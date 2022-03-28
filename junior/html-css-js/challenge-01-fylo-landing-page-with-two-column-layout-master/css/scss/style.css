@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+.logo {
+  max-width: 1280px;
+  margin: 45px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.headerContainer {
+  background-image: url("../../images/bg-curve-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0vw right 0vh;
+  padding-bottom: 260px;
+}
+
+.headerConteudo {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerConteudo img {
+  display: block;
+  max-width: 50%;
+  margin-top: 100px;
+}
+
+.headerConteudo .content {
+  max-width: 585px;
+}
+
+.headerConteudo .content h1 {
+  font-family: "Raleway", sans-serif;
+  line-height: 58px;
+  font-size: 38px;
+  color: #070439;
+}
+
+.headerConteudo .content p {
+  line-height: 25px;
+  color: #070439;
+  margin-right: 58px;
+}
+
+.headerConteudo .formHeader {
+  position: relative;
+}
+
+.headerConteudo .formHeader input {
+  width: 290px;
+  height: 45px;
+  display: inline-block;
+  margin-top: 23px;
+  border-radius: 5px;
+  padding-left: 20px;
+  border: 1px solid #070439;
+  font-family: "Raleway", sans-serif;
+}
+
+.headerConteudo .formHeader label {
+  display: none;
+  bottom: -25px;
+  position: absolute;
+}
+
+.headerConteudo .formHeader label.active {
+  display: block;
+}
+
+.headerConteudo .formHeader button {
+  width: 175px;
+  height: 45px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #f6f6fe;
+  background: #3065f8;
+  font-family: "Raleway", sans-serif;
+}
+
+.headerConteudo .formHeader button:hover {
+  cursor: pointer;
+  background: #6b9bff;
+}
+
+.sectionInfo {
+  background: #f6f6fe;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sectionInfo .infoContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sectionInfo .infoContainer img {
+  display: block;
+  max-width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sectionInfo .infoContainer .contentInfo {
+  max-width: 620px;
+}
+
+.sectionInfo .infoContainer .contentInfo h1 {
+  font-family: "Raleway", sans-serif;
+  line-height: 58px;
+  font-size: 38px;
+  margin-bottom: 27px;
+  color: #070439;
+}
+
+.sectionInfo .infoContainer .contentInfo p {
+  line-height: 25px;
+  color: #070439;
+  margin-right: 95px;
+  margin-bottom: 20px;
+}
+
+.sectionInfo .infoContainer .contentInfo a {
+  color: #3c9f8f;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.sectionInfo .infoContainer .contentInfo a::after {
+  content: url("../../images/icon-arrow.svg");
+  display: inline-block;
+}
+
+.sectionInfo .infoContainer .contentInfo a::before {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+  background: #3c9f8f;
+}
+
+.ceo {
+  background: white;
+  -webkit-box-shadow: 0px 0px 11px 0px #bfbfbf;
+          box-shadow: 0px 0px 11px 0px #bfbfbf;
+  border-radius: 10px;
+  width: 360px;
+  height: 230px;
+  margin-top: 45px;
+  padding: 25px 30px;
+}
+
+.ceo p {
+  margin: 0;
+  width: 305px;
+  font-size: 15px;
+}
+
+.ceo p::before {
+  content: url("../../images/icon-quotes.svg");
+  display: block;
+}
+
+.ceo .grid {
+  margin-top: -5px;
+  font-size: 13px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35px 260px;
+      grid-template-columns: 35px 260px;
+  -ms-grid-rows: 17px 17px;
+      grid-template-rows: 17px 17px;
+      grid-template-areas: "img nome" "img funcao";
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.ceo .grid .img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url("../../images/avatar-testimonial.jpg");
+  background-size: cover;
+}
+
+.ceo .grid .img + span {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nome;
+  font-weight: 700;
+}
+
+.ceo .grid span + span {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: funcao;
+}
+
+.subForm {
+  background: #585989;
+  padding: 110px 115px 80px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subForm .contentForm h1 {
+  line-height: 55px;
+  font-size: 35px;
+  color: white;
+}
+
+.subForm .contentForm p {
+  width: 480px;
+  line-height: 25px;
+  color: white;
+}
+
+.subForm .formFooter {
+  position: relative;
+}
+
+.subForm .formFooter input {
+  width: 480px;
+  height: 45px;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border: 1px solid #070439;
+  font-family: "Raleway", sans-serif;
+}
+
+.subForm .formFooter label {
+  position: absolute;
+  bottom: 45px;
+  display: none;
+}
+
+.subForm .formFooter label.active {
+  display: block;
+}
+
+.subForm .formFooter label.active button {
+  margin: 15px 0;
+}
+
+.subForm .formFooter button {
+  width: 175px;
+  height: 45px;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #f6f6fe;
+  background: #3065f8;
+  font-family: "Raleway", sans-serif;
+}
+
+.subForm .formFooter button:hover {
+  cursor: pointer;
+  background: #6b9bff;
+}
+
+.footer {
+  color: white;
+  background: #070439;
+  padding: 100px 80px 70px 80px;
+}
+
+.footer .listas {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .listas ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.footer .listas ul li:hover {
+  cursor: pointer;
+  color: #46518a;
+}
+
+.footer .listas .redes {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 180px;
+}
+
+.footer .listas .redes a {
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .listas .redes a:hover {
+  cursor: pointer;
+  color: #46518a;
+  border-color: #6d7bc2;
+}
+/*# sourceMappingURL=style.css.map */

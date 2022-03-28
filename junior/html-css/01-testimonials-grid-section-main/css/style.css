@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap");
+
+/* geral */
+
+body {
+  font-size: 13px;
+  background: hsl(213, 44%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+article {
+  padding: 25px 30px 10px 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin: 20px 0 20px 0;
+}
+
+p {
+  line-height: 18px;
+  color: hsl(217, 39%, 85%);
+}
+
+.container {
+  max-width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.gridContainer {
+  max-width: 1108px;
+  display: grid;
+  gap: 20px 30px;
+  grid-template-rows: repeat(2, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  grid-template-areas:
+    "daniel   daniel  jonathan kira"
+    "jeanette patrick patrick  kira";
+}
+
+.gridInterno {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-template-rows: repeat(2, 15px);
+  grid-template-areas:
+    "img nome"
+    "img funcao";
+}
+
+.gridInterno img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  grid-area: img;
+}
+
+.gridInterno img + span {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+  margin-left: 20px;
+  grid-area: nome;
+}
+
+.gridInterno span + span {
+  font-size: 12px;
+  margin-left: 20px;
+  color: hsl(216, 17%, 68%);
+  grid-area: funcao;
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: top 0vw right 7vh;
+  background-repeat: no-repeat;
+  box-shadow: 28px 27px 8px 2px hsl(222deg 27% 92%);
+  grid-area: daniel;
+}
+
+.daniel img {
+  border: 2px solid hsl(266, 45%, 64%);
+}
+
+.daniel h1 {
+  margin-right: 15px;
+}
+
+.daniel p {
+  margin-right: 10px;
+}
+
+.jonathan {
+  background: hsl(217, 19%, 35%);
+  box-shadow: 15px 33px 6px 2px hsl(222deg 27% 92%);
+  grid-area: jonathan;
+}
+
+.jonathan p {
+  margin-right: 5px;
+}
+
+.jeanette {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 30px 40px 10px 2px hsl(222deg 27% 90%);
+  grid-area: jeanette;
+}
+
+.jeanette img + span {
+  color: hsl(219, 29%, 14%);
+}
+
+.jeanette h1 {
+  margin-right: 15px;
+  color: hsl(219, 29%, 14%);
+}
+
+.jeanette p {
+  color: hsl(217, 19%, 35%);
+}
+
+.patrick {
+  background: hsl(219, 29%, 14%);
+  box-shadow: 49px 3px 8px 18px hsl(222deg 27% 90%);
+  grid-area: patrick;
+}
+
+.patrick img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.patrick p {
+  margin-right: 15px;
+}
+
+.kira {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 14px 40px 12px 4px hsl(222deg 27% 90%);
+  grid-area: kira;
+}
+
+.kira img + span {
+  color: hsl(219, 29%, 14%);
+}
+
+.kira h1 {
+  color: hsl(219, 29%, 14%);
+}
+
+.kira p {
+  margin-right: 8px;
+  color: hsl(217, 19%, 35%);
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .gridContainer * {
+    box-shadow: none;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .gridContainer {
+    max-width: 100%;
+    display: grid;
+    gap: 20px 30px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "daniel  daniel  kira     kira"
+      "patrick patrick jonathan jeanette";
+  }
+}
+
+/* mobile */
+
+@media (max-width: 425px) {
+  .gridContainer {
+    max-width: 325px;
+    display: grid;
+    column-gap: 0;
+    row-gap: 20px;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+  }
+}

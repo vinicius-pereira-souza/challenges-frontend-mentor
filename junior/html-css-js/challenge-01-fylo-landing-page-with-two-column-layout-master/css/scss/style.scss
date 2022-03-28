@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+// variaveis
+$dark-Blue: hsl(243, 87%, 12%);
+$desaturated-Blue: hsl(238, 22%, 44%);
+$Bright-Blue: hsl(224, 93%, 58%);
+$Moderate-Cyan: hsl(170, 45%, 43%);
+$Light-Blue: hsl(240, 75%, 98%);
+$Light-Gray: hsl(0, 0%, 75%);
+
+.logo {
+  max-width: 1280px;
+  margin: 45px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.headerContainer {
+  background-image: url("../../images/bg-curve-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0vw right 0vh;
+  padding-bottom: 260px;
+}
+
+.headerConteudo {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    display: block;
+    max-width: 50%;
+    margin-top: 100px;
+  }
+
+  .content {
+    max-width: 585px;
+
+    h1 {
+      font-family: "Raleway", sans-serif;
+      line-height: 58px;
+      font-size: 38px;
+      color: $dark-Blue;
+    }
+
+    p {
+      line-height: 25px;
+      color: $dark-Blue;
+      margin-right: 58px;
+    }
+  }
+
+  .formHeader {
+    position: relative;
+    input {
+      width: 290px;
+      height: 45px;
+      display: inline-block;
+      margin-top: 23px;
+      border-radius: 5px;
+      padding-left: 20px;
+      border: 1px solid $dark-Blue;
+      font-family: "Raleway", sans-serif;
+    }
+
+    label {
+      display: none;
+      bottom: -25px;
+      position: absolute;
+      &.active {
+        display: block;
+      }
+    }
+
+    button {
+      width: 175px;
+      height: 45px;
+      border: none;
+      font-weight: 600;
+      border-radius: 5px;
+      color: hsl(240, 75%, 98%);
+      background: hsl(224, 93%, 58%);
+      font-family: "Raleway", sans-serif;
+
+      &:hover {
+        cursor: pointer;
+        background: #6b9bff;
+      }
+    }
+  }
+}
+
+.sectionInfo {
+  background: $Light-Blue;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .infoContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      display: block;
+      max-width: 50%;
+      align-self: center;
+    }
+
+    .contentInfo {
+      max-width: 620px;
+
+      h1 {
+        font-family: "Raleway", sans-serif;
+        line-height: 58px;
+        font-size: 38px;
+        margin-bottom: 27px;
+        color: $dark-Blue;
+      }
+
+      p {
+        line-height: 25px;
+        color: $dark-Blue;
+        margin-right: 95px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: $Moderate-Cyan;
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        position: relative;
+
+        &::after {
+          content: url("../../images/icon-arrow.svg");
+          display: inline-block;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 170px;
+          height: 1px;
+          position: absolute;
+          bottom: -5px;
+          background: $Moderate-Cyan;
+        }
+      }
+    }
+  }
+}
+
+.ceo {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 0px 11px 0px hsl(0, 0%, 75%);
+  border-radius: 10px;
+  width: 360px;
+  height: 230px;
+  margin-top: 45px;
+  padding: 25px 30px;
+  p {
+    margin: 0;
+    width: 305px;
+    font-size: 15px;
+    &::before {
+      content: url("../../images/icon-quotes.svg");
+      display: block;
+    }
+  }
+  .grid {
+    margin-top: -5px;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: 35px 260px;
+    grid-template-rows: 17px 17px;
+    grid-template-areas:
+      "img nome"
+      "img funcao";
+    column-gap: 8px;
+    .img {
+      grid-area: img;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-image: url("../../images/avatar-testimonial.jpg");
+      background-size: cover;
+    }
+    .img + span {
+      grid-area: nome;
+      font-weight: 700;
+    }
+    span + span {
+      grid-area: funcao;
+    }
+  }
+}
+
+.subForm {
+  background: $desaturated-Blue;
+  padding: 110px 115px 80px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .contentForm h1 {
+    line-height: 55px;
+    font-size: 35px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .contentForm p {
+    width: 480px;
+    line-height: 25px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .formFooter {
+    position: relative;
+    input {
+      width: 480px;
+      height: 45px;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+      border: 1px solid $dark-Blue;
+      font-family: "Raleway", sans-serif;
+    }
+    label {
+      position: absolute;
+      bottom: 45px;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+    label.active button {
+      margin: 15px 0;
+    }
+    button {
+      width: 175px;
+      height: 45px;
+      border: none;
+      font-weight: 600;
+      border-radius: 5px;
+      color: hsl(240, 75%, 98%);
+      background: hsl(224, 93%, 58%);
+      font-family: "Raleway", sans-serif;
+      &:hover {
+        cursor: pointer;
+        background: #6b9bff;
+      }
+    }
+  }
+}
+
+.footer {
+  color: hsl(0, 0%, 100%);
+  background: $dark-Blue;
+  padding: 100px 80px 70px 80px;
+  .listas {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      li {
+        &:hover {
+          cursor: pointer;
+          color: #46518a;
+        }
+      }
+    }
+
+    .redes {
+      flex-direction: row;
+      margin-right: 180px;
+
+      a {
+        padding: 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        border: 1px solid hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          color: #46518a;
+          border-color: #6d7bc2;
+        }
+      }
+    }
+  }
+}

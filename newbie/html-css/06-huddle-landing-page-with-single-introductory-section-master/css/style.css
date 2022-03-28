@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("../images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 0vh right 3vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1285px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.container header {
+  margin-top: 65px;
+  margin-bottom: 75px;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudo img {
+  display: block;
+  max-width: 100%;
+}
+
+div h1 {
+  max-width: 435px;
+  margin-top: 45px;
+  font-size: 2.125em;
+  font-family: "Poppins", sans-serif;
+}
+
+div p {
+  max-width: 510px;
+  line-height: 25px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+div button {
+  padding: 15px 65px;
+  color: hsl(257, 40%, 49%);
+  border: none;
+  background: #fff;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 1.06em;
+  font-family: "Poppins", sans-serif;
+}
+
+div button:hover {
+  color: #fff;
+  background: hsl(300, 69%, 71%);
+  box-shadow: 1px -1px 23px 4px #642e86;
+  transition: 0.3s;
+}
+
+.redes {
+  width: 155px;
+  margin-top: 25px;
+  margin-left: 85%;
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redes li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes a {
+  padding: 10px 12px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+li [class^="ri-"] {
+  color: #fff;
+}
+
+a:hover,
+a:hover [class^="ri-"] {
+  border-color: hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 750px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top -0vh right -0vw;
+  }
+
+  .container {
+    max-width: 590px;
+  }
+
+  .container header {
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .conteudo div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .conteudo img {
+    display: block;
+    max-width: 100%;
+  }
+
+  div h1 {
+    max-width: 395px;
+    font-size: 1.875em;
+    text-align: center;
+    margin: 80px auto 0 auto;
+  }
+
+  div p {
+    max-width: 345px;
+    line-height: 30px;
+    margin: 35px auto;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  div button {
+    width: 250px;
+    align-self: center;
+    font-size: 1.06em;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 4px #523b8b;
+  }
+
+  .redes {
+    margin: 110px auto 50px auto;
+  }
+}

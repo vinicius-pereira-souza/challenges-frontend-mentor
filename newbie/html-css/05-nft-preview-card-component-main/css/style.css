@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background: hsl(217, 54%, 11%);
+}
+
+.container {
+  max-width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  height: 595px;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 25px 25px 0 25px;
+  background: hsl(216, 50%, 16%);
+}
+
+.card figure img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: 300px;
+}
+
+.card figure {
+  position: relative;
+}
+
+.card figure::after {
+  content: url("../images/icon-view.svg");
+  background: hsla(178, 100%, 50%, 0.5);
+  border-radius: 10px;
+  height: 300px;
+  width: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h1 {
+  font-size: 1.166em;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin: 25px 0;
+}
+
+.card h2 {
+  font-size: 0.944em;
+  line-height: 24px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 20px;
+}
+
+.flex {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex li {
+  font-size: 1em;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.flex li span {
+  color: hsl(178, 100%, 50%);
+  margin-left: 5px;
+}
+
+.flex img {
+  max-width: 100%;
+}
+
+.flex img.clock {
+  width: 17px;
+  height: 17px;
+}
+
+.flex li p {
+  margin-left: 9px;
+  color: hsl(215, 51%, 70%);
+}
+
+.avatar {
+  padding: 15px 0;
+  margin-top: 20px;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  align-items: center;
+}
+
+.avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 1px solid #fff;
+}
+
+.avatar p {
+  font-size: 0.888em;
+  line-height: 21px;
+  color: hsl(215, 51%, 70%);
+}
+
+.avatar p span {
+  color: hsl(0, 0%, 100%);
+}
+
+h1:hover,
+.avatar span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card figure:hover::after {
+  cursor: pointer;
+  visibility: visible;
+}
