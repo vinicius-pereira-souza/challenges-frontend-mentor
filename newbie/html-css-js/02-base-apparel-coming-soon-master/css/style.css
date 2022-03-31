@@ -31,7 +31,7 @@ body {
   height: 800px;
   padding-left: 165px;
   display: grid;
-  grid-template-columns: minmax(auto, 830px) minmax(auto, 610px);
+  grid-template-columns: minmax(auto-fit, 830px) minmax(auto-fit, 610px);
   grid-template-rows: 35px 460px;
   grid-template-areas: 
   "header img"
@@ -48,6 +48,7 @@ body {
 .content {
   grid-area: content;
   margin-top: 165px;
+  padding-right: 165px;
 }
 
 .content h1 {
@@ -80,7 +81,7 @@ body {
 }
 
 .formulario input {
-  width: 380px;
+  flex-basis: 380px;
   border: none;
   border-radius: 30px 0 0 30px;
   padding: 17px 50px 17px 35px;
@@ -124,9 +125,10 @@ p.err.errActive {
   color: hsl(0, 93%, 68%);
   margin: 10px 0 0 35px;
   position: relative;
+  display: block;
 }
 
-p.err::after {
+p.err.errActive::after {
   content: url('../images/icon-error.svg');
   display: block;
   position: absolute;
@@ -135,6 +137,7 @@ p.err::after {
 }
 
 p.err.valid {
+  margin: 10px 0 0 35px;
   display: block;
   color: hsl(120, 29%, 51%);
 }
@@ -143,4 +146,7 @@ p.err.valid {
 
 .fotoModelo {
   grid-area: img;
+  display: block;
+  max-width: 100%;
+  
 }
