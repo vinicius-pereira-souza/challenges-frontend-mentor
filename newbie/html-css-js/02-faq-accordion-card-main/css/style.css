@@ -55,15 +55,18 @@ body {
   width: 435px;
   height: 100%;
   background-repeat: no-repeat;
-  background-image: url('../images/illustration-box-desktop.svg'),
-                    url('../images/illustration-woman-online-desktop.svg'),
+  background-image: url('../images/illustration-woman-online-desktop.svg'),
                     url('../images/bg-pattern-desktop.svg');
-  background-position:  right 25vw bottom 18vh, 
-                        left -6vw top 11vh, 
+  background-position:  left -6vw top 11vh, 
                         left -42vw top -48vh;
   /* background-color: rgba(0, 0, 0, .2); */
   position: absolute;
-  left: -5px;
+}
+
+img.box {
+  position: absolute;
+  top: 205px;
+  left: -92px;
 }
 
 .faq {
@@ -98,6 +101,22 @@ h2:hover {
   cursor: pointer;
   color: hsl(14, 88%, 65%);
   transition: 0.2s;
+}
+
+h2:hover img.box {
+  animation: sobre 0.2s ease infinite;
+}
+
+@keyframes sobre {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 h2::after {
