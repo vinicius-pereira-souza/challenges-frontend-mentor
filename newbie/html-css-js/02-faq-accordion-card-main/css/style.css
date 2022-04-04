@@ -67,6 +67,20 @@ img.box {
   position: absolute;
   top: 205px;
   left: -92px;
+  animation: sobre 4s ease-out infinite;
+}
+
+@keyframes sobre {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-35px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+  
 }
 
 .faq {
@@ -103,21 +117,8 @@ h2:hover {
   transition: 0.2s;
 }
 
-h2:hover img.box {
-  animation: sobre 0.2s ease infinite;
-}
 
-@keyframes sobre {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 
 h2::after {
   content: url('../images/icon-arrow-down.svg');
