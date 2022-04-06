@@ -5,16 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --DesaturatedRed: hsl(0, 36%, 70%);
-  --SoftRed: hsl(0, 93%, 68%);
-  /* ### Neutral */
-  --DarkGrayishRed: hsl(0, 6%, 24%);
-  /* ### Gradients */
-  --Linear135degfrom1 :hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-  --Linear135degfrom2 :hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
-}
-
 body {
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
@@ -150,4 +140,109 @@ input:focus {
   background-image: url('../images/hero-desktop.jpg');
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+@media (max-width: 425px) {
+  .container {
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    grid-template-columns: minmax(auto, 375px);
+    grid-template-rows: 85px 255px auto;
+    grid-template-areas: 
+    "header" 
+    "img"
+    "conteudo";
+  }
+
+  .header {
+    grid-area: header;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: auto 25px;
+  }
+
+  .header img {
+    display: block;
+    width: 100px;
+    height: 20px;
+  }
+  
+  .imgBg {
+    grid-area: img;
+    background-image: url('../images/hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  /* CONTEUDO */
+  
+  .content {
+    grid-area: conteudo;
+    display: grid;
+    grid-template-columns: 35px auto 35px;
+    grid-template-areas: 
+    '.  h1 .'
+    '.   p  .'
+    '. formulario .';
+  }
+  
+  .content h1 {
+    grid-area: h1;
+    display: grid;
+    grid-template-columns: 244px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 15px;
+    font-size: 39px;
+    margin-top: 65px;
+    align-self: center;
+    margin: 65px 0 0 0;
+  }
+
+  .content h1 br {
+    display: none;
+  }
+  
+  .content > p {
+    grid-area: p;
+    text-align: center;
+    font-size: 14px;
+    margin: 20px auto 25px auto;
+  }
+  .formFlex {
+    grid-area: formulario;
+    max-width: 446px;
+    height: 70px;
+  }
+  
+  .form {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns:  minmax(auto, 270px) 35px;
+    position: relative;
+  }
+  
+  .form input {
+    height: 45px;
+  }
+  
+  .btn {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .mensage::after {
+    content: url('../images/icon-error.svg');
+    display: block;
+    position: absolute;
+    right: 75px;
+    bottom: 33px;
+  }
+  
+  .mensage.err {
+    margin-left: 15px;
+    margin-top: 10px;
+    color: hsl(0, 93%, 68%);
+    position: relative;
+    display: block;
+  }
 }
