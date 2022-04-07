@@ -5,17 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* ### Primary */
-  --Orange: hsl(25, 97%, 53%);
-  /* ### Neutral */
-  --White: hsl(0, 0%, 100%);
-  --LightGrey: hsl(217, 12%, 63%);
-  --MediumGrey: hsl(216, 12%, 54%);
-  --DarkBlue: hsl(213, 19%, 18%);
-  --VeryDarkBlue: hsl(216, 12%, 8%);
-}
-
 body {
   font-size: 15px;
   height: 100vh;
@@ -36,13 +25,14 @@ p {
   color: hsl(217, 12%, 63%);
 }
 
+/* LAYOUT PARA DESKTOP E TABLET */
+
 .container {
   max-width: 412px;
   height: 420px;
   background-color: hsl(215, 21%, 16%);
   border-radius: 20px;
   padding: 30px;
-  /* display: none; */
 }
 
 .img {
@@ -77,7 +67,7 @@ p {
 .listBtns li {
   width: 50px;
   height: 50px;
-  color: #828a95;
+  color: hsl(215, 8%, 55%);
   font-weight: 700;
   border-radius: 50%;
   background-color: hsl(213, 19%, 18%);
@@ -89,7 +79,7 @@ p {
 }
 
 .listBtns li:hover {
-  background: #7c8798;
+  background: hsl(216, 12%, 54%);
   color:hsl(0, 0%, 100%);
 }
 
@@ -138,6 +128,8 @@ p {
   padding: 45px 30px;
   text-align: center;
   display: none;
+  position: relative;
+  top: -18px;
 }
 
 .content img {
@@ -170,4 +162,77 @@ p {
 
 .content.aparecer {
   display: block;
+}
+
+.container.sumir {
+  display: none;
+}
+
+/* LAYOUT PARA MOBILE */
+
+@media (max-width: 425px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 330px;
+    height: 360px;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .container h1 {
+    margin: 32px 0 15px 0;
+    font-size: 24px;
+  }
+  
+  .container p {
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+  
+  .listBtns {
+    margin-bottom: 20px;
+  }
+  
+  .listBtns li {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* MODAL */
+  
+  .content {
+    max-width: 330px;
+    height: 360px;
+    padding: 38px 30px;
+  }
+  
+  .content img {
+    max-width: 146px;
+    height: 96px;
+  }
+  
+  .content.aparecer .msg {
+    margin-bottom: 25px;
+    padding: 4px 5px;
+  }
+  
+  .content h1 {
+    margin: 30px 0 15px 0;
+    font-size: 27px;
+  }
+  
+  .content p {
+    line-height: 21px;
+    margin-bottom: 25px;
+    padding: 0 5px;
+    font-size: 13px;
+  }
 }

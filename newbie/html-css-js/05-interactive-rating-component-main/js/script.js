@@ -24,7 +24,9 @@ function aparecerModal(e) {
   const itemAtivo = document.querySelector('li.active')
   const modal = document.querySelector('.content')
   const valorSelecionado = document.querySelector('.numeroSelecionado')
-
+  const container = document.querySelector('.container')
+  
+  container.classList.add('sumir')
   modal.classList.add('aparecer')
   valorSelecionado.innerText = itemAtivo.textContent
 }
