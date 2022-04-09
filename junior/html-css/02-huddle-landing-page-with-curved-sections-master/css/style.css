@@ -83,11 +83,13 @@ img {
 
 .dadosFlex {
   max-width: 945px;
+  
   margin: 0 auto;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .dadosFlex div span{
@@ -99,3 +101,55 @@ img {
 .dadosFlex div p{
   color: hsl(192, 100%, 9%);
 }
+
+.contentGrid {
+  padding: 0 120px;
+  background-color: hsl(207, 100%, 98%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 455px));
+  grid-template-areas: "conteudo img";
+  align-items: center;
+  gap: 130px;
+}
+
+.growBg {
+  padding-top: 165px;
+  padding-bottom: 150px;
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 38vw left 0vh, top 39vw left 0vh;
+}
+
+.contentGrid article {
+  grid-area: conteudo;
+}
+
+.contentGrid img {
+  grid-area: img;
+}
+
+article h1 {
+  font-size: 27px;
+  color: hsl(192, 100%, 9%);
+}
+
+article p {
+  font-size: 15px;
+  line-height: 23px;
+  color: hsl(192, 100%, 9%);
+}
+
+/* .growBg {
+
+} */
+
+/* .growBg {
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 48vw left 0vh, top 47vw left 0vh;
+  
+  height: 835px;
+} */
+
+/* top 165 */
+/* bottom 150 */
