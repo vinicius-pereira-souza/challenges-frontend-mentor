@@ -147,11 +147,17 @@ img {
 }
 
 .flowingBg {
-  padding-top: 165px;
   padding-bottom: 250px;
   background-image: url('../images/bg-section-top-desktop-2.svg');
   background-repeat: no-repeat;
   background-position: bottom 0vw left 0vh;
+}
+
+.usersBg {
+  padding-bottom: 250px;
+  background-image: url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: top 25vw left 0vh;
 }
 
 /* top 165 */
