@@ -1,5 +1,5 @@
 /* Headings */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 /* font-family: 'Poppins', sans-serif; */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
@@ -102,16 +102,6 @@ img {
   color: hsl(192, 100%, 9%);
 }
 
-.contentGrid {
-  padding: 0 120px;
-  background-color: hsl(207, 100%, 98%);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 455px));
-  grid-template-areas: "conteudo img";
-  align-items: center;
-  gap: 130px;
-}
-
 .growBg {
   padding-top: 165px;
   padding-bottom: 150px;
@@ -120,25 +110,49 @@ img {
   background-position: bottom 38vw left 0vh, top 39vw left 0vh;
 }
 
-.contentGrid article {
+.grid {
+  max-width: 100%;
+  padding: 0 130px;
+  background-color: hsl(207, 100%, 98%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 455px));
+  grid-template-areas: "conteudo img";
+  align-items: center;
+  gap: 130px;
+}
+
+.content {
   grid-area: conteudo;
 }
 
-.contentGrid img {
-  grid-area: img;
-}
-
-article h1 {
+.content h1 {
   font-size: 27px;
   color: hsl(192, 100%, 9%);
 }
 
-article p {
+.content p {
   font-size: 15px;
   line-height: 23px;
   color: hsl(192, 100%, 9%);
+  margin-top: 25px;
 }
 
+.grid img {
+  grid-area: img;
+}
+
+.flowingBg .grid {
+  grid-template-areas: "img conteudo";
+  background-color: #fff;
+}
+
+.flowingBg {
+  padding-top: 165px;
+  padding-bottom: 250px;
+  background-image: url('../images/bg-section-top-desktop-2.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 0vw left 0vh;
+}
 
 /* top 165 */
 /* bottom 150 */
