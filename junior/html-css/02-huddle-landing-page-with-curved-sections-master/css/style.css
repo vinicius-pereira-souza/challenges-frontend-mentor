@@ -1,5 +1,5 @@
 /* Headings */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 /* font-family: 'Poppins', sans-serif; */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
@@ -19,14 +19,8 @@ img {
   max-width: 100%;
 }
 
-:root {
-  /* ### Primary */
-  --Pink: hsl(322, 100%, 66%);
-  --LightPink: hsl(321, 100%, 78%);
-  --LightRed: hsl(0, 100%, 63%);
-  /* ### Neutral */
-  --VeryDarkCyan: hsl(192, 100%, 9%);
-  --VeryPaleBlue: hsl(207, 100%, 98%);
+span {
+  display: block;
 }
 
 /* desktop / tablet */
@@ -43,8 +37,8 @@ img {
   height: 38px;
   background: none;
   border-radius: 20px;
-  border: 2px solid hsl(321, 100%, 78%);;
-  color: hsl(321, 100%, 78%);;
+  border: 2px solid hsl(321, 100%, 78%);
+  color: hsl(321, 100%, 78%);
 }
 
 .header h1 {
@@ -102,8 +96,18 @@ img {
   color: hsl(192, 100%, 9%);
 }
 
-.contentGrid {
-  padding: 0 120px;
+.growBg {
+  padding-top: 165px;
+  padding-bottom: 150px;
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 34vw left 0vh, top 35vw left 0vh;
+  background-size: contain;
+}
+
+.grid {
+  max-width: 100%;
+  padding: 0 130px;
   background-color: hsl(207, 100%, 98%);
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 455px));
@@ -112,33 +116,142 @@ img {
   gap: 130px;
 }
 
-.growBg {
-  padding-top: 165px;
-  padding-bottom: 150px;
-  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
-  background-repeat: no-repeat;
-  background-position: bottom 38vw left 0vh, top 39vw left 0vh;
-}
-
-.contentGrid article {
+.content {
   grid-area: conteudo;
 }
 
-.contentGrid img {
-  grid-area: img;
-}
-
-article h1 {
+.content h1 {
   font-size: 27px;
   color: hsl(192, 100%, 9%);
 }
 
-article p {
+.content p {
   font-size: 15px;
   line-height: 23px;
   color: hsl(192, 100%, 9%);
+  margin-top: 25px;
+}
+
+.grid img {
+  grid-area: img;
+}
+
+.flowingBg .grid {
+  grid-template-areas: "img conteudo";
+  background-color: #fff;
+}
+
+.flowingBg {
+  padding-bottom: 250px;
+  background-image: url('../images/bg-section-top-desktop-2.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 0vw left 0vh;
+  background-size: contain;
+}
+
+.usersBg {
+  padding-bottom: 250px;
+  background-image: url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: top 32vw left 0vh;
+  background-size: contain;
+}
+
+.ready {
+  height: 483px;
+  background-image: url('../images/bg-footer-top-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top 21vw left 0vh;
+  background-size: contain;
+}
+
+.ready h1 {
+  font-size: 27px;
+  color: hsl(192, 100%, 9%);
+  text-align: center;
+}
+
+.ready button {
+  width: 300px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  color: hsl(207, 100%, 98%);
+  background: hsl(322, 100%, 66%);
+}
+/* top 165 */
+/* bottom 150 */
+
+:root {
+  /* ### Primary */
+  --Pink: hsl(322, 100%, 66%);
+  --LightPink: hsl(321, 100%, 78%);
+  --LightRed: hsl(0, 100%, 63%);
+  /* ### Neutral */
+  --VeryDarkCyan: hsl(192, 100%, 9%);
+  --VeryPaleBlue: hsl(207, 100%, 98%);
 }
 
 
-/* top 165 */
-/* bottom 150 */
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  padding: 100px 120px 80px 120px;
+  color:hsl(207, 100%, 98%);
+  display: flex;
+  gap: 270px;
+}
+
+.contato {
+  max-width: 330px;
+}
+
+.contato img, p, .form h2 {
+  margin-bottom: 25px;
+}
+
+.spanFlex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.redesSociais {
+  list-style: none;
+  margin-top: 60px;
+  display: flex;
+  justify-items: center;
+  gap: 20px;
+}
+
+.form {
+  max-width: 525px;
+}
+
+.form p {
+  max-width: 375px;
+}
+
+form {
+  display: flex;
+  gap: 30px;
+}
+
+.form input {
+  flex: 0 1 320px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+form button {
+  /* flex: 0 0 160px; */
+  flex: 0 1 160px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: hsl(207, 100%, 98%);
+  background: hsl(322, 100%, 66%);
+}
