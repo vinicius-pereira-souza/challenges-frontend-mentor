@@ -108,6 +108,60 @@ $Light-Gray: hsl(0, 0%, 75%);
   }
 }
 
-
+.getEarly {
+  background-color: hsl(238, 22%, 44%);
+  padding: 100px 120px 75px 70px;
+  display: grid;
+  grid-template-columns: minmax(320px, 490px) minmax(320px, 480px);
+  justify-content: space-between;
+  color: $Light-Blue;
+  font-family: "Raleway", sans-serif;
+  h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  p {
+    line-height: 23px;
+  }
+  .formFooter {
+    display: grid;
+    grid-template-columns: minmax(auto, 480px);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: "input"
+                         "label"
+                         "button";
+    grid-w
+    input {
+      grid-area: input;
+      padding-left: 15px;
+    }
+    label {
+      display: none;
+      &:active {
+        grid-area: label;
+        display: block;
+      }
+    }
+    button {
+      max-width: 200px;
+      grid-area: button;
+      border: none;
+      font-weight: 600;
+      border-radius: 3px;
+      color: hsl(240, 75%, 98%);
+      background: hsl(224, 93%, 58%);
+      font-family: "Raleway", sans-serif;
+      &:hover {
+        cursor: pointer;
+        background: #6b9bff;
+      }
+    } 
+  }
+}
 
 // section 1
+
+// margin-top: 180px;
+// background-image: url('../../images/bg-curve-desktop.svg');
+// background-size: contain;
+// background-repeat: no-repeat;
