@@ -37,8 +37,19 @@ span {
   height: 38px;
   background: none;
   border-radius: 20px;
-  border: 2px solid hsl(321, 100%, 78%);
+  border: 2px solid hsl(322, 100%, 66%);
+  color: hsl(322, 100%, 66%);
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.flexHeader button:hover {
+  border-color:  hsl(321, 100%, 78%);
   color: hsl(321, 100%, 78%);
+  box-shadow: 0px 0px 4px 0px hsl(321, 100%, 78%);
+  transition: 0.2s;
 }
 
 .header h1 {
@@ -65,9 +76,18 @@ span {
   margin-bottom: 105px;
   border: none;
   border-radius: 50px;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  font-size: 15px;
   color: hsl(207, 100%, 98%);
   background: hsl(322, 100%, 66%);
+  cursor: pointer;
+}
+
+.header > button:hover {
+  border-color:  hsl(321, 100%, 78%);
+  box-shadow: 2px 6px 9px 3px #e5ebeb;
+  transition: 0.2s;
 }
 
 .header > img {
@@ -77,7 +97,6 @@ span {
 
 .dadosFlex {
   max-width: 945px;
-  
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -96,24 +115,19 @@ span {
   color: hsl(192, 100%, 9%);
 }
 
-.growBg {
-  padding-top: 165px;
-  padding-bottom: 150px;
-  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
-  background-repeat: no-repeat;
-  background-position: bottom 34vw left 0vh, top 35vw left 0vh;
-  background-size: contain;
-}
-
 .grid {
   max-width: 100%;
-  padding: 0 130px;
-  background-color: hsl(207, 100%, 98%);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 455px));
-  grid-template-areas: "conteudo img";
+  grid-template-columns: minmax(auto, 455px) 
+                         minmax(auto, 130px) 
+                         minmax(auto, 455px);
+  grid-template-rows: 165px minmax(auto, 370px) 145px;
+  grid-template-areas: 
+  " . . ."
+  "conteudo . img"
+  ". . .";
   align-items: center;
-  gap: 130px;
 }
 
 .content {
@@ -134,6 +148,26 @@ span {
 
 .grid img {
   grid-area: img;
+}
+
+.growBg {
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: top 0vw left 0, bottom 0vw left 0vh;
+  background-size: contain;
+}
+
+.grid {
+  background: hsl(207, 100%, 98%);
+}
+
+/* .growBg {
+  padding-top: 165px;
+  padding-bottom: 145px;
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: top 0vw left 0, bottom 0vw left 0vh;
+  background-size: contain;
 }
 
 .flowingBg .grid {
@@ -179,19 +213,24 @@ span {
   margin-top: 50px;
   border: none;
   border-radius: 50px;
-  font-weight: 600;
   color: hsl(207, 100%, 98%);
   background: hsl(322, 100%, 66%);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
 }
-/* top 165 */
-/* bottom 150 */
+
+.ready button:hover {
+  border-color:  hsl(321, 100%, 78%);
+  box-shadow: 2px 6px 9px 3px #e5ebeb;
+  transition: 0.2s;
+}
+
 
 :root {
-  /* ### Primary */
   --Pink: hsl(322, 100%, 66%);
   --LightPink: hsl(321, 100%, 78%);
   --LightRed: hsl(0, 100%, 63%);
-  /* ### Neutral */
   --VeryDarkCyan: hsl(192, 100%, 9%);
   --VeryPaleBlue: hsl(207, 100%, 98%);
 }
@@ -227,6 +266,35 @@ span {
   gap: 20px;
 }
 
+.redesSociais li a{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: hsl(207, 100%, 98%);
+  text-decoration: none;
+  color:hsl(192, 100%, 9%);
+  font-size: 25px;
+}
+
+.redesSociais a:hover {
+  background: hsl(191, 100%, 47%);
+  text-decoration: none;
+  color: hsl(207, 100%, 98%);
+}
+
+.redesSociais .insta a {
+  background: hsl(192, 100%, 9%);
+  color: hsl(207, 100%, 98%);
+}
+
+.redesSociais .insta a:hover {
+  background: hsl(191, 100%, 47%);
+  color: hsl(207, 100%, 98%);
+}
+
 .form {
   max-width: 525px;
 }
@@ -247,11 +315,17 @@ form {
 }
 
 form button {
-  /* flex: 0 0 160px; */
   flex: 0 1 160px;
   border: none;
   border-radius: 8px;
   font-weight: 600;
   color: hsl(207, 100%, 98%);
   background: hsl(322, 100%, 66%);
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
+
+form button:hover {
+  background: hsl(321, 100%, 78%);
+  transition: 0.2s;
+} */
