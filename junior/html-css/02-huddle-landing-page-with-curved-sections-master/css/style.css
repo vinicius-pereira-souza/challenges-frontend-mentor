@@ -19,14 +19,8 @@ img {
   max-width: 100%;
 }
 
-:root {
-  /* ### Primary */
-  --Pink: hsl(322, 100%, 66%);
-  --LightPink: hsl(321, 100%, 78%);
-  --LightRed: hsl(0, 100%, 63%);
-  /* ### Neutral */
-  --VeryDarkCyan: hsl(192, 100%, 9%);
-  --VeryPaleBlue: hsl(207, 100%, 98%);
+span {
+  display: block;
 }
 
 /* desktop / tablet */
@@ -107,7 +101,8 @@ img {
   padding-bottom: 150px;
   background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
   background-repeat: no-repeat;
-  background-position: bottom 38vw left 0vh, top 39vw left 0vh;
+  background-position: bottom 34vw left 0vh, top 35vw left 0vh;
+  background-size: contain;
 }
 
 .grid {
@@ -151,20 +146,23 @@ img {
   background-image: url('../images/bg-section-top-desktop-2.svg');
   background-repeat: no-repeat;
   background-position: bottom 0vw left 0vh;
+  background-size: contain;
 }
 
 .usersBg {
   padding-bottom: 250px;
   background-image: url('../images/bg-section-bottom-desktop-1.svg');
   background-repeat: no-repeat;
-  background-position: top 25vw left 0vh;
+  background-position: top 32vw left 0vh;
+  background-size: contain;
 }
 
 .ready {
-  height: 510px;
+  height: 483px;
   background-image: url('../images/bg-footer-top-desktop.svg');
   background-repeat: no-repeat;
-  background-position: top 24vw left 0vh;
+  background-position: top 21vw left 0vh;
+  background-size: contain;
 }
 
 .ready h1 {
@@ -187,3 +185,73 @@ img {
 }
 /* top 165 */
 /* bottom 150 */
+
+:root {
+  /* ### Primary */
+  --Pink: hsl(322, 100%, 66%);
+  --LightPink: hsl(321, 100%, 78%);
+  --LightRed: hsl(0, 100%, 63%);
+  /* ### Neutral */
+  --VeryDarkCyan: hsl(192, 100%, 9%);
+  --VeryPaleBlue: hsl(207, 100%, 98%);
+}
+
+
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  padding: 100px 120px 80px 120px;
+  color:hsl(207, 100%, 98%);
+  display: flex;
+  gap: 270px;
+}
+
+.contato {
+  max-width: 330px;
+}
+
+.contato img, p, .form h2 {
+  margin-bottom: 25px;
+}
+
+.spanFlex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.redesSociais {
+  list-style: none;
+  margin-top: 60px;
+  display: flex;
+  justify-items: center;
+  gap: 20px;
+}
+
+.form {
+  max-width: 525px;
+}
+
+.form p {
+  max-width: 375px;
+}
+
+form {
+  display: flex;
+  gap: 30px;
+}
+
+.form input {
+  flex: 0 1 320px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+form button {
+  /* flex: 0 0 160px; */
+  flex: 0 1 160px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: hsl(207, 100%, 98%);
+  background: hsl(322, 100%, 66%);
+}
