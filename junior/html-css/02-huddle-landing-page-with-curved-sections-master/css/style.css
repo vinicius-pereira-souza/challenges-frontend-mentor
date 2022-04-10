@@ -43,8 +43,8 @@ img {
   height: 38px;
   background: none;
   border-radius: 20px;
-  border: 2px solid hsl(321, 100%, 78%);;
-  color: hsl(321, 100%, 78%);;
+  border: 2px solid hsl(321, 100%, 78%);
+  color: hsl(321, 100%, 78%);
 }
 
 .header h1 {
@@ -160,5 +160,30 @@ img {
   background-position: top 25vw left 0vh;
 }
 
+.ready {
+  height: 510px;
+  background-image: url('../images/bg-footer-top-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top 24vw left 0vh;
+}
+
+.ready h1 {
+  font-size: 27px;
+  color: hsl(192, 100%, 9%);
+  text-align: center;
+}
+
+.ready button {
+  width: 300px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  color: hsl(207, 100%, 98%);
+  background: hsl(322, 100%, 66%);
+}
 /* top 165 */
 /* bottom 150 */
