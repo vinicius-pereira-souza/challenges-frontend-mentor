@@ -258,3 +258,66 @@ $Light-Gray: hsl(0, 0%, 75%);
     } 
   }
 }
+
+.footer {
+  background-color: $dark-Blue;
+  padding: 100px 75px 70px 75px;
+  color: $Light-Blue;
+  .lists {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      li:hover {
+        cursor: pointer;
+        color:hsl(224, 93%, 58%);
+        transition: 0.2s;
+      }
+    }
+    .phoneEmail li{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .redesSociais {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      span {
+        padding: 5px 10px;
+        border-radius: 50%;
+        border: 2px solid $Light-Blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          transition: 0.2s;
+          border-color: $Bright-Blue;
+          a {
+            color: $Bright-Blue;
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          color: $Light-Blue;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+// //     {
+//   li {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+//     margin-top: 20px;
+//    }
+//   }
