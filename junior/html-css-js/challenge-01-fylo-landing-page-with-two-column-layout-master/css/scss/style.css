@@ -98,6 +98,10 @@ img {
   font-family: "Raleway", sans-serif;
 }
 
+.headerContainer .gridHeader .content .formHeader input.err {
+  border: 2px solid #ec6565;
+}
+
 .headerContainer .gridHeader .content .formHeader button {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -125,6 +129,7 @@ img {
   grid-area: label;
   margin-top: 10px;
   display: block;
+  color: #ec6565;
 }
 
 .headerContainer .gridHeader img {
@@ -306,15 +311,21 @@ img {
   padding-left: 15px;
 }
 
+.getEarly .formFooter input.err {
+  border: 2px solid #ec6565;
+}
+
 .getEarly .formFooter label {
   display: none;
 }
 
-.getEarly .formFooter label:active {
+.getEarly .formFooter label.err {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: label;
+  margin-top: 10px;
   display: block;
+  color: #ec6565;
 }
 
 .getEarly .formFooter button {

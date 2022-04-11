@@ -77,6 +77,9 @@ $Light-Gray: hsl(0, 0%, 75%);
           border-radius: 3px;
           border: 1px solid $dark-Blue;
           font-family: "Raleway", sans-serif;
+          &.err {
+            border: 2px solid rgb(236, 101, 101);
+          }
         }
         button {
           grid-area: button;
@@ -97,6 +100,7 @@ $Light-Gray: hsl(0, 0%, 75%);
             grid-area: label;
             margin-top: 10px;
             display: block;
+            color: rgb(236, 101, 101);
           }
         }
       }
@@ -233,12 +237,17 @@ $Light-Gray: hsl(0, 0%, 75%);
     input {
       grid-area: input;
       padding-left: 15px;
+      &.err {
+        border: 2px solid rgb(236, 101, 101);
+      }
     }
     label {
       display: none;
-      &:active {
+      &.err {
         grid-area: label;
+        margin-top: 10px;
         display: block;
+        color: rgb(236, 101, 101);
       }
     }
     button {
