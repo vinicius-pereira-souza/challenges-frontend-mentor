@@ -129,7 +129,8 @@ img {
 
 .headerContainer .gridHeader img {
   -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: img;
 }
 
@@ -197,16 +198,72 @@ img {
   right: 170px;
 }
 
-.stayProductive .stayProductiveGrid img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: img;
+.stayProductive .stayProductiveGrid article .ceo {
+  max-width: 360px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px 4px #f1f0f5;
+          box-shadow: 0 0 10px 4px #f1f0f5;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
-.stayProductive .ceo {
-  max-width: 360px;
-  height: 215px;
-  padding: 25px 30px;
+.stayProductive .stayProductiveGrid article .ceo p {
+  margin-bottom: 20px;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.stayProductive .stayProductiveGrid article .ceo p::before {
+  content: url("../../images/icon-quotes.svg");
+  display: block;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32px 180px;
+      grid-template-columns: 32px 180px;
+  -ms-grid-rows: 16px 16px;
+      grid-template-rows: 16px 16px;
+      grid-template-areas: "img nome" "img funcao";
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  background-image: url("../../images/avatar-testimonial.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .nome, .stayProductive .stayProductiveGrid article .ceo .subGrid .funcao {
+  font-size: 11px;
+  margin-left: 10px;
+  color: #070439;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .nome {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nome;
+  font-weight: bold;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .funcao {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: funcao;
+}
+
+.stayProductive .stayProductiveGrid img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
 }
 
 .getEarly {

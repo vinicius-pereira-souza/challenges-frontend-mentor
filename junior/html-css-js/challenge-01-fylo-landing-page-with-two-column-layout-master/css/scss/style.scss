@@ -158,16 +158,55 @@ $Light-Gray: hsl(0, 0%, 75%);
           right: 170px;
         }
       }
+      .ceo {
+        max-width: 360px;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 4px #f1f0f5;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        p {
+          margin-bottom: 20px;
+          line-height: 25px;
+          font-size: 14px;
+          &::before {
+            content: url('../../images/icon-quotes.svg');
+            display: block;
+          }
+        }
+        .subGrid {
+          display: grid;
+          grid-template-columns: 32px 180px;
+          grid-template-rows: 16px 16px;
+          grid-template-areas: "img nome"
+                               "img funcao";
+          .img {
+            grid-area: img;
+            background-image: url('../../images/avatar-testimonial.jpg');
+            background-size: cover;
+            border-radius: 50%;
+          }
+          .nome, .funcao {
+            font-size: 11px;
+            margin-left: 10px;
+            color:hsl(243, 87%, 12%);
+          }
+          .nome {
+            grid-area: nome;
+            font-weight: bold;
+          }
+          .funcao {
+            grid-area: funcao;
+          }
+        }
+      }
     }
     img {
       grid-area: img;
    }
   }
-  .ceo {
-    max-width: 360px;
-    height: 215px;
-    padding: 25px 30px;
-  }
+  
 }
 
 .getEarly {
