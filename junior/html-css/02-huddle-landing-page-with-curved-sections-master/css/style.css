@@ -115,40 +115,7 @@ span {
   color: hsl(192, 100%, 9%);
 }
 
-/* .grid {
-  max-width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(auto, 455px) 
-                         minmax(auto, 130px) 
-                         minmax(auto, 455px);
-  grid-template-rows: 165px minmax(auto, 370px) 145px;
-  grid-template-areas: 
-  " . . ."
-  "conteudo . img"
-  ". . .";
-  align-items: center;
-}
-
-.content {
-  grid-area: conteudo;
-}
-
-.content h1 {
-  font-size: 27px;
-  color: hsl(192, 100%, 9%);
-}
-
-.content p {
-  font-size: 15px;
-  line-height: 23px;
-  color: hsl(192, 100%, 9%);
-  margin-top: 25px;
-}
-
-.grid img {
-  grid-area: img;
-} */
+/* SEÇÕES */
 
 .growBg {
   background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
@@ -187,7 +154,7 @@ span {
                          minmax(auto, 255px)
                          minmax(auto, 510px)
                          minmax(auto, 120px);
-  grid-template-areas: ". conteudo . img";
+  grid-template-areas: ". conteudo . img .";
 }
 
 .content {
@@ -215,4 +182,28 @@ span {
   background-image: url('../images/bg-section-bottom-desktop-1.svg');
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.flowing .gridContainer {
+  grid-template-areas: ". img . conteudo .";
+  background-color: #fff;
+}
+
+.bgTopSection3 {
+  margin-top: 100px;
+  height: 162px;
+  background-image: url('../images/bg-section-top-desktop-2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bgBottomSection3 {
+  height: 162px;
+  background-image: url('../images/bg-section-bottom-desktop-2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.yourUsers .gridContainer {
+  padding-bottom: 40px;
 }
