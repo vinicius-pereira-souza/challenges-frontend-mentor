@@ -98,6 +98,10 @@ img {
   font-family: "Raleway", sans-serif;
 }
 
+.headerContainer .gridHeader .content .formHeader input.err {
+  border: 2px solid #ec6565;
+}
+
 .headerContainer .gridHeader .content .formHeader button {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -125,11 +129,13 @@ img {
   grid-area: label;
   margin-top: 10px;
   display: block;
+  color: #ec6565;
 }
 
 .headerContainer .gridHeader img {
   -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: img;
 }
 
@@ -197,16 +203,72 @@ img {
   right: 170px;
 }
 
-.stayProductive .stayProductiveGrid img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: img;
+.stayProductive .stayProductiveGrid article .ceo {
+  max-width: 360px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px 4px #f1f0f5;
+          box-shadow: 0 0 10px 4px #f1f0f5;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
-.stayProductive .ceo {
-  max-width: 360px;
-  height: 215px;
-  padding: 25px 30px;
+.stayProductive .stayProductiveGrid article .ceo p {
+  margin-bottom: 20px;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.stayProductive .stayProductiveGrid article .ceo p::before {
+  content: url("../../images/icon-quotes.svg");
+  display: block;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32px 180px;
+      grid-template-columns: 32px 180px;
+  -ms-grid-rows: 16px 16px;
+      grid-template-rows: 16px 16px;
+      grid-template-areas: "img nome" "img funcao";
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  background-image: url("../../images/avatar-testimonial.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .nome, .stayProductive .stayProductiveGrid article .ceo .subGrid .funcao {
+  font-size: 11px;
+  margin-left: 10px;
+  color: #070439;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .nome {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nome;
+  font-weight: bold;
+}
+
+.stayProductive .stayProductiveGrid article .ceo .subGrid .funcao {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: funcao;
+}
+
+.stayProductive .stayProductiveGrid img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
 }
 
 .getEarly {
@@ -249,15 +311,21 @@ img {
   padding-left: 15px;
 }
 
+.getEarly .formFooter input.err {
+  border: 2px solid #ec6565;
+}
+
 .getEarly .formFooter label {
   display: none;
 }
 
-.getEarly .formFooter label:active {
+.getEarly .formFooter label.err {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: label;
+  margin-top: 10px;
   display: block;
+  color: #ec6565;
 }
 
 .getEarly .formFooter button {
@@ -276,5 +344,222 @@ img {
 .getEarly .formFooter button:hover {
   cursor: pointer;
   background: #6b9bff;
+}
+
+.footer {
+  background-color: #070439;
+  padding: 100px 75px 70px 75px;
+  color: #f6f6fe;
+}
+
+.footer .lists {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .lists ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.footer .lists ul li:hover {
+  cursor: pointer;
+  color: #3065f8;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.footer .lists .phoneEmail li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.footer .lists .redesSociais {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.footer .lists .redesSociais span {
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 2px solid #f6f6fe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .lists .redesSociais span:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-color: #3065f8;
+}
+
+.footer .lists .redesSociais span:hover a {
+  color: #3065f8;
+}
+
+.footer .lists .redesSociais span a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #f6f6fe;
+  margin-top: 3px;
+}
+
+@media (max-width: 770px) {
+  .headerContainer .headerTop {
+    padding: 50px 40px;
+  }
+  .headerContainer .headerTop .nav ul {
+    gap: 45px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .headerContainer .gridHeader {
+    max-width: 710px;
+    -ms-grid-columns: minmax(auto, 710px);
+        grid-template-columns: minmax(auto, 710px);
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img"  "conteudo";
+  }
+  .headerContainer .gridHeader .content h1 {
+    line-height: 58px;
+    font-size: 38px;
+    text-align: center;
+  }
+  .headerContainer .gridHeader .content p {
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 330px;
+  }
+  .headerContainer .gridHeader .content .formHeader {
+    margin-top: 20px;
+    -ms-grid-columns: minmax(auto, 100%);
+        grid-template-columns: minmax(auto, 100%);
+    -ms-grid-rows: 70px auto 70px;
+        grid-template-rows: 70px auto 70px;
+        grid-template-areas: "input" "label" "button";
+    row-gap: 15px;
+  }
+  .headerContainer .gridHeader .content .formHeader input {
+    margin-right: 0;
+    font-size: 16px;
+  }
+  .headerContainer .gridHeader .content .formHeader button {
+    font-size: 18px;
+  }
+  .stayProductive .bg {
+    height: 100px;
+    background-image: url("../../images/bg-curve-mobile.svg");
+  }
+  .stayProductive .stayProductiveGrid {
+    -ms-grid-columns: minmax(auto, 50px) minmax(auto, 710px) minmax(auto, 50px);
+        grid-template-columns: minmax(auto, 50px) minmax(auto, 710px) minmax(auto, 50px);
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: ". img ." ". conteudo .";
+  }
+  .stayProductive .stayProductiveGrid article h1 {
+    font-size: 30px;
+    margin-top: 140px;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  .stayProductive .stayProductiveGrid article h1 + p, .stayProductive .stayProductiveGrid article p + p {
+    max-width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+  .stayProductive .stayProductiveGrid article a {
+    margin: 0 auto;
+  }
+  .stayProductive .stayProductiveGrid article a::after {
+    top: 15px;
+    right: 170px;
+  }
+  .stayProductive .stayProductiveGrid article .ceo {
+    max-width: 470px;
+    margin: 50px auto 100px auto;
+  }
+  .stayProductive .stayProductiveGrid article .ceo p {
+    font-size: 18px;
+    max-width: 405px;
+  }
+  .getEarly {
+    padding: 100px 120px 75px 70px;
+    -ms-grid-columns: minmax(auto, 600px);
+        grid-template-columns: minmax(auto, 600px);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "h1" "p" "form";
+  }
+  .getEarly h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: h1;
+    text-align: center;
+  }
+  .getEarly p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: p;
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 25px;
+  }
+  .getEarly .formFooter {
+    -ms-grid-rows: 50px auto 65px;
+        grid-template-rows: 50px auto 65px;
+    margin: 25px auto;
+  }
+  .getEarly .formFooter button {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  .footer .lists {
+    row-gap: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .lists .redesSociais {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

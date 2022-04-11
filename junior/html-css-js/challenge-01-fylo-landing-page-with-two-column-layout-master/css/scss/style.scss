@@ -25,7 +25,6 @@ $Moderate-Cyan: hsl(170, 45%, 43%);
 $Light-Blue: hsl(240, 75%, 98%);
 $Light-Gray: hsl(0, 0%, 75%);
 
-// header
 .headerContainer {
   .headerTop {
     padding: 40px 80px;
@@ -78,6 +77,9 @@ $Light-Gray: hsl(0, 0%, 75%);
           border-radius: 3px;
           border: 1px solid $dark-Blue;
           font-family: "Raleway", sans-serif;
+          &.err {
+            border: 2px solid rgb(236, 101, 101);
+          }
         }
         button {
           grid-area: button;
@@ -98,6 +100,7 @@ $Light-Gray: hsl(0, 0%, 75%);
             grid-area: label;
             margin-top: 10px;
             display: block;
+            color: rgb(236, 101, 101);
           }
         }
       }
@@ -158,16 +161,55 @@ $Light-Gray: hsl(0, 0%, 75%);
           right: 170px;
         }
       }
+      .ceo {
+        max-width: 360px;
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 4px #f1f0f5;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        p {
+          margin-bottom: 20px;
+          line-height: 25px;
+          font-size: 14px;
+          &::before {
+            content: url('../../images/icon-quotes.svg');
+            display: block;
+          }
+        }
+        .subGrid {
+          display: grid;
+          grid-template-columns: 32px 180px;
+          grid-template-rows: 16px 16px;
+          grid-template-areas: "img nome"
+                               "img funcao";
+          .img {
+            grid-area: img;
+            background-image: url('../../images/avatar-testimonial.jpg');
+            background-size: cover;
+            border-radius: 50%;
+          }
+          .nome, .funcao {
+            font-size: 11px;
+            margin-left: 10px;
+            color:hsl(243, 87%, 12%);
+          }
+          .nome {
+            grid-area: nome;
+            font-weight: bold;
+          }
+          .funcao {
+            grid-area: funcao;
+          }
+        }
+      }
     }
     img {
       grid-area: img;
    }
   }
-  .ceo {
-    max-width: 360px;
-    height: 215px;
-    padding: 25px 30px;
-  }
+  
 }
 
 .getEarly {
@@ -195,12 +237,17 @@ $Light-Gray: hsl(0, 0%, 75%);
     input {
       grid-area: input;
       padding-left: 15px;
+      &.err {
+        border: 2px solid rgb(236, 101, 101);
+      }
     }
     label {
       display: none;
-      &:active {
+      &.err {
         grid-area: label;
+        margin-top: 10px;
         display: block;
+        color: rgb(236, 101, 101);
       }
     }
     button {
@@ -217,5 +264,195 @@ $Light-Gray: hsl(0, 0%, 75%);
         background: #6b9bff;
       }
     } 
+  }
+}
+
+.footer {
+  background-color: $dark-Blue;
+  padding: 100px 75px 70px 75px;
+  color: $Light-Blue;
+  .lists {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      li:hover {
+        cursor: pointer;
+        color:hsl(224, 93%, 58%);
+        transition: 0.2s;
+      }
+    }
+    .phoneEmail li{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .redesSociais {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      span {
+        padding: 5px 10px;
+        border-radius: 50%;
+        border: 2px solid $Light-Blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          transition: 0.2s;
+          border-color: $Bright-Blue;
+          a {
+            color: $Bright-Blue;
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          color: $Light-Blue;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .headerContainer {
+    .headerTop {
+      padding: 50px 40px;
+
+      .nav ul {
+        gap: 45px;
+        flex-wrap: wrap;
+      }
+    }
+  
+    .gridHeader {
+      max-width: 710px;
+      grid-template-columns: minmax(auto, 710px);
+      grid-template-rows: auto auto;
+      grid-template-areas: 
+      "img" 
+      "conteudo";
+      .content {
+        
+        h1 {
+          line-height: 58px;
+          font-size: 38px;
+          text-align: center;
+        }
+        p {
+          line-height: 25px;
+          text-align: center;
+          margin: 0 auto;
+          max-width: 330px;
+        }
+        .formHeader {
+          margin-top: 20px;
+          grid-template-columns: minmax(auto, 100%);
+          grid-template-rows: 70px auto 70px;
+          grid-template-areas: 
+          "input"
+          "label"
+          "button";
+          row-gap: 15px;
+          input {
+            margin-right: 0;
+            font-size: 16px;
+          }
+          button {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .stayProductive {
+    .bg {
+      height: 100px;
+      background-image: url('../../images/bg-curve-mobile.svg');
+    }
+    .stayProductiveGrid {
+      grid-template-columns: minmax(auto, 50px) 
+                             minmax(auto, 710px) 
+                             minmax(auto, 50px);
+      grid-template-rows: auto auto;
+      grid-template-areas: ". img ." ". conteudo .";
+      article {
+        h1 {
+          font-size: 30px;
+          margin-top: 140px;
+          margin-bottom: 45px;
+          text-align: center;
+        }
+  
+        h1 + p, p + p {
+          max-width: 100%;
+          font-size: 18px;
+          margin-bottom: 20px;
+          line-height: 25px;
+        }
+        a {
+          margin: 0 auto;
+          &::after {
+            top: 15px;
+            right: 170px;
+          }
+        }
+        .ceo {
+          max-width: 470px;
+          margin: 50px auto 100px auto;
+          p {
+            font-size: 18px;
+            max-width: 405px;
+          }
+        }
+      }
+    }
+  }
+
+  .getEarly {
+    padding: 100px 120px 75px 70px;
+    grid-template-columns: minmax(auto, 600px);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "h1"
+    "p"
+    "form";
+    h1 {
+      grid-area: h1;
+      text-align: center;
+    }
+    p {
+      grid-area: p;
+      text-align: center;
+      max-width: 320px;
+      margin: 0 auto;
+      line-height: 25px;
+    }
+    .formFooter {
+      grid-template-rows: 50px auto 65px;
+      margin: 25px auto;
+      button {
+        max-width: 100%;
+        margin-top: 15px;
+      } 
+    }
+  }
+
+  .footer {
+    .lists {
+      row-gap: 50px;
+      flex-direction: column;
+      .redesSociais {
+        margin: 0 auto;
+      }
+    }
   }
 }
