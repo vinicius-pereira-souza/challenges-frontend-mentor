@@ -115,23 +115,47 @@ span {
   color: hsl(192, 100%, 9%);
 }
 
+/* SEÇÕES */
+
+.growBg {
+  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-position: top 0vw left 0, bottom 0vw left 0vh;
+  background-size: cover;
+}
+
 .grid {
-  max-width: 100%;
-  margin: 0 auto;
+  background: hsl(207, 100%, 98%);
+}
+
+.bgTopSection1 {
+  height: 185px;
+  background-image: url('../images/bg-section-top-desktop-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 100px;
+}
+
+.gridContainer {
+  background-color: hsl(207, 100%, 98%);
+  padding-top: 40px;
   display: grid;
-  grid-template-columns: minmax(auto, 455px) 
-                         minmax(auto, 130px) 
-                         minmax(auto, 455px);
-  grid-template-rows: 165px minmax(auto, 370px) 145px;
-  grid-template-areas: 
-  " . . ."
-  "conteudo . img"
-  ". . .";
   align-items: center;
+  grid-template-columns: minmax(120px, 1fr)
+                         minmax(auto, 490px)
+                         minmax(auto, 255px)
+                         minmax(auto, 510px)
+                         minmax(120px, 1fr);
+  grid-template-areas: ". conteudo . img .";
 }
 
 .content {
   grid-area: conteudo;
+}
+
+.gridContainer img {
+  grid-area: img;
 }
 
 .content h1 {
@@ -146,57 +170,43 @@ span {
   margin-top: 25px;
 }
 
-.grid img {
-  grid-area: img;
-}
-
-.growBg {
-  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
+.bgBottomSection1 {
+  height: 160px;
+  background-image: url('../images/bg-section-bottom-desktop-1.svg');
   background-repeat: no-repeat;
-  background-position: top 0vw left 0, bottom 0vw left 0vh;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 
-.grid {
-  background: hsl(207, 100%, 98%);
-}
-
-/* .growBg {
-  padding-top: 165px;
-  padding-bottom: 145px;
-  background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
-  background-repeat: no-repeat;
-  background-position: top 0vw left 0, bottom 0vw left 0vh;
-  background-size: contain;
-}
-
-.flowingBg .grid {
-  grid-template-areas: "img conteudo";
+.flowing .gridContainer {
+  grid-template-areas: ". img . conteudo .";
   background-color: #fff;
 }
 
-.flowingBg {
-  padding-bottom: 250px;
+.bgTopSection3 {
+  margin-top: 100px;
+  height: 162px;
   background-image: url('../images/bg-section-top-desktop-2.svg');
   background-repeat: no-repeat;
-  background-position: bottom 0vw left 0vh;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 
-.usersBg {
-  padding-bottom: 250px;
-  background-image: url('../images/bg-section-bottom-desktop-1.svg');
+.bgBottomSection3 {
+  height: 162px;
+  background-image: url('../images/bg-section-bottom-desktop-2.svg');
   background-repeat: no-repeat;
-  background-position: top 32vw left 0vh;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
+}
+
+.yourUsers .gridContainer {
+  padding-bottom: 40px;
 }
 
 .ready {
-  height: 483px;
-  background-image: url('../images/bg-footer-top-desktop.svg');
-  background-repeat: no-repeat;
-  background-position: top 21vw left 0vh;
-  background-size: contain;
+  padding: 170px 0;
+  text-align: center;
 }
 
 .ready h1 {
@@ -227,6 +237,7 @@ span {
 }
 
 
+/* FOOTER */
 :root {
   --Pink: hsl(322, 100%, 66%);
   --LightPink: hsl(321, 100%, 78%);
@@ -235,21 +246,32 @@ span {
   --VeryPaleBlue: hsl(207, 100%, 98%);
 }
 
+.bgTopFooter {
+  height: 159px;
+  background-image: url('../images/bg-footer-top-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 
-.footer {
+.gridFooter {
   background-color: hsl(192, 100%, 9%);
-  padding: 100px 120px 80px 120px;
-  color:hsl(207, 100%, 98%);
-  display: flex;
-  gap: 270px;
+  padding: 60px 120px 100px 120px;
+  color: hsl(207, 100%, 98%);
+  display: grid;
+  grid-template-columns: minmax(auto, 310px) 
+                         minmax(auto, 365px) 
+                         minmax(auto, 580px);
+  grid-template-areas: "content . form";
+  align-items: center;
 }
 
-.contato {
-  max-width: 330px;
+.contact {
+  grid-area: content;
 }
 
-.contato img, p, .form h2 {
-  margin-bottom: 25px;
+.contact > p{
+  margin: 30px 0;
 }
 
 .spanFlex {
@@ -258,74 +280,110 @@ span {
   gap: 15px;
 }
 
-.redesSociais {
-  list-style: none;
-  margin-top: 60px;
-  display: flex;
-  justify-items: center;
-  gap: 20px;
+.spanFlex + .spanFlex {
+  margin-top: 20px;
 }
 
-.redesSociais li a{
-  width: 32px;
-  height: 32px;
+.redesSociais {
+  list-style: none;
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 22px;
+}
+
+.redesSociais li {
+  padding: 7px 10px;
+  border-radius: 5px;
+  background: hsl(207, 100%, 98%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3px;
-  background: hsl(207, 100%, 98%);
+}
+
+.redesSociais li:nth-child(2) {
+  background-color: hsl(192, 100%, 9%);
+}
+
+.redesSociais li:nth-child(2) a {
+  color: hsl(207, 100%, 98%);
+  font-size: 42px;
+}
+
+.redesSociais li:nth-child(2):hover {
+  background-color: #03c7f1;
+}
+
+.redesSociais li:nth-child(2):hover a {
+  color: hsl(192, 100%, 9%);
+  
+}
+
+.redesSociais li:hover {
+  background-color: #03c7f1;
+} 
+
+li a {
   text-decoration: none;
   color:hsl(192, 100%, 9%);
-  font-size: 25px;
 }
 
-.redesSociais a:hover {
-  background: hsl(191, 100%, 47%);
-  text-decoration: none;
-  color: hsl(207, 100%, 98%);
+
+/* formulario do footer */
+.formContent {
+  grid-area: form;
 }
 
-.redesSociais .insta a {
-  background: hsl(192, 100%, 9%);
-  color: hsl(207, 100%, 98%);
+.formContent h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.redesSociais .insta a:hover {
-  background: hsl(191, 100%, 47%);
-  color: hsl(207, 100%, 98%);
-}
-
-.form {
-  max-width: 525px;
-}
-
-.form p {
+.formContent p {
+  line-height: 24px;
   max-width: 375px;
+  margin-bottom: 40px;
 }
 
 form {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: minmax(auto, 320px) minmax(auto, 160px);
+  grid-template-rows: 50px auto;
+  grid-template-areas: "input button"
+                       "label label";
+  column-gap: 25px;
 }
 
-.form input {
-  flex: 0 1 320px;
-  height: 50px;
-  border-radius: 8px;
+input {
+  grid-area: input;
+  border-radius: 5px;
 }
 
 form button {
-  flex: 0 1 160px;
+  grid-area: button;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  background-color: hsl(322, 100%, 66%);
+  font-weight: 700;
+  border-radius: 5px;
   color: hsl(207, 100%, 98%);
-  background: hsl(322, 100%, 66%);
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 form button:hover {
-  background: hsl(321, 100%, 78%);
+  background-color: hsl(321, 100%, 78%);
   transition: 0.2s;
-} */
+}
+
+form label {
+  grid-area: label;
+  display: none;
+}
+form label.err {
+  color: hsl(0, 100%, 63%);
+  margin-top: 10px;
+  display: block;
+}
+
+form label.err input {
+  border: 2px solid hsl(0, 100%, 63%);
+}
