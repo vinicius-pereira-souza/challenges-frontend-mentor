@@ -236,15 +236,7 @@ span {
   transition: 0.2s;
 }
 
-
 /* FOOTER */
-:root {
-  --Pink: hsl(322, 100%, 66%);
-  --LightPink: hsl(321, 100%, 78%);
-  --LightRed: hsl(0, 100%, 63%);
-  --VeryDarkCyan: hsl(192, 100%, 9%);
-  --VeryPaleBlue: hsl(207, 100%, 98%);
-}
 
 .bgTopFooter {
   height: 159px;
@@ -329,7 +321,6 @@ li a {
   color:hsl(192, 100%, 9%);
 }
 
-
 /* formulario do footer */
 .formContent {
   grid-area: form;
@@ -386,4 +377,149 @@ form label.err {
 
 form label.err input {
   border: 2px solid hsl(0, 100%, 63%);
+}
+
+@media (max-width: 770px) {
+  header .flexHeader{
+    padding: 70px;
+    flex-wrap: wrap;
+  }
+
+  .header h1 {
+    max-width: 425px;
+    margin: 50px auto 20px auto;
+  }
+  
+  .header > p {
+    max-width: 355px;
+    margin-bottom: 45px;
+  }
+  
+  .header > button {
+    margin-bottom: 115px;
+  }
+  
+  .header > img {
+    padding: 0 80px;
+  }
+  
+  .dadosFlex {
+    row-gap: 100px;
+    flex-direction: column;
+  }
+  
+  .dadosFlex div span{
+    font-size: 70px;
+    margin: 15px 0;
+  }
+  
+  .grid {
+    background: hsl(207, 100%, 98%);
+  }
+  
+  .bgTopSection1 {
+    height: 230px;
+    background-image: url('../images/bg-section-top-mobile-1.svg');
+  }
+  
+  .gridContainer {
+    background-color: hsl(207, 100%, 98%);
+    padding-top: 40px;
+    grid-template-columns: minmax(110px, 1fr)
+                           minmax(auto, 900px)
+                           minmax(120px, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    ". img ."
+    ". conteudo .";
+  }
+
+  .content h1 {
+    font-size: 30px;
+    margin: 70px 0 30px 0;
+    text-align: center;
+  }
+  
+  .content p {
+    font-size: 17px;
+    text-align: center;
+    margin: 25px auto 0 auto;
+  }
+  
+  .bgBottomSection1 {
+    height: 75px;
+    background-image: url('../images/bg-section-bottom-mobile-1.svg');
+    background-size: contain;
+  }
+  
+  .flowing .gridContainer {
+    padding-top: 100px;
+    grid-template-areas:
+    ". img ."
+    ". conteudo .";
+  }
+  
+  .bgTopSection3 {
+    height: 205px;
+    background-image: url('../images/bg-section-top-mobile-2.svg');
+  }
+  
+  .bgBottomSection3 {
+    height: 205px;
+    background-image: url('../images/bg-section-bottom-mobile-2.svg');
+  }
+
+  .ready {
+    padding: 80px 0 200px 0;
+  }
+
+  .ready h1 {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .bgTopFooter {
+    height: 80px;
+    background-image: url('../images/bg-footer-top-mobile.svg');
+  }
+
+  .gridFooter {
+    padding: 60px 0 100px 0;
+
+    grid-template-columns: minmax(80px, 1fr) 
+                           auto
+                           minmax(80px, 1fr) ;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". form ." ". content .";
+  }
+
+  .contact > p{
+    max-width: 340px;
+  }
+
+  .redesSociais {
+    gap: 10px;
+  }
+
+  .redesSociais li {
+    padding: 6px 8px;
+
+  }
+
+  /* formulario do footer */
+
+  .formContent p {
+    max-width: 346px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: "input input"
+                         "label label"
+                         ".   button";
+    row-gap: 10px;
+    margin-bottom: 100px;
+  }
 }
