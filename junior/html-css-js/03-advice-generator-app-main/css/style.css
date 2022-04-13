@@ -81,3 +81,10 @@ body {
   cursor: pointer;
   box-shadow: 0px 0px 20px 12px #2d6655;
 }
+
+@media (max-width: 425px) {
+  .btn {
+    left: 40%;
+    right: 40%;
+  }
+}
