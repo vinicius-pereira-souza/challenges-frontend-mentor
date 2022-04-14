@@ -1,0 +1,202 @@
+/* ### Headings, Call-to-actions, Navigation */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+/* body */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+  padding: 65px 0 65px 165px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding-right: 165px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.navList li {
+  cursor: pointer;
+  
+}
+
+.navList li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: hsl(230, 29%, 20%);
+  transition: 0.3s;
+}
+
+.navList li:nth-child(1):hover::after{
+  width: 65px;
+  transition: 0.3s;
+}
+
+.navList li:nth-child(2):hover::after{
+  width: 70px;
+  transition: 0.3s;
+}
+
+.navList li:nth-child(3):hover::after{
+  width: 58px;
+  transition: 0.3s;
+}
+
+.separatorCircle::after {
+  display: none;
+  visibility: hidden;
+}
+
+
+.separatorCircle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: hsl(231, 7%, 65%);
+}
+
+.separatorCircle:hover {
+  cursor: default;
+} 
+
+.navList li:last-child {
+  color: hsl(231, 7%, 65%);
+}
+
+.navList li:last-child::after {
+  content: '';
+  display: block;
+  width: 0;
+  background-color: hsl(231, 7%, 65%);
+  transition: 0.3s;
+}
+
+.navList li:last-child:hover::after {
+  content: '';
+  display: block;
+  width: 42px;
+  background-color: hsl(231, 7%, 65%);
+  transition: 0.3s;
+}
+
+.btnNav {
+  width: 35px;
+  height: 35px;
+  display: none;
+  background-color: transparent;
+  border: none;
+  background-image: url('../images/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.flexContainer {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 490px;
+}
+
+.content p:first-child{
+  margin-bottom: 25px;
+
+  letter-spacing: 2px;
+  color:hsl(231, 7%, 65%);
+}
+
+.content p span {
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  padding: 7px 10px;
+  border-radius: 25px;
+  background-color: hsl(230, 29%, 20%);
+  margin-right: 15px;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: hsl(230, 29%, 20%);
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.content h1 + p {
+  margin: 26px 0 58px 0;
+  text-transform: none;
+  line-height: 25px;
+  color: hsl(230, 29%, 20%);
+}
+
+.btnContent {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.btnContent button{
+  width: 185px;
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+  background-color: hsl(0, 100%, 68%);
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Barlow Condensed', sans-serif; 
+}
+
+.btnContent button:hover {
+  cursor: pointer;
+  background-color: #ff8584;
+  transition: 0.3s;
+}
+
+.btnContent p {
+  font-size: 15px;
+  color: hsl(231, 7%, 65%);
+  letter-spacing: 3px;
+  font-family: 'Barlow Condensed', sans-serif; 
+}
