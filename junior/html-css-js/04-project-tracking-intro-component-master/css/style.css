@@ -225,6 +225,10 @@ nav {
 /* mobile */
 
 @media (max-width: 425px) {
+  body {
+    font-size: 15px;
+  }
+
   .header {
     max-width: 310px;
     margin: 35px auto 66px auto;
@@ -281,24 +285,60 @@ nav {
     grid-template-columns: 30px 
                            minmax(auto, 300px)
                            30px;
-    grid-template-rows: 300px minmax(auto, 195px) minmax(auto, 255px);
+    grid-template-rows: 300px minmax(auto, 57px) minmax(auto, 255px);
     grid-template-areas: ". . ."
                          ". img ."
                          ". conteudo .";
   } 
+
   .ilustracao img {
   height: 262px;
   top: 130px;
   left: 0;
-}
-.corDeFundo {
+  }
+
+  .corDeFundo {
   position: absolute;
   width: 190px;
-  height: 430px;
+  height: 460px;
   top: 0px;
   left: 210px;
   border-radius: 0 0 0 70px;
   background-color: hsl(207, 33%, 95%);
   z-index: 5;
-}
+  }
+
+  .content p:first-child{
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .content p span {
+    font-weight: 700;
+    padding: 4px 10px 7px 10px;
+  }
+
+  .content h1 {
+    font-size: 39px;
+    color: hsl(230, 29%, 20%);
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .content h1 + p {
+    margin: 13px 0 28px 0;
+    font-size: 18px;
+  }
+
+  .btnContent {
+    gap: 20px;
+  }
+
+  .btnContent button{
+    width: 122px;
+    height: 40px;
+    font-size: 11px;
+  }
+
+  .btnContent p {
+    font-size: 11px; 
+  }
 }
