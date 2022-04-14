@@ -32,6 +32,7 @@ body {
 nav {
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 .navList {
@@ -208,7 +209,7 @@ nav {
   position: absolute;
   top: 160px;
   left: 805px;
-  z-index: 200;
+  z-index: 40;
 }
 
 .corDeFundo {
@@ -250,10 +251,11 @@ nav {
     padding: 30px 25px ;
     position: absolute;
     display: block;
-    top: 95px;
-    right: 10px;
+    top: 65px;
+    right: -3px;
     background: hsl(0, 0%, 100%);
     box-shadow: 0 0 20px 0 hsl(240, 4%, 90%);
+    z-index: 150;
   }
 
   .navList {
@@ -270,7 +272,7 @@ nav {
     transition: 0.2s;
   }
 
-  .navMobile.active .btnNav {
+  .navMobile.active + .btnNav {
     background-image: url('../images/icon-close.svg');
     transition: 0.2s;
   }
