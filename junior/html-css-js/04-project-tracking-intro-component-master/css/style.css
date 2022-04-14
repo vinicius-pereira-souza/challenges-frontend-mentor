@@ -207,4 +207,17 @@ nav {
   position: absolute;
   top: 160px;
   left: 805px;
+  z-index: 200;
 }
+
+.corDeFundo {
+  position: absolute;
+  width: 730px;
+  height: 430px;
+  top: -60px;
+  left: 790px;
+  border-radius:  0 0 0 70px;
+  background-color: hsl(207, 33%, 95%);
+  z-index: 5;
+}
+
