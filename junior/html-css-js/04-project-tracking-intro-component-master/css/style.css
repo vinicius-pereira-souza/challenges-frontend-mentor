@@ -38,6 +38,7 @@ nav {
   list-style: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -221,3 +222,83 @@ nav {
   z-index: 5;
 }
 
+/* mobile */
+
+@media (max-width: 425px) {
+  .header {
+    max-width: 310px;
+    margin: 35px auto 66px auto;
+    
+  }
+
+  nav {
+    display: block;
+    position: relative;
+    z-index: 50;
+  }
+
+  .navMobile {
+    display: none;
+  }
+
+  .navMobile.active {
+    width: 315px;
+    padding: 30px 25px ;
+    position: absolute;
+    display: block;
+    top: 95px;
+    right: 10px;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 20px 0 hsl(240, 4%, 90%);
+  }
+
+  .navList {
+    max-width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .btnNav {
+    display: block;
+    border: none;
+    background-image: url('../images/icon-hamburger.svg');
+    transition: 0.2s;
+  }
+
+  .navMobile.active .btnNav {
+    background-image: url('../images/icon-close.svg');
+    transition: 0.2s;
+  }
+
+  .separatorCircle {
+    width: 100%;
+    height: 1px;
+    border-radius: 0;
+  }
+  
+  .gridContainer {
+    grid-template-columns: 30px 
+                           minmax(auto, 300px)
+                           30px;
+    grid-template-rows: 300px minmax(auto, 195px) minmax(auto, 255px);
+    grid-template-areas: ". . ."
+                         ". img ."
+                         ". conteudo .";
+  } 
+  .ilustracao img {
+  height: 262px;
+  top: 130px;
+  left: 0;
+}
+.corDeFundo {
+  position: absolute;
+  width: 190px;
+  height: 430px;
+  top: 0px;
+  left: 210px;
+  border-radius: 0 0 0 70px;
+  background-color: hsl(207, 33%, 95%);
+  z-index: 5;
+}
+}
