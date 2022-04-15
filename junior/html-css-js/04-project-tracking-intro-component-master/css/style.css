@@ -223,6 +223,8 @@ nav {
   z-index: 5;
 }
 
+/* tablet: 768 */
+
 /* mobile */
 
 @media (max-width: 425px) {
@@ -233,12 +235,12 @@ nav {
   .header {
     max-width: 310px;
     margin: 35px auto 66px auto;
+    position: relative;
     
   }
 
   nav {
     display: block;
-    position: relative;
     z-index: 50;
   }
 
@@ -252,10 +254,11 @@ nav {
     position: absolute;
     display: block;
     top: 65px;
-    right: -3px;
     background: hsl(0, 0%, 100%);
     box-shadow: 0 0 20px 0 hsl(240, 4%, 90%);
     z-index: 150;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .navList {
