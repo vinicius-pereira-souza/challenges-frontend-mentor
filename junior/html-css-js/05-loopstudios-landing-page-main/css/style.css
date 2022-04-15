@@ -277,19 +277,6 @@ body {
   background-color: black;
 }
 
-.listCreations li:nth-child(1):hover {
-  background-color: hsl(0, 0%, 100%);
-}
-.listCreations li:hover:nth-child(2) {
-  background-color: hsl(0, 0%, 100%);
-}
-.listCreations li:hover:nth-child(5) {
-  background-color: hsl(0, 0%, 100%);
-}
-.listCreations li:hover:nth-child(6) {
-  background-color: hsl(0, 0%, 100%);
-}
-
 .listCreations li:hover::after {
   content: '';
   display: block;
@@ -303,3 +290,9 @@ body {
 }
 
 /* 1, 2, 5, 6,  */
+
+/* FOOTER */
+
+.footer {
+  padding: 40px 215px;
+}
