@@ -223,6 +223,8 @@ nav {
   z-index: 5;
 }
 
+/* tablet: 768 */
+
 /* mobile */
 
 @media (max-width: 425px) {
