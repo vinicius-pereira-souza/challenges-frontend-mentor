@@ -1,7 +1,5 @@
-/* font alata */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 /* font-family: 'Alata', sans-serif; */
-/* font josefin */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 /* font-family: 'Josefin Sans', sans-serif; */
 
@@ -210,6 +208,7 @@ body {
   margin-top: 80px;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -265,13 +264,6 @@ body {
   background-image: url('../images/desktop/image-fisheye.jpg');
 }
 
-:root {
-  --White: hsl(0, 0%, 100%);
-  --Black: hsl(0, 0%, 0%);
-  --DarkGray: hsl(0, 0%, 55%);
-  --VeryDarkGray: hsl(0, 0%, 41%);
-}
-
 .listCreations li:hover {
   color: hsl(0, 0%, 0%);
   background-color: black;
@@ -289,7 +281,23 @@ body {
   left: 0;
 }
 
-/* 1, 2, 5, 6,  */
+/* HOVER */
+
+.listCreations li:nth-child(1):hover {
+  color:hsl(0, 0%, 100%);
+}
+
+.listCreations li:nth-child(2):hover {
+  color:hsl(0, 0%, 100%);
+}
+
+.listCreations li:nth-child(5):hover {
+  color:hsl(0, 0%, 100%);
+}
+
+.listCreations li:nth-child(6):hover {
+  color:hsl(0, 0%, 100%);
+}
 
 /* FOOTER */
 
@@ -298,7 +306,6 @@ body {
   padding: 40px 215px 0 215px;
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
-  
 }
 
 .flexFooter {
@@ -355,3 +362,37 @@ body {
   gap: 20px;
 }
 
+/* TABLET */
+@media (max-width: 768px) {
+  .logoENav {
+    flex-wrap: wrap;
+  }
+  
+  .title {
+    width: 525px;
+  }
+  
+  .title h1 {
+    font-size: 60px;
+  }
+
+  .artigoContainer {
+    grid-template-columns: minmax(400px, 460px)
+                           minmax(auto, 1fr);
+    grid-template-rows: minmax(auto, 95px) minmax(auto, 315px);
+  }
+  
+  .heroFoto {
+    height: 320px;
+    background-size: contain;
+  }
+  
+  .artigo {
+    padding: 30px 0 0 30px;
+    max-width: 470px;
+  }
+  
+  .footer {
+    padding: 40px 50px 0 50px;
+  }
+}
