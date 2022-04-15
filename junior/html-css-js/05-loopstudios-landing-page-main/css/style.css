@@ -294,5 +294,64 @@ body {
 /* FOOTER */
 
 .footer {
-  padding: 40px 215px;
+  max-width: 100%;
+  padding: 40px 215px 0 215px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  
 }
+
+.flexFooter {
+  margin-bottom: 20px;
+  font-family: 'Alata', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.navFooter {
+  list-style: none;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navFooter li:hover, .redes li:hover{
+  cursor: pointer;
+}
+
+.navFooter li::after, .redes li::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  margin: 10px auto 0 auto;
+  transition: 0.2s;
+}
+
+.navFooter li:hover:after, .redes li:hover:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 10px auto 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.2s;
+}
+
+.regesECopy {
+  font-family: 'Josefin Sans', sans-serif;
+  color: hsl(0, 0%, 55%);
+}
+
+.redes {
+  margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
