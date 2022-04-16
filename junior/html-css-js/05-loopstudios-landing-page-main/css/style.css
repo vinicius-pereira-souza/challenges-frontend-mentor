@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-/* font-family: 'Alata', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
-/* font-family: 'Josefin Sans', sans-serif; */
+
 
 * {
   margin: 0;
@@ -9,21 +8,12 @@
   box-sizing: border-box;
 }
 
-:root {
-  --White: hsl(0, 0%, 100%);
-  --Black: hsl(0, 0%, 0%);
-  --DarkGray: hsl(0, 0%, 55%);
-  --VeryDarkGray: hsl(0, 0%, 41%);
-}
-
 body {
   font-size: 15px;
 }
 
-/* HEADER */
 .header {
   max-width: 100%;
-  /* height: 477px; */
   padding: 65px 165px 140px 165px; 
   background-image: url('../images/desktop/image-hero.jpg');
   background-attachment: fixed;
@@ -37,6 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .logoENav img {
@@ -97,7 +88,7 @@ body {
 }
 
 .title {
-  width: 650px;
+  max-width: 650px;
   padding: 40px;
   border: 2px solid hsl(0, 0%, 100%);
 }
@@ -109,8 +100,6 @@ body {
   text-transform: uppercase;
   font-family: 'Josefin Sans', sans-serif;
 }
-
-/* ARTICLE COM IMG */
 
 .artigoContainer {
   margin-top: 160px; 
@@ -158,8 +147,6 @@ body {
   color: hsl(0, 0%, 55%);
   font-family: 'Alata', sans-serif;
 }
-
-/* SECTION COM LISTA DE IMG */
 
 .ourCreations {
   max-width: 1115px;
@@ -219,6 +206,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.listCreations li span {
+  width: 100%;
+  height: 450px;
   padding-bottom: 40px;
   padding-left: 40px;
   font-size: 32px;
@@ -226,10 +219,17 @@ body {
   color:hsl(0, 0%, 100%);
   text-transform: uppercase;
   font-family: 'Josefin Sans', sans-serif; 
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: flex-end;
   transition: 0.2s;
-  position: relative;
+}
+
+.listCreations li:hover > span {
+  background-color: rgba(190, 190, 190, 0.7);
+  color: hsl(0, 0%, 0%);
 }
 
 .listCreations li:nth-child(1) {
@@ -263,43 +263,6 @@ body {
 .listCreations li:nth-child(8) {
   background-image: url('../images/desktop/image-fisheye.jpg');
 }
-
-.listCreations li:hover {
-  color: hsl(0, 0%, 0%);
-  background-color: black;
-}
-
-.listCreations li:hover::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 450px;
-  cursor: pointer;
-  background-color: rgba(229, 224, 220, 0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* HOVER */
-
-.listCreations li:nth-child(1):hover {
-  color:hsl(0, 0%, 100%);
-}
-
-.listCreations li:nth-child(2):hover {
-  color:hsl(0, 0%, 100%);
-}
-
-.listCreations li:nth-child(5):hover {
-  color:hsl(0, 0%, 100%);
-}
-
-.listCreations li:nth-child(6):hover {
-  color:hsl(0, 0%, 100%);
-}
-
-/* FOOTER */
 
 .footer {
   max-width: 100%;
@@ -362,37 +325,203 @@ body {
   gap: 20px;
 }
 
-/* TABLET */
 @media (max-width: 768px) {
-  .logoENav {
-    flex-wrap: wrap;
+  .header {
+    padding: 20px 45px 450px 45px; 
+    background-image: url('../images/mobile/image-hero.jpg');
   }
   
+  .containerNav {
+    display: none;
+  }
+
+  .containerNav.active {
+    width: 100%;
+    height: 1334px;
+    background-color: hsl(0, 0%, 0%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    padding: 400px 50px 450px 50px;
+    z-index: 25;
+  }
+  
+  .containerNav ul{
+    flex-wrap: nowrap;
+    row-gap: 45px;
+    flex-direction: column;
+    font-size: 43px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  
+  .btnMobile {
+    display: block;
+    transition: 0.2s;
+  }
+
+  .btnMobile:hover {
+    cursor: pointer;
+  }
+  
+  .containerNav.active + .btnMobile {
+    background-image: url('../images/icon-close.svg');
+    transition: 0.2s;
+  }
+
   .title {
-    width: 525px;
+    max-width: 650px;
+    padding: 40px;
+    border: 2px solid hsl(0, 0%, 100%);
   }
   
   .title h1 {
-    font-size: 60px;
+    font-size: 50px;
+    max-width: 250px;
   }
 
   .artigoContainer {
-    grid-template-columns: minmax(400px, 460px)
-                           minmax(auto, 1fr);
-    grid-template-rows: minmax(auto, 95px) minmax(auto, 315px);
+    max-width: 650px;
+    grid-template-columns: minmax(auto, 45px)
+                           minmax(auto, 1fr)
+                           minmax(auto, 45px);
+    grid-template-rows: minmax(auto, 445px) auto;
+    grid-template-areas: 
+    '. img .'
+    '. artigo .';
   }
   
   .heroFoto {
-    height: 320px;
-    background-size: contain;
+    grid-area: img;
+    background-image: url('../images/mobile/image-interactive.jpg');
   }
   
   .artigo {
-    padding: 30px 0 0 30px;
-    max-width: 470px;
+    grid-area: artigo;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0;
+    position: relative;
   }
   
-  .footer {
-    padding: 40px 50px 0 50px;
+  .artigo h2 {
+    font-size: 52px;
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  .artigo > div {
+    display: block;
+    margin: 0 auto;
+    max-width: 430px;
+  }
+  
+  .artigo div > p {
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .ourCreations {
+    max-width: 665px;
+    grid-template-columns: minmax(auto, 45px)
+                           minmax(auto, 1fr)
+                           minmax(auto, 45px);
+    grid-template-rows: 45px auto 80px;
+    grid-template-areas: 
+    " . h2 ."
+    ". list ."
+    ". btn .";
+  }
+  
+  .ourCreations h2 {
+    font-size: 55px;
+    text-align: center;
+  }
+  
+  .ourCreations button {
+    grid-area: btn;
+    width: 315px;
+    margin: 0 auto;
+    font-size: 25px;
+  }
+
+  .listCreations {
+    max-width: 655px;
+    margin-bottom: 65px;
+    flex-direction: column;
+  }
+
+  .listCreations li {
+    width: 100%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .listCreations li span {
+    max-width: 100%;
+    height: 240px;
+  }
+ 
+  .listCreations li span p {
+    width: 200px;
+  }
+
+  .listCreations li:nth-child(1) {
+    background-image: url('../images/mobile/image-deep-earth.jpg');
+  }
+  
+  .listCreations li:nth-child(2) {
+    background-image: url('../images/mobile/image-night-arcade.jpg');
+  }
+  
+  .listCreations li:nth-child(3) {
+    background-image: url('../images/mobile/image-soccer-team.jpg');
+  }
+  
+  .listCreations li:nth-child(4) {
+    background-image: url('../images/mobile/image-grid.jpg');
+  }
+  
+  .listCreations li:nth-child(5) {
+    background-image: url('../images/mobile/image-from-above.jpg');
+  }
+  
+  .listCreations li:nth-child(6) {
+    background-image: url('../images/mobile/image-pocket-borealis.jpg');
+  }
+  
+  .listCreations li:nth-child(7) {
+    background-image: url('../images/mobile/image-curiosity.jpg');
+  }
+  
+  .listCreations li:nth-child(8) {
+    background-image: url('../images/mobile/image-fisheye.jpg');
+  } 
+  
+  .flexFooter {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navFooter {
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .regesECopy {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 499px){
+  .title h1 {
+    font-size: 26px;
   }
 }
