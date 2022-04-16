@@ -521,4 +521,23 @@ body {
     top: 0;
     left: 0;
   }
+  
+  .flexFooter {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  .navFooter {
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  .regesECopy {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
