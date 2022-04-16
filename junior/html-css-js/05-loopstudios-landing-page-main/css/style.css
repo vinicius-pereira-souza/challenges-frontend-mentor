@@ -382,6 +382,10 @@ body {
     display: block;
     transition: 0.2s;
   }
+
+  .btnMobile:hover {
+    cursor: pointer;
+  }
   
   .containerNav.active + .btnMobile {
     background-image: url('../images/icon-close.svg');
