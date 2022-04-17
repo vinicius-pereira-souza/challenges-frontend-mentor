@@ -71,7 +71,7 @@ body {
 
 .ContainerPlanos {
   max-width: 100%;
-  margin: 65px auto 0 auto;
+  margin: 65px auto 50px auto;
   align-items: center; 
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 350px));
@@ -92,11 +92,13 @@ body {
 }
 
 .plano span {
-  width: 145px;
+  width: 210px;
   margin: 0 auto;
-  font-size: 50px;
+  text-align: center;
+  font-size: 58px;
   color: hsl(232, 13%, 33%);
-  display: flex;
+  display: grid;
+  grid-template-columns: 25px minmax(auto, 215px);
   align-items: center;
 }
 
@@ -144,4 +146,30 @@ body {
   border: 1px solid hsl(237, 63%, 64%);
   color: hsl(237, 63%, 64%);
   background-color: #fff;
+}
+
+.ContainerPlanos div:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
+}
+
+.ContainerPlanos div:nth-child(3) {
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
+}
+
+.planoProfessional {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: hsl(237, 63%, 64%);
+}
+
+.planoProfessional h2, 
+.planoProfessional span, 
+.planoProfessional ul li{
+  color: #fff;
+}
+
+.planoProfessional button{
+  border: 1px solid #fff;
 }
