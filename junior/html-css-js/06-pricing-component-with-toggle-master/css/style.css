@@ -75,6 +75,7 @@ body {
   align-items: center; 
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 350px));
+  grid-template-areas: "plano1 plano2 plano3";
   margin-top: 65px;
 }
 
@@ -133,12 +134,12 @@ body {
   height: 45px;
   border: none;
   border-radius: 10px;
-  background-color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(60deg, hsl(236, 72%, 79%),  hsl(237, 63%, 64%) );
   letter-spacing: 1px;
   color:hsl(240, 78%, 98%);
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  transition: 0.3s;
+  transition: 1s;
 }
 
 .plano button:hover {
@@ -146,19 +147,24 @@ body {
   border: 1px solid hsl(237, 63%, 64%);
   color: hsl(237, 63%, 64%);
   background-color: #fff;
+  background-image: none;
+  transition: 1s;
 }
 
 .ContainerPlanos div:nth-child(1) {
+  grid-area: plano1;
   border-radius: 10px 0 0 10px;
   box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
 }
 
 .ContainerPlanos div:nth-child(3) {
+  grid-area: plano3;
   border-radius: 0 10px 10px 0;
   box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
 }
 
 .planoProfessional {
+  grid-area: plano2;
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: hsl(237, 63%, 64%);
@@ -171,5 +177,66 @@ body {
 }
 
 .planoProfessional button{
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+  background-image: none;
+}
+
+.planoProfessional button:hover{
+  background: hsl(237, 63%, 64%);
   border: 1px solid #fff;
+  color: #fff;
+}
+
+@media (max-width: 425px) {
+  .container h1 {
+    margin-top: 70px;
+    margin-bottom: 45px
+  }
+
+  .ContainerPlanos {
+    margin: 80px auto 50px auto;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 330px) minmax(auto, 1fr);
+    grid-template-rows: repeat(3, minmax(auto, 455px));
+    grid-template-areas: ". plano1 ." ". plano2 ." ". plano3 .";
+    gap: 35px;
+  }
+  
+  .plano {
+    height: 455px;
+  }
+
+  .plano h2 {
+    margin-bottom: 20px;
+  }
+  
+  .plano span {
+    width: 210px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 58px;
+    color: hsl(232, 13%, 33%);
+    display: grid;
+    grid-template-columns: 25px minmax(auto, 215px);
+    align-items: center;
+  }
+  
+  .plano span span {
+    font-size: 30px;
+  }
+  
+  .plano ul {
+    margin-top: 25px;
+  }
+  
+  .ContainerPlanos div:nth-child(1), 
+  .ContainerPlanos div:nth-child(3), 
+  .planoProfessional{
+    border-radius: 10px;
+  }
+  
+  .planoProfessional {
+    padding-top: 40px;
+    padding-bottom: 37px;
+  }
 }
