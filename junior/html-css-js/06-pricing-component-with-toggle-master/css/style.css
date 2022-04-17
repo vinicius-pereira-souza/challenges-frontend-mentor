@@ -19,10 +19,12 @@ body {
   font-size: 15px;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: hsl(240, 78%, 98%);
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 .container h1 {
@@ -34,6 +36,8 @@ body {
 
 .flexToggle {
   display: flex;
+  max-width: 245px;
+  margin: 0 auto;
   align-items: center;
   gap: 25px;
   font-size: 14px;
@@ -63,4 +67,81 @@ body {
   border-radius: 50%;
   background-color: hsl(240, 78%, 98%);
   position: absolute;
+}
+
+.ContainerPlanos {
+  max-width: 100%;
+  margin: 65px auto 0 auto;
+  align-items: center; 
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 350px));
+  margin-top: 65px;
+}
+
+.plano {
+  padding: 35px 30px 30px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.plano h2 {
+  font-size: 15px;
+  text-align: center;
+  color:hsl(232, 13%, 33%);
+  margin-bottom: 40px;
+}
+
+.plano span {
+  width: 145px;
+  margin: 0 auto;
+  font-size: 50px;
+  color: hsl(232, 13%, 33%);
+  display: flex;
+  align-items: center;
+}
+
+.plano span span {
+  font-size: 30px;
+}
+
+.plano ul {
+  list-style: none;
+  max-width: 290px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border: 1px solid #dbdbdb;
+  border-right: none;
+  border-left: none;
+  color:hsl(233, 13%, 49%);
+}
+
+.plano ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.plano ul li:last-child {
+  border-bottom: none;
+}
+
+.plano button {
+  display: block;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(237, 63%, 64%);
+  letter-spacing: 1px;
+  color:hsl(240, 78%, 98%);
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s;
+}
+
+.plano button:hover {
+  cursor: pointer;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+  background-color: #fff;
 }
