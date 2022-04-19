@@ -15,6 +15,7 @@ ul {
   max-width: 1115px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   column-gap: 30px;
@@ -172,4 +173,49 @@ ul {
 
 .high.down::before {
   content: url('../images/icon-down.svg');
+}
+
+.overview {
+  max-width: 1115px;
+  margin: 0 auto;
+}
+
+.overview h1 {
+  color: hsl(228, 12%, 44%);
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.overviewToday li {
+  flex: 0 0 255px;
+  padding: 25px;
+  border-radius: 7px;
+  background-color: hsl(227, 47%, 96%);
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto minmax(auto, 1fr) auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 'p . img' '. . .' 'valorLikes . porcentagem';
+}
+
+.overviewToday li p {
+  grid-area: p;
+  font-weight: 700;
+  color:hsl(228, 12%, 44%);
+  margin-bottom: 25px;
+}
+
+.overviewToday li img {
+  grid-area: img;
+  align-self: baseline;
+}
+
+.overviewToday li img + span {
+  grid-area: valorLikes;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.overviewToday li span + span {
+  grid-area: porcentagem;
 }
