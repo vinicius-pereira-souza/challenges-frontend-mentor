@@ -158,10 +158,54 @@ body {
   right: 165px;
   background-image: url('../images/image-intro-desktop.jpg');
   background-repeat: no-repeat;
+}
 
+.findOutMore {
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 67px;
+  background-color: hsl(256, 26%, 20%);
+  background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top 0vw right 0vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.findOutMore h2 {
+  color: hsl(0, 0%, 98%);
+  font-size: 57px;
+  font-weight: 400;
+  line-height: 55px;
+  font-family: 'DM Serif Display', serif;
+}
+
+.findOutMore button {
+  width: 160px;
+  height: 45px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: hsl(0, 0%, 98%);
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 98%);
+  transition: 0.2s;
+}
+
+.findOutMore button:hover {
+  cursor: pointer;
+  color: hsl(256, 26%, 20%);
+  background-color: hsl(0, 0%, 98%);
+  transition: 0.2s;
+  
 }
 
 .fotter {
+  margin-top: 150px;
   padding: 65px 160px 15px 160px;
   background-color: hsl(0, 0%, 98%);
   background-image: url('../images/bg-pattern-footer-desktop.svg');
@@ -188,6 +232,19 @@ body {
   gap: 15px;
 }
 
+.redes li {
+  font-size: 32px;
+  line-height: 0;
+  color:hsl(273, 4%, 51%);
+  transition: 0.2s
+}
+
+.redes li:hover {
+  cursor: pointer;
+  color:hsl(256, 26%, 20%);
+  transition: 0.2s;
+}
+
 .lists {
   max-width: 940px;
   padding-top: 45px;
@@ -210,14 +267,3 @@ body {
   gap: 16px;
 }
 
-.lists li {
-  font-weight: 700;
-}
-
-.lists li::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: hsl(270, 9%, 17%);
-}
