@@ -253,4 +253,11 @@ p {
     font-weight: 400;
   }
   
+  .overview {
+    max-width: 325px;
+  }
+  
+  .overviewToday li {
+    flex: 0 0 100%;
+  }
 }
