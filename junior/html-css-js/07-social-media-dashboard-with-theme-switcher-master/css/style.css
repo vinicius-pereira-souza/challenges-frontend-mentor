@@ -227,31 +227,30 @@ p {
     grid-template-areas: "tittle" "toggle" "dadas";
   }
 
+  .tittle {
+    border-bottom: 1px solid hsl(228, 12%, 44%);
+    padding-bottom: 20px;
+  }
+
   .tittle h1 {
-    font-size: 28px;
-    color: hsl(230, 17%, 14%);
+    font-size: 23px;
   }
   
+  .tittle p {
+    margin-top: 10px;
+  }
+
   .toggle {
-    grid-area: toggle;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .today li {
+    flex: 0 0 100%;
   }
   
-  .btnToggle {
-    border: none;
-    width: 48px;
-    padding: 3px;
-    border-radius: 20px;
-    background-color: hsl(228, 12%, 44%);
+  .followers {
+    font-weight: 400;
   }
   
-  .btnToggle .circle {
-    width: 20px;
-    height: 20px;
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 50%;
-    transform: translateX(22px);
-  }
 }
