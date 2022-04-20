@@ -1,4 +1,5 @@
 const btnToggle = document.querySelector('.btnToggle')
+const lis = document.querySelectorAll('li')
 btnToggle.addEventListener('click', HandledarkModo)
 
 function HandledarkModo(e) {
@@ -20,7 +21,7 @@ function HandledarkModo(e) {
     colorBody.style.backgroundColor = 'hsl(0, 0%, 100%)'
     colorBg.style.backgroundColor = 'hsl(225, 100%, 98%)'
     colorbgLi.forEach(li => {
-      li.style.backgroundColor = 'hsl(227, 47%, 96%)'
+      li.style.backgroundColor = '#f0f3fa'
     })
     colorText.forEach(item => {
       item.style.color = 'hsl(230, 17%, 14%)'
