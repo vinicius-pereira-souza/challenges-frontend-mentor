@@ -3,12 +3,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-weight: 700;
   box-sizing: border-box;
 }
 
 body {
   font-size: 14px;
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
 
 ul {
@@ -20,6 +22,19 @@ ul {
   justify-content: center;
   column-gap: 30px;
   row-gap: 20px; 
+}
+
+p {
+  font-weight: 700;
+  color:hsl(228, 12%, 44%);
+}
+
+.bgBlock {
+  width: 100%;
+  height: 245px;
+  position: absolute;
+  background-color: hsl(225, 100%, 98%);
+  z-index: -10;
 }
 
 .header {
@@ -50,21 +65,11 @@ ul {
   color: hsl(230, 17%, 14%);
 }
 
-.tittle p {
-  font-weight: 700;
-  color:hsl(228, 12%, 44%);
-}
-
 .toggle {
   grid-area: toggle;
   display: flex;
   align-items: center;
   gap: 15px;
-}
-
-.toggle p {
-  font-weight: 700;
-  color:hsl(228, 12%, 44%);
 }
 
 .btnToggle {
@@ -134,14 +139,8 @@ ul {
   justify-content: center;
 }
 
-.flex p {
-  color: hsl(228, 12%, 44%);
-  font-weight: 700;
-}
-
 .dadas {
   font-size: 55px;
-  font-weight: 700;
   color: hsl(230, 17%, 14%);
   margin-top: 20px;
 }
@@ -154,7 +153,6 @@ ul {
 }
 
 .high {
-  font-weight: 700;
   color: #33a687;
   position: relative;
 }
@@ -167,11 +165,11 @@ ul {
   bottom: 2px;
 }
 
-.high.down {
+.down {
   color:hsl(347, 96%, 39%);
 }
 
-.high.down::before {
+.down::before {
   content: url('../images/icon-down.svg');
 }
 
@@ -200,8 +198,6 @@ ul {
 
 .overviewToday li p {
   grid-area: p;
-  font-weight: 700;
-  color:hsl(228, 12%, 44%);
   margin-bottom: 25px;
 }
 
@@ -213,9 +209,55 @@ ul {
 .overviewToday li img + span {
   grid-area: valorLikes;
   font-size: 32px;
-  font-weight: 700;
 }
 
 .overviewToday li span + span {
   grid-area: porcentagem;
+}
+
+@media (max-width: 425px) {
+  .bgBlock {
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .header {
+    max-width: 325px;
+    grid-template-columns: minmax(auto, 325px) ;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "tittle" "toggle" "dadas";
+  }
+
+  .tittle {
+    border-bottom: 1px solid hsl(228, 12%, 44%);
+    padding-bottom: 20px;
+  }
+
+  .tittle h1 {
+    font-size: 23px;
+  }
+  
+  .tittle p {
+    margin-top: 10px;
+  }
+
+  .toggle {
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .today li {
+    flex: 0 0 100%;
+  }
+  
+  .followers {
+    font-weight: 400;
+  }
+  
+  .overview {
+    max-width: 325px;
+  }
+  
+  .overviewToday li {
+    flex: 0 0 100%;
+  }
 }
