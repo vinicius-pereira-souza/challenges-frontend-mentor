@@ -35,6 +35,7 @@ p {
   position: absolute;
   background-color: hsl(225, 100%, 98%);
   z-index: -10;
+  transition: 0.3s;
 }
 
 .header {
@@ -48,14 +49,6 @@ p {
   align-items: center;
 }
 
-:root {
-  --White : hsl(0, 0%, 100%);  /* (BG)*/
-  --VeryPaleBlue: hsl(225, 100%, 98%); /* (Top BG Pattern)*/
-  --LightGrayishBlue: hsl(227, 47%, 96%);  /* (Card BG)*/
-  --DarkGrayishBlue: hsl(228, 12%, 44%); /* (Text)*/
-  --VeryDarkBlue: hsl(230, 17%, 14%); /* (Text)*/
-}
-
 .tittle {
   grid-area: tittle;
 }
@@ -63,6 +56,7 @@ p {
 .tittle h1 {
   font-size: 28px;
   color: hsl(230, 17%, 14%);
+  transition: 0.3s;
 }
 
 .toggle {
@@ -78,6 +72,13 @@ p {
   padding: 3px;
   border-radius: 20px;
   background-color: hsl(228, 12%, 44%);
+  transition: 0.2s;
+}
+
+.btnToggle:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #4494d1, #3ecf8e);
+  transition: 0.2s;
 }
 
 .btnToggle .circle {
@@ -86,6 +87,13 @@ p {
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   transform: translateX(22px);
+  transition: 0.2s;
+}
+
+.btnToggle.modeDarkActive .circle {
+  transform: translateX(0);
+  background-color: hsl(230, 17%, 14%);
+  transition: 0.2s;
 }
 
 .today {
@@ -143,6 +151,7 @@ p {
   font-size: 55px;
   color: hsl(230, 17%, 14%);
   margin-top: 20px;
+  transition: 0.3s;
 }
 
 .followers {
@@ -182,6 +191,7 @@ p {
   color: hsl(228, 12%, 44%);
   font-size: 25px;
   margin-bottom: 25px;
+  transition: 0.3s;
 }
 
 .overviewToday li {
@@ -194,6 +204,7 @@ p {
   grid-template-columns: auto minmax(auto, 1fr) auto;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 'p . img' '. . .' 'valorLikes . porcentagem';
+  transition: 0.3s;
 }
 
 .overviewToday li p {
@@ -260,4 +271,8 @@ p {
   .overviewToday li {
     flex: 0 0 100%;
   }
+}
+
+[data-darkMode] {
+  transition: 0.3s;
 }
