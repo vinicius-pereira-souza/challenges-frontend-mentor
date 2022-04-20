@@ -72,6 +72,13 @@ p {
   padding: 3px;
   border-radius: 20px;
   background-color: hsl(228, 12%, 44%);
+  transition: 0.2s;
+}
+
+.btnToggle:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #4494d1, #3ecf8e);
+  transition: 0.2s;
 }
 
 .btnToggle .circle {
@@ -80,6 +87,13 @@ p {
   background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   transform: translateX(22px);
+  transition: 0.2s;
+}
+
+.btnToggle.modeDarkActive .circle {
+  transform: translateX(0);
+  background-color: hsl(230, 17%, 14%);
+  transition: 0.2s;
 }
 
 .today {
