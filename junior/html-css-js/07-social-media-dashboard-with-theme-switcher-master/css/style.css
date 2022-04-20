@@ -33,6 +33,7 @@ p {
   width: 100%;
   height: 245px;
   position: absolute;
+  border-radius: 0 0 20px 20px;
   background-color: hsl(225, 100%, 98%);
   z-index: -10;
   transition: 0.3s;
@@ -226,11 +227,11 @@ p {
   grid-area: porcentagem;
 }
 
-@media (max-width: 425px) {
-  .bgBlock {
-    border-radius: 0 0 20px 20px;
-  }
-  
+li:hover {
+  cursor: pointer;  
+}
+
+@media (max-width: 425px) {  
   .header {
     max-width: 325px;
     grid-template-columns: minmax(auto, 325px) ;
