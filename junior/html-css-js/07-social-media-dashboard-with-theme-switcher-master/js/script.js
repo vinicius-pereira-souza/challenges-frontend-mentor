@@ -27,4 +27,19 @@ function HandledarkModo(e) {
       item.style.color = 'hsl(230, 17%, 14%)'
     })
   }
+  addClassHover()
 }
+
+function addClassHover() {
+  lis.forEach(li => {
+    if(btnToggle.classList.contains('modeDarkActive')) {
+      li.classList.add('modeDarkHover')
+      li.classList.remove('modeLightHover')
+    } else {
+      li.classList.add('modeLightHover')
+      li.classList.remove('modeDarkHover')
+    }
+  })
+}
+
+addClassHover()
