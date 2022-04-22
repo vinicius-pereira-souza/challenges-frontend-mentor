@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+/* font-family: 'Barlow', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+/* font-family: 'Fraunces', serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  /* ### Primary */
+  --Softred: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Darkdesaturatedcyan : hsl(167, 40%, 24%); /*(graphic design text)*/
+  --Darkblue : hsl(198, 62%, 26%); /*(photography text)*/
+  --Darkmoderatecyan : hsl(168, 34%, 41%); /*(footer)*/
+  /* ### Neutral */
+  --Verydarkdesaturatedblue: hsl(212, 27%, 19%);
+  --Verydarkgrayishblue: hsl(213, 9%, 39%);
+  --Darkgrayishblue: hsl(232, 10%, 55%);
+  --Grayishblue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.header {
+  background-color: #3dbeff;
+  padding-bottom: 325px;
+  background-image: url('../images/desktop/image-header.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom 0vw center;
+  background-size: cover;
+}
+
+.logoNav {
+  padding: 30px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.btnMobile {
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+.nav {
+  gap: 45px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'Barlow', sans-serif;
+}
+
+
+.nav button {
+  border: none;
+  width: 145px;
+  height: 57px;
+  border-radius: 30px;
+  background-color: hsl(0, 0%, 100%);
+  font-family: 'Fraunces', serif;
+  color: hsl(212, 27%, 19%);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 56px;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 2px;
+  margin: 90px 0  100px 0;
+}
+
+.seta {
+  margin: 0 auto;
+  animation: arrow 2s  ease-out infinite;
+}
+
+@keyframes arrow {
+  0%,100%{
+		transform:translatey(0)
+	}
+  50%{
+		transform:translatey(-25px)
+	}
+}
