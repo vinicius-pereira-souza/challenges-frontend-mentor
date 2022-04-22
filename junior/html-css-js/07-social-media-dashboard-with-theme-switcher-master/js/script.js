@@ -11,13 +11,13 @@ function HandledarkModo(e) {
   if(btnToggle.classList.contains('modeDarkActive')) {
     colorBody.style.backgroundColor = 'hsl(230, 17%, 14%)'
     colorBg.style.backgroundColor = 'hsl(232, 19%, 15%)'
-    colorbgLi.forEach(li => { // modo escuro
+    colorbgLi.forEach(li => {
       li.style.backgroundColor = 'hsl(228, 28%, 20%)'
     })
     colorText.forEach(item => {
       item.style.color = 'hsl(0, 0%, 100%)'
     })
-  } else { // mode claro
+  } else {
     colorBody.style.backgroundColor = 'hsl(0, 0%, 100%)'
     colorBg.style.backgroundColor = 'hsl(225, 100%, 98%)'
     colorbgLi.forEach(li => {

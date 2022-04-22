@@ -283,6 +283,5 @@ li:hover {
 }
 
 .modeDarkHover:hover {
-  /* background-color: #333a56; */
-  background-color: red !important;
+  background-color: #333a56 !important;
 }
