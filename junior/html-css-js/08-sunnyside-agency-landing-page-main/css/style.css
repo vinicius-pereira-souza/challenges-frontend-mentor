@@ -211,3 +211,38 @@ nav {
 .photography {
   background-image: url('../images/desktop/image-photography.jpg');
 }
+
+.clients {
+  justify-content: center;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 145px;
+}
+
+.clients ul {
+  max-width: 1140px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.clients h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(213, 9%, 39%);
+  font-family: 'Fraunces', serif;
+  margin-bottom: 75px;
+}
+
+.clients li {
+  max-width: 350px;
+}
+
+.clients li img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
