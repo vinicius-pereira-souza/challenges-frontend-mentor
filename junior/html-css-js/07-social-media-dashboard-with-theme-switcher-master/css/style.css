@@ -277,3 +277,11 @@ li:hover {
 [data-darkMode] {
   transition: 0.3s;
 }
+
+.modeLightHover:hover {
+  background-color: #e1e3f0  !important;
+}
+
+.modeDarkHover:hover {
+  background-color: #333a56 !important;
+}
