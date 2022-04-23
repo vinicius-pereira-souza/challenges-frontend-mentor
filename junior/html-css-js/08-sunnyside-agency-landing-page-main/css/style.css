@@ -302,3 +302,29 @@ nav {
 .imgList li:nth-child(4) {
   background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
 }
+
+.footer {
+  max-width: 100%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-color: hsl(167, 44%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navFooter {
+  margin-top: 45px;
+  margin-bottom: 90px;
+  color: hsl(167, 40%, 24%);
+  font-family: 'Barlow', sans-serif; 
+  gap: 55px;
+}
+
+.listRedes {
+  font-size: 28px;
+  color: hsl(167, 40%, 24%);
+  margin-bottom: 20px;
+  gap: 25px
+}
