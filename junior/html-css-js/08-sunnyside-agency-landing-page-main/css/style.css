@@ -112,13 +112,13 @@ nav {
 
 .flex {
   max-width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) 1fr;
+  grid-template-areas: "conteudo imagem";
 }
 
 .content {
-  flex: 0 0 50%;
+  grid-area: conteudo;
   padding: 135px 115px 135px 160px;
 }
 
@@ -136,6 +136,7 @@ nav {
   line-height: 25px;
   margin-bottom: 45px;
 }
+
 .content span {
   margin-left: 5px;
   font-size: 16px;
@@ -159,20 +160,22 @@ nav {
   background-color: hsl(51, 100%, 49%);
 }
 
-.imgEgg {
-  flex: 0 0 50%;
-  height: 562px;
-  background-image: url('../images/desktop/image-transform.jpg');
+.flex.flexReverso {
+  grid-template-areas:  "imagem conteudo";
+}
+
+.imgBg {
+  grid-area: imagem;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.imgEgg {
+  background-image: url('../images/desktop/image-transform.jpg');
 }
 
 .cup {
-  flex: 0 0 50%;
-  height: 562px;
   background-image: url('../images/desktop/image-stand-out.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .colorPink::after {
@@ -180,15 +183,13 @@ nav {
 }
 
 .subFlex div {
-  flex: 0 0 50%;
-  height: 520px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: end;
   text-align: center;
-  padding: 0 170px 60px 170px;
+  padding: 400px 170px 60px 170px;
 }
 
 .subFlex h2 {
@@ -210,39 +211,4 @@ nav {
 
 .photography {
   background-image: url('../images/desktop/image-photography.jpg');
-}
-
-.clients {
-  justify-content: center;
-  text-align: center;
-  padding-top: 150px;
-  padding-bottom: 145px;
-}
-
-.clients ul {
-  max-width: 1140px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.clients h3 {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: hsl(213, 9%, 39%);
-  font-family: 'Fraunces', serif;
-  margin-bottom: 75px;
-}
-
-.clients li {
-  max-width: 350px;
-}
-
-.clients li img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 60px;
 }
