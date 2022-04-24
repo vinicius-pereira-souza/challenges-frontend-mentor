@@ -465,4 +465,32 @@ nav {
   .photography {
     background-image: url('../images/mobile/image-photography.jpg');
   }
+
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 85px;
+  }
+  
+  .clients h3 {
+    font-size: 18px;
+    margin-bottom: 65px;
+  }
+
+  .clients ul {
+    gap: 65px;
+  }
+  
+  .clients li {
+    max-width: 330px;
+  }
+  
+  .clients li img {
+    margin-bottom: 30px;
+  }
+  
+  .clients p + span {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
 }
