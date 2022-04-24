@@ -174,8 +174,6 @@ nav {
   
 }
 
-
-
 .colorYellow.line span {
   background-color: hsl(51, 100%, 49%);
 }
@@ -351,4 +349,59 @@ nav {
   cursor: pointer;
   color:hsl(0, 0%, 100%);
   transition: 0.3s;
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding-bottom: 130px;
+    background-image: url('../images/mobile/image-header.jpg');
+  }
+
+  .logoNav {
+    position: relative;
+  }
+
+  .btnMobile {
+    display: block;
+  }
+
+  .navMobile {
+    display: none;
+    width: 320px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    background-color: hsl(26, 100%, 99%);
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+  }
+
+  .navMobile::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 25px solid hsl(0, 0%, 100%);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    right: 0;
+    top: -25px;
+  }
+  
+  .navMobile.active {
+    display: block;
+  }
+
+  .nav {
+    gap: 35px;
+    flex-direction: column;
+    color:hsl(213, 9%, 39%);
+  }git e
+
+  .nav button {
+    background-color: hsl(51, 100%, 49%);
+  }
 }
