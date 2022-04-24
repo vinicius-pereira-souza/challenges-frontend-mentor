@@ -24,6 +24,10 @@ img {
   display: block;
 }
 
+span {
+  display: block;
+}
+
 :root {
   /* ### Primary */
   --Softred: hsl(7, 99%, 70%);
@@ -83,6 +87,14 @@ nav {
   color: hsl(212, 27%, 19%);
   font-size: 16px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav button:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(200, 100%, 72%);
+  transition: 0.3s;
 }
 
 .header h1 {
@@ -112,14 +124,15 @@ nav {
 
 .flex {
   max-width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) 1fr;
+  grid-template-areas: "conteudo imagem";
 }
 
 .content {
-  flex: 0 0 50%;
+  grid-area: conteudo;
   padding: 135px 115px 135px 160px;
+  background-color: hsl(26, 100%, 99%);
 }
 
 .content h2 {
@@ -136,59 +149,68 @@ nav {
   line-height: 25px;
   margin-bottom: 45px;
 }
-.content span {
+
+.content div {
+  position: relative;
+}
+
+.content div p{
   margin-left: 5px;
   font-size: 16px;
   color: hsl(212, 27%, 19%);
   text-transform: uppercase;
   font-family: 'Fraunces', serif;
+  position: relative;
+  z-index: 10;
 }
 
-.content span::after {
-  content: '';
+.content div span {
   width: 120px;
   height: 10px;
-  display: block;
+  bottom: 2px;
+  position: absolute;
+  background-color: #3dbeff;
   border-radius: 20px;
-  position: relative;
-  bottom: 10px;
-  z-index: -5;
+  
 }
 
-.colorYellow::after {
+
+
+.colorYellow.line span {
   background-color: hsl(51, 100%, 49%);
 }
 
-.imgEgg {
-  flex: 0 0 50%;
-  height: 562px;
-  background-image: url('../images/desktop/image-transform.jpg');
+.flex.flexReverso {
+  grid-template-areas:  "imagem conteudo";
+}
+
+.imgBg {
+  grid-area: imagem;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+}
+
+.imgEgg {
+  background-image: url('../images/desktop/image-transform.jpg');
 }
 
 .cup {
-  flex: 0 0 50%;
-  height: 562px;
   background-image: url('../images/desktop/image-stand-out.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
-.colorPink::after {
+.colorPink.line span {
   background-color: hsl(7, 99%, 70%);
 }
 
 .subFlex div {
-  flex: 0 0 50%;
-  height: 520px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: end;
   text-align: center;
-  padding: 0 170px 60px 170px;
+  padding: 400px 170px 60px 170px;
 }
 
 .subFlex h2 {
@@ -206,10 +228,12 @@ nav {
 
 .graphic {
   background-image: url('../images/desktop/image-graphic-design.jpg');
+  background-position: center;
 }
 
 .photography {
   background-image: url('../images/desktop/image-photography.jpg');
+  background-position: center;
 }
 
 .clients {
@@ -217,11 +241,13 @@ nav {
   text-align: center;
   padding-top: 150px;
   padding-bottom: 145px;
+  background-color: hsl(26, 100%, 99%);
 }
 
 .clients ul {
   max-width: 1140px;
   margin: 0 auto;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -245,4 +271,84 @@ nav {
   display: block;
   margin: 0 auto;
   margin-bottom: 60px;
+}
+
+.clients p {
+  line-height: 30px;
+  color: hsl(213, 9%, 39%);
+  font-family: 'Barlow', sans-serif;
+}
+
+.clients p + span {
+  color: hsl(212, 27%, 19%);
+  font-family: 'Fraunces', serif;
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+
+.clients span + span {
+  font-size: 14px;
+  color: hsl(210, 4%, 67%);
+  font-family: 'Barlow', sans-serif;
+}
+
+.imgList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(auto, 445px);
+}
+
+.imgList li {
+  max-width: 100%;
+  height: 445px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imgList li:nth-child(1) {
+  background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+}
+
+.imgList li:nth-child(2) {
+  background-image: url('../images/desktop/image-gallery-orange.jpg');
+}
+
+.imgList li:nth-child(3) {
+  background-image: url('../images/desktop/image-gallery-cone.jpg');
+}
+
+.imgList li:nth-child(4) {
+  background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+}
+
+.footer {
+  max-width: 100%;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-color: hsl(167, 44%, 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navFooter {
+  margin-top: 45px;
+  margin-bottom: 90px;
+  color: hsl(167, 40%, 24%);
+  font-family: 'Barlow', sans-serif; 
+  gap: 55px;
+}
+
+.listRedes {
+  font-size: 28px;
+  color: hsl(167, 40%, 24%);
+  margin-bottom: 20px;
+  gap: 25px
+}
+
+.navFooter li:hover, .listRedes li:hover {
+  cursor: pointer;
+  color:hsl(0, 0%, 100%);
+  transition: 0.3s;
 }
