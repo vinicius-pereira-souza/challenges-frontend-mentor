@@ -353,7 +353,7 @@ nav {
 
 @media (max-width: 425px) {
   .header {
-    padding-bottom: 130px;
+    padding-bottom: 80px;
     background-image: url('../images/mobile/image-header.jpg');
   }
 
@@ -399,9 +399,20 @@ nav {
     gap: 35px;
     flex-direction: column;
     color:hsl(213, 9%, 39%);
-  }git e
+  }
 
   .nav button {
     background-color: hsl(51, 100%, 49%);
+  }
+
+  .header h1 {
+    font-size: 41px;
+    line-height: 51px;
+    margin: 55px 0  100px 0;
+  }
+  
+  .seta {
+    margin: 0 auto;
+    animation: arrow 2s  ease-out infinite;
   }
 }
