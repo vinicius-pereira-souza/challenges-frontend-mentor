@@ -517,4 +517,24 @@ nav {
   .imgList li:nth-child(4) {
     background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
   }
+
+  .footer {
+    padding-top: 60px;
+  }
+  
+  .navFooter {
+    margin-top: 40px;
+    margin-bottom: 85px;
+    gap: 60px;
+  }
+
+  .navFooter li:last-child {
+    display: none;
+  }
+  
+  .listRedes {
+    font-size: 25px;
+    gap: 30px
+  }
+  
 }
