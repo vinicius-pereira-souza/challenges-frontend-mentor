@@ -87,6 +87,14 @@ nav {
   color: hsl(212, 27%, 19%);
   font-size: 16px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav button:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(200, 100%, 72%);
+  transition: 0.3s;
 }
 
 .header h1 {
@@ -142,26 +150,33 @@ nav {
   margin-bottom: 45px;
 }
 
-.content span {
+.content div {
+  position: relative;
+}
+
+.content div p{
   margin-left: 5px;
   font-size: 16px;
   color: hsl(212, 27%, 19%);
   text-transform: uppercase;
   font-family: 'Fraunces', serif;
+  position: relative;
+  z-index: 10;
 }
 
-.content span::after {
-  content: '';
+.content div span {
   width: 120px;
   height: 10px;
-  display: block;
+  bottom: 2px;
+  position: absolute;
+  background-color: #3dbeff;
   border-radius: 20px;
-  position: relative;
-  bottom: 10px;
-  z-index: -5;
+  
 }
 
-.colorYellow::after {
+
+
+.colorYellow.line span {
   background-color: hsl(51, 100%, 49%);
 }
 
@@ -173,6 +188,7 @@ nav {
   grid-area: imagem;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .imgEgg {
@@ -183,7 +199,7 @@ nav {
   background-image: url('../images/desktop/image-stand-out.jpg');
 }
 
-.colorPink::after {
+.colorPink.line span {
   background-color: hsl(7, 99%, 70%);
 }
 
@@ -212,10 +228,12 @@ nav {
 
 .graphic {
   background-image: url('../images/desktop/image-graphic-design.jpg');
+  background-position: center;
 }
 
 .photography {
   background-image: url('../images/desktop/image-photography.jpg');
+  background-position: center;
 }
 
 .clients {
@@ -327,4 +345,10 @@ nav {
   color: hsl(167, 40%, 24%);
   margin-bottom: 20px;
   gap: 25px
+}
+
+.navFooter li:hover, .listRedes li:hover {
+  cursor: pointer;
+  color:hsl(0, 0%, 100%);
+  transition: 0.3s;
 }
