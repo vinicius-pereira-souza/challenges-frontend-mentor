@@ -171,10 +171,7 @@ nav {
   position: absolute;
   background-color: #3dbeff;
   border-radius: 20px;
-  
 }
-
-
 
 .colorYellow.line span {
   background-color: hsl(51, 100%, 49%);
@@ -351,4 +348,193 @@ nav {
   cursor: pointer;
   color:hsl(0, 0%, 100%);
   transition: 0.3s;
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding-bottom: 80px;
+    background-image: url('../images/mobile/image-header.jpg');
+  }
+
+  .logoNav {
+    position: relative;
+  }
+
+  .btnMobile {
+    display: block;
+  }
+
+  .navMobile {
+    display: none;
+    width: 320px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    background-color: hsl(26, 100%, 99%);
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+  }
+
+  .navMobile::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 25px solid hsl(0, 0%, 100%);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    right: 0;
+    top: -25px;
+  }
+  
+  .navMobile.active {
+    display: block;
+  }
+
+  .nav {
+    gap: 35px;
+    flex-direction: column;
+    color:hsl(213, 9%, 39%);
+  }
+
+  .nav button {
+    background-color: hsl(51, 100%, 49%);
+  }
+
+  .header h1 {
+    font-size: 41px;
+    line-height: 51px;
+    margin: 55px 0  100px 0;
+  }
+
+  .flex {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "imagem" "conteudo";
+  }
+
+  .content {
+    padding: 65px 32px 35px 32px;
+    background-color: hsl(26, 100%, 99%);
+  }
+  
+  .content h2 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .content div span {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+  .flex.flexReverso {
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:  "imagem" "conteudo";
+  }
+
+  .imgEgg {
+    background-image: url('../images/mobile/image-transform.jpg');
+  }
+  
+  .cup {
+    background-image: url('../images/mobile/image-stand-out.jpg');
+  }
+
+  .subFlex div {
+    padding: 400px 20px 60px 20px;
+  }
+  
+  .graphic {
+    background-image: url('../images/mobile/image-graphic-design.jpg');
+  }
+  
+  .photography {
+    background-image: url('../images/mobile/image-photography.jpg');
+  }
+
+  .clients {
+    padding-top: 60px;
+    padding-bottom: 85px;
+  }
+  
+  .clients h3 {
+    font-size: 18px;
+    margin-bottom: 65px;
+  }
+
+  .clients ul {
+    gap: 65px;
+  }
+  
+  .clients li {
+    max-width: 330px;
+  }
+  
+  .clients li img {
+    margin-bottom: 30px;
+  }
+  
+  .clients p + span {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .imgList {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  
+  .imgList li {
+    height: 185px;
+  }
+
+  .imgList li:nth-child(1) {
+    background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+  }
+  
+  .imgList li:nth-child(2) {
+    background-image: url('../images/mobile/image-gallery-orange.jpg');
+  }
+  
+  .imgList li:nth-child(3) {
+    background-image: url('../images/mobile/image-gallery-cone.jpg');
+  }
+  
+  .imgList li:nth-child(4) {
+    background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
+  }
+
+  .footer {
+    padding-top: 60px;
+  }
+  
+  .navFooter {
+    margin-top: 40px;
+    margin-bottom: 85px;
+    gap: 60px;
+  }
+
+  .navFooter li:last-child {
+    display: none;
+  }
+  
+  .listRedes {
+    font-size: 25px;
+    gap: 30px
+  }
+  
 }
