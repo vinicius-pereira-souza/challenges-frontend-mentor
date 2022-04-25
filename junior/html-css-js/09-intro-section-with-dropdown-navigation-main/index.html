@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .attribution {
       font-size: 11px;
@@ -22,46 +23,19 @@
 <body>
   <header class="header">
     <img src="images/logo.svg" alt="logo">
-    <nav>
-      <div class="navMobile">
-        <ul class="navList">
-          <li>
-            Features
-            <ul class="subNavFeatures">
-              <li>
-                <img src="images/icon-todo.svg" alt="icone todo list">
-                Todo List
-              </li>
-              <li>
-                <img src="images/icon-calendar.svg" alt="icone calendar">
-                calendar
-              </li>
-              <li>
-                <img src="images/icon-reminders.svg" alt="icone reminders">
-                Reminders
-              </li>
-              <li>
-                <img src="images/icon-planning.svg" alt="icone planning">
-                Planning
-              </li>
-            </ul>
-          </li>
-          <li>
-            Company
-            <ul class="SubNavCompany">
-              <li>History</li>
-              <li>Our Team</li>
-              <li>Blog</li>
-            </ul>
-          </li>
-          <li>Careers</li>
-          <li>About</li>
-          <li>Login</li>
-          <button>Register</button>
-        </ul>
+    <nav class="navMobile">
+      <ul class="navList">
+        <li>Features</li>
+        <li>Company</li>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <div class="loginBtn">
+        <p>Login</p>
+        <button>Register</button>
       </div>
-      <button class="btnMobile"></button>
     </nav>
+    <button class="btnMobile"></button>
   </header>
   <main class="gridContent">
     <div class="content">
