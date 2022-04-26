@@ -58,6 +58,12 @@ body {
   gap: 40px;
 }
 
+.navList li:hover, .loginBtn p:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+  transition: 0.3s;
+}
+
 .subUl {
   position: relative;
 }
@@ -113,6 +119,14 @@ body {
   border-radius: 12px;
 }
 
+.loginBtn button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 8%);
+  transition: 0.3s;
+}
+
 .gridContent {
   /* padding: 0 160px; */
   display: grid;
@@ -150,6 +164,14 @@ body {
   border-color: hsl(0, 0%, 8%);
   margin-top: 50px;
   margin-bottom: 110px;
+  transition: 0.3s;
+}
+
+.btnContent:hover {
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(0, 0%, 8%);
 }
 
 .listImgs {
