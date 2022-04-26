@@ -112,3 +112,58 @@ body {
   border: 2px solid hsl(0, 0%, 41%);
   border-radius: 12px;
 }
+
+.gridContent {
+  /* padding: 0 160px; */
+  display: grid;
+  grid-template-columns: minmax(auto, 160px) /* espaço em branco*/
+                         minmax(auto, 510px) /* conteudo */
+                         minmax(auto, 1fr)   /* espaço em branco*/
+                         minmax(465px, 1fr)  /* imagem */
+                         minmax(auto, 160px);/* espaço em branco*/
+  grid-template-areas: ". conteudo . img .";
+} 
+
+.content {
+  grid-area: conteudo;
+}
+
+.content h1{
+  font-size: 75px;
+  margin-top: 100px;
+  margin-bottom: 45px;
+  color:hsl(0, 0%, 8%);
+}
+
+.content p {
+  max-width: 420px;
+  line-height: 27px;
+  color:hsl(0, 0%, 41%);
+}
+
+.btnContent {
+  width: 163px;
+  height: 56px;
+  background-color: hsl(0, 0%, 8%);
+  color:hsl(0, 0%, 98%);
+  font-weight: 700;
+  border-color: hsl(0, 0%, 8%);
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+
+.listImgs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.bgRight {
+  grid-area: img;
+  width: 100%;
+  background-image: url('../images/image-hero-desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
