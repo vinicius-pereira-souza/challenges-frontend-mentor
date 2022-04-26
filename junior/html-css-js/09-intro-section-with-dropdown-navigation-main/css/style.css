@@ -28,9 +28,19 @@ body {
   color: hsl(0, 0%, 41%);
   padding: 40px 20px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   margin-bottom: 70px;
+}
+
+.btnMobile {
+  width: 32px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../images/icon-menu.svg');
+  background-repeat: no-repeat;
+  display: none;
 }
 
 .navMobile {
@@ -43,23 +53,46 @@ body {
 .navList {
   font-size: 16px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-.navList li:nth-child(1)::after, 
-.navList li:nth-child(2)::after {
-  content: url('../images/icon-arrow-down.svg');
-  display:inline-block;
-  margin-left: 15px;
-} 
+.subUl {
+  position: relative;
+}
 
-.navList li:hover, .loginBtn p:hover {
-  cursor: pointer;
-  color: hsl(0, 0%, 8%);
-  transition: 0.3s;
+.subUl::after {
+  content: url('../images/icon-arrow-down.svg');
+  display: inline;
+  margin-left: 5px;
+}
+
+.subUl .subList {
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 35px;
+  display: none;
+}
+
+.alignAbsolute1 {
+  right: 0;
+}
+
+.alignAbsolute2 {
+  width: 150px;
+  left: 0;
+}
+
+.subUl .subList li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .loginBtn {
@@ -78,63 +111,4 @@ body {
   height: 38px;
   border: 2px solid hsl(0, 0%, 41%);
   border-radius: 12px;
-}
-
-.loginBtn button:hover {
-  cursor: pointer;
-  transition: 0.3s;
-  color: hsl(0, 0%, 8%);
-  border: 2px solid hsl(0, 0%, 8%);
-}
-
-.gridContent {
-  padding: 0 160px;
-  display: grid;
-  grid-template-columns: auto  1fr;
-}
-
-.content h1{
-  font-size: 75px;
-  margin-top: 100px;
-  margin-bottom: 45px;
-  color:hsl(0, 0%, 8%);
-}
-
-.content p {
-  max-width: 420px;
-  line-height: 27px;
-  color:hsl(0, 0%, 41%);
-}
-
-.btnContent {
-  width: 163px;
-  height: 56px;
-  background-color: hsl(0, 0%, 8%);
-  color:hsl(0, 0%, 98%);
-  font-weight: 700;
-  border-color: hsl(0, 0%, 8%);
-  margin-top: 50px;
-  margin-bottom: 110px;
-}
-
-.btnContent:hover {
-  background-color: transparent;
-  cursor: pointer;
-  transition: 0.3s;
-  color: hsl(0, 0%, 8%);
-}
-
-.listImgs {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.bgRight {
-  width: 100%;
-  background-image: url('../images/image-hero-desktop.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
