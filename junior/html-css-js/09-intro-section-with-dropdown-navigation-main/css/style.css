@@ -12,6 +12,7 @@ ul {
   list-style: none;
 }
 
+
 :root {
   --AlmostWhite: hsl(0, 0%, 98%);
   --MediumGray: hsl(0, 0%, 41%);
@@ -29,6 +30,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 60px;
+  margin-bottom: 70px;
 }
 
 .navMobile {
@@ -66,7 +68,7 @@ body {
   gap: 40px;
 }
 
-.loginBtn button {
+.loginBtn button, .btnContent {
   background-color: transparent;
   color: hsl(0, 0%, 41%);
   font-weight: 500;
@@ -83,4 +85,56 @@ body {
   transition: 0.3s;
   color: hsl(0, 0%, 8%);
   border: 2px solid hsl(0, 0%, 8%);
+}
+
+.gridContent {
+  padding: 0 160px;
+  display: grid;
+  grid-template-columns: auto  1fr;
+}
+
+.content h1{
+  font-size: 75px;
+  margin-top: 100px;
+  margin-bottom: 45px;
+  color:hsl(0, 0%, 8%);
+}
+
+.content p {
+  max-width: 420px;
+  line-height: 27px;
+  color:hsl(0, 0%, 41%);
+}
+
+.btnContent {
+  width: 163px;
+  height: 56px;
+  background-color: hsl(0, 0%, 8%);
+  color:hsl(0, 0%, 98%);
+  font-weight: 700;
+  border-color: hsl(0, 0%, 8%);
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+
+.btnContent:hover {
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(0, 0%, 8%);
+}
+
+.listImgs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.bgRight {
+  width: 100%;
+  background-image: url('../images/image-hero-desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
