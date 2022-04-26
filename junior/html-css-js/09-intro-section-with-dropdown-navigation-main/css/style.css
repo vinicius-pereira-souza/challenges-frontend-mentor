@@ -41,6 +41,8 @@ body {
   background-image: url('../images/icon-menu.svg');
   background-repeat: no-repeat;
   display: none;
+  z-index: 250;
+  transition: 0.3s;
 }
 
 .navMobile {
@@ -75,7 +77,10 @@ body {
 }
 
 .subUl .subList {
-  padding: 20px;
+  height: 0;
+  padding: 0 20px;
+  overflow-y: hidden;
+  transition: 1s;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
   display: flex;
@@ -83,7 +88,6 @@ body {
   gap: 15px;
   position: absolute;
   top: 35px;
-  display: none;
 }
 
 .alignAbsolute1 {
@@ -189,3 +193,28 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+/* interação JS */
+
+.btnMobile.active {
+  background-image: url('../images/icon-close-menu.svg');
+  z-index: 250px;
+}
+
+.subUl.up::after {
+  content: url('../images/icon-arrow-up.svg');
+  display: inline;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.alignAbsolute1.dropDownOpened {
+  height: 150px;
+  padding: 20px;
+  overflow-y: visible;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
