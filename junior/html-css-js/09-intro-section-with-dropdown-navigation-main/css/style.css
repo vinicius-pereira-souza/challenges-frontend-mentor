@@ -12,7 +12,6 @@ ul {
   list-style: none;
 }
 
-
 :root {
   --AlmostWhite: hsl(0, 0%, 98%);
   --MediumGray: hsl(0, 0%, 41%);
@@ -28,9 +27,21 @@ body {
   color: hsl(0, 0%, 41%);
   padding: 40px 20px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
   margin-bottom: 70px;
+}
+
+.btnMobile {
+  width: 32px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../images/icon-menu.svg');
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 250;
+  transition: 0.3s;
 }
 
 .navMobile {
@@ -43,23 +54,55 @@ body {
 .navList {
   font-size: 16px;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-.navList li:nth-child(1)::after, 
-.navList li:nth-child(2)::after {
-  content: url('../images/icon-arrow-down.svg');
-  display:inline-block;
-  margin-left: 15px;
-} 
-
 .navList li:hover, .loginBtn p:hover {
   cursor: pointer;
   color: hsl(0, 0%, 8%);
   transition: 0.3s;
+}
+
+.subUl {
+  position: relative;
+}
+
+.subUl::after {
+  content: url('../images/icon-arrow-down.svg');
+  display: inline;
+  margin-left: 5px;
+}
+
+.subUl .subList {
+  width: 170px;
+  height: 0px;
+  padding: 0 20px;
+  overflow-y: hidden;
+  transition: 1s;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 35px;
+}
+
+.alignAbsolute1 {
+  right: 0;
+}
+
+.alignAbsolute2 {
+  width: 150px;
+  left: 0;
+}
+
+.subUl .subList li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .loginBtn {
@@ -85,12 +128,22 @@ body {
   transition: 0.3s;
   color: hsl(0, 0%, 8%);
   border: 2px solid hsl(0, 0%, 8%);
+  transition: 0.3s;
 }
 
 .gridContent {
-  padding: 0 160px;
+  /* padding: 0 160px; */
   display: grid;
-  grid-template-columns: auto  1fr;
+  grid-template-columns: minmax(auto, 160px) /* espaço em branco*/
+                         minmax(auto, 510px) /* conteudo */
+                         minmax(auto, 1fr)   /* espaço em branco*/
+                         minmax(465px, 1fr)  /* imagem */
+                         minmax(auto, 160px);/* espaço em branco*/
+  grid-template-areas: ". conteudo . img .";
+} 
+
+.content {
+  grid-area: conteudo;
 }
 
 .content h1{
@@ -115,6 +168,7 @@ body {
   border-color: hsl(0, 0%, 8%);
   margin-top: 50px;
   margin-bottom: 110px;
+  transition: 0.3s;
 }
 
 .btnContent:hover {
@@ -132,9 +186,39 @@ body {
 }
 
 .bgRight {
+  grid-area: img;
   width: 100%;
   background-image: url('../images/image-hero-desktop.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+/* interação JS */
+
+.btnMobile.active {
+  background-image: url('../images/icon-close-menu.svg');
+  z-index: 250px;
+}
+
+.subUl.up::after {
+  content: url('../images/icon-arrow-up.svg');
+  display: inline;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.alignAbsolute1.dropDownOpened {
+  height:  155px;
+  padding: 20px;
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.alignAbsolute2.dropDownOpened {
+  height:  118px;
+  padding: 20px;
+  overflow-y: hidden;
+  transition: 1s;
+}
+
