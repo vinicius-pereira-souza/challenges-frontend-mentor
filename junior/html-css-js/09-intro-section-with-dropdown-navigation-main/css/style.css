@@ -227,6 +227,7 @@ body {
 @media(max-width: 770px) {
   .header {
     justify-content: space-between;
+    margin-bottom: 0;
   }
 
   .btnMobile {
