@@ -222,3 +222,75 @@ body {
   transition: 1s;
 }
 
+/* tablet */
+
+@media(max-width: 770px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .btnMobile {
+    display: block;
+    z-index: 250;
+  }
+
+  .navMobile {
+    max-width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .navList {
+    width: 0;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 0;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+  }
+
+  .subUl .subList {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .alignAbsolute1.dropDownOpened {
+    height:  155px;
+
+  }
+
+  .alignAbsolute2.dropDownOpened {
+    height:  118px;
+  }
+
+  .subUl::after {
+    position: absolute;
+    top: 0;
+    left: 75px;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+  
+
+  .navMobile.active {
+    max-width: 100%;
+  }
+
+  .navMobile.active .navList{
+    width: 240px;
+    padding-left: 25px
+  }
+  .btnMobile.active {
+    background-image: url('../images/icon-close-menu.svg');
+  }
+}
