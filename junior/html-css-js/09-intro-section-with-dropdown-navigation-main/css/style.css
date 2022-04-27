@@ -293,4 +293,41 @@ body {
   .btnMobile.active {
     background-image: url('../images/icon-close-menu.svg');
   }
+
+  .gridContent {
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-rows: 500px auto;
+    grid-template-areas: ". img ." ". conteudo .";
+  } 
+  
+  .bgRight {
+    background-image: url('../images/image-hero-mobile.png');
+  }
+
+  .content h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .content h1 br {
+    display: none;
+  }
+
+  .content p {
+    max-width: 565px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .btnContent {
+    margin: 30px auto 50px auto;
+    display: block;
+  }
+
+  .listImgs {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
