@@ -12,7 +12,6 @@ ul {
   list-style: none;
 }
 
-
 :root {
   --AlmostWhite: hsl(0, 0%, 98%);
   --MediumGray: hsl(0, 0%, 41%);
@@ -77,7 +76,8 @@ body {
 }
 
 .subUl .subList {
-  height: 0;
+  width: 170px;
+  height: 0px;
   padding: 0 20px;
   overflow-y: hidden;
   transition: 1s;
@@ -209,12 +209,16 @@ body {
 }
 
 .alignAbsolute1.dropDownOpened {
-  height: 150px;
+  height:  155px;
   padding: 20px;
-  overflow-y: visible;
+  overflow-y: hidden;
   transition: 1s;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+}
+
+.alignAbsolute2.dropDownOpened {
+  height:  118px;
+  padding: 20px;
+  overflow-y: hidden;
+  transition: 1s;
 }
 
