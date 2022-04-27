@@ -15,5 +15,11 @@ function handleDropDown(e) {
 
 btnMobile.addEventListener('click', handleClick)
 function handleClick(e) {
+  const navMobile = document.querySelector(".navMobile")
   btnMobile.classList.toggle('active')
+  if(btnMobile.classList.contains('active')) {
+    navMobile.classList.add('active')
+  } else {
+    navMobile.classList.remove('active')
+  }
 }

@@ -12,6 +12,11 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 :root {
   --AlmostWhite: hsl(0, 0%, 98%);
   --MediumGray: hsl(0, 0%, 41%);
@@ -222,3 +227,156 @@ body {
   transition: 1s;
 }
 
+/* tablet */
+
+@media(max-width: 770px) {
+  .header {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .btnMobile {
+    display: block;
+    z-index: 250;
+  }
+
+  .navMobile {
+    max-width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .navList {
+    width: 0;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 0;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+  }
+
+  .subUl .subList {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .alignAbsolute1.dropDownOpened {
+    height:  155px;
+
+  }
+
+  .alignAbsolute2.dropDownOpened {
+    height:  118px;
+  }
+
+  .subUl::after {
+    position: absolute;
+    top: 0;
+    left: 75px;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+  
+
+  .navMobile.active {
+    max-width: 100%;
+  }
+
+  .navMobile.active .navList{
+    width: 240px;
+    padding-left: 25px
+  }
+
+  .btnMobile.active {
+    background-image: url('../images/icon-close-menu.svg');
+  }
+
+  .gridContent {
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-rows: 500px auto;
+    grid-template-areas: ". img ." ". conteudo .";
+  } 
+  
+  .bgRight {
+    background-image: url('../images/image-hero-mobile.png');
+  }
+
+  .content h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .content h1 br {
+    display: none;
+  }
+
+  .content p {
+    max-width: 565px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .btnContent {
+    margin: 30px auto 50px auto;
+    display: block;
+  }
+
+  .listImgs {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* mobile */
+
+@media(max-width: 425px) {
+  .header {
+    margin-bottom: -40px;
+  }
+
+  .gridContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 310px auto;
+  } 
+  
+  .bgRight {
+    background-image: url('../images/image-hero-mobile.png');
+  }
+
+  .content h1{
+    font-size: 35px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
+  .content p {
+    max-width: 355px;
+  }
+  
+  .btnContent {
+    margin: 25px auto 50px auto;
+    display: block;
+  }
+
+  .listImgs {
+    width: 100%;  
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .listImgs li {
+    flex: 0 0 60px;
+  }
+}
