@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  /* ### Primary */
+  --Blue: hsl(246, 80%, 60%);
+  /* ----------- */
+  --Lightred : hsl(15, 100%, 70%); /*(work)*/ 
+  --Softblue : hsl(195, 74%, 62%); /*(play)*/
+  --Lightred : hsl(348, 100%, 68%); /*(study)*/
+  --Limegreen : hsl(145, 58%, 55%); /*(exercise)*/
+  --Violet : hsl(264, 64%, 52%); /*(social)*/
+  --Softorange : hsl(43, 84%, 65%); /*(self care)*/
+  /* ### Neutral */
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(auto, 255px) 1fr;
+  grid-template-rows: repeat(2, minmax(auto, 245px));
+  grid-template-areas: 
+  "perfil datas"
+  "perfil datas";
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.nomeBtn {
+  grid-area: perfil;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
+
+.perfil {
+  background-color: hsl(246, 80%, 60%);
+  padding: 35px 30px;
+  border-radius: 20px;
+}
+
+.perfil img {
+  display: block;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.perfil p {
+  color: hsl(236, 100%, 87%);
+  margin-top: 45px;
+  font-size: 15px;
+  line-height: 0;
+}
+
+.perfil h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 47px;
+  margin-top: -5px;
+}
+
+.btnsData {
+  padding: 25px 30px 35px 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btnsData button {
+  background-color: transparent;
+  color: hsl(235, 45%, 61%);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.data {
+  grid-area: datas;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.data li {
+  flex: 0 0 255px;
+  border-radius: 20px;
+}
