@@ -17,6 +17,11 @@
   --PaleBlue: hsl(236, 100%, 87%);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
@@ -28,15 +33,16 @@ body {
 }
 
 .container {
+  max-width: 1114px;
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: minmax(auto, 255px) 1fr;
+  grid-template-columns: minmax(auto, 260px) 1fr;
   grid-template-rows: repeat(2, minmax(auto, 245px));
   grid-template-areas: 
   "perfil datas"
   "perfil datas";
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  row-gap: 25px;
+  column-gap: 30px;
 }
 
 .nomeBtn {
@@ -75,6 +81,7 @@ body {
 }
 
 .btnsData {
+  list-style: none;
   padding: 25px 30px 35px 30px;
   display: flex;
   align-items: flex-start;
@@ -82,23 +89,10 @@ body {
   gap: 20px;
 }
 
-.btnsData button {
+.btnsData li {
   background-color: transparent;
   color: hsl(235, 45%, 61%);
   border: none;
   font-size: 18px;
-  font-weight: 500;
-}
-
-.data {
-  grid-area: datas;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.data li {
-  flex: 0 0 255px;
-  border-radius: 20px;
+  font-weight: 400;
 }
