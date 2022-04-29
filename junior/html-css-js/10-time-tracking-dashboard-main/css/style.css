@@ -34,19 +34,13 @@ body {
 
 .container {
   max-width: 1114px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: minmax(auto, 260px) 1fr;
-  grid-template-rows: repeat(2, minmax(auto, 245px));
-  grid-template-areas: 
-  "perfil datas"
-  "perfil datas";
-  row-gap: 25px;
-  column-gap: 30px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .nomeBtn {
-  grid-area: perfil;
+  flex: 0 1 255px;
   border-radius: 20px;
   background-color: hsl(235, 46%, 20%);
 }
@@ -90,9 +84,82 @@ body {
 }
 
 .btnsData li {
-  background-color: transparent;
   color: hsl(235, 45%, 61%);
   border: none;
   font-size: 18px;
   font-weight: 400;
+  transition: 0.3s;
+}
+
+.btnsData li:hover {
+  cursor: pointer;
+  color: hsl(236, 100%, 87%);
+  transition: 0.3s;
+}
+
+/* .data {
+  grid-area: datas;
+  list-style: none;
+  display: flex;
+  row-gap: 25px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+} */
+
+.data {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 255px));
+  grid-template-rows: repeat(2, minmax(auto, 255px));
+  row-gap: 25px;
+  column-gap: 30px;
+}
+
+.data li {
+  padding: 75px 30px 30px 30px;
+  border-radius: 20px;
+  position: relative;
+  color: #fff;
+  background-color: hsl(235, 46%, 20%);
+  display: grid;
+  grid-template-columns: 45px 1fr 20px;
+  grid-template-rows: 16px auto 20px;
+  grid-template-areas: 
+  "h2 . icone"
+  "h3 h3 ."
+  "p p .";
+  align-items: center;
+}
+
+.data li::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 20px 0 0 0;
+  border-top: 42px solid rebeccapurple;
+  background-color: aqua;
+}
+
+.data li h2 {
+  grid-area: h2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.data li span {
+  grid-area: icone;
+}
+
+.data li h3 {
+  grid-area: h3;
+  font-size: 63px;
+  line-height: 0;
+  font-weight: 300;
+}
+
+.data li p {
+  grid-area: p;
+  font-size: 15px;
+  margin-top: -20px;
 }
