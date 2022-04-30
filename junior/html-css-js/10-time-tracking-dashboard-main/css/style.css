@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
 :root {
@@ -19,6 +17,12 @@
   --PaleBlue: hsl(236, 100%, 87%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
@@ -30,14 +34,15 @@ body {
 }
 
 .container {
-  max-width: 1110px;
   margin-top: 50px;
+  margin-bottom: 20px;
   display: grid;
-  grid-template-columns: minmax(auto, 255px) minmax(auto, 825px);
-  grid-template-rows: repeat(2, minmax(auto, 250px));
+  grid-template-columns: repeat(4, minmax(auto, 255px));
+  grid-template-rows: repeat(2, minmax(auto, 242px));
+  gap: 30px;
   grid-template-areas: 
-  "nomeBtn list"
-  "nomeBtn list";
+  "nomeBtn work play study"
+  "nomeBtn exercise social selfCare";
 }
 
 .nomeBtns {
@@ -48,7 +53,7 @@ body {
 
 .nome {
   padding: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   border-radius: 20px;
   background-color: hsl(246, 80%, 60%);
 }
@@ -71,11 +76,11 @@ body {
   font-weight: 300;
   line-height: 45px;
   color:hsl(0, 0%, 100%);
-  margin-top: -11px;
 }
 
 .btnsData {
   list-style: none;
+  margin: 30px;
   color: hsl(235, 45%, 61%);
   display: flex;
   flex-direction: column;
@@ -96,36 +101,40 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-.datasList {
-  grid-area: list;
-  list-style: none;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+.borderTop {
+  border-radius: 20px;
+  border-top: 45px solid transparent;
+  position: relative;
+
 }
 
-.datasList li{
-  flex: 0 0 255px;
-  height: 255px;
-  border-radius: 20px;
-  border-top: 42px solid;
-  position: relative;
+.borderTop::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: bottom -2vw right 3vh;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  top: -45px;
 }
 
 .content {
-  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(235, 46%, 20%);
-  border-radius: 20px;
-  padding: 30px;
-  position: absolute;
-  top: 4px;
-  left: 0;
+  transition: 0.3s;
+}
+
+.content:hover {
+  cursor: pointer;
+  background-color: hsl(236, 41%, 34%);
+  transition: 0.3s;
 }
 
 .titleIcone {
-  max-width: 195px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -136,33 +145,72 @@ body {
   font-weight: 400;
 }
 
-.datasList li h3 {
+.content h3 {
   font-size: 63px;
-  line-height: 0;
   font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.datasList li p {
+.content p {
   font-size: 15px;
-  margin-top: -20px;
   color: hsl(236, 100%, 87%);
 }
 
 .work {
+  grid-area: work;
   background-color: hsl(15, 100%, 70%);
 }
 .play {
+  grid-area: play;
   background-color: hsl(195, 74%, 62%);
 }
 .study {
+  grid-area: study;
   background-color: hsl(348, 100%, 68%);
 }
 .exercise {
+  grid-area: exercise;
   background-color: hsl(145, 58%, 55%);
 }
 .social {
+  grid-area: social;
   background-color: hsl(263, 63%, 51%);
 }
 .selfCare {
+  grid-area: selfCare;
   background-color: hsl(43, 84%, 65%);
+}
+
+/* before element */
+
+.work::before {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url('../images/icon-work.svg');
+}
+
+.play::before {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url('../images/icon-play.svg');
+}
+.study::before {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url('../images/icon-study.svg');
+}
+.exercise::before {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url('../images/icon-exercise.svg');
+  background-position: bottom -1vw right 3vh;
+}
+
+.social::before {
+  background-color: hsl(263, 63%, 51%);
+  background-image: url('../images/icon-social.svg');
+  background-position: bottom -3vw right 3vh;
+}
+
+.selfCare::before {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url('../images/icon-self-care.svg');
+  background-position: bottom -1vw right 3vh;
 }
