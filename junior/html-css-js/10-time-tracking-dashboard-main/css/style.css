@@ -38,7 +38,6 @@ body {
   grid-template-areas: 
   "nomeBtn list"
   "nomeBtn list";
-  column-gap: 30px;
 }
 
 .nomeBtns {
@@ -95,4 +94,75 @@ body {
 
 .btnsData li.active {
   color: hsl(0, 0%, 100%);
+}
+
+.datasList {
+  grid-area: list;
+  list-style: none;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.datasList li{
+  flex: 0 0 255px;
+  height: 255px;
+  border-radius: 20px;
+  border-top: 42px solid;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  padding: 30px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.titleIcone {
+  max-width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleIcone h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.datasList li h3 {
+  font-size: 63px;
+  line-height: 0;
+  font-weight: 300;
+}
+
+.datasList li p {
+  font-size: 15px;
+  margin-top: -20px;
+  color: hsl(236, 100%, 87%);
+}
+
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.social {
+  background-color: hsl(263, 63%, 51%);
+}
+.selfCare {
+  background-color: hsl(43, 84%, 65%);
 }
