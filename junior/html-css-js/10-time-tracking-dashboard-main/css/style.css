@@ -1,0 +1,98 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  /* ### Primary */
+  --Blue: hsl(246, 80%, 60%);
+  /* ----------- */
+  --Lightred : hsl(15, 100%, 70%); /*(work)*/ 
+  --Softblue : hsl(195, 74%, 62%); /*(play)*/
+  --Lightred : hsl(348, 100%, 68%); /*(study)*/
+  --Limegreen : hsl(145, 58%, 55%); /*(exercise)*/
+  --Violet : hsl(264, 64%, 52%); /*(social)*/
+  --Softorange : hsl(43, 84%, 65%); /*(self care)*/
+  /* ### Neutral */
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1110px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: minmax(auto, 255px) minmax(auto, 825px);
+  grid-template-rows: repeat(2, minmax(auto, 250px));
+  grid-template-areas: 
+  "nomeBtn list"
+  "nomeBtn list";
+  column-gap: 30px;
+}
+
+.nomeBtns {
+  grid-area: nomeBtn;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
+
+.nome {
+  padding: 30px;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  background-color: hsl(246, 80%, 60%);
+}
+
+.nome img{
+  display: block;
+  max-width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid hsl(0, 0%, 100%);
+}
+
+.nome p {
+  font-size: 16px;
+  color:hsl(236, 100%, 87%);
+  margin-top: 35px;
+}
+
+.nome h1 {
+  font-weight: 300;
+  line-height: 45px;
+  color:hsl(0, 0%, 100%);
+  margin-top: -11px;
+}
+
+.btnsData {
+  list-style: none;
+  color: hsl(235, 45%, 61%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btnsData li {
+  transition: 0.3s;
+}
+
+.btnsData li:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s;
+}
+
+.btnsData li.active {
+  color: hsl(0, 0%, 100%);
+}
