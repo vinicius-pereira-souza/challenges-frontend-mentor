@@ -29,3 +29,19 @@ body {
   justify-content: center;
 }
 
+.container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 255px));
+  grid-template-rows: repeat(2, minmax(auto, 255px));
+  gap: 30px;
+  grid-template-areas: 
+  "nomeBtn work play study"
+  "nomeBtn exercise social selfCare";
+}
+
+.nomeBtns {
+  grid-area: nomeBtn;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
