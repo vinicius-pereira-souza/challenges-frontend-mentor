@@ -219,7 +219,7 @@ body {
   .container {
     display: grid;
     grid-template-columns: minmax(auto, 465px);
-    grid-template-rows: minmax(auto, 205px) repeat(6, minmax(auto, 160px));
+    grid-template-rows: minmax(auto, 205px) repeat(6, minmax(auto, 145px));
     gap: 25px;
     grid-template-areas: 
     "nomeBtn" "work" "play" "study"
@@ -262,4 +262,40 @@ body {
     justify-content: space-between;
   }
   
+  .borderTop {
+    border-top: 35px solid transparent;
+  }
+  
+  .borderTop::before {
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: bottom -2vw right 3vh;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    top: -35px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 80px 1fr 130px;
+    grid-template-rows: 13px 25px;
+    row-gap: 15px;
+    grid-template-areas: 
+    "titleIcone titleIcone titleIcone"
+    "h3 . paragrafo";
+    align-items: center;
+  }
+
+  .titleIcone {
+  grid-area: titleIcone;
+}
+
+.content h3 {
+  grid-area: h3;
+  font-size: 42px;
+}
+
+.content p {
+  grid-area: paragrafo;
+}
 } 
