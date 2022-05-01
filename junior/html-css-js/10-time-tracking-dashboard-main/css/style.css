@@ -312,3 +312,26 @@ body {
   }
   
 } 
+
+@media(max-width: 425px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(auto, 327px);
+  }
+  
+  .nome h1 {
+    font-size: 23px;
+  }
+  
+  .content h3 {
+    font-size: 30px;
+    align-items: center;
+  }
+
+  .content p {
+    grid-area: paragrafo;
+    font-size: 13px;
+    align-self: flex-end;
+  }
+
+}
