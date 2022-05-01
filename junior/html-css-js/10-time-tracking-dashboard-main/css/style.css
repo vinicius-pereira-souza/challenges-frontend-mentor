@@ -269,7 +269,7 @@ body {
   .borderTop::before {
     height: 35px;
     background-repeat: no-repeat;
-    background-position: bottom -2vw right 3vh;
+    background-position: bottom -5vw right 3vh;
     border-radius: 20px 20px 0 0;
     position: absolute;
     top: -35px;
@@ -290,12 +290,25 @@ body {
   grid-area: titleIcone;
 }
 
-.content h3 {
-  grid-area: h3;
-  font-size: 42px;
-}
+  .content h3 {
+    grid-area: h3;
+    font-size: 42px;
+  }
 
-.content p {
-  grid-area: paragrafo;
-}
+  .content p {
+    grid-area: paragrafo;
+  }
+
+  .exercise::before {
+    background-position: bottom -3vw right 3vh;
+  }
+  
+  .social::before {
+    background-position: bottom -9vw right 3vh;
+  }
+  
+  .selfCare::before {
+    background-position: bottom -3vw right 3vh;
+  }
+  
 } 
