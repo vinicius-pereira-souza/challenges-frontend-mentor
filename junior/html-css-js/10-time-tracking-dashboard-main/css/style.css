@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
-:root {
-  /* ### Primary */
-  --Blue: hsl(246, 80%, 60%);
-  /* ----------- */
-  --Lightred : hsl(15, 100%, 70%); /*(work)*/ 
-  --Softblue : hsl(195, 74%, 62%); /*(play)*/
-  --Lightred : hsl(348, 100%, 68%); /*(study)*/
-  --Limegreen : hsl(145, 58%, 55%); /*(exercise)*/
-  --Violet : hsl(264, 64%, 52%); /*(social)*/
-  --Softorange : hsl(43, 84%, 65%); /*(self care)*/
-  /* ### Neutral */
-  --Verydarkblue: hsl(226, 43%, 10%);
-  --Darkblue: hsl(235, 46%, 20%);
-  --Desaturatedblue: hsl(235, 45%, 61%);
-  --PaleBlue: hsl(236, 100%, 87%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -182,8 +165,6 @@ body {
   background-color: hsl(43, 84%, 65%);
 }
 
-/* before element */
-
 .work::before {
   background-color: hsl(15, 100%, 70%);
   background-image: url('../images/icon-work.svg');
@@ -213,4 +194,125 @@ body {
   background-color: hsl(43, 84%, 65%);
   background-image: url('../images/icon-self-care.svg');
   background-position: bottom -1vw right 3vh;
+}
+
+@media(max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(auto, 465px);
+    grid-template-rows: minmax(auto, 205px) repeat(6, minmax(auto, 145px));
+    gap: 25px;
+    grid-template-areas: 
+    "nomeBtn" "work" "play" "study"
+    "exercise" "social" "selfCare";
+  }
+
+  .nome {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 35px auto;
+    grid-template-areas: 
+    "img reportFor"
+    "img nome";
+    align-items: center;
+    column-gap: 15px;
+  }
+  
+  .nome img{
+    grid-area: img;
+    max-width: 70px;
+    height: 70px;
+  }
+  
+  .nome p {
+    grid-area: reportFor;
+    margin-top: 5px;
+  }
+  
+ .nome h1 {
+   grid-area: nome;
+   line-height: 0;
+   margin-bottom: 10px;
+  }
+
+  .btnsData {
+    list-style: none;
+    margin: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .borderTop {
+    border-top: 35px solid transparent;
+  }
+  
+  .borderTop::before {
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: bottom -5vw right 3vh;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    top: -35px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 80px 1fr 130px;
+    grid-template-rows: 13px 25px;
+    row-gap: 15px;
+    grid-template-areas: 
+    "titleIcone titleIcone titleIcone"
+    "h3 . paragrafo";
+    align-items: center;
+  }
+
+  .titleIcone {
+  grid-area: titleIcone;
+}
+
+  .content h3 {
+    grid-area: h3;
+    font-size: 42px;
+  }
+
+  .content p {
+    grid-area: paragrafo;
+  }
+
+  .exercise::before {
+    background-position: bottom -3vw right 3vh;
+  }
+  
+  .social::before {
+    background-position: bottom -9vw right 3vh;
+  }
+  
+  .selfCare::before {
+    background-position: bottom -3vw right 3vh;
+  }
+  
+} 
+
+@media(max-width: 425px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(auto, 327px);
+  }
+  
+  .nome h1 {
+    font-size: 23px;
+  }
+  
+  .content h3 {
+    font-size: 30px;
+    align-items: center;
+  }
+
+  .content p {
+    grid-area: paragrafo;
+    font-size: 13px;
+    align-self: flex-end;
+  }
+
 }

@@ -1,6 +1,4 @@
-/* ### Headings, Call-to-actions, Navigation */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
-/* body */
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 
@@ -222,10 +220,6 @@ nav {
   background-color: hsl(207, 33%, 95%);
   z-index: 5;
 }
-
-/* tablet: 768 */
-
-/* mobile */
 
 @media (max-width: 425px) {
   body {
