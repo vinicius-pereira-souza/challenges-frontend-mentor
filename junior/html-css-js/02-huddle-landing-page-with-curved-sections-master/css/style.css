@@ -1,7 +1,4 @@
-/* Headings */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-/* font-family: 'Poppins', sans-serif; */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 * {
@@ -22,8 +19,6 @@ img {
 span {
   display: block;
 }
-
-/* desktop / tablet */
 
 .header .flexHeader{
   padding: 75px;
@@ -114,8 +109,6 @@ span {
 .dadosFlex div p{
   color: hsl(192, 100%, 9%);
 }
-
-/* SEÇÕES */
 
 .growBg {
   background-image: url('../images/bg-section-top-desktop-1.svg'), url('../images/bg-section-bottom-desktop-1.svg');
@@ -505,8 +498,6 @@ form label.err input {
     padding: 6px 8px;
 
   }
-
-  /* formulario do footer */
 
   .formContent p {
     max-width: 346px;

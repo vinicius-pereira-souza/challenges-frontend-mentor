@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
-/*   font-family: 'Epilogue', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +13,6 @@ ul {
 img {
   display: block;
   max-width: 100%;
-}
-
-:root {
-  --AlmostWhite: hsl(0, 0%, 98%);
-  --MediumGray: hsl(0, 0%, 41%);
-  --AlmostBlack: hsl(0, 0%, 8%);
 }
 
 body {
@@ -137,13 +129,12 @@ body {
 }
 
 .gridContent {
-  /* padding: 0 160px; */
   display: grid;
-  grid-template-columns: minmax(auto, 160px) /* espaço em branco*/
-                         minmax(auto, 510px) /* conteudo */
-                         minmax(auto, 1fr)   /* espaço em branco*/
-                         minmax(465px, 1fr)  /* imagem */
-                         minmax(auto, 160px);/* espaço em branco*/
+  grid-template-columns: minmax(auto, 160px) 
+                         minmax(auto, 510px) 
+                         minmax(auto, 1fr)   
+                         minmax(465px, 1fr)  
+                         minmax(auto, 160px);
   grid-template-areas: ". conteudo . img .";
 } 
 
@@ -199,8 +190,6 @@ body {
   background-size: contain;
 }
 
-/* interação JS */
-
 .btnMobile.active {
   background-image: url('../images/icon-close-menu.svg');
   z-index: 250px;
@@ -226,8 +215,6 @@ body {
   overflow-y: hidden;
   transition: 1s;
 }
-
-/* tablet */
 
 @media(max-width: 770px) {
   .header {
@@ -338,8 +325,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
-/* mobile */
 
 @media(max-width: 425px) {
   .header {
