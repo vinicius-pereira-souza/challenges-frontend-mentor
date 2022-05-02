@@ -14,13 +14,9 @@ function handleClick(e) {
 }
 
 function fetchGet() {
-  // fetch('../data.json')
-  // .then(transform = transform.json())
-  // .then(arrObjs => {
-  //   console.log(arrObjs)
-  // })
-  fetch('../data.json')
-  .then(r => r.json())
+  fetch('data.json')
+  .then(transformJson => transformJson.json())
+  .then(arr => {
+    return console.log(arr)
+  })
 }
-
-fetchGet()
