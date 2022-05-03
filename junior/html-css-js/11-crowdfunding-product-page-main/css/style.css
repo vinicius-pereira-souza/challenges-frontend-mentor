@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Commissioner', sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 
 img {
@@ -26,6 +27,8 @@ span {
   -Black: hsl(0, 0%, 0%);
   -Darkgray: hsl(0, 0%, 48%);
 }
+
+/* header */
 
 .header {
   max-width: 100%;
@@ -66,5 +69,72 @@ nav {
   background-image: url('../images/icon-hamburger.svg');
   background-repeat: no-repeat;
   background-position: center;
+  display: none;
+}
+
+/* containerAbsolute */
+.containerAbsolute {
+  max-width: 730px;
+  position: absolute;
+  top: 305px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mastercraft {
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 60px 50px 50px 50px;
+  text-align: center;
+  position: relative;
+}
+
+.mastercraft::before {
+  content: url('../images/logo-mastercraft.svg');
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mastercraft h1 {
+  font-size: 28px;
+}
+
+.mastercraft h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(0, 0%, 48%);
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.btnsFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  width: 205px;
+  height: 55px;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  color:hsl(0, 0%, 98%);
+  transition: 0.3s;
+}
+
+.back:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+  transition: 0.3s;
+}
+
+.labelContainer {
   display: none;
 }
