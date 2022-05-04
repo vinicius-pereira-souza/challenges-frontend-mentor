@@ -326,10 +326,13 @@ article.whiteArticle .Select:hover {
   transition: 0.3s;
 }
 
+.closeModal:hover {
+  cursor: pointer;
+}
+
 .closeModal:hover svg path{
   fill: hsl(0, 0%, 0%);
   opacity: 1;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -342,6 +345,37 @@ article.whiteArticle .Select:hover {
   color: hsl(0, 0%, 48%);
   line-height: 28px;
   margin-bottom: 30px;
+}
+
+.gridArticle {
+  padding: 30px;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: grid;
+  justify-content: flex-start;
+  grid-template-columns: 25px 1fr 65px;
+  grid-template-rows: 20px auto auto;
+  grid-template-areas: 
+  'input subgrid subgrid'
+  '. p p'
+  '. selected selected';
+}
+
+.gridArticle input {
+  grid-area: input;
+}
+
+.subGrid {
+  grid-area: subgrid;
+}
+
+.gridArticle input + div{
+  grid-area: p;
+}
+
+.selectedGrid {
+  grid-area: selected;
 }
 
 .success {
