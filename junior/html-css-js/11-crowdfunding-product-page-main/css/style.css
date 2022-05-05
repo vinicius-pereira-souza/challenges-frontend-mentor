@@ -319,3 +319,145 @@ button.gray:hover {
   cursor: auto;
   background: #cbcbcb;
 }
+
+.bgFundo {
+  width: 100%;
+  padding: 180px 0 725px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+.modalBackThisProject {
+  flex: 0 1 730px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  position: relative;
+}
+
+.closeModal {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.closeModal:hover {
+  cursor: pointer;
+}
+
+.closeModal:hover svg path{
+  fill: hsl(0, 0%, 0%);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.modalBackThisProject h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modalBackThisProject  p {
+  margin-bottom: 30px;
+}
+
+.gridArticle {
+  padding: 30px;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  grid-template-rows: 20px auto auto;
+  grid-template-areas: 
+  "line1 line1"
+  ". p"
+  "selected selected";
+}
+
+.line1 {
+  grid-area: line1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.line1 h2 {
+  font-size: 16px;
+  margin-left: 22px;
+  margin-right: 20px;
+}
+
+.line1 h2 + span {
+  color:hsl(176, 50%, 47%);
+  font-size: 16px;
+}
+
+.line1 .flex {
+  font-weight: 700;
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.flex span {
+  font-weight: 400;
+  color: hsl(0, 0%, 48%);
+}
+
+.gridArticle p {
+  margin-top: 12px;
+  grid-area: p;
+}
+
+.selectedGrid {
+  grid-area: selected;
+  display: grid;
+  grid-template-columns: 135px 1fr 115px 105px;
+  grid-template-rows: 50px;
+  align-items: center;
+  grid-template-areas: 
+  "p . input btn";
+}
+
+.selectedGrid p {
+  grid-area: p;
+  line-height: 15px;
+}
+
+.selectedGrid input, .selectedGrid button {
+  height: 55px;
+  border-radius: 50px;
+}
+
+.selectedGrid input {
+  grid-area: input;
+  padding-left: 40px;
+  margin-right: 15px;
+  border: 2px solid hsl(0, 0%, 48%);
+}
+
+.selectedGrid button {
+  grid-area: btn;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  color:hsl(0, 0%, 98%);
+  transition: 0.3s;
+}
+
+.selectedGrid button:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+  transition: 0.3s;
+}
