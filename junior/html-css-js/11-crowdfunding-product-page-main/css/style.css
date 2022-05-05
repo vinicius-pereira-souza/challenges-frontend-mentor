@@ -22,6 +22,8 @@ span {
 
 ul {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 p {
@@ -171,4 +173,62 @@ nav {
 .btnIcon button:hover svg circle{
   transition: 0.3s;
   fill: #707070;
+}
+
+.numbersData {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  padding: 45px 45px 50px 45px;
+}
+
+.dadas {
+  margin-bottom: 40px;
+}
+
+.dadas li {
+  color: hsl(0, 0%, 48%);
+  display: flex;
+  flex-direction: column;
+}
+
+.dadas li span{
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 10px;
+}
+
+.dadas li:first-child {
+  padding-right: 40px;
+}
+
+.dadas li span:first-child {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dadas li:nth-child(2) {
+  border: 1px solid hsl(0, 0%, 85%);
+  border-top: transparent;
+  border-bottom: transparent;
+  padding: 0 40px;
+}
+
+.dadas li:last-child {
+  padding-left: 40px;
+}
+
+.progressBarContainer {
+  max-width: 632px;
+  height: 12px;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 85%);
+}
+
+.progressBar {
+  width: 495px;
+  height: 12px;
+  border-radius: 20px;
+  background-color: hsl(176, 50%, 47%);
 }
