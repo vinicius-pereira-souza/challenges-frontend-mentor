@@ -23,6 +23,10 @@ span {
 ul {
   list-style: none;
 }
+
+p {
+  color: hsl(0, 0%, 48%);
+}
 /* header */
 
 .header {
@@ -77,4 +81,94 @@ nav {
   transform: translateX(-50%);
   display: grid;
   grid-template-columns: minmax(730px,  1fr);
+}
+
+.mastercraft {
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 60px 45px 50px 45px;
+  text-align: center;
+  position: relative;
+}
+
+.mastercraft::before {
+  content: url('../images/logo-mastercraft.svg');
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mastercraft h1 {
+  font-size: 28px;
+}
+
+.mastercraft h2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.btnsFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  width: 205px;
+  height: 55px;
+  border-radius: 30px;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  color:hsl(0, 0%, 98%);
+  transition: 0.3s;
+}
+
+.back:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+  transition: 0.3s;
+}
+
+
+.btnIcon button{
+  width: 145px;
+  height: 55px;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 50px;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  color:hsl(0, 0%, 48%);
+  position: relative;
+  z-index: 10;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.btnIcon svg {
+  position: absolute;
+  left: 0;
+}
+
+.btnIcon button svg circle{
+  transition: 0.3s;
+}
+
+.btnIcon button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnIcon button:hover svg circle{
+  transition: 0.3s;
+  fill: #707070;
 }
