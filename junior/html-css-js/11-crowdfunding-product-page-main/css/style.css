@@ -341,7 +341,7 @@ article.whiteArticle .Select:hover {
   margin-bottom: 20px;
 }
 
-.modalBackThisProject > p {
+.modalBackThisProject  p {
   color: hsl(0, 0%, 48%);
   line-height: 28px;
   margin-bottom: 30px;
@@ -354,29 +354,50 @@ article.whiteArticle .Select:hover {
   margin-bottom: 25px;
   display: grid;
   justify-content: flex-start;
-  grid-template-columns: 25px 1fr 65px;
+  grid-template-columns: 230px 535px;
   grid-template-rows: 20px auto auto;
   grid-template-areas: 
-  'input subgrid subgrid'
+  'line1 line1 line1'
   '. p p'
-  '. selected selected';
+  'selectedGrid selectedGrid selectedGrid';
 }
 
-.gridArticle input {
-  grid-area: input;
+.line1 {
+  grid-area: line1;
+  display: flex;
+  align-items: center;
 }
 
-.subGrid {
-  grid-area: subgrid;
+.line1 h2 {
+  margin-left: 25px;
+  margin-right: 20px;
+  font-size: 16px;
 }
 
-.gridArticle input + div{
-  grid-area: p;
+.flex {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .selectedGrid {
-  grid-area: selected;
+  grid-area: selectedGrid;
+  display: flex;
+  align-items: center;
 }
+
+.selectedGrid input, .selectedGrid button {
+  align-self: flex-end;
+}
+
+/* .line1 input {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50% !important;
+} */
+
 
 .success {
   display: none;
