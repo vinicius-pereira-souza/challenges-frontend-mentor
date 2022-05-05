@@ -70,6 +70,7 @@ nav {
   position: absolute;
   top: 305px;
   left: 50%;
+  z-index: 50;
   transform: translateX(-50%);
 }
 
@@ -293,5 +294,111 @@ article.whiteArticle .Select:hover {
 }
 
 .labelContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBackThisProject {
+  position: absolute;
+  top:0;
+  max-width: 730px;
+  background-color: #fff;
+  margin-top: 180px;
+  border-radius: 10px;
+  padding: 50px;
+  z-index: 200;
+}
+
+.closeModal {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.closeModal:hover {
+  cursor: pointer;
+}
+
+.closeModal:hover svg path{
+  fill: hsl(0, 0%, 0%);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.modalBackThisProject h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modalBackThisProject  p {
+  color: hsl(0, 0%, 48%);
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.gridArticle {
+  padding: 30px;
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: grid;
+  justify-content: flex-start;
+  grid-template-columns: 230px 535px;
+  grid-template-rows: 20px auto auto;
+  grid-template-areas: 
+  'line1 line1 line1'
+  '. p p'
+  'selectedGrid selectedGrid selectedGrid';
+}
+
+.line1 {
+  grid-area: line1;
+  display: flex;
+  align-items: center;
+}
+
+.line1 h2 {
+  margin-left: 25px;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.flex {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.selectedGrid {
+  grid-area: selectedGrid;
+  display: flex;
+  align-items: center;
+}
+
+.selectedGrid input, .selectedGrid button {
+  align-self: flex-end;
+}
+
+/* .line1 input {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50% !important;
+} */
+
+
+.success {
   display: none;
 }
