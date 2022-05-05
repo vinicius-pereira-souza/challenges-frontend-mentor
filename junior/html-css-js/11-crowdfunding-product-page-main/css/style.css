@@ -20,6 +20,16 @@ span {
   display: block;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  color: hsl(0, 0%, 48%);
+  line-height: 28px;
+}
 /* header */
 
 .header {
@@ -65,13 +75,15 @@ nav {
 }
 
 /* containerAbsolute */
-.containerAbsolute {
+.containerGridAbsolute {
   max-width: 730px;
+  padding-bottom: 50px;
   position: absolute;
   top: 305px;
   left: 50%;
-  z-index: 50;
   transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: minmax(730px,  1fr);
 }
 
 .mastercraft {
@@ -99,7 +111,6 @@ nav {
 .mastercraft h2 {
   font-size: 16px;
   font-weight: 400;
-  color: hsl(0, 0%, 48%);
   margin-top: 15px;
   margin-bottom: 25px;
 }
@@ -110,7 +121,7 @@ nav {
   justify-content: space-between;
 }
 
-.back {
+.back, .numberBtn button {
   width: 205px;
   height: 55px;
   border-radius: 30px;
@@ -122,14 +133,50 @@ nav {
   transition: 0.3s;
 }
 
-.back:hover {
+.back:hover, .numberBtn button:hover {
   cursor: pointer;
   background-color: hsl(176, 72%, 28%);
   transition: 0.3s;
 }
 
+
+.btnIcon button{
+  width: 145px;
+  height: 55px;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 50px;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  color:hsl(0, 0%, 48%);
+  position: relative;
+  z-index: 10;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.btnIcon svg {
+  position: absolute;
+  left: 0;
+}
+
+.btnIcon button svg circle{
+  transition: 0.3s;
+}
+
+.btnIcon button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnIcon button:hover svg circle{
+  transition: 0.3s;
+  fill: #707070;
+}
+
 .numbersData {
-  max-width: 100%;
   background-color: #fff;
   border-radius: 5px;
   margin: 25px 0;
@@ -137,11 +184,7 @@ nav {
 }
 
 .dadas {
-  list-style: none;
   margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-
 }
 
 .dadas li {
@@ -150,8 +193,20 @@ nav {
   flex-direction: column;
 }
 
+.dadas li span{
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 10px;
+}
+
 .dadas li:first-child {
   padding-right: 40px;
+}
+
+.dadas li span:first-child {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .dadas li:nth-child(2) {
@@ -163,18 +218,6 @@ nav {
 
 .dadas li:last-child {
   padding-left: 40px;
-}
-
-.dadas li span:first-child {
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.dadas li span{
-  font-size: 32px;
-  font-weight: 700;
-  color: hsl(0, 0%, 0%);
-  margin-bottom: 10px;
 }
 
 .progressBarContainer {
@@ -200,11 +243,6 @@ nav {
 
 .container h3 {
   margin-bottom: 40px;
-}
-
-.container p {
-  color: hsl(0, 0%, 48%);
-  line-height: 28px;
 }
 
 .container > p + p {
@@ -255,64 +293,50 @@ nav {
 .numberBtn button {
   width: 155px;
   height: 45px;
-  border-radius: 30px;
-  border: none;
-  background-color: hsl(176, 50%, 47%);
-  font-family: 'Commissioner', sans-serif;
-  font-weight: 500;
-  color:hsl(0, 0%, 98%);
-  transition: 0.3s;
 }
 
-.numberBtn button:hover {
-  cursor: pointer;
-  background-color: hsl(176, 72%, 28%);
-  transition: 0.3s;
-}
-
-article.whiteArticle .titleSpan h4, span{
+.contentgray, article.whiteArticle span {
   color: #7a7a7a;
 }
 
-article.whiteArticle .titleSpan span{
+.contentgray span{
   color: hsl(171, 31%, 80%);
 }
+
 article.whiteArticle p{
   color: #d0d0d0;
 }
 
-article.whiteArticle span span{
+.numberGray span{
   color: #d0d0d0;
 }
 
-article.whiteArticle .Select {
+.Select.gray {
   background: #cbcbcb;
 }
 
-article.whiteArticle .Select:hover {
+button.gray:hover {
   cursor: auto;
+  background: #cbcbcb;
 }
 
-.labelContainer {
+.bgFundo {
   width: 100%;
-  height: 100%;
+  padding: 180px 0 725px 0;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 0;
 }
 
 .modalBackThisProject {
-  position: absolute;
-  top:0;
-  max-width: 730px;
+  flex: 0 1 730px;
   background-color: #fff;
-  margin-top: 180px;
   border-radius: 10px;
   padding: 50px;
-  z-index: 200;
+  position: relative;
 }
 
 .closeModal {
@@ -342,8 +366,6 @@ article.whiteArticle .Select:hover {
 }
 
 .modalBackThisProject  p {
-  color: hsl(0, 0%, 48%);
-  line-height: 28px;
   margin-bottom: 30px;
 }
 
@@ -353,52 +375,89 @@ article.whiteArticle .Select:hover {
   border-radius: 10px;
   margin-bottom: 25px;
   display: grid;
-  justify-content: flex-start;
-  grid-template-columns: 230px 535px;
+  grid-template-columns: 35px 1fr;
   grid-template-rows: 20px auto auto;
   grid-template-areas: 
-  'line1 line1 line1'
-  '. p p'
-  'selectedGrid selectedGrid selectedGrid';
+  "line1 line1"
+  ". p"
+  "selected selected";
 }
 
 .line1 {
   grid-area: line1;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .line1 h2 {
-  margin-left: 25px;
+  font-size: 16px;
+  margin-left: 22px;
   margin-right: 20px;
+}
+
+.line1 h2 + span {
+  color:hsl(176, 50%, 47%);
   font-size: 16px;
 }
 
-.flex {
-  align-self: flex-end;
+.line1 .flex {
+  font-weight: 700;
+  position: absolute;
+  right: 0;
   display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.flex span {
+  font-weight: 400;
+  color: hsl(0, 0%, 48%);
+}
+
+.gridArticle p {
+  margin-top: 12px;
+  grid-area: p;
 }
 
 .selectedGrid {
-  grid-area: selectedGrid;
-  display: flex;
+  grid-area: selected;
+  display: grid;
+  grid-template-columns: 135px 1fr 115px 105px;
+  grid-template-rows: 50px;
   align-items: center;
+  grid-template-areas: 
+  "p . input btn";
+}
+
+.selectedGrid p {
+  grid-area: p;
+  line-height: 15px;
 }
 
 .selectedGrid input, .selectedGrid button {
-  align-self: flex-end;
+  height: 55px;
+  border-radius: 50px;
 }
 
-/* .line1 input {
-  display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50% !important;
-} */
+.selectedGrid input {
+  grid-area: input;
+  padding-left: 40px;
+  margin-right: 15px;
+  border: 2px solid hsl(0, 0%, 48%);
+}
 
+.selectedGrid button {
+  grid-area: btn;
+  border: none;
+  background-color: hsl(176, 50%, 47%);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  color:hsl(0, 0%, 98%);
+  transition: 0.3s;
+}
 
-.success {
-  display: none;
+.selectedGrid button:hover {
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+  transition: 0.3s;
 }

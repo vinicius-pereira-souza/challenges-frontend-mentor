@@ -34,8 +34,7 @@
       <button class="btnMoile"></button>
     </nav>
   </header>
-
-  <main class="containerAbsolute">
+  <main class="containerGridAbsolute">
     <section class="mastercraft">
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <h2> A beautiful & handcrafted monitor stand to reduce neck and eye strain.</h2>
@@ -43,9 +42,17 @@
         <button class="back">
           Back this project
         </button>
-        <button class="bookmark">
-          Bookmark
-        </button>
+        <div class="btnIcon">
+          <button>
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
+            Bookmark
+          </button>
+        </div>
       </div>
     </section>
 
@@ -84,7 +91,6 @@
           <span>101<span>left</span></span>
           <button class="Select">Select Reward</button>
         </div>
-
       </article>
 
       <article>
@@ -100,11 +106,10 @@
           <span>64<span>left</span></span>
           <button class="Select">Select Reward</button>
         </div>
-
       </article>
 
       <article class="whiteArticle">
-        <div class="titleSpan">
+        <div class="titleSpan contentgray">
           <h4>Mahogany Special Edition</h4>
           <span>Pledge $200 or more</span>
         </div>
@@ -113,22 +118,21 @@
           to our Backer member list. Shipping is included.
         </p>
         <div class="numberBtn">
-          <span>0<span>left</span></span>
-          <button class="Select">Out of Stock</button>
+          <span class="numberGray">0<span>left</span></span>
+          <button class="Select gray">Out of Stock</button>
         </div>
 
       </article>
     </section>
   </main>
 
-  <div class="labelContainer">
+  <div class="bgFundo">
     <main class="modalBackThisProject">
       <button class="closeModal">
         <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg">
           <path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4" />
         </svg>
       </button>
-
       <h1>Back this project</h1>
       <p>
         Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
@@ -158,7 +162,7 @@
         </p>
         <div class="selectedGrid">
           <p>Enter your pledge</p>
-          <input type="number" name="" id="" value="25" placeholder="$">
+          <input type="number" name="" id="" value="25">
           <button>Continue</button>
         </div>
       </article>
@@ -176,7 +180,7 @@
         </p>
         <div class="selectedGrid">
           <p>Enter your pledge</p>
-          <input type="number" name="" id="" value="75" placeholder="$">
+          <input type="number" name="" id="" value="75">
           <button>Continue</button>
         </div>
       </article>
@@ -194,25 +198,11 @@
         </p>
         <div class="selectedGrid">
           <p>Enter your pledge</p>
-          <input type="number" name="" id="" value="200" placeholder="$">
+          <input type="number" name="" id="" value="200">
           <button>Continue</button>
         </div>
       </article>
-
     </main>
-  </div>
-
-  <!-- Selection modal end -->
-  <div class="labelContainer">
-    <div class="success">
-      <img src="images/icon-check.svg" alt="icone de check">
-      <h1>Thanks for your support!</h1>
-      <p>
-        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-        an email once our campaign is completed.
-      </p>
-      <button>Got it!</button>
-    </div>
   </div>
 </body>
 
