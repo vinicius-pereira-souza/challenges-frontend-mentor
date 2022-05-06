@@ -365,34 +365,25 @@ button.gray:hover {
   margin-bottom: 20px;
 }
 
-.modalBackThisProject  p {
+.modalBackThisProject > p {
   margin-bottom: 30px;
 }
 
 .gridArticle {
-  padding: 30px;
   border: 1px solid hsl(0, 0%, 85%);
   border-radius: 10px;
   margin-bottom: 25px;
-  display: grid;
-  grid-template-columns: 35px 1fr;
-  grid-template-rows: 20px auto auto;
-  grid-template-areas: 
-  "line1 line1"
-  ". p"
-  "selected selected";
+  padding: 30px 0;
 }
 
 .line1 {
-  grid-area: line1;
+  padding: 0 25px;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .line1 h2 {
   font-size: 16px;
-  margin-left: 22px;
   margin-right: 20px;
 }
 
@@ -404,7 +395,7 @@ button.gray:hover {
 .line1 .flex {
   font-weight: 700;
   position: absolute;
-  right: 0;
+  right: 80px;
   display: flex;
   gap: 10px;
 }
@@ -414,19 +405,35 @@ button.gray:hover {
   color: hsl(0, 0%, 48%);
 }
 
-.gridArticle p {
+.gridArticle > p {
   margin-top: 12px;
-  grid-area: p;
+  padding-left: 55px;
+  padding-right: 30px;
 }
 
 .selectedGrid {
-  grid-area: selected;
+  height: 0;
+  padding-top: 0;
+  border-top: none;
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.selectedGrid.active {
+  margin-top: 30px;
+  padding: 0 30px;
+  padding-top: 20px;
+  border-top: 1px solid hsl(0, 0%, 85%);
+  position: relative;
   display: grid;
   grid-template-columns: 135px 1fr 115px 105px;
   grid-template-rows: 50px;
   align-items: center;
   grid-template-areas: 
   "p . input btn";
+  overflow-y: hidden;
+  height: auto;
+  transition: 1s;
 }
 
 .selectedGrid p {
