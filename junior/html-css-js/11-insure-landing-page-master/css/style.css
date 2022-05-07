@@ -44,6 +44,7 @@ body {
   background-position: left;
   position: absolute;
   bottom: -333px;
+  z-index: 100;
 }
 
 .flexLogoNav {
@@ -99,6 +100,23 @@ nav {
   transition: 0.3s;
 }
 
+.flexContentHeader {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: minmax(auto, 540px) minmax(400px, 1fr);
+  gap: 30px;
+}
+
+.headerImg {
+  height: 640px;
+  background-image: url('../images/image-intro-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
 .content h1, .findOutMore h1, .wereDifferent h1 {
   font-size: 70px;
   font-weight: 400;
@@ -117,6 +135,12 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.content button:hover, .findOutMore button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  color:hsl(256, 26%, 20%);
 }
 
 .content p {
@@ -201,12 +225,6 @@ nav {
   line-height: 47px;
 }
 
-.findOutMore button:hover {
-  cursor: pointer;
-  background-color: hsl(0, 0%, 100%);
-  color:hsl(256, 26%, 20%);
-}
-
 .footer {
   font-size: 15px;
   padding: 60px 160px;
@@ -252,7 +270,8 @@ nav {
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 170px;
+  column-gap: 170px;
+  row-gap: 25px;
 }
 
 .listsFooter ul {
