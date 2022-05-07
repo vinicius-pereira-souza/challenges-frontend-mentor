@@ -87,7 +87,7 @@ nav {
   transition: 0.3s;
 }
 
-.content h1, .findOutMore h1 {
+.content h1, .findOutMore h1, .wereDifferent h1 {
   font-size: 70px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -96,7 +96,7 @@ nav {
   font-family: 'DM Serif Display', serif;
 }
 
-.content::before {
+.content::before, .wereDifferent::before {
   content: '';
   display: block;
   width: 150px;
@@ -119,10 +119,61 @@ nav {
   color: hsl(0, 0%, 100%);
 }
 
+.wereDifferent {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 300px;
+  padding-top: 70px;
+  position: relative;
+}
+
+.wereDifferent::before {
+  background-color: hsl(273, 4%, 51%);
+}
+
+.wereDifferent h1 {
+  color: hsl(270, 9%, 17%);
+  margin-bottom: 90px;
+}
+
+.wereDifferent ul{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.wereDifferent ul li:first-child {
+  flex: 0 0 330px;
+}
+
+.wereDifferent ul li:nth-child(2) {
+  flex: 0 0 350px;
+}
+
+.wereDifferent ul li:nth-child(3) {
+  flex: 0 0 335px;
+}
+
+.wereDifferent li img {
+  margin-bottom: 30px;
+}
+
+.wereDifferent li h2 {
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(270, 9%, 17%);
+  font-family: 'DM Serif Display', serif;
+}
+
 .findOutMore {
   max-width: 1010px;
   padding: 75px 80px;
-  margin: 0 auto;
+  margin: 160px auto;
   background-color: hsl(256, 26%, 20%);
   background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
   background-repeat: no-repeat;
