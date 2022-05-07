@@ -28,16 +28,8 @@ body {
   --VeryLightGray: hsl(0, 0%, 98%);
 }
 
-.header {
-  max-width: 100%;
-  height: 680px;
-  background-color: hsl(256, 26%, 20%);
-  position: relative;
-}
-
 .flexLogoNav {
   padding: 30px 165px;
-  background-color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,18 +80,26 @@ nav {
   transition: 0.3s;
 }
 
+.positionRelative {
+  height: 600px;
+  background-color: hsl(256, 26%, 20%);
+  position: relative;
+}
+
 .flexContentHeader {
-  max-width: 1112px;
-  position: absolute;
-  top: 185px;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 1110px;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .content {
-  max-width: 540px;
+  flex: 1 0 540px;
   padding: 70px 0;
 }
 
@@ -124,19 +124,26 @@ nav {
 }
 
 .content p {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  line-height: 30px;
-  color: hsl(0, 0%, 98%);
+margin-top: 25px;
+margin-bottom: 25px;
+line-height: 30px;
+color: hsl(0, 0%, 98%);
 }
 
 .content button {
-  border-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 100%);
+border-color: hsl(0, 0%, 100%);
+color: hsl(0, 0%, 100%);
 }
 
 .content button:hover {
-  cursor: pointer;
-  background-color: hsl(0, 0%, 100%);
-  color:hsl(256, 26%, 20%);
+cursor: pointer;
+background-color: hsl(0, 0%, 100%);
+color:hsl(256, 26%, 20%);
+}
+
+.headerImg {
+  flex: 1 0 540px;
+  height: 655px;
+  padding: 20px 0;
+  background-color: bisque;
 }
