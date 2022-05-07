@@ -28,11 +28,47 @@ body {
   --VeryLightGray: hsl(0, 0%, 98%);
 }
 
+.header {
+  height: 675px;
+  background-color: hsl(256, 26%, 20%);
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 505px;
+  background-image: url('../images/bg-pattern-intro-left-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  position: absolute;
+  bottom: -333px;
+  z-index: 100;
+}
+
+.header::before {
+  content: '';
+  display: block;
+  width: 440px;
+  height: 510px;
+  background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top -14vh right -3vw;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 100;
+  overflow-y: hidden;
+}
+
 .flexLogoNav {
   padding: 30px 165px;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 500;
 }
 
 nav {
@@ -61,7 +97,7 @@ nav {
   transition: 0.3s;
 }
 
-.nav button, .content button {
+.nav button, .content button, .findOutMore button {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -80,30 +116,39 @@ nav {
   transition: 0.3s;
 }
 
-.positionRelative {
-  height: 600px;
-  background-color: hsl(256, 26%, 20%);
-  position: relative;
-}
-
-.flexContentHeader {
+.gridContentHeader {
   max-width: 1110px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: minmax(540px, auto) minmax(540px, 1fr);
   gap: 30px;
   position: absolute;
-  top: 105px;
+  top: 206px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.content {
-  flex: 1 0 540px;
-  padding: 70px 0;
+.headerImg {
+  height: 640px;
+  background-image: url('../images/image-intro-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  position: relative;
+  top: -98px;
 }
 
-.content::before {
+.content h1, .findOutMore h1, .wereDifferent h1 {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'DM Serif Display', serif;
+}
+
+.content::before, .wereDifferent::before {
   content: '';
   display: block;
   width: 150px;
@@ -114,36 +159,180 @@ nav {
   left: 0;
 }
 
-.content h1 {
-  font-size: 70px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 68px;
-  color: hsl(0, 0%, 100%);
-  font-family: 'DM Serif Display', serif;
+.content button:hover, .findOutMore button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  color:hsl(256, 26%, 20%);
 }
 
 .content p {
-margin-top: 25px;
-margin-bottom: 25px;
-line-height: 30px;
-color: hsl(0, 0%, 98%);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 30px;
+  color: hsl(0, 0%, 98%);
 }
 
-.content button {
-border-color: hsl(0, 0%, 100%);
-color: hsl(0, 0%, 100%);
+.content button, .findOutMore button {
+  border-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 
-.content button:hover {
-cursor: pointer;
-background-color: hsl(0, 0%, 100%);
-color:hsl(256, 26%, 20%);
+.wereDifferent {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 300px;
+  padding-top: 70px;
+  position: relative;
 }
 
-.headerImg {
-  flex: 1 0 540px;
-  height: 655px;
-  padding: 20px 0;
-  background-color: bisque;
+.wereDifferent::before {
+  background-color: hsl(273, 4%, 51%);
+}
+
+.wereDifferent h1 {
+  color: hsl(270, 9%, 17%);
+  margin-bottom: 90px;
+}
+
+.wereDifferent ul{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.wereDifferent ul li:first-child {
+  flex: 0 0 330px;
+}
+
+.wereDifferent ul li:nth-child(2) {
+  flex: 0 0 350px;
+}
+
+.wereDifferent ul li:nth-child(3) {
+  flex: 0 0 335px;
+}
+
+.wereDifferent li img {
+  margin-bottom: 30px;
+}
+
+.wereDifferent li h2 {
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(270, 9%, 17%);
+  font-family: 'DM Serif Display', serif;
+}
+
+.findOutMore {
+  max-width: 1010px;
+  padding: 75px 80px;
+  margin: 160px auto;
+  background-color: hsl(256, 26%, 20%);
+  background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.findOutMore h1 {
+  font-size: 49px;
+  line-height: 47px;
+}
+
+.footer {
+  font-size: 15px;
+  padding: 60px 160px;
+  background-color: hsl(0, 0%, 98%);
+  background-image: url('../images/bg-pattern-footer-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.logoRedesFooter {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoRedesFooter ul {
+  max-width: 100%;
+  font-size: 29px;
+  color: hsl(273, 4%, 51%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logoRedesFooter ul li {
+  transition: 0.3s;
+}
+
+.logoRedesFooter ul li:hover {
+  cursor: pointer;
+  color: hsl(270, 9%, 17%);
+  transition: 0.3s;
+}
+
+.listsFooter {
+  max-width: 100%;
+  padding-top: 45px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 170px;
+  row-gap: 25px;
+}
+
+.listsFooter ul {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listsFooter ul h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(273, 4%, 51%);
+  margin-bottom: 15px;
+}
+
+.listsFooter ul li {
+  transition: 0.3s;
+  position: relative;
+}
+
+.listsFooter ul li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: hsl(270, 9%, 17%);
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.listsFooter ul li:hover {
+  cursor: pointer;
+}
+
+.listsFooter ul li:hover::after{
+  content: '';
+  width: 100px;
+  transition: 0.3s;
 }
