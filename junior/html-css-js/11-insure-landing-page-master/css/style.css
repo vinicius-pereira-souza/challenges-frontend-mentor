@@ -28,8 +28,15 @@ body {
   --VeryLightGray: hsl(0, 0%, 98%);
 }
 
+.header {
+  height: 675px;
+  background-color: hsl(256, 26%, 20%);
+  position: relative;
+}
+
 .flexLogoNav {
   padding: 30px 165px;
+  background-color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +68,7 @@ nav {
   transition: 0.3s;
 }
 
-.nav button, .content button {
+.nav button, .content button, .findOutMore button {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -80,27 +87,13 @@ nav {
   transition: 0.3s;
 }
 
-.positionRelative {
-  height: 600px;
-  background-color: hsl(256, 26%, 20%);
-  position: relative;
-}
-
-.flexContentHeader {
-  max-width: 1110px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
-  position: absolute;
-  top: 105px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.content {
-  flex: 1 0 540px;
-  padding: 70px 0;
+.content h1, .findOutMore h1 {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'DM Serif Display', serif;
 }
 
 .content::before {
@@ -114,36 +107,39 @@ nav {
   left: 0;
 }
 
-.content h1 {
-  font-size: 70px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 68px;
-  color: hsl(0, 0%, 100%);
-  font-family: 'DM Serif Display', serif;
-}
-
 .content p {
-margin-top: 25px;
-margin-bottom: 25px;
-line-height: 30px;
-color: hsl(0, 0%, 98%);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  line-height: 30px;
+  color: hsl(0, 0%, 98%);
 }
 
-.content button {
-border-color: hsl(0, 0%, 100%);
-color: hsl(0, 0%, 100%);
+.content button, .findOutMore button {
+  border-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
 
-.content button:hover {
-cursor: pointer;
-background-color: hsl(0, 0%, 100%);
-color:hsl(256, 26%, 20%);
+.findOutMore {
+  max-width: 1010px;
+  padding: 75px 80px;
+  margin: 0 auto;
+  background-color: hsl(256, 26%, 20%);
+  background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.headerImg {
-  flex: 1 0 540px;
-  height: 655px;
-  padding: 20px 0;
-  background-color: bisque;
+.findOutMore h1 {
+  font-size: 49px;
+  line-height: 47px;
+}
+
+.findOutMore button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  color:hsl(256, 26%, 20%);
 }
