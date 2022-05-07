@@ -47,12 +47,28 @@ body {
   z-index: 100;
 }
 
+.header::before {
+  content: '';
+  display: block;
+  width: 440px;
+  height: 510px;
+  background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top -14vh right -3vw;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 100;
+  overflow-y: hidden;
+}
+
 .flexLogoNav {
   padding: 30px 165px;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 500;
 }
 
 nav {
@@ -100,13 +116,17 @@ nav {
   transition: 0.3s;
 }
 
-.flexContentHeader {
+.gridContentHeader {
   max-width: 1110px;
   margin: 0 auto;
   padding-top: 100px;
   display: grid;
-  grid-template-columns: minmax(auto, 540px) minmax(400px, 1fr);
+  grid-template-columns: minmax(540px, auto) minmax(540px, 1fr);
   gap: 30px;
+  position: absolute;
+  top: 206px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .headerImg {
@@ -115,6 +135,8 @@ nav {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
+  position: relative;
+  top: -98px;
 }
 
 .content h1, .findOutMore h1, .wereDifferent h1 {
