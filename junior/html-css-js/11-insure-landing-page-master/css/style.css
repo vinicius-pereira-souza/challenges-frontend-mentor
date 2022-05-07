@@ -34,6 +34,18 @@ body {
   position: relative;
 }
 
+.header::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 505px;
+  background-image: url('../images/bg-pattern-intro-left-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  position: absolute;
+  bottom: -333px;
+}
+
 .flexLogoNav {
   padding: 30px 165px;
   background-color: hsl(0, 0%, 100%);
@@ -193,4 +205,93 @@ nav {
   cursor: pointer;
   background-color: hsl(0, 0%, 100%);
   color:hsl(256, 26%, 20%);
+}
+
+.footer {
+  font-size: 15px;
+  padding: 60px 160px;
+  background-color: hsl(0, 0%, 98%);
+  background-image: url('../images/bg-pattern-footer-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.logoRedesFooter {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoRedesFooter ul {
+  max-width: 100%;
+  font-size: 29px;
+  color: hsl(273, 4%, 51%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logoRedesFooter ul li {
+  transition: 0.3s;
+}
+
+.logoRedesFooter ul li:hover {
+  cursor: pointer;
+  color: hsl(270, 9%, 17%);
+  transition: 0.3s;
+}
+
+.listsFooter {
+  max-width: 100%;
+  padding-top: 45px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 170px;
+}
+
+.listsFooter ul {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listsFooter ul h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(273, 4%, 51%);
+  margin-bottom: 15px;
+}
+
+.listsFooter ul li {
+  transition: 0.3s;
+  position: relative;
+}
+
+.listsFooter ul li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: hsl(270, 9%, 17%);
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.listsFooter ul li:hover {
+  cursor: pointer;
+}
+
+.listsFooter ul li:hover::after{
+  content: '';
+  width: 100px;
+  transition: 0.3s;
 }
