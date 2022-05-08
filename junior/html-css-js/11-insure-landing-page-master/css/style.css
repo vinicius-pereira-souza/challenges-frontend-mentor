@@ -119,7 +119,7 @@ body {
   left: 0;
 }
 
-.content h1 {
+.content h1, .wereDifferent h1 {
   font-size: 70px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -154,3 +154,49 @@ body {
 .imgMobile {
   display: none;
 }
+
+/* inicio section we're different */
+.wereDifferent {
+  max-width: 1110px;
+  padding-top: 70px;
+  margin: 300px auto 160px auto;
+}
+
+.wereDifferent h1 {
+  color: hsl(270, 9%, 17%);
+  margin-bottom: 90px;
+}
+
+.wereDifferent ul{
+ display: flex;
+ align-items: flex-start;
+ gap: 40px;
+ flex-wrap: wrap;
+}
+
+.wereDifferent ul li:first-child {
+  flex: 1 1 330px;
+}
+
+.wereDifferent ul li:nth-child(2) {
+  flex: 1 1 350px;
+}
+
+.wereDifferent ul li:last-child {
+  flex: 1 1 335px;
+}
+
+.wereDifferent li img {
+  margin-bottom: 30px;
+}
+
+.wereDifferent li h2 {
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(270, 9%, 17%);
+  font-family: 'DM Serif Display', serif;
+}
+
+/* inicio da div Find out more */
