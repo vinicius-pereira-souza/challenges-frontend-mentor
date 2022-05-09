@@ -341,3 +341,201 @@ body {
   }
   
 }
+
+@media (max-width: 425px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logoNavFlex {
+    padding: 30px 20px;
+  }
+  
+  .navList {
+    flex-direction: column;
+    position: absolute;
+    max-width: 100%;
+    display: none;
+  }
+
+  .navList button, .content button, .findOutMore button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .btnMobile {
+    display: block;
+  }
+  
+  /* conteudo do header */
+  
+  .containerContent {
+    height: auto;
+    padding-top: 0;
+  }
+  
+  .containerAbsolute {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  
+  .content {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    position: relative;
+  }
+  
+  .content::before {
+    display: none;
+  }
+  
+  .content h1, .wereDifferent h1, .findOutMore h1 {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  .content p {
+    max-width: 324px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  .imgDesktop {
+    max-width: 100%;
+    display: none;
+  }
+  
+  .imgMobile {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* inicio section we're different */
+  .wereDifferent {
+    max-width: 1110px;
+    padding-top: 70px;
+    margin: 300px auto 160px auto;
+  }
+  
+  .wereDifferent h1 {
+    color: hsl(270, 9%, 17%);
+    margin-bottom: 90px;
+  }
+  
+  .wereDifferent ul{
+   display: flex;
+   align-items: flex-start;
+   gap: 40px;
+   flex-wrap: wrap;
+  }
+  
+  .wereDifferent ul li:first-child {
+    flex: 1 1 330px;
+  }
+  
+  .wereDifferent ul li:nth-child(2) {
+    flex: 1 1 350px;
+  }
+  
+  .wereDifferent ul li:last-child {
+    flex: 1 1 335px;
+  }
+  
+  .wereDifferent li img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  .wereDifferent li h2 {
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 68px;
+    color: hsl(270, 9%, 17%);
+    font-family: 'DM Serif Display', serif;
+  }
+  
+  /* inicio da div Find out more */
+  .findOutMore {
+    max-width: 1110px;
+    padding: 75px 80px;
+    margin: 0 auto;
+    background-color: hsl(256, 26%, 20%);
+    background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  
+  .findOutMore h1 {
+    font-size: 49px;
+    line-height: 47px;
+  }
+  
+  /* inicio footer */ 
+  .footer {
+    font-size: 15px;
+    margin-top: 150px;
+    padding: 60px 25px;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url('../images/bg-pattern-footer-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  
+  .logoRedesFooter {
+    max-width: 100%;
+    padding-bottom: 30px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  /* .logoRedesFooter ul {
+    max-width: 100%;
+    font-size: 29px;
+    color: hsl(273, 4%, 51%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+   */
+  .logoRedesFooter ul li {
+    transition: 0.3s;
+  }
+  
+  .logoRedesFooter ul li:hover {
+    cursor: pointer;
+    color: hsl(270, 9%, 17%);
+    transition: 0.3s;
+  }
+  
+  .footerLists {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footerLists ul {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footerLists ul h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(273, 4%, 51%);
+    margin-bottom: 15px;
+  }
+  
+}
