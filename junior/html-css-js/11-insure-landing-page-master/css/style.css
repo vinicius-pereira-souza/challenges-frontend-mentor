@@ -389,7 +389,7 @@ body {
     display: none;
   }
   
-  .navList.active {
+  .navList.active{
     font-size: 16px;
     color: hsl(0, 0%, 100%);
     width: 100%;
@@ -398,12 +398,13 @@ body {
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    z-index: 300;
     background-color: hsl(270, 9%, 17%);
     background-image: url('../images/bg-pattern-mobile-nav.svg');
     background-repeat: no-repeat;
     background-size: auto;
     background-position: bottom;
+    display: flex;
     flex-direction: column;
   }
 
@@ -427,6 +428,11 @@ body {
 
   .btnMobile {
     display: block;
+  }
+
+  .btnMobile.clicked {
+    transition: 0.3s;
+    background-image: url('../images/icon-close.svg');
   }
   
   /* conteudo do header */
