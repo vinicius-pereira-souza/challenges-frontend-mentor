@@ -58,7 +58,7 @@ body {
   transition: 0.3s;
 }
 
-.navList button, .content button {
+.navList button, .content button, .findOutMore button {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -119,7 +119,7 @@ body {
   left: 0;
 }
 
-.content h1, .wereDifferent h1 {
+.content h1, .wereDifferent h1, .findOutMore h1 {
   font-size: 70px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -136,12 +136,12 @@ body {
   color: hsl(0, 0%, 98%);
 }
 
-.content button {
+.content button, .findOutMore button {
   border-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 100%);
 }
 
-.content button:hover {
+.content button:hover, .findOutMore button:hover {
   background-color: hsl(0, 0%, 100%);
   color: hsl(256, 26%, 20%);
 }
@@ -187,6 +187,8 @@ body {
 }
 
 .wereDifferent li img {
+  max-width: 100%;
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -200,3 +202,21 @@ body {
 }
 
 /* inicio da div Find out more */
+.findOutMore {
+  max-width: 1110px;
+  padding: 75px 80px;
+  margin: 0 auto;
+  background-color: hsl(256, 26%, 20%);
+  background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.findOutMore h1 {
+  font-size: 49px;
+  line-height: 47px;
+}
