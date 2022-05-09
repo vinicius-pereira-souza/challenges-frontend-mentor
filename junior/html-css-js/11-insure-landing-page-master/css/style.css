@@ -414,21 +414,20 @@ body {
   
   /* inicio section we're different */
   .wereDifferent {
-    max-width: 1110px;
-    padding-top: 70px;
-    margin: 300px auto 160px auto;
+    max-width: 320px;
+    padding-top: 45px;
+    margin: 140px auto 160px auto;
   }
   
   .wereDifferent h1 {
-    color: hsl(270, 9%, 17%);
-    margin-bottom: 90px;
+    font-size: 44px;
   }
   
   .wereDifferent ul{
-   display: flex;
-   align-items: flex-start;
-   gap: 40px;
-   flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
   }
   
   .wereDifferent ul li:first-child {
@@ -444,20 +443,18 @@ body {
   }
   
   .wereDifferent li img {
-    max-width: 100%;
-    display: block;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    margin-bottom: 15px;
   }
   
   .wereDifferent li h2 {
     font-size: 27px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    line-height: 68px;
-    color: hsl(270, 9%, 17%);
-    font-family: 'DM Serif Display', serif;
   }
   
+  .wereDifferent li p {
+    line-height: 25px;
+  }
+
   /* inicio da div Find out more */
   .findOutMore {
     max-width: 1110px;
