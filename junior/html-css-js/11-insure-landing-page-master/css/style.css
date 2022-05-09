@@ -350,12 +350,27 @@ body {
   .logoNavFlex {
     padding: 30px 20px;
   }
-  
+
   .navList {
-    flex-direction: column;
-    position: absolute;
-    max-width: 100%;
     display: none;
+  }
+  
+  .navList.active {
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    padding: 45px 25px 290px 25px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url('../images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+    flex-direction: column;
   }
 
   .navList button, .content button, .findOutMore button {
@@ -363,6 +378,19 @@ body {
     margin: 0 auto;
   }
   
+  .navList button {
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 100%);
+  }
+
+  .navList button:hover {
+    cursor: pointer;
+    width: 100%;
+    color: hsl(270, 9%, 17%);
+    background-color: hsl(0, 0%, 100%);
+  }
+
   .btnMobile {
     display: block;
   }
