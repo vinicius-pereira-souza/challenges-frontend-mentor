@@ -516,6 +516,11 @@ body {
     margin: 140px auto 45px auto;
   }
   
+  .wereDifferent::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .wereDifferent h1 {
     font-size: 44px;
   }
