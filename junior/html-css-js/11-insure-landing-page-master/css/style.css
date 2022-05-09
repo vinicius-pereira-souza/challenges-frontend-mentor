@@ -87,6 +87,19 @@ body {
   background-color: hsl(256, 26%, 20%);
 }
 
+.containerContent::before {
+  content: '';
+  width: 430px;
+  height: 510px;
+  background-image: url('../images/bg-pattern-intro-right-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top -11vh right 0vw;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .containerAbsolute {
   max-width: 1110px;
   margin: 0 auto;
