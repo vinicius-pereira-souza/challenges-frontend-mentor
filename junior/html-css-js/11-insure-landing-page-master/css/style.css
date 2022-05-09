@@ -6,98 +6,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }
-img {
-  max-width: 100%;
-  display: block;
-} 
 
 body {
   font-family: 'Karla', sans-serif;
 }
 
-:root {
-  /* ### Primary */
-  --DarkViolet: hsl(256, 26%, 20%);
-  --GrayishBlue: hsl(216, 30%, 68%);
-  /* ### Neutral */
-  --VeryDarkViolet: hsl(270, 9%, 17%);
-  --DarkGrayishViolet: hsl(273, 4%, 51%);
-  --VeryLightGray: hsl(0, 0%, 98%);
-}
-
-.header {
-  height: 675px;
-  background-color: hsl(256, 26%, 20%);
-  position: relative;
-}
-
-.header::after {
-  content: '';
-  display: block;
-  width: 200px;
-  height: 505px;
-  background-image: url('../images/bg-pattern-intro-left-desktop.svg');
-  background-repeat: no-repeat;
-  background-position: left;
-  position: absolute;
-  bottom: -333px;
-  z-index: 100;
-}
-
-.header::before {
-  content: '';
-  display: block;
-  width: 440px;
-  height: 510px;
-  background-image: url('../images/bg-pattern-intro-right-desktop.svg');
-  background-repeat: no-repeat;
-  background-position: top -14vh right -3vw;
-  position: absolute;
-  top: 100px;
-  right: 0;
-  z-index: 100;
-  overflow-y: hidden;
-}
-
-.flexLogoNav {
+/* inicio header */
+.logoNavFlex {
   padding: 30px 165px;
-  background-color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 500;
 }
 
-nav {
-  display: flex;
-  align-items: center;
+.logoNavFlex img {
+  max-width: 100%;
+  display: block;
 }
 
-.nav {
+.navList {
   font-size: 12px;
   letter-spacing: 2px;
-  color: hsl(273, 4%, 51%);
+  color: hsl(273, 4%, 51%); 
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.nav li {
+.navList li {
   transition: 0.3s;
   padding: 5px 0;
 }
 
-.nav li:hover {
+.navList li:hover {
   color:hsl(256, 26%, 20%);
   cursor: pointer;
   transition: 0.3s;
 }
 
-.nav button, .content button, .findOutMore button {
+.navList button, .content button, .findOutMore button {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -108,7 +60,7 @@ nav {
   transition: 0.3s;
 }
 
-.nav button:hover {
+.navList button:hover, .content button:hover {
   cursor: pointer;
   color: hsl(0, 0%, 98%);
   background-color: hsl(256, 26%, 20%);
@@ -116,39 +68,38 @@ nav {
   transition: 0.3s;
 }
 
-.gridContentHeader {
+.btnMobile {
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+  display: none;
+}
+
+/* conteudo do header */
+
+.containerContent {
+  height: 600px;
+  padding-top: 100px;
+  position: relative;
+  background-color: hsl(256, 26%, 20%);
+}
+
+.containerAbsolute {
   max-width: 1110px;
   margin: 0 auto;
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: minmax(540px, auto) minmax(540px, 1fr);
-  gap: 30px;
-  position: absolute;
-  top: 206px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  gap:30px
 }
 
-.headerImg {
-  height: 640px;
-  background-image: url('../images/image-intro-desktop.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
+.content {
+  padding-top: 70px;
   position: relative;
-  top: -98px;
 }
 
-.content h1, .findOutMore h1, .wereDifferent h1 {
-  font-size: 70px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 68px;
-  color: hsl(0, 0%, 100%);
-  font-family: 'DM Serif Display', serif;
-}
-
-.content::before, .wereDifferent::before {
+.content::before {
   content: '';
   display: block;
   width: 150px;
@@ -159,13 +110,17 @@ nav {
   left: 0;
 }
 
-.content button:hover, .findOutMore button:hover {
-  cursor: pointer;
-  background-color: hsl(0, 0%, 100%);
-  color:hsl(256, 26%, 20%);
+.content h1, .wereDifferent h1, .findOutMore h1 {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 68px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'DM Serif Display', serif;
 }
 
 .content p {
+  max-width: 540px;
   margin-top: 25px;
   margin-bottom: 25px;
   line-height: 30px;
@@ -177,16 +132,25 @@ nav {
   color: hsl(0, 0%, 100%);
 }
 
-.wereDifferent {
-  max-width: 1100px;
-  margin: 0 auto;
-  margin-top: 300px;
-  padding-top: 70px;
-  position: relative;
+.content button:hover, .findOutMore button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(256, 26%, 20%);
 }
 
-.wereDifferent::before {
-  background-color: hsl(273, 4%, 51%);
+.imgDesktop {
+  max-width: 100%;
+  display: block;
+}
+
+.imgMobile {
+  display: none;
+}
+
+/* inicio section we're different */
+.wereDifferent {
+  max-width: 1110px;
+  padding-top: 70px;
+  margin: 300px auto 160px auto;
 }
 
 .wereDifferent h1 {
@@ -195,27 +159,27 @@ nav {
 }
 
 .wereDifferent ul{
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+ display: flex;
+ align-items: flex-start;
+ gap: 40px;
+ flex-wrap: wrap;
 }
 
 .wereDifferent ul li:first-child {
-  flex: 0 0 330px;
+  flex: 1 1 330px;
 }
 
 .wereDifferent ul li:nth-child(2) {
-  flex: 0 0 350px;
+  flex: 1 1 350px;
 }
 
-.wereDifferent ul li:nth-child(3) {
-  flex: 0 0 335px;
+.wereDifferent ul li:last-child {
+  flex: 1 1 335px;
 }
 
 .wereDifferent li img {
+  max-width: 100%;
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -228,10 +192,11 @@ nav {
   font-family: 'DM Serif Display', serif;
 }
 
+/* inicio da div Find out more */
 .findOutMore {
-  max-width: 1010px;
+  max-width: 1110px;
   padding: 75px 80px;
-  margin: 160px auto;
+  margin: 0 auto;
   background-color: hsl(256, 26%, 20%);
   background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
   background-repeat: no-repeat;
@@ -240,15 +205,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} 
 
 .findOutMore h1 {
   font-size: 49px;
   line-height: 47px;
 }
 
+/* inicio footer */ 
 .footer {
   font-size: 15px;
+  margin-top: 150px;
   padding: 60px 160px;
   background-color: hsl(0, 0%, 98%);
   background-image: url('../images/bg-pattern-footer-desktop.svg');
@@ -284,7 +251,7 @@ nav {
   transition: 0.3s;
 }
 
-.listsFooter {
+.footerLists {
   max-width: 100%;
   padding-top: 45px;
   margin-bottom: 25px;
@@ -296,7 +263,7 @@ nav {
   row-gap: 25px;
 }
 
-.listsFooter ul {
+.footerLists ul {
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
@@ -304,19 +271,19 @@ nav {
   gap: 15px;
 }
 
-.listsFooter ul h2 {
+.footerLists ul h2 {
   font-size: 15px;
   font-weight: 400;
   color: hsl(273, 4%, 51%);
   margin-bottom: 15px;
 }
 
-.listsFooter ul li {
+.footerLists ul li {
   transition: 0.3s;
   position: relative;
 }
 
-.listsFooter ul li::after {
+.footerLists ul li::after {
   content: '';
   width: 0;
   height: 2px;
@@ -327,12 +294,237 @@ nav {
   transition: 0.3s;
 }
 
-.listsFooter ul li:hover {
+.footerLists ul li:hover {
   cursor: pointer;
 }
 
-.listsFooter ul li:hover::after{
+.footerLists ul li:hover::after{
   content: '';
   width: 100px;
   transition: 0.3s;
+}
+
+@media (max-width: 770px) {
+  body {
+    font-size: 14px;
+  }
+
+  .containerContent {
+    height: 525px;
+    padding-top: 100px;
+  }
+  
+  .containerAbsolute {
+    gap: 15px
+  }
+  
+  .content {
+    padding-top: 40px;
+    position: relative;
+  }
+  
+  .content::before {
+    width: 90px;
+  }
+  
+  .content h1, .wereDifferent h1, .findOutMore h1 {
+    font-size: 40px;
+  }
+  
+  .imgDesktop {
+    max-width: 55%;
+  }
+
+  .wereDifferent {
+    padding-top: 70px;
+    margin: 130px auto 100px auto;
+  }
+  
+}
+
+@media (max-width: 425px) {
+  body {
+    font-size: 16px;
+  }
+
+  .logoNavFlex {
+    padding: 30px 20px;
+  }
+
+  .navList {
+    display: none;
+  }
+  
+  .navList.active {
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    padding: 45px 25px 290px 25px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: hsl(270, 9%, 17%);
+    background-image: url('../images/bg-pattern-mobile-nav.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+    flex-direction: column;
+  }
+
+  .navList button, .content button, .findOutMore button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .navList button {
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 100%);
+  }
+
+  .navList button:hover {
+    cursor: pointer;
+    width: 100%;
+    color: hsl(270, 9%, 17%);
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .btnMobile {
+    display: block;
+  }
+  
+  /* conteudo do header */
+  
+  .containerContent {
+    height: auto;
+    padding-top: 0;
+  }
+  
+  .containerAbsolute {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  
+  .content {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    position: relative;
+  }
+  
+  .content::before {
+    display: none;
+  }
+  
+  .content h1, .wereDifferent h1, .findOutMore h1 {
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  .content p {
+    max-width: 324px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  .imgDesktop {
+    max-width: 100%;
+    display: none;
+  }
+  
+  .imgMobile {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* inicio section we're different */
+  .wereDifferent {
+    max-width: 320px;
+    padding-top: 45px;
+    margin: 140px auto 45px auto;
+  }
+  
+  .wereDifferent h1 {
+    font-size: 44px;
+  }
+  
+  .wereDifferent ul{
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .wereDifferent ul li:first-child {
+    flex: 1 1 300px;
+  }
+  
+  .wereDifferent ul li:nth-child(2) {
+    flex: 1 1 300px;
+  }
+  
+  .wereDifferent ul li:last-child {
+    flex: 1 1 380px;
+  }
+  
+  .wereDifferent li img {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  
+  .wereDifferent li h2 {
+    font-size: 27px;
+  }
+  
+  .wereDifferent li p {
+    line-height: 25px;
+  }
+
+  /* inicio da div Find out more */
+  .findOutMore {
+    max-width: 325px;
+    padding: 75px 20px;
+    background-image: url('../images/bg-pattern-how-we-work-mobile.svg');
+    flex-direction: column;
+    text-align: center;
+  } 
+  
+  .findOutMore h1 {
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 40px;
+  }
+  
+  /* inicio footer */ 
+  .footer {
+    font-size: 15px;
+    margin-top: 150px;
+    padding: 85px 25px;
+    background-image: url('../images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  
+  .logoRedesFooter {
+    max-width: 100%;
+    padding-bottom: 30px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .footerLists {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footerLists ul {
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 700;
+  }
+  
 }
