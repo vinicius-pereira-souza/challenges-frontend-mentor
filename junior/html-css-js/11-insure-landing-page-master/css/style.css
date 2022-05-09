@@ -474,9 +474,8 @@ body {
   .footer {
     font-size: 15px;
     margin-top: 150px;
-    padding: 60px 25px;
-    background-color: hsl(0, 0%, 98%);
-    background-image: url('../images/bg-pattern-footer-desktop.svg');
+    padding: 85px 25px;
+    background-image: url('../images/bg-pattern-footer-mobile.svg');
     background-repeat: no-repeat;
     background-position: top left;
   }
@@ -488,27 +487,6 @@ body {
     gap: 32px;
   }
   
-  /* .logoRedesFooter ul {
-    max-width: 100%;
-    font-size: 29px;
-    color: hsl(273, 4%, 51%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-  }
-   */
-  .logoRedesFooter ul li {
-    transition: 0.3s;
-  }
-  
-  .logoRedesFooter ul li:hover {
-    cursor: pointer;
-    color: hsl(270, 9%, 17%);
-    transition: 0.3s;
-  }
-  
   .footerLists {
     align-items: center;
     flex-direction: column;
@@ -516,18 +494,9 @@ body {
   }
   
   .footerLists ul {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .footerLists ul h2 {
-    font-size: 15px;
-    font-weight: 400;
-    color: hsl(273, 4%, 51%);
-    margin-bottom: 15px;
+    font-weight: 700;
   }
   
 }
