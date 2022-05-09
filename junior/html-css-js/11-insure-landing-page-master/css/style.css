@@ -128,7 +128,7 @@ body {
   z-index: 100;
 }
 
-.content::before {
+.content::before, .wereDifferent::before {
   content: '';
   display: block;
   width: 150px;
@@ -180,6 +180,11 @@ body {
   max-width: 1110px;
   padding-top: 70px;
   margin: 300px auto 160px auto;
+  position: relative;
+}
+
+.wereDifferent::before {
+  background-color: #b0a4b2;
 }
 
 .wereDifferent h1 {
@@ -431,19 +436,54 @@ body {
     padding-top: 0;
   }
   
+  .containerContent::before {
+    display: none;
+  }
+  
+  .containerContent::after {
+    display: none;
+  }
+  
+
   .containerAbsolute {
     flex-direction: column-reverse;
     gap: 0;
   }
   
   .content {
-    padding-top: 70px;
+    padding-top: 95px;
     padding-bottom: 100px;
     position: relative;
   }
   
+  .content::after {
+    content: '';
+    display: block;
+    width: 125px;
+    height: 330px;
+    background-image: url('../images/bg-pattern-intro-right-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top 0vh right 0vw;
+    background-size: contain;
+    position: absolute;
+    bottom: -175px;
+    right: 0;
+
+  }
+
   .content::before {
-    display: none;
+    content: '';
+    display: block;
+    background-color: transparent;
+    width: 165px;
+    height: 165px;
+    background-image: url('../images/bg-pattern-intro-left-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top 0vh right 0vw;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    display: block;
   }
   
   .content h1, .wereDifferent h1, .findOutMore h1 {
