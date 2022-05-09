@@ -416,7 +416,7 @@ body {
   .wereDifferent {
     max-width: 320px;
     padding-top: 45px;
-    margin: 140px auto 160px auto;
+    margin: 140px auto 45px auto;
   }
   
   .wereDifferent h1 {
@@ -427,19 +427,19 @@ body {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 0;
   }
   
   .wereDifferent ul li:first-child {
-    flex: 1 1 330px;
+    flex: 1 1 300px;
   }
   
   .wereDifferent ul li:nth-child(2) {
-    flex: 1 1 350px;
+    flex: 1 1 300px;
   }
   
   .wereDifferent ul li:last-child {
-    flex: 1 1 335px;
+    flex: 1 1 380px;
   }
   
   .wereDifferent li img {
@@ -457,22 +457,17 @@ body {
 
   /* inicio da div Find out more */
   .findOutMore {
-    max-width: 1110px;
-    padding: 75px 80px;
-    margin: 0 auto;
-    background-color: hsl(256, 26%, 20%);
-    background-image: url('../images/bg-pattern-how-we-work-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    max-width: 325px;
+    padding: 75px 20px;
+    background-image: url('../images/bg-pattern-how-we-work-mobile.svg');
+    flex-direction: column;
+    text-align: center;
   } 
   
   .findOutMore h1 {
-    font-size: 49px;
+    font-size: 40px;
     line-height: 47px;
+    margin-bottom: 40px;
   }
   
   /* inicio footer */ 
