@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+/* font-family: 'Overpass', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+  /* ### Primary */
+  --Lightred: hsl(356, 100%, 66%); /* (CTA text)*/
+  --Verylightred : hsl(355, 100%, 74%); /*(CTA hover background)*/
+  --Verydarkblue : hsl(208, 49%, 24%); /*(headings)*/
+/* ### Neutral */
+  --White : hsl(0, 0%, 100%); /*(text)*/
+  --Grayishblue : hsl(240, 2%, 79%); /*(footer text)*/
+  --Verydarkgrayishblue : hsl(207, 13%, 34%); /*(body copy)*/
+  --Verydarkblackblue : hsl(240, 10%, 16%); /*(footer background)*/
+/* ### Gradient */
+/* Background gradient - Intro/CTA mobile nav: */
+  --Verylightred: hsl(13, 100%, 72%);
+  --Lightred: hsl(353, 100%, 62%);
+/* Background gradient - body: */
+  --Verydarkgrayblue: hsl(237, 17%, 21%); 
+  --Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+}
+
+/* inicio header */
+.header {
+  padding-top: 60px;
+  padding-bottom: 150px;
+  border-radius: 0 0 0 90px;
+  background-image: url('../images/bg-pattern-intro-desktop.svg'), linear-gradient(90deg, hsl(11, 100%, 72%), hsl(354, 100%, 63%));
+  background-position: top -225vh left -35vw, bottom 0vh left 0vw;
+  background-repeat: no-repeat;
+}
+
+.logoNav {
+  max-width: 1120px;
+  margin: 0 auto 140px auto;
+  display: flex;
+  align-items: center;
+}
+
+.logoNav img{
+  margin-right: 60px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.navList li:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navList li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.3s;
+}
+
+.navList li:hover::after {
+  cursor: pointer;
+  width: 58px;
+  transition: 0.3s;
+}
+
+.navList li:nth-child(2):after {
+  width: 0;
+}
+
+.navList li:nth-child(2):hover:after {
+  width: 65px;
+}
+
+.subList {
+  display: none;
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.loginBtn span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.loginBtn button {
+  display: block;
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  font-weight: 700;
+  font-family: 'Overpass', sans-serif;
+  transition: 0.3s;
+}
+
+.loginBtn span:hover {
+  cursor: pointer;
+}
+
+.loginBtn button:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(355, 100%, 74%);
+  transition: 0.3s;
+}
+
+.btnNavMobile {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../images/icon-hamburger.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.header h1 {
+  font-size: 60px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -2px;
+  font-family: 'Overpass', sans-serif;
+}
+
+.header h2 {
+  text-align: center;
+  font-size: 20px;
+  color: hsl(9, 100%, 95%);
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btnsContentHeader {
+  max-width: 290px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnsContentHeader button {
+  width: 140px;
+  height: 50px;
+  border-radius: 25px;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.startForFree {
+  border: none;
+  border-radius: 25px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  font-family: 'Ubuntu', sans-serif;
+  transition: 0.3s;
+}
+
+.LearnMore {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Ubuntu', sans-serif;
+  border: 2px solid hsl(0, 0%, 100%);
+  background-color: transparent;
+}
+
+.startForFree:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(355, 100%, 74%);
+  transition: 0.3s;
+}
+
+.LearnMore:hover {
+  color: hsl(353, 100%, 62%);
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.3s;
+}
