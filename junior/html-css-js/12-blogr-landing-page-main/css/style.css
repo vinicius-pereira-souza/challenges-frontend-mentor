@@ -15,6 +15,7 @@ ul {
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 
 :root {
@@ -213,4 +214,47 @@ body {
   color: hsl(353, 100%, 62%);
   background-color: hsl(0, 0%, 100%);
   transition: 0.3s;
+}
+
+/* inicio designed */
+
+.designed {
+  padding-top: 150px;
+  padding-bottom: 250px;
+  background-image: url('../images/illustration-editor-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top 9vh left 52vw;
+}
+
+.designed h3 {
+  font-size: 37px;
+  font-family: 'Overpass', sans-serif;
+  color: hsl(208, 49%, 24%);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.designed article{
+  max-width: 502px;
+  margin-left: 130px;
+}
+
+.designed h4 {
+  font-size: 28px;
+  color: hsl(208, 49%, 24%);
+  font-family: 'Overpass', sans-serif;
+  margin-bottom: 30px;
+}
+
+.designed p {
+  color: hsl(228, 3%, 39%);
+  line-height: 27px;
+  font-family: 'Overpass', sans-serif;
+  margin-bottom: 75px;
+}
+
+.imgMobile {
+  display: none;
+  font-weight: 300;
+  font-family: 'Overpass', sans-serif;
 }
