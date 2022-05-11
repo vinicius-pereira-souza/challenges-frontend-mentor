@@ -90,30 +90,8 @@ body {
 
 .navList li:hover {
   cursor: pointer;
+  text-decoration: underline;
   transition: 0.3s;
-}
-
-.navList li::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: hsl(0, 0%, 100%);
-  transition: 0.3s;
-}
-
-.navList li:hover::after {
-  cursor: pointer;
-  width: 58px;
-  transition: 0.3s;
-}
-
-.navList li:nth-child(2):after {
-  width: 0;
-}
-
-.navList li:nth-child(2):hover:after {
-  width: 65px;
 }
 
 .subList {
@@ -323,5 +301,39 @@ body {
 
 /* inicio footer */
 .footer {
-  background-color: aqua;
+  padding-top: 65px;
+  border-radius: 0 90px 0 0;
+  background-color: #24242c;
+  color: hsl(0, 0%, 100%);
+}
+
+.logoLists {
+  max-width: 935px;
+  margin: 0 auto;
+  padding-bottom: 65px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 175px;
+}
+
+.logoLists ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoLists ul li{
+  font-size: 16px;
+  color: #a3a3ab;
+}
+
+.logoLists ul li:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.logoLists li h5{
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
 }
