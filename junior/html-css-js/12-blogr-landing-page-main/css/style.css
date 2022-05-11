@@ -220,7 +220,7 @@ body {
 
 .designed {
   padding-top: 150px;
-  padding-bottom: 250px;
+  padding-bottom: 165px;
   background-image: url('../images/illustration-editor-desktop.svg');
   background-repeat: no-repeat;
   background-position: top 9vh left 52vw;
@@ -258,3 +258,53 @@ body {
   font-weight: 300;
   font-family: 'Overpass', sans-serif;
 }
+
+/* inicio state */
+.state {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Overpass', sans-serif;
+  padding-top: 120px;
+  padding-bottom: 105px;
+  border-radius: 0 90px 0 0;
+  background-color: hsl(237, 18%, 23%);
+  background-image: url('../images/bg-pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: right 40vw top -85vh;
+
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.state::before {
+  content: '';
+  display: block;
+  width: 527px;
+  height: 540px;
+  background-image: url('../images/illustration-phones.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: -65px;
+  left: 135px;
+}
+
+.contentState {
+  max-width: 520px;
+  margin-right: 120px;
+}
+
+.contentState h5 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.contentState p {
+  line-height: 27px;
+  font-family: 'Overpass', sans-serif;
+}
+
+
+
+
