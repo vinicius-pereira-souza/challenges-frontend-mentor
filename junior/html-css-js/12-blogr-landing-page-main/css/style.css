@@ -32,25 +32,6 @@ body {
   background-color: hsl(0, 0%, 98%);
 }
 
-:root {
-  /* ### Primary */
-  --Lightred: hsl(356, 100%, 66%); /* (CTA text)*/
-  --Verylightred : hsl(355, 100%, 74%); /*(CTA hover background)*/
-  --Verydarkblue : hsl(208, 49%, 24%); /*(headings)*/
-/* ### Neutral */
-  --White : hsl(0, 0%, 100%); /*(text)*/
-  --Grayishblue : hsl(240, 2%, 79%); /*(footer text)*/
-  --Verydarkgrayishblue : hsl(207, 13%, 34%); /*(body copy)*/
-  --Verydarkblackblue : hsl(240, 10%, 16%); /*(footer background)*/
-/* ### Gradient */
-/* Background gradient - Intro/CTA mobile nav: */
-  --Verylightred: hsl(13, 100%, 72%);
-  --Lightred: hsl(353, 100%, 62%);
-/* Background gradient - body: */
-  --Verydarkgrayblue: hsl(237, 17%, 21%); 
-  --Verydarkdesaturatedblue: hsl(237, 23%, 32%);
-}
-
 /* inicio header */
 .header {
   padding-top: 60px;
@@ -80,22 +61,51 @@ body {
 }
 
 .navList {
-  color: hsl(0, 0%, 100%);
+  color: hsl(14, 100%, 90%);
   font-weight: 500;
   transition: 0.3s;
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
-.navList li:hover {
+.navList > li {
+  position: relative;
+}
+
+.navList > li::after {
+  content: url('../images/icon-arrow-light.svg');
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.navList > li:hover {
   cursor: pointer;
   text-decoration: underline;
   transition: 0.3s;
 }
 
 .subList {
-  display: none;
+  width: 170px;
+  height: 0; /*height: auto;*/
+  padding: 0; /*padding: 25px;*/
+  font-weight: 400;
+  color: hsl(248, 7%, 24%);
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: hidden;
+}
+
+.subList li:hover {
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
 }
 
 .loginBtn {
@@ -105,7 +115,7 @@ body {
 }
 
 .loginBtn span {
-  color: hsl(0, 0%, 100%);
+  color: hsl(14, 100%, 90%);
   font-weight: 500;
 }
 
