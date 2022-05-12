@@ -535,7 +535,7 @@ body {
   
   .designed {
     padding-top: 95px;
-    padding-bottom: 270px;
+    padding-bottom: 180px;
     background-image: none;
   }
   
@@ -556,51 +556,32 @@ body {
     text-align: center;
   }
   
-
-  
   /* inicio state */
   .state {
-    color: hsl(0, 0%, 100%);
-    font-family: 'Overpass', sans-serif;
-    padding-top: 120px;
-    padding-bottom: 30px;
-    border-radius: 0 90px 0 0;
-    background-color: hsl(237, 18%, 23%);
-    background-image: url('../images/bg-pattern-circles.svg');
-    background-repeat: no-repeat;
-    background-position: right 40vw top -85vh;
-  
-    display: flex;
-    justify-content: end;
+    padding-top: 235px;
+    padding-bottom: 35px;
+    background-size: cover;
+    background-position: center bottom 40vh;
     position: relative;
   }
   
   .state::before {
-    content: '';
-    display: block;
-    width: 527px;
-    height: 540px;
-    background-image: url('../images/illustration-phones.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    top: -65px;
-    left: 135px;
+    width: 370px;
+    height: 390px;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .contentState {
-    max-width: 520px;
-    margin-right: 120px;
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
   }
   
   .contentState h5 {
     font-size: 36px;
-    font-weight: 500;
-  }
-  
-  .contentState p {
-    color:hsl(0, 0%, 98%);
+    margin-bottom: 20px;
   }
   
   /* inicio Free Powerful */
