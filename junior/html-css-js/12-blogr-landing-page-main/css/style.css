@@ -453,6 +453,10 @@ body {
     font-family: 'Overpass', sans-serif;
     margin-bottom: 75px;
   }
+
+  body {
+    font-size: 17px;
+  }
   
   /* inicio header */
   .header {
@@ -530,31 +534,29 @@ body {
   /* inicio designed */
   
   .designed {
-    padding-top: 240px;
+    padding-top: 95px;
     padding-bottom: 270px;
-    background-image: url('../images/illustration-editor-desktop.svg');
-    background-repeat: no-repeat;
-    background-position: top 9vh left 52vw;
-  }
-  
-  .designed h3 {
-    font-size: 37px;
-    font-family: 'Overpass', sans-serif;
-    color: hsl(208, 49%, 24%);
-    text-align: center;
-    margin-bottom: 100px;
-  }
-  
-  .designed article{
-    max-width: 502px;
-    margin-left: 130px;
+    background-image: none;
   }
   
   .imgMobile {
-    display: none;
-    font-weight: 300;
-    font-family: 'Overpass', sans-serif;
+    display: block;
+    max-width: 100%;
+    margin-bottom: 55px;
   }
+
+  .designed h3 {
+    font-size: 27px;
+    margin-bottom: 40px;
+  }
+  
+  .designed article{
+    max-width: 310px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+
   
   /* inicio state */
   .state {
