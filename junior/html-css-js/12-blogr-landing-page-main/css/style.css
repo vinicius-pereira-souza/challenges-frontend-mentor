@@ -509,12 +509,63 @@ body {
   }
   
   .navList {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
+    width: 100%;
+    color: hsl(217, 22%, 26%);
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navList li{
+    width: 100%;
+    position: relative;
+  }
+
+  .navList li.active{
+    color: hsl(222, 6%, 42%);
+  }
+
+  .navList > li::after {
+    content: url('../images/icon-arrow-dark.svg');
+    position: absolute;
+    top:0;
+    right: 85px;
   }
   
+  .navList > li.active::after {
+    content: url('../images/icon-arrow-dark.svg');
+    position: absolute;
+    height: 25px;
+    top:0;
+    right: 85px;
+  }
+
+  .navList > li:hover {
+    text-decoration: none;
+  }
+
+  .subList {
+    width: 100%;
+    color: hsl(222, 6%, 42%);
+    background-color: hsl(240, 7%, 94%);
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .subList.active {
+    height: auto;
+    padding: 25px;
+    transition: 1s;
+    overflow-y: hidden;
+  }
+
   .loginBtn {
     width: 100%;
     padding-top: 30px;
