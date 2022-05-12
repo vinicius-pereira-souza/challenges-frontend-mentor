@@ -599,40 +599,20 @@ body {
   
   /* inicio footer */
   .footer {
-    padding-top: 65px;
-    border-radius: 0 90px 0 0;
-    background-color: #24242c;
-    color: hsl(0, 0%, 100%);
+    padding-top: 75px;
   }
   
   .logoLists {
-    max-width: 935px;
-    margin: 0 auto;
+    max-width: 105px;
     padding-bottom: 65px;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 175px;
+    flex-direction: column;
+    gap: 50px;
   }
   
   .logoLists ul{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
   }
   
-  .logoLists ul li{
-    font-size: 16px;
-    color: #a3a3ab;
-  }
-  
-  .logoLists ul li:hover{
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .logoLists li h5{
-    color: hsl(0, 0%, 100%);
-    font-weight: 500;
-  }
 }
