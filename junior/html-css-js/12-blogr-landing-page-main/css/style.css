@@ -497,10 +497,15 @@ body {
   }
   
   .nav {
+    max-width: 325px;
+    padding: 35px 25px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    display: none;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .navList {
@@ -511,12 +516,25 @@ body {
   }
   
   .loginBtn {
+    width: 100%;
+    padding-top: 30px;
+    margin-top: 25px;
+    border-top: 2px solid hsl(240, 7%, 94%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
   }
   
+  .loginBtn span {
+    color: hsl(217, 22%, 26%);
+  }
+
+  .loginBtn button {
+    color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(90deg, hsl(11, 100%, 72%), hsl(354, 100%, 63%));
+  }
+
   .btnNavMobile {
     display: block;
   }
