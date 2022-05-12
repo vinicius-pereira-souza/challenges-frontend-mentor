@@ -451,7 +451,7 @@ body {
     color: hsl(228, 3%, 39%);
     line-height: 27px;
     font-family: 'Overpass', sans-serif;
-    margin-bottom: 75px;
+    margin-bottom: 40px;
   }
 
   body {
@@ -586,19 +586,15 @@ body {
   
   /* inicio Free Powerful */
   .freePowerful {
-    padding-top: 295px;
-    padding-bottom: 195px;
-    background-image: url('../images/illustration-laptop-desktop.svg');
-    background-repeat: no-repeat;
-    background-position: center right 48vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    background-image: none;
   }
   
   .freePowerful article{
-    max-width: 502px;
-    margin-right: 125px;
+    max-width: 318px;
+    margin: 0 auto;
+    text-align: center;
   }
   
   /* inicio footer */
