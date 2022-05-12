@@ -433,27 +433,8 @@ body {
     max-width: 355px;
     margin-right: 10px;
   }
-
-  .footer {
-    padding-top: 65px;
-    border-radius: 0 90px 0 0;
-    background-color: #24242c;
-    color: hsl(0, 0%, 100%);
-  }
   
   .logoLists {
-    max-width: 935px;
-    margin: 0 auto;
-    padding-bottom: 65px;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 175px;
-  }
-  
-  .logoLists ul{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    gap: 125px;
   }
 }
