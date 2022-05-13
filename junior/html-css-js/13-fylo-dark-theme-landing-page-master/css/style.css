@@ -72,10 +72,11 @@ body {
 }
 
 .header p {
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 31px;
   text-align: center;
   color:hsl(215, 33%, 90%);
-  max-width: 430px;
+  max-width: 595px;
   margin: 30px auto;
 }
 
@@ -91,4 +92,45 @@ body {
   font-size: 15px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+}
+
+/* inicio listContentIcon */
+.listContentIcon {
+  max-width: 880px;
+  margin: 150px auto;
+}
+
+.listContentIcon ul {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 85px;
+  column-gap: 130px;
+}
+
+.listContentIcon ul li {
+  flex: 0 1 355px;
+  text-align: center;
+}
+
+.listContentIcon ul li:nth-child(3) {
+  flex: 0 1 360px;
+}
+
+.listContentIcon ul img {
+  margin: 0 auto;
+}
+
+.listContentIcon ul h2 {
+  font-size: 20px;
+  color: hsl(0, 0%, 100%);
+  font-family: 'Raleway', sans-serif;
+  margin: 25px 0 5px 0;
+}
+
+.listContentIcon ul p {
+  color: hsl(215, 33%, 90%);
+  margin: 25px 0 5px 0;
 }
