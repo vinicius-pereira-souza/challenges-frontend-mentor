@@ -500,7 +500,7 @@ body {
     max-width: 325px;
     padding: 35px 25px;
     background-color: hsl(0, 0%, 100%);
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 90px;
@@ -508,6 +508,10 @@ body {
     transform: translateX(-50%);
   }
   
+  .nav.navMobileActive {
+    display: flex;
+  }
+
   .navList {
     width: 100%;
     color: hsl(217, 22%, 26%);
@@ -588,6 +592,12 @@ body {
 
   .btnNavMobile {
     display: block;
+    transform: 1s;
+  }
+
+  .btnNavMobile.btnMobileActive {
+    background-image: url('../images/icon-close.svg');
+    transform: 1s;
   }
   
   .header h1 {

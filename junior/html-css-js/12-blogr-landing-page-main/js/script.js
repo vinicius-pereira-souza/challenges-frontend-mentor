@@ -19,3 +19,13 @@ function removeClassBtnActive(btnActive) {
     }
   })
 }
+
+const btnMobile = document.querySelector('.btnNavMobile')
+const navMobile = document.querySelector('.nav')
+
+btnMobile.addEventListener('click', handleNavMobile)
+
+function handleNavMobile(e) {
+  btnMobile.classList.toggle('btnMobileActive')
+  navMobile.classList.toggle('navMobileActive')
+}
