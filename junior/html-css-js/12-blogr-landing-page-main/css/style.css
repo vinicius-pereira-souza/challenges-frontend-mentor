@@ -499,6 +499,8 @@ body {
   .nav {
     max-width: 325px;
     padding: 35px 25px;
+    box-shadow: 0 5px 12px 1px hsl(0, 0%, 45%);
+    border-radius: 5px;
     background-color: hsl(0, 0%, 100%);
     display: none;
     flex-direction: column;
@@ -514,6 +516,7 @@ body {
 
   .navList {
     width: 100%;
+
     color: hsl(217, 22%, 26%);
     align-items: center;
     text-align: center;
@@ -550,6 +553,7 @@ body {
 
   .subList {
     width: 100%;
+    border-radius: 5px;
     color: hsl(222, 6%, 42%);
     background-color: hsl(240, 7%, 94%);
     margin-top: 20px;
