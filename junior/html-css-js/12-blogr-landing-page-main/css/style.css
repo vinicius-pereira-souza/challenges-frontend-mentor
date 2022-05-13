@@ -78,6 +78,8 @@ body {
   content: url('../images/icon-arrow-light.svg');
   display: inline-block;
   margin-left: 2px;
+  transform: rotate(0);
+  transition: 0.3s;
 }
 
 .navList > li:hover {
@@ -88,8 +90,8 @@ body {
 
 .subList {
   width: 170px;
-  height: 0; /*height: auto;*/
-  padding: 0; /*padding: 25px;*/
+  height: 0;
+  padding: 0;
   font-weight: 400;
   color: hsl(248, 7%, 24%);
   background-color: hsl(0, 0%, 100%);
@@ -100,6 +102,21 @@ body {
   flex-direction: column;
   gap: 20px;
   overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.subList.active {
+  height: 180px;
+  padding: 25px;
+  transition: 1s;
+  overflow-y: hidden;
+}
+
+.navList > li.active::after {
+  transform: rotate(180deg);
+  transition: 0.3s;
+  position: relative;
+  bottom: -4px;
 }
 
 .subList li:hover {
@@ -480,28 +497,111 @@ body {
   }
   
   .nav {
+    max-width: 325px;
+    padding: 35px 25px;
+    box-shadow: 0 5px 12px 1px hsl(0, 0%, 45%);
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 0;
-    display: none;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
+  .nav.navMobileActive {
+    display: flex;
+  }
+
   .navList {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
+    width: 100%;
+
+    color: hsl(217, 22%, 26%);
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navList li{
+    width: 100%;
+    position: relative;
+  }
+
+  .navList li.active{
+    color: hsl(222, 6%, 42%);
+  }
+
+  .navList > li::after {
+    content: url('../images/icon-arrow-dark.svg');
+    position: absolute;
+    top:0;
+    right: 85px;
   }
   
+  .navList > li.active::after {
+    content: url('../images/icon-arrow-dark.svg');
+    position: absolute;
+    height: 25px;
+    top:0;
+    right: 85px;
+  }
+
+  .navList > li:hover {
+    text-decoration: none;
+  }
+
+  .subList {
+    width: 100%;
+    border-radius: 5px;
+    color: hsl(222, 6%, 42%);
+    background-color: hsl(240, 7%, 94%);
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .subList.active {
+    height: auto;
+    padding: 25px;
+    transition: 1s;
+    overflow-y: hidden;
+  }
+
   .loginBtn {
+    width: 100%;
+    padding-top: 30px;
+    margin-top: 25px;
+    border-top: 2px solid hsl(240, 7%, 94%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
   }
   
+  .loginBtn span {
+    color: hsl(217, 22%, 26%);
+  }
+
+  .loginBtn button {
+    color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(90deg, hsl(11, 100%, 72%), hsl(354, 100%, 63%));
+  }
+
   .btnNavMobile {
     display: block;
+    transform: 1s;
+  }
+
+  .btnNavMobile.btnMobileActive {
+    background-image: url('../images/icon-close.svg');
+    transform: 1s;
   }
   
   .header h1 {
