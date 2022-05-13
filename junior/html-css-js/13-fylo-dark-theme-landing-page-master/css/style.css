@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: hsl(217, 28%, 15%);
+}
+
+:root {
+  /* ### Primary */
+  --DarkBlue : hsl(217, 28%, 15%); /*(intro and email sign up background)*/
+  --DarkBluemain : hsl(218, 28%, 13%); /*(main background)*/
+  --DarkBluefooter: hsl(216, 53%, 9%); /*(footer background)*/
+  --DarkBluetestimonials: hsl(219, 30%, 18%); /*(testimonials background)*/
+  /* ### Accent */
+  --Cyan1: hsl(176, 68%, 64%); /*(inside call-to-action gradient)*/
+  --Blue: hsl(198, 60%, 50%); /*(inside call-to-action gradient)*/
+  --LightRed: hsl(0, 100%, 63%); /* (error)*/
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+}
+
+/* inicio header */
+.header {
+  padding-top: 60px;
+}
+
+.navLogo {
+  max-width: 1280px;
+  margin: 0 auto;
+  color: hsl(215, 33%, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.header .illustration {
+  margin: 65px auto 25px auto;
+}
+
+.header h1 {
+  font-size: 33px;
+  line-height: 50px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+.header p {
+  line-height: 25px;
+  text-align: center;
+  color:hsl(215, 33%, 90%);
+  max-width: 430px;
+  margin: 30px auto;
+}
+
+.header button {
+  width: 280px;
+  height: 55px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
