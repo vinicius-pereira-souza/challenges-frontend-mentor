@@ -386,7 +386,7 @@ body {
   /* inicio listContentIcon */
   .listContentIcon {
     max-width: 880px;
-    margin: 235px auto 120px auto;
+    margin: 235px auto 210px auto;
   }
 
   .listContentIcon ul {
@@ -408,5 +408,31 @@ body {
 
   .listContentIcon ul p {
     margin: 20px 0 5px 0;
+  }
+    /* inicio stayProductive */
+  .stayProductive {
+    row-gap: 100px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h3{
+    max-width: 560px;
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .content p{
+    max-width: 455px;
+  }
+
+  .content p + p{
+    margin: 35px 0 30px 0;
+  }
+
+  .content span {
+    max-width: 215px;
   }
 }
