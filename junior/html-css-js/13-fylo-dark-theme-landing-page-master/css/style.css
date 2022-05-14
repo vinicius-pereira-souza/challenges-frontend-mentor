@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-/* font-family: 'Raleway', sans-serif; */
 
 * {
   margin: 0;
@@ -241,8 +240,6 @@ body {
 /* inicio formInput */
 .containerRelative {
   position: relative;
-  background-color: aqua;
-  height: 5px;
 }
 
 .formInput {
@@ -306,4 +303,58 @@ body {
   margin: 5px 0 0 30px;
   color: hsl(0, 100%, 63%);
   display: none;
+}
+
+/* inicio footer */
+.fotter {
+  padding: 190px 0 0 0;
+  background-color: #0c1524;
+}
+
+.contentFooter {
+  max-width: 1245px;
+  margin: 0 auto 25px auto;
+}
+
+.footerLists {
+  color: hsl(215, 33%, 90%);
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pWithIcon {
+  max-width: 345px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.listWithIcon li {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footerLists ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.redes {
+  flex-direction: row !important;
+  gap: 10px;
+}
+
+.redes li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid hsl(215, 33%, 90%);
 }
