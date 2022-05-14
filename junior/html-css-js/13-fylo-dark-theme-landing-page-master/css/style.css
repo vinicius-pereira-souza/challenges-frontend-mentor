@@ -435,4 +435,31 @@ body {
   .content span {
     max-width: 215px;
   }
+
+  /* inicio listPeaples */
+  .listPeaples {
+    max-width: 560px;
+    padding: 35px 0 0 0;
+    margin: 270px auto 355px auto;
+  }
+
+  .listPeaples ul li {
+    flex: 0 0 560px;
+    padding: 45px 40px 35px 40px;
+  }
+
+  .grid {
+    margin-top: 35px;
+    grid-template-columns: 45px auto;
+    grid-template-rows: 25px 25px;
+    column-gap: 15px;
+  }
+
+  .grid span {
+    font-size: 18px;
+  }
+
+  .grid p {
+    font-size: 15px;
+  }
 }
