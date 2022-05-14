@@ -357,6 +357,25 @@ body {
   border: 1px solid hsl(215, 33%, 90%);
 }
 
-/* @media(max-width: 768px) {
-
-} */
+@media(max-width: 768px) {
+  .header h1 {
+    font-size: 42px;
+    line-height: 60px;
+  }
+  
+  .header p {
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 539px;
+    margin: 30px auto 55px auto;
+  }
+  
+  .header button {
+    width: 470px;
+    height: 85px;
+    border-radius: 60px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
