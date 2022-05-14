@@ -181,3 +181,59 @@ body {
   align-items: center;
   gap: 10px;
 }
+
+/* inicio listPeaples */
+.listPeaples {
+  max-width: 1185px;
+  padding: 35px 5px 0 5px;
+  margin: 130px auto 355px auto;
+  background-image: url('../images/bg-quotes.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.listPeaples ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 45px;
+}
+
+.listPeaples ul li {
+  flex: 0 0 365px;
+  padding: 40px 40px 20px 25px;
+  border-radius: 5px;
+  background-color: #21293c;
+  color:hsl(215, 33%, 90%);
+}
+
+.grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 25px auto;
+  grid-template-rows: 12.5px 12.5px;
+  grid-template-areas: 
+  'img spanText'
+  'img p';
+  column-gap: 5px;
+  row-gap: 3px;
+}
+
+.grid img {
+  grid-area: img;
+  border-radius: 50%;
+}
+
+.grid span {
+  grid-area: spanText;
+  font-size: 11px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.grid p {
+  grid-area: p;
+  font-size: 8px;
+}
