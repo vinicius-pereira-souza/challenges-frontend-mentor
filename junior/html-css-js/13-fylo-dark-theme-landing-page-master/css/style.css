@@ -42,12 +42,10 @@ body {
 
 /* inicio header */
 .header {
-  padding-top: 60px;
+  padding: 60px 70px 0 70px;
 }
 
 .navLogo {
-  max-width: 1280px;
-  margin: 0 auto;
   color: hsl(215, 33%, 90%);
   display: flex;
   align-items: center;
@@ -140,7 +138,7 @@ body {
 
 /* inicio stayProductive */
 .stayProductive {
-  max-width: 1240px;
+  padding: 0 70px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -307,7 +305,7 @@ body {
 
 /* inicio footer */
 .fotter {
-  padding: 190px 0 0 0;
+  padding: 190px 70px 0 70px;
   background-color: #0c1524;
 }
 
@@ -358,3 +356,7 @@ body {
   border-radius: 50%;
   border: 1px solid hsl(215, 33%, 90%);
 }
+
+/* @media(max-width: 768px) {
+
+} */
