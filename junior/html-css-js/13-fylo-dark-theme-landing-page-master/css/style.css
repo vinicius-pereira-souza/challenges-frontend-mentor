@@ -366,6 +366,13 @@ body {
   row-gap: 15px;
 }
 
+.footerLists ul:nth-child(3) li:hover, .footerLists ul:nth-child(4) li:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
 .redes {
   flex-direction: row !important;
   gap: 10px;
@@ -379,6 +386,14 @@ body {
   height: 35px;
   border-radius: 50%;
   border: 1px solid hsl(215, 33%, 90%);
+  transition: 0.3s;
+}
+
+.redes li:hover {
+  cursor: pointer;
+  color: hsl(176, 68%, 64%);
+  border-color: hsl(176, 68%, 64%);
+  transition: 0.3s;
 }
 
 @media(max-width: 768px) {
