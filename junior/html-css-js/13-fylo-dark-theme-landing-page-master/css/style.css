@@ -462,4 +462,40 @@ body {
   .grid p {
     font-size: 15px;
   }
+
+  /* inicio formInput */
+  .formInput {
+    max-width: 660px;
+    padding: 65px 40px 55px 40px;
+    top: -160px;
+  }
+
+  .formInput h4 {
+    font-size: 35px;
+    margin-bottom: 35px;
+  }
+
+  .formInput p {
+    max-width: 410px;
+    margin: 0 auto 40px auto;
+  }
+
+  .formInput form {
+    max-width: 100%;
+    grid-template-columns: minmax(445px, 1fr);
+    grid-template-rows: 90px auto 90px;
+    grid-template-areas: 
+    'input '
+    'label'
+    'btn';
+    gap: 20px;
+  }
+
+  .formInput form input {
+    border-radius: 60px;
+  }
+
+  .formInput form button {
+    border-radius: 60px;
+  }
 }
