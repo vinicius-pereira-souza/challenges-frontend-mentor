@@ -93,6 +93,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.header button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #8cdae4, #8cdae4);
+  transition: 0.3s;
 }
 
 /* inicio listContentIcon */
@@ -293,6 +300,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.formInput form button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #8cdae4, #8cdae4);
+  transition: 0.3s;
 }
 
 .formInput form label {
