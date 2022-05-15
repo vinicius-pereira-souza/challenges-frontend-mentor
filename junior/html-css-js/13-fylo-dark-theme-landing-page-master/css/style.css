@@ -42,12 +42,10 @@ body {
 
 /* inicio header */
 .header {
-  padding-top: 60px;
+  padding: 60px 70px 0 70px;
 }
 
 .navLogo {
-  max-width: 1280px;
-  margin: 0 auto;
   color: hsl(215, 33%, 90%);
   display: flex;
   align-items: center;
@@ -140,7 +138,7 @@ body {
 
 /* inicio stayProductive */
 .stayProductive {
-  max-width: 1240px;
+  padding: 0 70px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -307,7 +305,7 @@ body {
 
 /* inicio footer */
 .fotter {
-  padding: 190px 0 0 0;
+  padding: 190px 70px 0 70px;
   background-color: #0c1524;
 }
 
@@ -357,4 +355,182 @@ body {
   height: 35px;
   border-radius: 50%;
   border: 1px solid hsl(215, 33%, 90%);
+}
+
+@media(max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  /* header inicio */
+  .header h1 {
+    font-size: 42px;
+    line-height: 60px;
+  }
+  
+  .header p {
+    font-size: 25px;
+    line-height: 35px;
+    max-width: 539px;
+    margin: 30px auto 55px auto;
+  }
+  
+  .header button {
+    width: 470px;
+    height: 85px;
+    border-radius: 60px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* inicio listContentIcon */
+  .listContentIcon {
+    max-width: 880px;
+    margin: 235px auto 210px auto;
+  }
+
+  .listContentIcon ul {
+    row-gap: 145px;
+  }
+
+  .listContentIcon ul li {
+    flex: 0 1 465px;
+  }
+
+  .listContentIcon ul li:nth-child(3) {
+    flex: 0 1 440px;
+  }
+
+  .listContentIcon ul h2 {
+    font-size: 34px;
+    margin: 55px 0 5px 0;
+  }
+
+  .listContentIcon ul p {
+    margin: 20px 0 5px 0;
+  }
+    /* inicio stayProductive */
+  .stayProductive {
+    row-gap: 100px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h3{
+    max-width: 560px;
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .content p{
+    max-width: 455px;
+  }
+
+  .content p + p{
+    margin: 35px 0 30px 0;
+  }
+
+  .content span {
+    max-width: 215px;
+  }
+
+  /* inicio listPeaples */
+  .listPeaples {
+    max-width: 560px;
+    padding: 35px 0 0 0;
+    margin: 270px auto 355px auto;
+  }
+
+  .listPeaples ul li {
+    flex: 0 0 560px;
+    padding: 45px 40px 35px 40px;
+  }
+
+  .grid {
+    margin-top: 35px;
+    grid-template-columns: 45px auto;
+    grid-template-rows: 25px 25px;
+    column-gap: 15px;
+  }
+
+  .grid span {
+    font-size: 18px;
+  }
+
+  .grid p {
+    font-size: 15px;
+  }
+
+  /* inicio formInput */
+  .formInput {
+    max-width: 660px;
+    padding: 65px 40px 55px 40px;
+    top: -160px;
+  }
+
+  .formInput h4 {
+    font-size: 35px;
+    margin-bottom: 35px;
+  }
+
+  .formInput p {
+    max-width: 410px;
+    margin: 0 auto 40px auto;
+  }
+
+  .formInput form {
+    max-width: 100%;
+    grid-template-columns: minmax(445px, 1fr);
+    grid-template-rows: 90px auto 90px;
+    grid-template-areas: 
+    'input '
+    'label'
+    'btn';
+    gap: 20px;
+  }
+
+  .formInput form input {
+    border-radius: 60px;
+  }
+
+  .formInput form button {
+    border-radius: 60px;
+  }
+
+  /* inicio footer */
+  .fotter {
+    padding: 510px 70px 0 70px;
+  }
+
+  .contentFooter {
+    max-width: 100%;
+  }
+
+  .pWithIcon {
+    max-width: 395px;
+  }
+
+  .listWithIcon {
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+
+  .footerLists {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  .footerLists ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .redes {
+    width: 210px;
+    margin: 0 auto;
+  }
+
 }
