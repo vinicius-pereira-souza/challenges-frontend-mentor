@@ -498,4 +498,39 @@ body {
   .formInput form button {
     border-radius: 60px;
   }
+
+  /* inicio footer */
+  .fotter {
+    padding: 510px 70px 0 70px;
+  }
+
+  .contentFooter {
+    max-width: 100%;
+  }
+
+  .pWithIcon {
+    max-width: 395px;
+  }
+
+  .listWithIcon {
+    flex-direction: column;
+    margin-bottom: 120px;
+  }
+
+  .footerLists {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  .footerLists ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .redes {
+    width: 210px;
+    margin: 0 auto;
+  }
+
 }
