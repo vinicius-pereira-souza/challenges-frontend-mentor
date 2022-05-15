@@ -58,6 +58,12 @@ body {
   gap: 45px;
 }
 
+.navList li:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  text-decoration: underline;
+}
+
 .header .illustration {
   margin: 65px auto 25px auto;
 }
@@ -93,6 +99,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.header button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #8cdae4, #8cdae4);
+  transition: 0.3s;
 }
 
 /* inicio listContentIcon */
@@ -293,6 +306,13 @@ body {
   font-size: 15px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.formInput form button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #8cdae4, #8cdae4);
+  transition: 0.3s;
 }
 
 .formInput form label {
@@ -301,6 +321,10 @@ body {
   margin: 5px 0 0 30px;
   color: hsl(0, 100%, 63%);
   display: none;
+}
+
+.formInput form label.err {
+  display: block;
 }
 
 /* inicio footer */
@@ -342,6 +366,13 @@ body {
   row-gap: 15px;
 }
 
+.footerLists ul:nth-child(3) li:hover, .footerLists ul:nth-child(4) li:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
 .redes {
   flex-direction: row !important;
   gap: 10px;
@@ -355,6 +386,14 @@ body {
   height: 35px;
   border-radius: 50%;
   border: 1px solid hsl(215, 33%, 90%);
+  transition: 0.3s;
+}
+
+.redes li:hover {
+  cursor: pointer;
+  color: hsl(176, 68%, 64%);
+  border-color: hsl(176, 68%, 64%);
+  transition: 0.3s;
 }
 
 @media(max-width: 768px) {
