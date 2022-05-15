@@ -58,6 +58,12 @@ body {
   gap: 45px;
 }
 
+.navList li:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  text-decoration: underline;
+}
+
 .header .illustration {
   margin: 65px auto 25px auto;
 }
