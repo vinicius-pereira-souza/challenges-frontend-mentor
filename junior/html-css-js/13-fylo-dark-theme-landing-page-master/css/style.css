@@ -303,6 +303,10 @@ body {
   display: none;
 }
 
+.formInput form label.err {
+  display: block;
+}
+
 /* inicio footer */
 .fotter {
   padding: 190px 70px 0 70px;
