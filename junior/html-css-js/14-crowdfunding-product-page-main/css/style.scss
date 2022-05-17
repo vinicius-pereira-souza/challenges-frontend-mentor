@@ -156,6 +156,91 @@ body {
 
   .listOptions {
     @include estiloPadrao;
+    padding: 50px;
+
+    h3 {
+      font-size: 21px;
+      color: $black;
+      margin-bottom: 40px;
+    }
+    & > p {
+      color: $dark-gray;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+
+    .option {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      padding: 40px 30px 30px 30px;
+      border: 1px solid #dbdbdb;
+      .tittleOption {
+        margin-bottom: 25px;
+        @include flexAlignCenter;
+        justify-content: space-between;
+        h4 {
+          font-size: 18px;
+          color: $black;
+        }
+        span {
+          color: $dark-cyan;
+          font-size: 16px;
+        }
+      }
+      p {
+        color: $dark-gray;
+        line-height: 30px;
+      }
+      .dataBtn {
+        margin-top: 30px;
+        @include flexAlignCenter;
+        justify-content: space-between;
+        & > span {
+          font-size: 32px;
+          font-weight: 700;
+          color: $black;
+          @include flexAlignCenter;
+          gap: 10px;
+          span {
+            font-size: 16px;
+            color: $dark-gray;
+            font-weight: 400;
+          }
+        }
+        button {
+          width: 160px;
+          height: 48px;
+          @include btnStyle;
+        }
+      }
+    }
+
+    .noSelected {
+      border-color: $light-gray;
+      .tittleOption {
+        h4 {
+          color: $colorH4;
+        }
+        span {
+          color: $colorSpanGreen;
+        }
+      }
+      p {
+        color: $colorP;
+      }
+      .dataBtn {
+        & > span {
+          color: $colorH4;
+          span {
+            color: $colorP;
+          }
+        }
+        button {
+          background-color: $btn;
+        }
+      }
+    }
   }
 }
 

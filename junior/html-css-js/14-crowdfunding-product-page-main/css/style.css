@@ -223,6 +223,126 @@ body {
   margin: 0 auto;
   border-radius: 10px;
   background-color: white;
+  padding: 50px;
+}
+
+.container .listOptions h3 {
+  font-size: 21px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.container .listOptions > p {
+  color: #7a7a7a;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.container .listOptions .option {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 40px 30px 30px 30px;
+  border: 1px solid #dbdbdb;
+}
+
+.container .listOptions .option .tittleOption {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .listOptions .option .tittleOption h4 {
+  font-size: 18px;
+  color: black;
+}
+
+.container .listOptions .option .tittleOption span {
+  color: #147b74;
+  font-size: 16px;
+}
+
+.container .listOptions .option p {
+  color: #7a7a7a;
+  line-height: 30px;
+}
+
+.container .listOptions .option .dataBtn {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .listOptions .option .dataBtn > span {
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.container .listOptions .option .dataBtn > span span {
+  font-size: 16px;
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+.container .listOptions .option .dataBtn button {
+  width: 160px;
+  height: 48px;
+  border: none;
+  border-radius: 70px;
+  color: #e6ffff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  background-color: #3cb4ac;
+}
+
+.container .listOptions .noSelected {
+  border-color: whitesmoke;
+}
+
+.container .listOptions .noSelected .tittleOption h4 {
+  color: #828282;
+}
+
+.container .listOptions .noSelected .tittleOption span {
+  color: #c1e6e2;
+}
+
+.container .listOptions .noSelected p {
+  color: #c2c2c2;
+}
+
+.container .listOptions .noSelected .dataBtn > span {
+  color: #828282;
+}
+
+.container .listOptions .noSelected .dataBtn > span span {
+  color: #c2c2c2;
+}
+
+.container .listOptions .noSelected .dataBtn button {
+  background-color: #cccccc;
 }
 
 .modalBackThisProject, .modalThanks {

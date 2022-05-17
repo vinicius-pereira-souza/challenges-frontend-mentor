@@ -11,6 +11,11 @@ $dark-gray: hsl(0, 0%, 48%);
 $light-gray: hsl(0, 0%, 96%);
 $textColorBtn: hsl(180, 100%, 95%);
 $textColorWhite: hsl(312, 71%, 99%);
+// cor do texto não selecionada
+$colorH4: hsl(0, 0%, 51%);
+$colorSpanGreen: hsl(173, 42%, 83%);
+$colorP: hsl(0, 0%, 76%);
+$btn: hsl(0, 0%, 80%);
 
 // mixins
 @mixin btnStyle {
