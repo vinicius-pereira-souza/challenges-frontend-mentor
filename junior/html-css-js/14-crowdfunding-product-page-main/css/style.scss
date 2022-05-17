@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+@import "mixins-variaveis";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+//header
+.header {
+  padding: 40px 150px 400px 150px;
+  background-image: url('../images/image-hero-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+  @include flexAlignCenter;
+  justify-content: space-between;
+  position: relative;
+
+  .navList {
+    list-style: none;
+    color: $textColorWhite;
+    @include flexAlignCenter;
+    gap: 20px;
+  }
+
+  button {
+    width: 35px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+  }
+}
