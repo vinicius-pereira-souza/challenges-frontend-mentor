@@ -152,6 +152,7 @@ body {
   border-radius: 10px;
   background-color: white;
   margin-top: 25px;
+  margin-bottom: 25px;
   padding: 50px 45px;
 }
 
@@ -170,8 +171,8 @@ body {
 
 .container .dataList ul li:nth-child(2) {
   padding: 0 80px 0 45px;
-  border-right: 1px solid #7a7a7a;
-  border-left: 1px solid #7a7a7a;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
 }
 
 .container .dataList ul li:nth-child(3) {
@@ -200,6 +201,28 @@ body {
   color: black;
   font-size: 32px;
   font-weight: 700;
+}
+
+.container .dataList .barraProgresso {
+  max-width: 100%;
+  height: 12px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.container .dataList .barraProgresso div {
+  max-width: 490px;
+  height: 12px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #3cb4ac;
+}
+
+.container .listOptions {
+  max-width: 730px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .modalBackThisProject, .modalThanks {
