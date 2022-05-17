@@ -11,8 +11,13 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: 'Commissioner', sans-serif;
+  background-color: #fafafa;
 }
 
 .header {
@@ -34,7 +39,6 @@ body {
 }
 
 .header .navList {
-  list-style: none;
   color: #fefbfe;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,6 +57,96 @@ body {
   background-image: url("../images/icon-hamburger.svg");
   background-repeat: no-repeat;
   background-position: center;
+  display: none;
+}
+
+.container {
+  width: 100%;
+  top: 400px;
+  display: table;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container > img {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -25px;
+}
+
+.container .tittleBtns {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 50px 40px 40px 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.container .tittleBtns h1 {
+  font-size: 28px;
+  text-align: center;
+  color: black;
+}
+
+.container .tittleBtns h2 {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 15px 0 35px 0;
+  color: #7a7a7a;
+  color: black;
+}
+
+.container .tittleBtns .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .tittleBtns .btns button:first-child {
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 70px;
+  color: #e6ffff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  background-color: #3cb4ac;
+}
+
+.container .tittleBtns .btns button:last-child {
+  width: 130px;
+  height: 55px;
+  border: none;
+  border-radius: 0 60px 60px 0;
+  text-align: end;
+  color: #7a7a7a;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  padding-right: 25px;
+  position: relative;
+}
+
+.container .tittleBtns .btns button:last-child svg {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.modalBackThisProject, .modalThanks {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
