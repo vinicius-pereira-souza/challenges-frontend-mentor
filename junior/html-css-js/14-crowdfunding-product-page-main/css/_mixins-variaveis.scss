@@ -32,7 +32,9 @@ $textColorWhite: hsl(312, 71%, 99%);
   align-items: center;
 }
 
-@mixin borderRadiusColor {
+@mixin estiloPadrao {
+  max-width: 730px;
+  margin: 0 auto;
+  border-radius: 10px;
   background-color: $white;
-  border-radius: 5px;
 }

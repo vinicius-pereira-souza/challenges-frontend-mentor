@@ -61,10 +61,8 @@ body {
   }
 
   .tittleBtns {
-    max-width: 730px;
-    margin: 0 auto;
     padding: 50px 40px 40px 40px;
-    @include borderRadiusColor;
+    @include estiloPadrao;
     h1 {
       font-size: 28px;
       text-align: center;
@@ -102,6 +100,41 @@ body {
           left: -25px;
           top: 50%;
           transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .dataList {
+    @include estiloPadrao;
+    margin-top: 25px;
+    padding: 50px 45px;
+    ul {
+      @include flexAlignCenter;
+      & li:nth-child(1) {
+        padding: 0 45px 0 0;
+      }
+
+      & li:nth-child(2) {
+        padding: 0 80px 0 45px;
+        border-right: 1px solid $dark-gray;
+        border-left: 1px solid $dark-gray;
+      }
+
+      & li:nth-child(3) {
+        padding: 0 0 0 45px;
+      }
+
+      li {
+        color: $dark-gray;
+        @include flexAlignCenter;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 10px;
+        span {
+          color: $black;
+          font-size: 32px;
+          font-weight: 700;
         }
       }
     }
