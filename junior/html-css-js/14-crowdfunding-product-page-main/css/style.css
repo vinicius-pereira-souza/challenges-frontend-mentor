@@ -80,11 +80,11 @@ body {
 }
 
 .container .tittleBtns {
+  padding: 50px 40px 40px 40px;
   max-width: 730px;
   margin: 0 auto;
-  padding: 50px 40px 40px 40px;
+  border-radius: 10px;
   background-color: white;
-  border-radius: 5px;
 }
 
 .container .tittleBtns h1 {
@@ -146,7 +146,355 @@ body {
           transform: translateY(-50%);
 }
 
-.modalBackThisProject, .modalThanks {
+.container .dataList {
+  max-width: 730px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 50px 45px;
+}
+
+.container .dataList ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dataList ul li:nth-child(1) {
+  padding: 0 45px 0 0;
+}
+
+.container .dataList ul li:nth-child(2) {
+  padding: 0 80px 0 45px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+
+.container .dataList ul li:nth-child(3) {
+  padding: 0 0 0 45px;
+}
+
+.container .dataList ul li {
+  color: #7a7a7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+.container .dataList ul li span {
+  color: black;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.container .dataList .barraProgresso {
+  max-width: 100%;
+  height: 12px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.container .dataList .barraProgresso div {
+  max-width: 490px;
+  height: 12px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #3cb4ac;
+}
+
+.container .listOptions {
+  max-width: 730px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  padding: 50px;
+}
+
+.container .listOptions h3 {
+  font-size: 21px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.container .listOptions > p {
+  color: #7a7a7a;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.container .listOptions .option {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding: 40px 30px 30px 30px;
+  border: 1px solid #dbdbdb;
+}
+
+.container .listOptions .option .tittleOption {
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .listOptions .option .tittleOption h4 {
+  font-size: 18px;
+  color: black;
+}
+
+.container .listOptions .option .tittleOption span {
+  color: #147b74;
+  font-size: 16px;
+}
+
+.container .listOptions .option p {
+  color: #7a7a7a;
+  line-height: 30px;
+}
+
+.container .listOptions .option .dataBtn {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .listOptions .option .dataBtn > span {
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.container .listOptions .option .dataBtn > span span {
+  font-size: 16px;
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+.container .listOptions .option .dataBtn button {
+  width: 160px;
+  height: 48px;
+  border: none;
+  border-radius: 70px;
+  color: #e6ffff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  background-color: #3cb4ac;
+}
+
+.container .listOptions .noSelected {
+  border-color: whitesmoke;
+}
+
+.container .listOptions .noSelected .tittleOption h4 {
+  color: #828282;
+}
+
+.container .listOptions .noSelected .tittleOption span {
+  color: #c1e6e2;
+}
+
+.container .listOptions .noSelected p {
+  color: #c2c2c2;
+}
+
+.container .listOptions .noSelected .dataBtn > span {
+  color: #828282;
+}
+
+.container .listOptions .noSelected .dataBtn > span span {
+  color: #c2c2c2;
+}
+
+.container .listOptions .noSelected .dataBtn button {
+  background-color: #cccccc;
+}
+
+.modalBackThisProject {
+  width: 100%;
+  height: 2080px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 185px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.modalBackThisProject .containerModalBack {
+  max-width: 730px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  padding: 55px 45px 50px 45px;
+}
+
+.modalBackThisProject .containerModalBack > button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.modalBackThisProject .containerModalBack h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.modalBackThisProject .containerModalBack > p {
+  color: #7a7a7a;
+  line-height: 30px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.modalBackThisProject .optionModal {
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  margin-top: 25px;
+}
+
+.modalBackThisProject .optionModal .titleOptionModal {
+  max-width: 580px;
+  margin: 35px auto 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.modalBackThisProject .optionModal .titleOptionModal h2 {
+  font-size: 16px;
+  color: black;
+  margin: 0 15px 0 20px;
+}
+
+.modalBackThisProject .optionModal .titleOptionModal .textGreen {
+  color: #3cb4ac;
+}
+
+.modalBackThisProject .optionModal .titleOptionModal .spanFlex {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+
+.modalBackThisProject .optionModal .titleOptionModal .spanFlex span {
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+.modalBackThisProject .optionModal > p {
+  max-width: 580px;
+  color: #7a7a7a;
+  line-height: 30px;
+  margin: 0 auto 20px auto;
+}
+
+.modalBackThisProject .optionModal .select {
+  max-width: 100%;
+  height: 0;
+  overflow-y: hidden;
+  padding: 0 30px;
+  border-top: 1px solid #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalBackThisProject .optionModal .select p {
+  color: #7a7a7a;
+  line-height: 30px;
+}
+
+.modalBackThisProject .optionModal .select .inputBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.modalBackThisProject .optionModal .select .inputBtn input {
+  width: 100px;
+  height: 47px;
+  border-radius: 60px;
+  padding-left: 35px;
+  border: none;
+  border: 1px solid #147b74;
+  color: black;
+  font-weight: 700;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.modalBackThisProject .optionModal .select .inputBtn button {
+  width: 105px;
+  height: 47px;
+  border: none;
+  border-radius: 70px;
+  color: #e6ffff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  background-color: #3cb4ac;
+}
+
+.modalThanks {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
