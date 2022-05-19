@@ -99,7 +99,7 @@ body {
       }
 
       & button:last-child {
-        width: 130px;
+        width: 140px;
         height: 55px;
         border: none;
         border-radius: 0 60px 60px 0;
@@ -308,6 +308,9 @@ body {
       position: absolute;
       top: 30px;
       right: 30px;
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     h1 {
@@ -480,3 +483,19 @@ body {
     }
   }
 }
+
+// interação js
+.bookMark.bookMarkActive {
+  color: $dark-cyan !important;
+  svg g circle {
+    fill: $dark-cyan;
+  }
+  svg g path {
+    fill: $white;
+  }  
+}
+
+.modalBackThisProject.modalActive {
+  display: block;
+}
+
