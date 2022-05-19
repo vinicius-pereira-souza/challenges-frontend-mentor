@@ -392,6 +392,7 @@ body {
   position: absolute;
   top: 0;
   z-index: 100;
+  display: none;
 }
 
 .modalBackThisProject .containerModalBack {
@@ -592,5 +593,12 @@ body {
   height: 50px;
   display: block;
   margin: 0 auto;
+}
+
+.modalThanks .containerThanks button:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
