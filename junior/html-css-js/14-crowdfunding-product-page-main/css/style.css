@@ -123,6 +123,8 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container .tittleBtns .btns button:last-child {
@@ -315,6 +317,8 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container .listOptions .noSelected {
@@ -493,9 +497,12 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .modalThanks {
+  display: none;
   width: 100%;
   height: 2080px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -538,6 +545,8 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: 105px;
   height: 50px;
   display: block;
