@@ -139,7 +139,7 @@ body {
 }
 
 .container .tittleBtns .btns button:last-child {
-  width: 130px;
+  width: 140px;
   height: 55px;
   border: none;
   border-radius: 0 60px 60px 0;
@@ -412,6 +412,10 @@ body {
   right: 30px;
 }
 
+.modalBackThisProject .containerModalBack > button:hover {
+  cursor: pointer;
+}
+
 .modalBackThisProject .containerModalBack h1 {
   font-size: 24px;
   color: black;
@@ -616,5 +620,21 @@ body {
   background-color: #147b74;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.bookMark.bookMarkActive {
+  color: #147b74 !important;
+}
+
+.bookMark.bookMarkActive svg g circle {
+  fill: #147b74;
+}
+
+.bookMark.bookMarkActive svg g path {
+  fill: white;
+}
+
+.modalBackThisProject.modalActive {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
