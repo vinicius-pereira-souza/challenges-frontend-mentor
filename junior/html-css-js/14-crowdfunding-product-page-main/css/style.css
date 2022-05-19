@@ -392,7 +392,6 @@ body {
   position: absolute;
   top: 0;
   z-index: 100;
-  display: none;
 }
 
 .modalBackThisProject .containerModalBack {
@@ -483,7 +482,7 @@ body {
   max-width: 100%;
   height: 0;
   overflow-y: hidden;
-  padding: 0 30px;
+  padding: 0px 30px;
   border-top: 1px solid #dbdbdb;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,6 +531,13 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modalBackThisProject .optionModal .select .inputBtn button:hover {
+  cursor: pointer;
+  background-color: #147b74;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
