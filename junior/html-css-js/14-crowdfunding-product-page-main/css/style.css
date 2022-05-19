@@ -151,6 +151,18 @@ body {
   position: relative;
 }
 
+.container .tittleBtns .btns button:last-child:hover svg g circle {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #707070;
+}
+
+.container .tittleBtns .btns button:last-child:hover svg g path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #b1b1b1;
+}
+
 .container .tittleBtns .btns button:last-child svg {
   position: absolute;
   left: -25px;

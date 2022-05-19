@@ -110,6 +110,16 @@ body {
         padding-right: 25px;
         position: relative;
 
+        &:hover svg g circle {
+          transition: 0.3s;
+          fill: #707070;
+        }
+
+        &:hover svg g path {
+          transition: 0.3s;
+          fill: #b1b1b1;
+        }
+
         svg {
           position: absolute;
           left: -25px;
@@ -157,11 +167,13 @@ body {
         }
       }
     }
+
     .barraProgresso {
       max-width: 100%;
       height: 12px;
       border-radius: 10px;
       background-color: $light-gray;
+
       div {
         max-width: 490px;
         height: 12px;
