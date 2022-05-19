@@ -49,6 +49,10 @@ body {
   gap: 20px;
 }
 
+.header .navList li:hover {
+  cursor: pointer;
+}
+
 .header button {
   width: 35px;
   height: 30px;
@@ -123,6 +127,15 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .tittleBtns .btns button:first-child:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container .tittleBtns .btns button:last-child {
@@ -136,6 +149,18 @@ body {
   font-weight: 700;
   padding-right: 25px;
   position: relative;
+}
+
+.container .tittleBtns .btns button:last-child:hover svg g circle {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #707070;
+}
+
+.container .tittleBtns .btns button:last-child:hover svg g path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #b1b1b1;
 }
 
 .container .tittleBtns .btns button:last-child svg {
@@ -315,6 +340,15 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .listOptions .option .dataBtn button:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .container .listOptions .noSelected {
@@ -345,6 +379,11 @@ body {
   background-color: #cccccc;
 }
 
+.container .listOptions .noSelected .dataBtn button:hover {
+  cursor: auto;
+  background-color: #cccccc;
+}
+
 .modalBackThisProject {
   width: 100%;
   height: 2080px;
@@ -353,6 +392,7 @@ body {
   position: absolute;
   top: 0;
   z-index: 100;
+  display: none;
 }
 
 .modalBackThisProject .containerModalBack {
@@ -443,7 +483,7 @@ body {
   max-width: 100%;
   height: 0;
   overflow-y: hidden;
-  padding: 0 30px;
+  padding: 0px 30px;
   border-top: 1px solid #dbdbdb;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,9 +532,89 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modalBackThisProject .optionModal .select .inputBtn button:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal h2 {
+  color: #828282;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal .textGreen {
+  color: #c1e6e2;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal .spanFlex {
+  color: #828282;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal p {
+  color: #c2c2c2;
 }
 
 .modalThanks {
   display: none;
+  width: 100%;
+  height: 2080px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 460px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.modalThanks .containerThanks {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 45px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.modalThanks .containerThanks img {
+  margin: 0 auto;
+}
+
+.modalThanks .containerThanks h1 {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  margin: 50px 0 15px 0;
+}
+
+.modalThanks .containerThanks p {
+  color: #7a7a7a;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.modalThanks .containerThanks button {
+  border: none;
+  border-radius: 70px;
+  color: #e6ffff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 105px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.modalThanks .containerThanks button:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */

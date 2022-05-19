@@ -25,6 +25,13 @@ $btn: hsl(0, 0%, 80%);
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: $moderate-cyan;
+  transition: 0.3s;
+}
+
+@mixin btnStyleHover {
+  cursor: pointer;
+  background-color: $dark-cyan;
+  transition: 0.3s;
 }
 
 @mixin positionCenterAbsolute {
