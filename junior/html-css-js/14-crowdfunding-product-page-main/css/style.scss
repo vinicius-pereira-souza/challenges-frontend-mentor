@@ -35,6 +35,10 @@ body {
     color: $textColorWhite;
     @include flexAlignCenter;
     gap: 20px;
+
+    li:hover {
+      cursor: pointer;
+    }
   }
 
   button {
@@ -54,6 +58,7 @@ body {
   top: 305px;
   display: table;
   @include positionCenterAbsolute;
+
   & > img {
     position: absolute;
     @include positionCenterAbsolute;
@@ -63,11 +68,13 @@ body {
   .tittleBtns {
     padding: 50px 40px 40px 40px;
     @include estiloPadrao;
+
     h1 {
       font-size: 28px;
       text-align: center;
       color: $black;
     }
+
     h2 {
       font-size: 16px;
       font-weight: 400;
@@ -76,14 +83,21 @@ body {
       color: $dark-gray;
       color: $black;
     }
+
     .btns {
       @include flexAlignCenter;
       justify-content: space-between;
+
       & button:first-child {
         width: 200px;
         height: 55px;
         @include btnStyle;
+
+        &:hover {
+          @include btnStyleHover;
+        }
       }
+
       & button:last-child {
         width: 130px;
         height: 55px;
@@ -95,6 +109,7 @@ body {
         font-weight: 700;
         padding-right: 25px;
         position: relative;
+
         svg {
           position: absolute;
           left: -25px;
@@ -110,8 +125,10 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
     padding: 50px 45px;
+
     ul {
       @include flexAlignCenter;
+
       & li:nth-child(1) {
         padding: 0 45px 0 0;
       }
@@ -132,6 +149,7 @@ body {
         align-items: flex-start;
         flex-direction: column;
         row-gap: 10px;
+
         span {
           color: $black;
           font-size: 32px;
@@ -163,6 +181,7 @@ body {
       color: $black;
       margin-bottom: 40px;
     }
+
     & > p {
       color: $dark-gray;
       line-height: 30px;
@@ -175,23 +194,28 @@ body {
       margin-bottom: 25px;
       padding: 40px 30px 30px 30px;
       border: 1px solid #dbdbdb;
+
       .tittleOption {
         margin-bottom: 25px;
         @include flexAlignCenter;
         justify-content: space-between;
+
         h4 {
           font-size: 18px;
           color: $black;
         }
+
         span {
           color: $dark-cyan;
           font-size: 16px;
         }
       }
+
       p {
         color: $dark-gray;
         line-height: 30px;
       }
+
       .dataBtn {
         margin-top: 30px;
         @include flexAlignCenter;
@@ -212,6 +236,9 @@ body {
           width: 160px;
           height: 48px;
           @include btnStyle;
+          &:hover {
+            @include btnStyleHover;
+          }
         }
       }
     }
@@ -238,6 +265,10 @@ body {
         }
         button {
           background-color: $btn;
+          &:hover {
+            cursor: auto;
+            background-color: $btn;
+          }
         }
       }
     }

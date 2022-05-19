@@ -49,6 +49,10 @@ body {
   gap: 20px;
 }
 
+.header .navList li:hover {
+  cursor: pointer;
+}
+
 .header button {
   width: 35px;
   height: 30px;
@@ -123,6 +127,13 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
   background-color: #3cb4ac;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container .tittleBtns .btns button:first-child:hover {
+  cursor: pointer;
+  background-color: #147b74;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -321,6 +332,13 @@ body {
   transition: 0.3s;
 }
 
+.container .listOptions .option .dataBtn button:hover {
+  cursor: pointer;
+  background-color: #147b74;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .container .listOptions .noSelected {
   border-color: whitesmoke;
 }
@@ -346,6 +364,11 @@ body {
 }
 
 .container .listOptions .noSelected .dataBtn button {
+  background-color: #cccccc;
+}
+
+.container .listOptions .noSelected .dataBtn button:hover {
+  cursor: auto;
   background-color: #cccccc;
 }
 
