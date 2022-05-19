@@ -543,6 +543,22 @@ body {
   transition: 0.3s;
 }
 
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal h2 {
+  color: #828282;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal .textGreen {
+  color: #c1e6e2;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal .titleOptionModal .spanFlex {
+  color: #828282;
+}
+
+.modalBackThisProject .optionModal.noSelectedModal p {
+  color: #c2c2c2;
+}
+
 .modalThanks {
   display: none;
   width: 100%;

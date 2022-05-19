@@ -408,6 +408,27 @@ body {
       }
     }
   }
+
+  .optionModal.noSelectedModal {
+
+    .titleOptionModal {
+      h2 {
+        color: $colorH4;
+      }
+
+      .textGreen {
+        color: $colorSpanGreen;
+      }
+
+      .spanFlex {
+        color: $colorH4;
+      }
+    }
+
+    p {
+      color: $colorP;
+    }
+  }
 }
 
 // Success modal start
