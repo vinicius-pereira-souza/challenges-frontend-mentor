@@ -3,7 +3,7 @@ async function getFetch (){
   const jsonFormated = await getData.json()
   createAndInsert(jsonFormated)
 }
-// column
+
 function createAndInsert(arrDatas) {
   const container = document.querySelectorAll('.columnContainer')
   const columns = document.querySelectorAll('.column')
@@ -32,7 +32,7 @@ function handleClick(e) {
   const column = valueSpan.nextElementSibling
 
   valueSpan.classList.toggle('selected')
-  column.classList.toggle('selectedColunm')
+  column.classList.toggle('selectedColumn')
 
   handleSelected(valueSpan)
 }
@@ -42,7 +42,7 @@ function handleSelected(selectedItem) {
   spans.forEach(span => {
     if(span !== selectedItem) {
       span.classList.remove('selected')
-      span.nextElementSibling.classList.remove('selectedColunm')
+      span.nextElementSibling.classList.remove('selectedColumn')
     }
   })
 

@@ -125,8 +125,8 @@ section h1 {
 .columnContainer:nth-child(3) .column:hover {
   background-color:#b4dfe5;
 }
-.columnContainer:nth-child(3).selectedColumn {
-  background-color:red;
+.columnContainer:nth-child(3) .column.selectedColumn {
+  background-color:#b4dfe5;
 }
 .columnContainer:nth-child(4) .column {
   height: 90px;
