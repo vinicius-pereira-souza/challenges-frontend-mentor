@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="css/style.css">
 
   <style>
     .attribution {
@@ -21,27 +21,71 @@
 </head>
 
 <body>
-  <main class="container">
+  <main class="flexContainer">
+    <header>
+      <div>
+        <p>My balance</p>
+        <span>$921.48</span>
+      </div>
+      <img src="images/logo.svg" alt="imagem da logo">
+    </header>
+    <section>
+      <h1>Spending - Last 7 days</h1>
+      <div class="flexColunms">
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">mon</p>
+        </div>
 
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">tue</p>
+        </div>
+
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">wed</p>
+        </div>
+
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">thu</p>
+        </div>
+
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">fri</p>
+        </div>
+
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">sat</p>
+        </div>
+
+        <div class="colunmContainer">
+          <span class="data">4563</span>
+          <div class="colunm"></div>
+          <p class="day">sun</p>
+        </div>
+      </div>
+      <footer>
+        <p>Total this month</p>
+        <div class="flexFooter">
+          <span>$478.33</span>
+          <div class="lastMonth">
+            <span>+2.4%</span>
+            <p>from last month</p>
+          </div>
+        </div>
+      </footer>
+    </section>
   </main>
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
