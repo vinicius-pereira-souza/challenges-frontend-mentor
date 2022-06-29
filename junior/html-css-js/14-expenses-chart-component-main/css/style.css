@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
 :root {
   --Softred: hsl(10, 79%, 65%);
   --Cyan: hsl(186, 34%, 60%);
@@ -8,6 +10,113 @@
   --Verypaleorange: hsl(33, 100%, 98%);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span {
+  display: block;
+}
+
 body {
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
   background-color: hsl(27, 66%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexContainer {
+  flex: 0 1 540px;
+}
+
+.header {
+  max-width: 540px;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 15px;
+  padding: 30px;
+  color:hsl(27, 66%, 92%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header p {
+  line-height: 0;
+}
+
+.header span {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+section {
+  max-width: 540px;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 25px 0;
+}
+
+section h1 {
+  color:hsl(25, 47%, 15%);
+}
+
+.flexColunms {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.colunmContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.data {
+  width: 75px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: hsl(25, 47%, 15%);
+  color:hsl(33, 100%, 98%);
+  text-align: center;
+  margin: 10px 0 5px 0;
+  visibility: hidden;
+}
+
+.colunm {
+  width: 50px;
+  border-radius: 5px;
+  background-color: hsl(10, 79%, 65%);
+}
+
+.colunmContainer:nth-child(1) .colunm {
+  height: 50px;
+}
+.colunmContainer:nth-child(2) .colunm {
+  height: 100px;
+}
+.colunmContainer:nth-child(3) .colunm {
+  height: 150px;
+  background-color:hsl(186, 34%, 60%);
+}
+.colunmContainer:nth-child(4) .colunm {
+  height: 90px;
+}
+.colunmContainer:nth-child(5) .colunm {
+  height: 65px;
+}
+.colunmContainer:nth-child(6) .colunm {
+  height: 120px;
+}
+.colunmContainer:nth-child(7) .colunm {
+  height: 70px;
+}
+
+.day {
+  color: hsl(28, 10%, 53%);
+  line-height: 0;
 }
