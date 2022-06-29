@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-:root {
-  --Softred: hsl(10, 79%, 65%);
-  --Cyan: hsl(186, 34%, 60%);
-  /* ### Neutral */
-  --Darkbrown: hsl(25, 47%, 15%);
-  --Mediumbrown: hsl(28, 10%, 53%);
-  --Cream: hsl(27, 66%, 92%);
-  --Verypaleorange: hsl(33, 100%, 98%);
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -62,9 +52,10 @@ section {
 
 section h1 {
   color:hsl(25, 47%, 15%);
+  line-height: 0;
 }
 
-.flexColunms {
+.flexColumns {
   border-bottom: 2px solid hsl(27, 66%, 92%);
   padding-bottom: 30px;
   display: flex;
@@ -72,7 +63,7 @@ section h1 {
   justify-content: space-between;
 }
 
-.colunmContainer {
+.columnContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -91,50 +82,62 @@ section h1 {
 
 .data.selected {
   visibility: visible;
+  animation: show 0.2s ease-in;
 }
 
-.colunm {
+@keyframes show {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+.column {
   width: 50px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
   transition: 0.3s;
 }
 
-.colunm:hover {
+.column:hover {
   background-color: #ff9b87;
   transition: 0.3s;
   cursor: pointer;
 }
 
-.colunm.selectedColunm {
+.column.selectedColumn{
   background-color: #ff9b87;
   transition: 0.3s;
   cursor: pointer;
 }
 
-.colunmContainer:nth-child(1) .colunm {
+.columnContainer:nth-child(1) .column {
   height: 50px;
 }
-.colunmContainer:nth-child(2) .colunm {
+.columnContainer:nth-child(2) .column {
   height: 100px;
 }
-.colunmContainer:nth-child(3) .colunm {
+.columnContainer:nth-child(3) .column {
   height: 150px;
   background-color:hsl(186, 34%, 60%);
 }
-.colunmContainer:nth-child(3) .colunm:hover {
+.columnContainer:nth-child(3) .column:hover {
   background-color:#b4dfe5;
 }
-.colunmContainer:nth-child(4) .colunm {
+.columnContainer:nth-child(3).selectedColumn {
+  background-color:red;
+}
+.columnContainer:nth-child(4) .column {
   height: 90px;
 }
-.colunmContainer:nth-child(5) .colunm {
+.columnContainer:nth-child(5) .column {
   height: 65px;
 }
-.colunmContainer:nth-child(6) .colunm {
+.columnContainer:nth-child(6) .column {
   height: 120px;
 }
-.colunmContainer:nth-child(7) .colunm {
+.columnContainer:nth-child(7) .column {
   height: 70px;
 }
 
