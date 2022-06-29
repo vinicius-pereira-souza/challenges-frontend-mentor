@@ -65,6 +65,8 @@ section h1 {
 }
 
 .flexColunms {
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+  padding-bottom: 30px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -87,10 +89,27 @@ section h1 {
   visibility: hidden;
 }
 
+.data.selected {
+  visibility: visible;
+}
+
 .colunm {
   width: 50px;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
+  transition: 0.3s;
+}
+
+.colunm:hover {
+  background-color: #ff9b87;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.colunm.selectedColunm {
+  background-color: #ff9b87;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .colunmContainer:nth-child(1) .colunm {
@@ -102,6 +121,9 @@ section h1 {
 .colunmContainer:nth-child(3) .colunm {
   height: 150px;
   background-color:hsl(186, 34%, 60%);
+}
+.colunmContainer:nth-child(3) .colunm:hover {
+  background-color:#b4dfe5;
 }
 .colunmContainer:nth-child(4) .colunm {
   height: 90px;
@@ -118,5 +140,33 @@ section h1 {
 
 .day {
   color: hsl(28, 10%, 53%);
+  line-height: 0;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+footer p {
+  color:hsl(28, 10%, 53%);
+  line-height: 0;
+}
+
+.flexFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.flexFooter span {
+  font-weight: 700;
+  color:hsl(25, 47%, 15%);
+}
+
+.flexFooter > span {
+  font-size: 50px;
+}
+
+.flexFooter p {
   line-height: 0;
 }
