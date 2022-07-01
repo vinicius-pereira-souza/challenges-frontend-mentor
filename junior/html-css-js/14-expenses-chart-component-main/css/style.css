@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 
-.flexContainer {
+.container {
   flex: 0 1 540px;
 }
 
@@ -70,8 +70,8 @@ section h1 {
 }
 
 .data {
-  width: 75px;
-  padding: 10px 0;
+  max-width: 75px;
+  padding: 10px 6px;
   border-radius: 5px;
   background-color: hsl(25, 47%, 15%);
   color:hsl(33, 100%, 98%);
@@ -172,4 +172,63 @@ footer p {
 
 .flexFooter p {
   line-height: 0;
+}
+
+.lastMonth span{
+  text-align: end;
+}
+
+@media(max-width: 540px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .container {
+    flex: 0 1 340px;
+  }
+  
+  .header {
+    max-width: 340px;
+    padding: 20px;
+  }
+  
+  .header span {
+    font-size: 27px;
+  }
+
+  section {
+    max-width: 340px;
+    padding: 20px;
+    margin: 25px 0;
+  }
+  
+  .flexColumns {
+    justify-content: space-around;
+  }
+  
+  .data {
+    font-size: 10px;
+  }
+  
+  .column {
+    width: 30px;
+  }
+
+  footer {
+    padding-top: 20px;
+  }
+  
+  footer p {
+    color:hsl(28, 10%, 53%);
+    line-height: 0;
+  }
+  
+  .flexFooter {
+    height: 40px;
+  }
+  
+  .flexFooter > span {
+    font-size: 27px;
+  }
+  
 }
