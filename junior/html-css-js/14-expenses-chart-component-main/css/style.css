@@ -174,6 +174,10 @@ footer p {
   line-height: 0;
 }
 
+.lastMonth span{
+  text-align: end;
+}
+
 @media(max-width: 540px) {
   body {
     font-size: 16px;
@@ -220,21 +224,11 @@ footer p {
   }
   
   .flexFooter {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  
-  .flexFooter span {
-    font-weight: 700;
-    color:hsl(25, 47%, 15%);
+    height: 40px;
   }
   
   .flexFooter > span {
-    font-size: 50px;
+    font-size: 27px;
   }
   
-  .flexFooter p {
-    line-height: 0;
-  }
 }
