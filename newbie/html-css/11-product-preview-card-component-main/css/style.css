@@ -16,7 +16,7 @@ body {
   max-width: 600px;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(auto, 300px));
   grid-template-rows: 450px;
 }
 
@@ -107,4 +107,58 @@ body {
   cursor: pointer;
   transition: 0.3s;
   background-color: hsl(156, 42%, 18%);
+}
+
+/* layout para mobile */
+
+@media(max-width: 425px) {
+  body {
+    font-size: 13px;
+  }
+  
+  .container {
+    max-width: 345px;
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px auto;
+  }
+  
+  .img {
+    background-image: url('../images/image-product-mobile.jpg');
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .content {
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+  }
+  
+  .content h1 {
+    font-size: 29px;
+    line-height: 30px;
+    margin: 15px 0;
+  }
+  
+  .content h1 br {
+    display: none;
+  }
+
+  .content p {
+    width: 275px;
+    font-size: 12px;
+  }
+  
+  .flex {
+    margin: 40px 0;
+    column-gap: 25px;
+  }
+  
+  .promo {
+    font-size: 34px;
+  }
+  
+  .btn {
+    height: 50px;
+  }
+
 }
