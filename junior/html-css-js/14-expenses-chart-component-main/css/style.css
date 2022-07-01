@@ -18,8 +18,9 @@ body {
   justify-content: center;
 }
 
-.flexContainer {
+.container {
   flex: 0 1 540px;
+  background-color: aquamarine;
 }
 
 .header {
@@ -70,8 +71,8 @@ section h1 {
 }
 
 .data {
-  width: 75px;
-  padding: 10px 0;
+  max-width: 75px;
+  padding: 10px 6px;
   border-radius: 5px;
   background-color: hsl(25, 47%, 15%);
   color:hsl(33, 100%, 98%);
@@ -172,26 +173,4 @@ footer p {
 
 .flexFooter p {
   line-height: 0;
-}
-
-/* layout para mobile */
-
-@media (max-width: 425px) {
-  body {
-    font-size: 16px;
-  }
-
-  .flexContainer {
-    flex: 0 1 340px;
-  }
-  
-  .header {
-    max-width: 340px;
-    padding: 20px;
-    margin: 0 auto;
-  }
-  
-  .header span {
-    font-size: 27px;
-  }
 }
