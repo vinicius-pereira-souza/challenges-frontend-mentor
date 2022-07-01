@@ -173,3 +173,25 @@ footer p {
 .flexFooter p {
   line-height: 0;
 }
+
+/* layout para mobile */
+
+@media (max-width: 425px) {
+  body {
+    font-size: 16px;
+  }
+
+  .flexContainer {
+    flex: 0 1 340px;
+  }
+  
+  .header {
+    max-width: 340px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .header span {
+    font-size: 27px;
+  }
+}
