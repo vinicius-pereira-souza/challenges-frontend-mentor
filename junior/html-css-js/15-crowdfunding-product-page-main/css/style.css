@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Commissioner', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  display: block;
+}
+
+:root {
+  /* ### Primary */
+  --Moderatecyan: hsl(176, 50%, 47%);
+  --Darkcyan: hsl(176, 72%, 28%);
+  /* ### Neutral */
+  --Black: hsl(0, 0%, 0%);
+  --Darkgray: hsl(0, 0%, 48%);
+}
+/* syles start */
+
