@@ -71,6 +71,7 @@ span {
 }
 
 .containerAbsolute section {
+  margin-bottom: 25px;
   border-radius: 10px;
   background-color: white;
   position: relative;
@@ -78,7 +79,6 @@ span {
 
 .titleBtns {
   padding: 50px 50px 40px 50px;
-  margin-bottom: 25px;
 }
 
 .titleBtns h1 {
@@ -159,3 +159,11 @@ span {
   fill: #707070;
 }
 
+.listDatas {
+  padding: 45px 50px;
+}
+
+.listDatas ul {
+  display: flex;
+  align-items: center;
+}
