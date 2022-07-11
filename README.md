@@ -48,9 +48,9 @@
 
 <h3>Nivel junior com HTML e CSS</h3>
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/01-testimonials-grid-section-main/">testimonials-grid-section-main</a>
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/01-testimonials-grid-section-main/">testimonials-grid-section-main</a>
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/02-fylo-data-storage-component-master">fylo-data-storage-component-master</a>
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/02-fylo-data-storage-component-master/">fylo-data-storage-component-master</a>
 
 <h3>Nivel junior com HTML, CSS e JavaScript</h3>
 
