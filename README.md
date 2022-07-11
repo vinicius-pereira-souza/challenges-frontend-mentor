@@ -8,6 +8,8 @@
 
 <h2 align="center">Link de cada desafios</h2>
 
+<p>Os niveis dos desafios foram classificados de acordo com o site <a href="https://www.frontendmentor.io/home">Front End Mentor</a></p>
+
 <h3>Nivel iniciante com HTML e CSS</h3>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/01-stats-preview-card-component-main/">stats-preview-card-component-main</a>
