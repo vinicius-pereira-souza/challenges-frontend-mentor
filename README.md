@@ -8,7 +8,7 @@
 
 **Link de cada desafios**
 
-<div display="flex">
+<div display="flex" flexDirection="row">
   <p>teste 1</p>
   <p>teste 2</p>
 </div>
