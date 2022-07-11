@@ -6,4 +6,9 @@
 - CSS
 - JavaScript
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/01-stats-preview-card-component-main/">desafio 1</a>
+**Link de cada desafios**
+
+<div display='flex'>
+  <p>teste 1</p>
+  <p>teste 2</p>
+</div>
