@@ -49,3 +49,34 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/02-fylo-data-storage-component-master">fylo-data-storage-component-master</a>
 
+<h3>Nivel junior com HTML, CSS e JavaScript</h3>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/01-fylo-landing-page-with-two-column-layout-master/">fylo-landing-page-with-two-column-layout-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/02-huddle-landing-page-with-curved-sections-master">huddle-landing-page-with-curved-sections-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/03-advice-generator-app-main">advice-generator-app-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/04-project-tracking-intro-component-master">project-tracking-intro-component-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/05-loopstudios-landing-page-main">loopstudios-landing-page-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/06-pricing-component-with-toggle-master">pricing-component-with-toggle-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/07-social-media-dashboard-with-theme-switcher-master">social-media-dashboard-with-theme-switcher-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/08-sunnyside-agency-landing-page-main">sunnyside-agency-landing-page-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/09-intro-section-with-dropdown-navigation-main">intro-section-with-dropdown-navigation-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/10-time-tracking-dashboard-main">time-tracking-dashboard-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/11-insure-landing-page-master">insure-landing-page-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/12-blogr-landing-page-main">blogr-landing-page-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/13-fylo-dark-theme-landing-page-master">fylo-dark-theme-landing-page-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/14-expenses-chart-component-main">expenses-chart-component-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/15-crowdfunding-product-page-main">crowdfunding-product-page-main</a>
