@@ -14,7 +14,7 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/01-stats-preview-card-component-main/">stats-preview-card-component-main</a>
 
-<a href="challenges-frontend-mentor/newbie/html-css/02-profile-card-component-main/">profile-card-component-main</a>
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/02-profile-card-component-main/">profile-card-component-main</a>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/03-social-proof-section-master/">social-proof-section-master</a>
 
@@ -25,6 +25,7 @@
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/06-huddle-landing-page-with-single-introductory-section-master">huddle-landing-page-with-single-introductory-section-master</a>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/07-ping-coming-soon-page-master">ping-coming-soon-page-master</a>
+
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/08-qr-code-component-main">qr-code-component-main</a>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/09-single-price-grid-component-master">single-price-grid-component-master</a>
