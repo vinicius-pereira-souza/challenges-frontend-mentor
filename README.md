@@ -31,7 +31,21 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/11-product-preview-card-component-main">product-preview-card-component-main</a>
 
-<!-- <h3>Nivel iniciante com HTML, CSS e JavaScript</h3>
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/11-product-preview-card-component-main">product-preview-card-component-main</a>
+<h3>Nivel iniciante com HTML, CSS e JavaScript</h3>
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/11-product-preview-card-component-main">product-preview-card-component-main</a> -->
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/01-intro-component-with-signup-form-master/">intro-component-with-signup-form-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/02-faq-accordion-card-main">faq-accordion-card-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/03-article-preview-component-master">article-preview-component-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/04-base-apparel-coming-soon-master">base-apparel-coming-soon-master</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/05-interactive-rating-component-main">interactive-rating-component-main</a>
+
+<h3>Nivel junior com HTML e CSS</h3>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/01-testimonials-grid-section-main/">testimonials-grid-section-main</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/02-fylo-data-storage-component-master">fylo-data-storage-component-master</a>
+
