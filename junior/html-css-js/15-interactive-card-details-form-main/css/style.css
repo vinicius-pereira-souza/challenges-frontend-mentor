@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+:root {
+  /* ### Primary */
+  /* (active input border) */
+  --Lineargradient : hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* (input errors) */
+  --Red : hsl(0, 100%, 66%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+/* container externo */
+.container {
+  max-width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* confirmado */
+.confirmed {
+  display: none;
+  max-width: 385px;
+}
+
+.confirmed.show {
+  display: block;
+}
+
+.confirmed img {
+  margin: 0 auto 40px auto;
+}
+
+.confirmed h1 {
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+}
+
+.confirmed p {
+  text-align: center;
+  margin: 20px 0 40px 0;
+  color:hsl(279, 6%, 55%);
+}
+
+.continue {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 17px;
+  border-radius: 5px;
+  color:hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+  transition: 0.3s;
+}
+
+.continue:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: hsl(278, 48%, 28%);
+}
