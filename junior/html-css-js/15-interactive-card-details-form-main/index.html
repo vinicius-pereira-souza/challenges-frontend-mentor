@@ -22,18 +22,20 @@
 <body>
   <main class="container">
     <div class="bg-img">
-      <div class="cardFrontContainer">
-        <img src="images/bg-card-front.png" alt="imagem do cartão de frente" class="bg-card-front">
-        <img src="images/card-logo.svg" alt="imagem da logo do cartão" class="cardLogo">
-        <p class="cardNumber">0000 0000 0000 0000</p>
-        <div class="nomeData">
-          <span>Jane Appleseed</span>
-          <span>00/00</span>
+      <div class="gridCard">
+        <div class="cardFront">
+          <img src="images/card-logo.svg" alt="imagem da logo do cartão" class="cardLogo">
+          <p class="cardNumber">0000 0000 0000 0000</p>
+          <div class="nomeData">
+            <span class="nome">Jane Appleseed</span>
+            <span class="data">
+              <span class="dataMes">00</span>/<span class="dataAno">00</span>
+            </span>
+          </div>
         </div>
-      </div>
-      <div class="cardBackContainer">
-        <img src="images/bg-card-back.png" alt="imagem de trás do cartão" class="bg-card-back">
-        <span class="backNumber">000</span>
+        <div class="cardBack">
+          <span class="backNumber">000</span>
+        </div>
       </div>
     </div>
     <div class="formContainer">
@@ -66,11 +68,6 @@
         <button class="continue">Continue</button>
       </div>
     </div>
-
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
   </main>
   <script src="js/script.js"></script>
 </body>
