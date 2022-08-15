@@ -21,58 +21,65 @@
 
 <body>
   <main class="container">
-    <div class="bg-img">
-      <div class="gridCard">
-        <div class="cardFront">
-          <img src="images/card-logo.svg" alt="imagem da logo do cartão" class="cardLogo">
-          <p class="cardNumber">0000 0000 0000 0000</p>
-          <div class="nomeData">
-            <span class="nome">Jane Appleseed</span>
-            <span class="data">
-              <span class="dataMes">00</span>/<span class="dataAno">00</span>
-            </span>
-          </div>
-        </div>
-        <div class="cardBack">
-          <span class="backNumber">000</span>
+    <div class="containerCard">
+      <div class="frontCard">
+        <img src="images/card-logo.svg" alt="logo do cartão">
+        <span>0000 0000 0000 0000</span>
+        <div class="flexCardFront">
+          <span class="nomeCard">Jane Appleseed</span>
+          <span class="dataCard">
+            <span class="mes">00</span>/<span class="ano">00</span>
+          </span>
         </div>
       </div>
+      <div class="backCard">
+        <span class="numberBack">000</span>
+      </div>
     </div>
-    <div class="formContainer">
+    <div class="containerForm">
+      <!-- form -->
       <form class="form">
-        <div class="nomeFlex">
-          <label for="nome">Cardholder Name</label>
-          <input type="text" name="nome" id="nome" placeholder="e.g. Jane Appleseed">
+        <div class="nome">
+          <label for="nomeCard">Cardholder Name</label>
+          <input type="text" name="nomeCard" id="nomeCard" placeholder="e.g. Jane Appleseed">
+          <span>Wrong format, letters only</span>
         </div>
-        <div class="numberFlex">
-          <label for="numero">Card Number</label>
-          <input type="number" name="numero" id="numero" placeholder="e.g. 1234 5678 9123 0000">
+        <div class="numero">
+          <label for="numeroCard">Card Number</label>
+          <input type="text" name="numeroCard" id="numeroCard" placeholder="e.g. 1234 5678 9123 0000">
+          <span>Wrong format, numbers only</span>
         </div>
-        <div class="flexFormDadas">
+        <div class="subGridForm">
           <div class="data">
-            <label for="data">Exp. Date (MM/YY)</label>
-            <div class="dataFlex">
+            <label for="dataNumber">Exp. Date (MM/YY)</label>
+            <div>
               <input type="number" name="mes" id="mes" placeholder="MM">
               <input type="number" name="ano" id="ano" placeholder="YY">
+              <span>Can't be blank</span>
             </div>
           </div>
-          <div class="cvc">
-            <label for="cvcData">CVC</label>
-            <input type="number" name="numeroCvc" id="numeroCvc" placeholder="e.g. 123">
+          <div class="numberCvc">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+            <span>Can't be blank</span>
           </div>
         </div>
-        <button class="submitButton">Confirm</button>
+        <button class="btnSubmit">Confirm</button>
       </form>
 
       <!-- Completed state start -->
-      <div class="confirmed">
-        <img src="images/icon-complete.svg" alt="imagem de checado">
+      <div class="continue">
+        <img src="images/icon-complete.svg" alt="icone de checado">
         <h1>Thank you!</h1>
         <p>We've added your card details</p>
-        <button class="continue">Continue</button>
+        <button>Continue</button>
       </div>
     </div>
   </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
   <script src="js/script.js"></script>
 </body>
 
