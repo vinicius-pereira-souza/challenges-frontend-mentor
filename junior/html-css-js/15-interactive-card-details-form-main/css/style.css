@@ -35,17 +35,83 @@ span, label, input {
 }
 
 .container {
-  max-width: 1055px;
+  max-width: 1135px;
   height: 100vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  column-gap: 125px;
 }
 
+/* cartão */
+.containerCard {
+  max-width: 545px;
+  height: 515px;
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  grid-template-rows: 245px 245px;
+  row-gap: 25px;
+  grid-template-areas:
+  'front front .'
+  '. back back';
+}
+
+.frontCard, .backCard {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* card front */
+.frontCard {
+  grid-area: front;
+  background-image: url("../images/bg-card-front.png");
+  padding: 20px 30px;
+}
+
+.cardFrontNum {
+  letter-spacing: 1px;
+  font-size: 27px;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  max-width: max-content;
+  margin: 60px auto 30px auto;
+}
+
+.flexCardFront {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color:hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataCard {
+  display: flex;
+}
+
+/* card back */
+.backCard {
+  grid-area: back;
+  background-image: url("../images/bg-card-back.png");
+}
+
+.numberBack {
+  max-width: 325px;
+  margin: 112px auto 0 auto;
+  text-align: end;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color:hsl(0, 0%, 100%);
+}
+
+/* formulario */
 .containerForm {
   max-width: 380px;
+  margin: 0 auto;
 }
 
 .form label {
