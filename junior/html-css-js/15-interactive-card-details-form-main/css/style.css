@@ -139,6 +139,7 @@ span, label, input {
 }
 
 .form input.err {
+  display: block;
   border-color: hsl(0, 100%, 66%);
 }
 
@@ -165,6 +166,27 @@ span, label, input {
   display: grid;
   column-gap: 10px;
   grid-template-columns: 80px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  'mes ano'
+  'msgerr msgerr';
+}
+
+#mes {
+  grid-area: mes;
+}
+
+#ano {
+  grid-area: ano;
+}
+
+#ano.err {
+  margin-top: 0;
+  color: #000;
+}
+
+.err {
+  grid-area: msgerr;
 }
 
 .btnSubmit {
