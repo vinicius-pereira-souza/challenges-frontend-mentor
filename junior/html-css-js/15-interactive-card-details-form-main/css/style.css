@@ -143,6 +143,16 @@ span, label, input {
   border-color: hsl(0, 100%, 66%);
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
 .form .err {
   display: none;
   font-size: 13px;
