@@ -1,4 +1,3 @@
-// Cartão
 class Form {
   constructor() {
     this.cardNumber = document.querySelector('.cardFrontNum')
@@ -9,7 +8,7 @@ class Form {
 
     this.inputs = document.querySelectorAll('input')
 
-    this.adionarEventos()
+    this.adicionarEventos()
   }
 
   handleChangeInput = (e) => {
@@ -30,7 +29,8 @@ class Form {
     }
   }
 
-  adionarEventos = () => {
+
+  adicionarEventos = () => {
     this.inputs.forEach(input => {
       input.addEventListener('keyup', this.handleChangeInput)
     })
