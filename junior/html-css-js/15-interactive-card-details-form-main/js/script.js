@@ -25,7 +25,7 @@ class Form {
 
     } else if(e.target.id === 'ano') {
       this.cardDataAno.innerText = e.target.value
-      this.handleLimitedCaracter(1, e.target)
+      this.handleLimitedCaracter(2, e.target)
 
     } else {
       this.numberCvc.innerText = e.target.value
