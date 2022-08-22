@@ -17,18 +17,27 @@ class Form {
 
     } else if(e.target.id === 'numeroCard') {
       this.cardNumber.innerText = e.target.value
+      this.handleLimitedCaracter(16, e.target)
 
     } else if(e.target.id === 'mes') {
       this.cardDataMes.innerText = e.target.value
+      this.handleLimitedCaracter(2, e.target)
 
     } else if(e.target.id === 'ano') {
       this.cardDataAno.innerText = e.target.value
+      this.handleLimitedCaracter(1, e.target)
 
     } else {
       this.numberCvc.innerText = e.target.value
+      this.handleLimitedCaracter(3, e.target)
     }
   }
 
+  handleLimitedCaracter(limite, input) {
+    if(input.value > limite) {
+      input.value = input.value.substring(0, limite)
+    }
+  }
 
   adicionarEventos = () => {
     this.inputs.forEach(input => {
