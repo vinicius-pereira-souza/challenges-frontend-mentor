@@ -1,3 +1,7 @@
+/* estilizações gerais */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +9,28 @@
 }
 
 body {
+  font-family: 'Space Grotesk', sans-serif;
   background-image: url('../images/bg-main-desktop.png');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+input, label {
+  display: block;
+}
+
+/* estilizações desktop */
+
+.modalThank {
+  display: none;
+}
+
+.container {
+  max-width: 1045px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 125px;
 }
