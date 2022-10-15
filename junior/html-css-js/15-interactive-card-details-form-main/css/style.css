@@ -88,4 +88,13 @@ img {
   background-image: url('../images/bg-card-back.png');
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
+}
+
+.back span {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1px;
+  position: absolute;
+  right: 12%;
+  top: 45%;
 }
