@@ -19,6 +19,12 @@ input, label {
   display: block;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
 /* estilizações desktop */
 
 .modalThank {
@@ -33,4 +39,53 @@ input, label {
   align-items: center;
   justify-content: center;
   column-gap: 125px;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+.cards {
+  width: 545px;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: repeat(2, 245px);
+  row-gap: 35px;
+  grid-template-areas: 
+  "front front ."
+  ". back back";
+}
+
+.front {
+  grid-area: front;
+  background-image: url('../images/bg-card-front.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.cardNumber {
+  margin: 80px 0 35px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 0;
+  letter-spacing: 4px;
+}
+
+.flexCardFront {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back {
+  grid-area: back;
+  background-image: url('../images/bg-card-back.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
