@@ -16,7 +16,7 @@ function handleChange (e) {
     handleCleanName(e.target, nameCard)
 
   } else if(e.target.id == 'numberCard') {
-    handleCardNumber(e.target, nameCard)
+    handleCardNumber(e.target, numberCardFront)
   }
 
 }
@@ -36,6 +36,9 @@ function handleCleanName(input, item) {
 }
 
 function handleCardNumber(input, item) {
-  input.value.split(/(\d{4})(\d{4})/g)
-  
+  const arr = input.value.split(/(\d{4})/g)
+  const newArr = arr.map((item) => item.replace("", " "))
+  const cleanStr = newArr.toString().replaceAll(",", '')
+
+  item.innerText = cleanStr
 }
