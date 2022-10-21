@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,5 +9,64 @@
 body {
   font-size: 15px;
   background-color: hsl(36, 100%, 99%);
+  font-family: 'Inter', sans-serif;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  padding: 80px 0 50px 0;
+}
+
+.headerFlex {
+  max-width: 1010px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.nav li {
+  color: hsl(236, 13%, 42%);
+  transition: .3s;
+  padding: 5px;
+}
+
+.nav li:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
+  transition: .3s;
+}
+
+.buttonMobile {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.buttonMobile span {
+  display: block;
+  width: 40px;
+  height: 35px;
+  background-image: url('../assets/images/icon-menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
