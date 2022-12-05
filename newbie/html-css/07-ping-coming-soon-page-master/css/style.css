@@ -98,10 +98,12 @@ form button {
   border-radius: 30px;
   background: hsl(223, 85%, 62%);
   box-shadow: 0 10px 7px rgb(222, 229, 255);
+  transition: 0.3s;
 }
 
 button:hover {
   cursor: pointer;
+  transition: 0.3s;
   background: hsl(224, 87%, 70%);
 }
 
@@ -129,20 +131,24 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
 }
 
 li a:hover {
   transition: 0.3s;
   border-color: hsl(223, 85%, 62%);
   background: hsl(223, 85%, 62%);
+  transition: 0.3s;
 }
 
 a i {
   color: hsl(223, 85%, 62%);
+  transition: 0.3s;
 }
 
 li a:hover i {
   color: #fff;
+  transition: 0.3s;
 }
 
 .articleFooter p {
