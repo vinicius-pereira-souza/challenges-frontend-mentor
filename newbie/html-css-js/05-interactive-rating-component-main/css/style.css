@@ -9,6 +9,7 @@
 body {
   font-size: 15px;
   height: 100vh;
+  padding: 15px;
   background: hsl(216, 12%, 8%);
   display: flex;
   align-items: center;
@@ -139,4 +140,15 @@ span {
   line-height: 26px;
   margin-top: 15px;
   color: hsl(217, 12%, 63%);
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .btns button {
+    width: 40px;
+    height: 40px;
+  }
 }
