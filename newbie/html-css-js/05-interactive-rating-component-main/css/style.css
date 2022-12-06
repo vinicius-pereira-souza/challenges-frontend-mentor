@@ -4,3 +4,53 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-size: 15px;
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background: hsl(216, 12%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span {
+  display: block;
+}
+
+.containerSelectBtn {
+  max-width: 415px;
+  background-color: hsl(215, 21%, 16%);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.star {
+  max-width: max-content;
+  background-color: #273039;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.containerSelectBtn h1 {
+  color: #fff;
+  font-size: 27px;
+}
+
+.containerSelectBtn p {
+  line-height: 26px;
+  margin: 20px 0;
+  color: hsl(217, 12%, 63%);
+}
+
+.containerThankYouMessage {
+  display: none;
+}
