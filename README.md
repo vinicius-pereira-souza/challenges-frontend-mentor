@@ -82,4 +82,3 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/14-expenses-chart-component-main">expenses-chart-component-main</a>
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/15-crowdfunding-product-page-main">crowdfunding-product-page-main</a>
