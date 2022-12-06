@@ -1,32 +1,36 @@
-const btn = document.querySelector('.btn')
-const listBtn = document.querySelectorAll('li')
+const containerOptionsBtns = document.querySelector(".containerSelectBtn");
+const containerSelect = document.querySelector(".containerThankYouMessage");
+const btns = document.querySelectorAll(".btns button");
+const btnSubmit = document.querySelector("#submit");
 
-listBtn.forEach(item => {
-  item.addEventListener('click', handleActive)
-})
+btns.forEach((btn) => {
+  btn.addEventListener("click", handleButtonSelect);
+});
 
-function handleActive(e) {
-  e.target.classList.add('active')
-  removerClasse(e.target)
+btnSubmit.addEventListener("click", handleButtonSubmit);
+
+function handleButtonSelect(e) {
+  e.target.classList.toggle("select");
+
+  alternativeClasse(e.target);
 }
 
-function removerClasse(itenClick) {
-  listBtn.forEach(item => {
-    if(item != itenClick) {
-      item.classList.remove('active')
+function alternativeClasse(target) {
+  btns.forEach((btn) => {
+    if (btn !== target) {
+      btn.classList.remove("select");
     }
-  })
-} 
+  });
+}
 
-btn.addEventListener('click', aparecerModal)
+function handleButtonSubmit() {
+  const optionSelected = document.querySelector("button.select");
+  const optionValue = document.querySelector(".option");
 
-function aparecerModal(e) {
-  const itemAtivo = document.querySelector('li.active')
-  const modal = document.querySelector('.content')
-  const valorSelecionado = document.querySelector('.numeroSelecionado')
-  const container = document.querySelector('.container')
-  
-  container.classList.add('sumir')
-  modal.classList.add('aparecer')
-  valorSelecionado.innerText = itemAtivo.textContent
+  if (optionSelected) {
+    optionValue.textContent = optionSelected.textContent;
+
+    containerOptionsBtns.style.display = "none";
+    containerSelect.style.display = "block";
+  }
 }

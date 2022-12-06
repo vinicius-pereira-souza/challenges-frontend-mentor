@@ -1,238 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
 }
 
 body {
   font-size: 15px;
   height: 100vh;
-  font-family: 'Overpass', sans-serif;
+  padding: 15px;
   background: hsl(216, 12%, 8%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 25px;
 }
 
-h1 {
-  color:hsl(0, 0%, 100%);
+img {
+  display: block;
+  max-width: 100%;
 }
 
-p {
-  color: hsl(217, 12%, 63%);
+span {
+  display: block;
 }
 
-/* LAYOUT PARA DESKTOP E TABLET */
-
-.container {
-  max-width: 412px;
-  height: 420px;
+.containerSelectBtn {
+  max-width: 415px;
   background-color: hsl(215, 21%, 16%);
   border-radius: 20px;
   padding: 30px;
 }
 
-.img {
-  width: 50px;
-  height: 50px;
-  background-color: hsl(213, 19%, 18%);
+.star {
+  max-width: max-content;
+  background-color: #273039;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 30px;
+  padding: 15px;
 }
 
-.container h1 {
-  margin: 32px 0 15px 0;
+.containerSelectBtn h1 {
+  color: #fff;
   font-size: 27px;
 }
 
-.container p {
+.containerSelectBtn p {
   line-height: 26px;
-  margin-bottom: 25px;
+  margin: 20px 0;
+  color: hsl(217, 12%, 63%);
 }
 
-.listBtns {
-  max-width: 100%;
-  margin-bottom: 30px;
-  list-style: none;
+.btns {
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.listBtns li {
-  width: 50px;
-  height: 50px;
+.btns button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  background-color: #273039;
+  border-radius: 50%;
   color: hsl(215, 8%, 55%);
   font-weight: 700;
-  border-radius: 50%;
-  background-color: hsl(213, 19%, 18%);
+  transition: 0.3s ease-in-out;
+}
+
+.btns button:hover {
   cursor: pointer;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.listBtns li:hover {
   background: hsl(216, 12%, 54%);
-  color:hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s ease-in-out;
 }
 
-.listBtns li.active {
+.btns button.select {
   background: hsl(25, 97%, 53%);
-  color:hsl(0, 0%, 100%);
-  transition: 0.3s;
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s ease-in-out;
 }
 
-.btn {
-  display: block;
+#submit {
   width: 100%;
   height: 45px;
   border: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  font-family: 'Overpass', sans-serif;
   border-radius: 35px;
-  color:hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   background: hsl(25, 97%, 53%);
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
-.btn:hover {
-  color:hsl(25, 97%, 53%);
+#submit:hover {
+  cursor: pointer;
+  color: hsl(25, 97%, 53%);
   background: hsl(0, 0%, 100%);
+  transition: 0.3s ease-in-out;
 }
 
-/* MODAL */
-
-.containerModal {
-  max-width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
-.content {
-  max-width: 412px;
-  height: 420px;
+.containerThankYouMessage {
+  max-width: 415px;
   background-color: hsl(215, 21%, 16%);
   border-radius: 20px;
-  padding: 45px 30px;
+  padding: 35px 37px;
   text-align: center;
   display: none;
-  position: relative;
-  top: -18px;
 }
 
-.content img {
-  max-width: 100%;
-  display: block;
+.containerThankYouMessage img {
   margin: 0 auto;
 }
 
-.msg {
-  width: 195px;
+.containerThankYouMessage > span {
+  max-width: max-content;
   border-radius: 50px;
+  margin: 25px auto 30px auto;
+  padding: 5px 10px 3px 10px;
+  font-size: 15px;
   font-weight: 400;
-  margin: 0 auto;
-  margin-top: 30px;
-  color:hsl(25, 97%, 53%);
+  color: hsl(25, 97%, 53%);
   background-color: hsl(213, 19%, 18%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.content h1 {
-  margin: 32px 0 15px 0;
+.containerThankYouMessage h1 {
+  color: #fff;
   font-size: 27px;
 }
 
-.content p {
+.containerThankYouMessage p {
   line-height: 26px;
-  margin-bottom: 25px;
-  text-align: center;
-  padding: 0 5px;
+  margin-top: 15px;
+  color: hsl(217, 12%, 63%);
 }
 
-.content.aparecer {
-  display: block;
-}
-
-.container.sumir {
-  display: none;
-}
-
-/* LAYOUT PARA MOBILE */
-
-@media (max-width: 425px) {
+@media (max-width: 400px) {
   body {
     font-size: 14px;
   }
 
-  .container {
-    max-width: 330px;
-    height: 360px;
-    padding: 20px;
-    padding-bottom: 30px;
-  }
-  
-  .img {
+  .btns button {
     width: 40px;
     height: 40px;
-  }
-  
-  .container h1 {
-    margin: 32px 0 15px 0;
-    font-size: 24px;
-  }
-  
-  .container p {
-    line-height: 23px;
-    margin-bottom: 25px;
-  }
-  
-  .listBtns {
-    margin-bottom: 20px;
-  }
-  
-  .listBtns li {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* MODAL */
-  
-  .content {
-    max-width: 330px;
-    height: 360px;
-    padding: 38px 30px;
-  }
-  
-  .content img {
-    max-width: 146px;
-    height: 96px;
-  }
-  
-  .content.aparecer .msg {
-    margin-bottom: 25px;
-    padding: 4px 5px;
-  }
-  
-  .content h1 {
-    margin: 30px 0 15px 0;
-    font-size: 27px;
-  }
-  
-  .content p {
-    line-height: 21px;
-    margin-bottom: 25px;
-    padding: 0 5px;
-    font-size: 13px;
   }
 }
