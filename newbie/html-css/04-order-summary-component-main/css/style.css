@@ -27,6 +27,7 @@ body {
   height: auto;
   background: #fff;
   border-radius: 15px;
+  box-shadow: 0px 11px 24px -8px rgba(135, 141, 163, 0.61);
 }
 
 .bgImg {
@@ -125,10 +126,11 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .container {
-    background: url("../images/pattern-background-mobile.svg") no-repeat;
-    background-position: top 0vw left 2vh;
+    background: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 126vw left -38vh;
   }
 
   .card {
