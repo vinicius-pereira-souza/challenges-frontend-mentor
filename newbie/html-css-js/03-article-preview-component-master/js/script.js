@@ -1,10 +1,7 @@
-const btn = document.querySelector('button')
-const grid = document.querySelector('.gridPerfil')
-btn.addEventListener('click', handleVisible)
+const btn = document.querySelector(".icon");
+const redes = document.querySelector(".redesShare");
 
-function handleVisible(e) {
-  const lista = document.querySelector('.share')
-  e.target.classList.toggle('active')
-  lista.classList.toggle('active')
-  grid.classList.toggle('sumir')
-}
+btn.addEventListener("click", (e) => {
+  btn.classList.toggle("active");
+  redes.classList.toggle("active");
+});

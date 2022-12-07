@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
 
 * {
   margin: 0;
@@ -6,56 +6,45 @@
   box-sizing: border-box;
 }
 
-:root {
-  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
-  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
-  --GrayishBlue: hsl(212, 23%, 69%);
-  --LightGrayishBlue: hsl(210, 46%, 95%);
-}
 body {
+  height: 100vh;
   font-size: 13px;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   background: hsl(210, 46%, 95%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 15px;
 }
 
-span {
+img {
   display: block;
-  font-size: 13px;
-  color: rgb(255, 5, 46);
+  max-width: 100%;
 }
 
 .container {
-  max-width: 730px;
-  height: 280px;
-  display: flex;
-  margin-bottom: 50px;
-  margin: 150px 0;
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
 }
 
-.imgFundo {
-  width: 285px;
-  height: 100%;
-  background-image: url('../images/drawers.jpg');
-  background-repeat: no-repeat;
+.imgBg {
+  background-image: url("../images/drawers.jpg");
+  background-position: center left 0;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 10px 0 0 10px;
 }
 
 .content {
   max-width: 445px;
-  padding: 40px;
+  padding: 30px 40px;
   background: hsl(0, 0%, 100%);
-  /* background: hsl(214, 17%, 51%); */
   border-radius: 0 10px 10px 0;
-  position: relative;
 }
 
 .content h1 {
-  color:hsl(217, 19%, 35%);
+  color: hsl(217, 19%, 35%);
   margin-bottom: 12px;
 }
 
@@ -65,210 +54,162 @@ span {
   margin-bottom: 20px;
 }
 
-.flexAvatar {
-  max-width: 100%;
-  height: 40px;
+.flexContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-.gridPerfil {
+.gridAvatar {
   display: grid;
   grid-template-columns: 40px 130px;
   grid-template-rows: 20px 20px;
-  grid-template-areas: 
-  "img nome"
-  "img data";
+  grid-template-areas:
+    "img nome"
+    "img data";
+  color: hsl(212, 23%, 69%);
 }
 
-.gridPerfil img {
+.gridAvatar img {
   grid-area: img;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.gridPerfil .nome {
+.gridAvatar span {
+  margin-left: 15px;
+}
+
+.gridAvatar span:nth-child(2) {
   font-weight: 700;
-  color:hsl(217, 19%, 35%);
-  margin-left: 15px;
+  color: hsl(217, 19%, 35%);
 }
 
-.gridPerfil .data {
-  color:hsl(212, 23%, 69%);
-  margin-left: 15px;
-}
-
-.btnFlex {
-  width: 248px;
-  height: 115px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  position: absolute;
-  bottom: 22px;
-  right: -68px;
-}
-
-.share {
-  list-style: none;
-  width: 100%;
-  height: 55px;
-  background-color: hsl(217, 19%, 35%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  position: relative;
-  visibility: hidden;
-}
-
-.share::after {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 0px;
-  border: 22px solid hsl(217, 19%, 35%);
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  position: absolute;
-  left: 102px;
-  bottom: -38px;
-}
-
-.share span {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color:hsl(212, 23%, 69%);
-  font-weight: 500;
-}
-
-.btn{
+.icon {
   width: 32px;
   height: 32px;
+  background-color: hsl(210, 46%, 95%);
+  position: relative;
+  z-index: 200;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../images/icon-share.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: hsl(210, 46%, 95%);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-} 
+  transition: 0.3s ease-in-out;
+}
 
-.btn.active {
-  background-image: url('../images/icon-share.svg');
+.icon:is(:hover, :active, .active) {
+  background-color: hsl(214, 20%, 52%);
+  transition: 0.3s ease-in-out;
+}
+
+.icon:is(:hover, :active, .active) path {
+  fill: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.redesShare {
+  height: 55px;
   background-color: hsl(217, 19%, 35%);
+  padding: 10px 35px;
+  border-radius: 10px;
+  position: absolute;
+  top: -80px;
+  right: -99px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: hsl(214, 20%, 52%);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: showRedes 0.3s ease-in-out;
 }
 
-.share.active {
-  visibility: visible;
-  animation: aparecer 1s ;
+.redesShare.active {
+  display: flex;
+  animation: showRedes 0.3s ease-in-out;
 }
 
-@keyframes aparecer {
-  from {
+.redesShare::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  bottom: -29px;
+  border: 15px solid transparent;
+  border-top-color: hsl(217, 19%, 35%);
+}
+
+@keyframes showRedes {
+  0% {
     opacity: 0;
-  } 
-  to {
+  }
+  100% {
     opacity: 1;
   }
 }
 
-@media(max-width: 425px) {
-  .container {
-    max-width: 328px;
-    height: 515px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
+@media (max-width: 920px) {
+  .redesShare {
+    right: -33px;
   }
-  
-  .imgFundo {
-    width: 100%;
-    height: 200px;
+
+  .redesShare::after {
+    right: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: minmax(auto, 340px);
+    grid-template-rows: 205px auto;
+    position: relative;
+  }
+
+  .imgBg {
     border-radius: 10px 10px 0 0;
   }
 
   .content {
-    max-width: 100%;
-    height: 312px;
-    padding: 40px 35px 0 35px;
-    border-radius: 0  0 10px 10px;
- 
+    padding: 40px 30px 20px 30px;
+    border-radius: 0 0 10px 10px;
   }
-  
+
   .content h1 {
     font-size: 16px;
   }
-  
+
   .content p {
     margin-bottom: 20px;
   }
 
-  .btnFlex {
-    width: 328px;
-    height: 56px;
+  .flexContent {
+    position: static;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    position: absolute;
+  }
+
+  .icon.active {
+    bottom: -10px;
+  }
+
+  .redesShare {
+    width: 100%;
+    height: 60px;
+    padding: 10px 35px;
+    border-radius: 0 0 10px 10px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
-    right: 0;
-    z-index: 30;
-  }
-  
-  .btn{
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 12px;
+    align-items: auto;
+    justify-content: flex-start;
   }
 
-  .btn.active {
-    background-image: url('../images/icon-share.svg');
-    background-color: hsl(218, 10%, 31%);
-    position: absolute;
-    right: 15px;
-    top: 12px;
-    z-index: 30;
-  }
-
-
-  .gridPerfil.sumir{
+  .redesShare::after {
     display: none;
-    transition: 1s;;
-  }
-
-  .share {
-    gap: 22px;
-    position: relative;
-    visibility: hidden;
-    z-index: 1;
-  }
-  
-
-  .share::after {
-    content: '';
-    display: none;
-  }
-  
-  .share.active span {
-    position: relative;
-    right: 35px;
-  }
-
-  .share.active li {
-    position: relative;
-    right: 35px;
   }
 }
