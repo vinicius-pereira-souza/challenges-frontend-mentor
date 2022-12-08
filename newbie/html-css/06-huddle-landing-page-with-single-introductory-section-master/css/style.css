@@ -38,6 +38,11 @@ img {
   justify-content: space-between;
 }
 
+.contentContainer {
+  max-width: 510px;
+  margin: 0 auto;
+}
+
 .contentContainer h1 {
   font-size: 40px;
   line-height: 59px;
@@ -110,7 +115,7 @@ img {
   transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   body {
     background: url("../images/bg-mobile.svg"), hsl(257, 40%, 49%);
     background-repeat: no-repeat;
@@ -126,6 +131,7 @@ img {
     max-width: 605px;
     margin: 0 auto;
     gap: 140px;
+    display: flex;
   }
 
   .contentContainer h1 {
@@ -167,5 +173,46 @@ img {
 
   .redesFooter li i {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    max-width: 190px;
+    margin: 75px 0 85px 0;
+  }
+
+  .container {
+    gap: 75px;
+  }
+
+  .contentContainer h1 {
+    font-size: 30px;
+    line-height: 53px;
+  }
+
+  .contentContainer p {
+    margin: 40px 0;
+    font-size: 21px;
+    line-height: 38px;
+  }
+
+  .contentContainer button {
+    width: 220px;
+    height: 59px;
+    font-size: 19px;
+  }
+
+  .redesFooter li {
+    width: 45px;
+    height: 45px;
+  }
+
+  .redesFooter li a {
+    font-size: 30px;
+  }
+
+  .redesFooter li i {
+    font-size: 23px;
   }
 }
