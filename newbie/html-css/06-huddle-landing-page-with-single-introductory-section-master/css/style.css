@@ -14,6 +14,7 @@ body {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   background: url("../images/bg-desktop.svg"), hsl(257, 40%, 49%);
+  background-position: top 0vh right 3vw;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -25,7 +26,7 @@ img {
 
 .header {
   max-width: 1270px;
-  margin: 65px auto 100px auto;
+  margin: 19px auto 113px auto;
 }
 
 .container {
@@ -119,7 +120,8 @@ img {
   body {
     background: url("../images/bg-mobile.svg"), hsl(257, 40%, 49%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: top 0vh right 0vw;
   }
 
   .header {
