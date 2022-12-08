@@ -109,3 +109,63 @@ img {
   color: hsl(300, 69%, 71%);
   transition: 0.3s ease-in-out;
 }
+
+@media (max-width: 750px) {
+  body {
+    background: url("../images/bg-mobile.svg"), hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header {
+    max-width: 595px;
+    margin: 75px auto 140px auto;
+  }
+
+  .container {
+    max-width: 605px;
+    margin: 0 auto;
+    gap: 140px;
+  }
+
+  .contentContainer h1 {
+    font-size: 47px;
+    line-height: 73px;
+    text-align: center;
+  }
+
+  .contentContainer p {
+    margin: 50px 0;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .contentContainer button {
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 24px;
+  }
+
+  .redesFooter {
+    margin: 120px auto 50px auto;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .redesFooter li {
+    width: 55px;
+    height: 55px;
+  }
+
+  .redesFooter li a {
+    font-size: 38px;
+  }
+
+  .redesFooter li i {
+    font-size: 30px;
+  }
+}
