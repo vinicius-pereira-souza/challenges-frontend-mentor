@@ -55,8 +55,6 @@ img {
   letter-spacing: 1px;
 }
 
-/* seção das estrelas */
-
 .starsContainer {
   flex: 0 1 540px;
 }
@@ -97,7 +95,7 @@ img {
 
 .starsContainer div + span {
   font-size: 15px;
-  color: #290426;
+  color: #472548;
   font-weight: 700;
 }
 
@@ -153,4 +151,60 @@ img {
   font-size: 13px;
   line-height: 22px;
   color: #fff;
+}
+
+@media (max-width: 470px) {
+  body {
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+      url("../images/bg-pattern-bottom-mobile.svg");
+    padding: 0 10px;
+  }
+
+  .headerContainer {
+    max-width: 335px;
+    margin: 85px auto 50px auto;
+  }
+
+  .title h1 {
+    font-size: 37px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .title p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .starsContainer > div {
+    max-width: 100%;
+    padding: 20px 0;
+    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .starsContainer > div:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .starsContainer > div:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .quotesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: 15px;
+  }
+
+  .quotesContainer article:nth-child(2) {
+    margin-top: 0px;
+  }
+
+  .quotesContainer article:nth-child(3) {
+    margin-top: 0px;
+  }
 }
