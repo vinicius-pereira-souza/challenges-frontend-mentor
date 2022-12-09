@@ -8,97 +8,103 @@
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Social proof section</title>
+  <style>
+    .attribution {
+      margin-top: 25px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
 </head>
 
 <body>
-  <main class="container">
-    <header>
-      <div class="titulos">
-        <h1>10,000+ of our users love our products.</h1>
-        <h2>We only provide great products combined with excellent customer service.
-          See what our satisfied customers are saying about our services.</h2>
-      </div>
-      <ul>
-        <li>
-          <div class="estrelas">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <p>Rated 5 Stars in Reviews</p>
-        </li>
-        <li>
-          <div class="estrelas">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <p>Rated 5 Stars in Report Guru</p>
-        </li>
-        <li>
-          <div class="estrelas">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <p>Rated 5 Stars in BestTech</p>
-        </li>
-      </ul>
-    </header>
-
-    <section class="comentarios">
-      <article>
-        <div class="grid">
-          <figure><img src="images/image-colton.jpg" alt="foto de colton"></figure>
-          <span class="nome">Colton Smith</span>
-          <span class="funcao">Verified Buyer</span>
-        </div>
-        <p>
-          "We needed the same printed design as the one we had ordered a week prior.
-          Not only did they find the original order, but we also received it in time.
-          Excellent!"
-        </p>
-      </article>
-
-      <article>
-        <div class="grid">
-          <figure><img src="images/image-irene.jpg" alt="foto da Irene"></figure>
-          <span class="nome">Irene Roberts</span>
-          <span class="funcao">Verified Buyer</span>
-        </div>
-        <p>
-          "Customer service is always excellent and very quick turn around. Completely
-          delighted with the simplicity of the purchase and the speed of delivery."
-        </p>
-      </article>
-
-      <article>
-        <div class="grid">
-          <figure><img src="images/image-anne.jpg" alt="foto da anne"></figure>
-          <span class="nome">Anne Wallace</span>
-          <span class="funcao">Verified Buyer</span>
-        </div>
-        <p>
-          "Put an order with this company and can only praise them for the very high
-          standard. Will definitely use them again and recommend them to everyone!"
-        </p>
-      </article>
+  <header class="headerContainer">
+    <section class="title">
+      <h1>10,000+ of our users love our products.</h1>
+      <p>
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.
+      </p>
     </section>
-  </main>
+    <section class="starsContainer">
+      <div>
+        <div class="flexStars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span>Rated 5 Stars in Reviews</span>
+      </div>
+      <div>
+        <div class="flexStars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span> Rated 5 Stars in Report Guru</span>
+      </div>
+      <div>
+        <div class="flexStars">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span> Rated 5 Stars in BestTech</span>
+      </div>
+    </section>
+  </header>
+  <section class="quotesContainer">
+    <article>
+      <div class="gridAvatar">
+        <img src="images/image-colton.jpg" alt="imagem de avatar do colton">
+        <span class="name">Colton Smith</span>
+        <span class="verified">Verified Buyer</span>
+      </div>
+      <p>
+        "We needed the same printed design as the one we had ordered a week prior.
+        Not only did they find the original order, but we also received it in time.
+        Excellent!"
+      </p>
+    </article>
+    <article>
+      <div class="gridAvatar">
+        <img src="images/image-irene.jpg" alt="imagem de avatar da Irene">
+        <span class="name">Irene Roberts</span>
+        <span class="verified">Verified Buyer</span>
+      </div>
+      <p>
+        "Customer service is always excellent and very quick turn around. Completely
+        delighted with the simplicity of the purchase and the speed of delivery."
+      </p>
+    </article>
+    <article>
+      <div class="gridAvatar">
+        <img src="images/image-anne.jpg" alt="imagem de avatar da Anne">
+        <span class="name">Anne Wallace</span>
+        <span class="verified">Verified Buyer</span>
+      </div>
+      <p>
+        "Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"
+      </p>
+    </article>
+  </section>
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
 
-  </div>
-
-
+  </footer>
 </body>
 
 </html>
