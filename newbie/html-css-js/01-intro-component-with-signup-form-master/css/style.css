@@ -133,6 +133,10 @@ body {
   margin-bottom: 0;
 }
 
+.inputContainer input.errorActive::placeholder {
+  color: #fa7974;
+}
+
 img.errorActive {
   max-width: 100%;
   display: block;
