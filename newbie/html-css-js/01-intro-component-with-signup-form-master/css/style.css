@@ -122,6 +122,7 @@ body {
 
 .form p span {
   color: #df868a;
+  font-weight: 600;
 }
 
 /* --------- ERROR ---------- */
@@ -147,4 +148,29 @@ span.errorActive {
   color: #fa7974;
   font-style: italic;
   margin: 9px 0 18px 0;
+}
+
+@media (max-width: 500px) {
+  body {
+    background: url("../images/bg-intro-mobile.png"), #ff7978;
+    background-size: cover;
+  }
+
+  .content {
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+  .form {
+    padding: 24px;
+  }
+
+  .form p {
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 14px;
+  }
 }
