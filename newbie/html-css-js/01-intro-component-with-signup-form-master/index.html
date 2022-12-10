@@ -21,35 +21,48 @@
 
 <body>
   <main class="container">
-    <article class="conteudo">
-      <section class="titulo">
-        <h1>Learn to code by watching others</h1>
-        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-          but understanding how developers think is invaluable.</p>
-      </section>
-      <section class="formulario">
-        <p class="promocao"><span> Try it free 7 days </span>then $20/mo. thereafter</p>
-        <form id="cadastro" name="cadastro">
-          <input type="text" name="nome" id="nome" placeholder="First Name" required >
-          <label>firs Name cannot be empty</label>
-          <input type="text" name="sobreNome" id="sobreNome" placeholder="Last Name" required>
-          <label>Last Name cannot be empty</label>
-          <input type="email" name="email" id="email" placeholder="Email Address" required>
-          <label>Look like this is not an email</label>
-          <input type="password" name="senha" id="senha" placeholder="Password" required>
-          <label>Password cannot be empty</label>
-          <button id="enviar" type="submit">Claim your free trial</button>
-          <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
-        </form>
-      </section>
-    </article>
-    <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
+    <article class="content">
+      <h1>
+        Learn to code by watching others
+      </h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
       </p>
-    </footer>
+    </article>
+    <article class="formContainer">
+      <div class="tryItFree">
+        <p>
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+      </div>
+      <form class="form">
+        <div class="inputContainer">
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="inputContainer">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="inputContainer">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="inputContainer">
+          <input type="password" placeholder="Password">
+        </div>
+        <button class="btnSubmit">Claim your free trial</button>
+        <p>
+          By clicking the button, you are agreeing to our <span>Terms and Services</span>
+        </p>
+      </form>
+    </article>
   </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
+    </p>
+  </footer>
+
   <script src="js/script.js"></script>
 </body>
 
