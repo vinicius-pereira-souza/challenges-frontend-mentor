@@ -15,14 +15,18 @@ body {
   background-position: center;
 }
 
+.inputContainer :where(span, img) {
+  display: none;
+}
+
 .container {
   max-width: 1111px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  row-gap: 70px;
+  gap: 55px;
 }
 
 .content {
@@ -63,8 +67,13 @@ body {
 .form {
   background-color: #fff;
   border-radius: 10px;
-  padding: 50px 40px 45px 40px;
+  margin-bottom: 20px;
+  padding: 50px 40px;
   box-shadow: 0px 10px 0px 0px rgb(0 0 0 / 10%);
+}
+
+.inputContainer {
+  position: relative;
 }
 
 .inputContainer input {
@@ -89,18 +98,53 @@ body {
   background-color: #37cc8a;
   border-radius: 10px;
   padding: 15px;
-  color: #fff;
+  color: #e7fffa;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 26px;
   letter-spacing: 2px;
-  box-shadow: 0px 10px 0px 0px rgb(107, 204, 161 / 100%);
+  box-shadow: 0px 10px 0px 0px #2ca671;
   transition: 0.3s ease-in-out;
 }
 
 .btnSubmit:is(:hover, :active) {
   background-color: #77e2b4;
+  box-shadow: 0px 10px 0px 0px #6bcca1;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-/* 6BCCA1 */
+
+.form p {
+  color: #a8a8a8;
+  font-size: 11px;
+  line-height: 26px;
+}
+
+.form p span {
+  color: #df868a;
+}
+
+/* --------- ERROR ---------- */
+
+.inputContainer input.errorActive {
+  border-color: #fa7974;
+  margin-bottom: 0;
+}
+
+img.errorActive {
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 26px;
+}
+
+span.errorActive {
+  display: block;
+  text-align: end;
+  font-size: 11px;
+  line-height: 26px;
+  color: #fa7974;
+  font-style: italic;
+  margin: 9px 0 18px 0;
+}
