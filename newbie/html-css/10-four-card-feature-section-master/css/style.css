@@ -95,11 +95,11 @@ img {
   margin-bottom: 30px;
 }
 .content:nth-child(3) {
-  grid-area: azul;
+  grid-area: ama;
   border-color: #fcae4a;
 }
 .content:nth-child(4) {
-  grid-area: ama;
+  grid-area: azul;
   border-color: #529ff1;
 }
 
