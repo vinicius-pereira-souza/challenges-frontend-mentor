@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
   margin: 0;
@@ -8,15 +8,9 @@
 
 body {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-}
-
-p {
-  color: hsl(229, 6%, 66%);
-}
-
-h1, h2 {
-  color: hsl(234, 12%, 34%);
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
 }
 
 img {
@@ -24,100 +18,127 @@ img {
   display: block;
 }
 
-.titulos {
+.headerContainer {
+  max-width: 575px;
+  margin: 70px auto 80px auto;
   text-align: center;
-  max-width: 505px;
-  margin: 90px auto 65px auto;
 }
 
-.titulos h1 {
-  font-weight: 200;
+.headerContainer h1 {
+  font-size: 35px;
+  line-height: 52px;
+  font-weight: lighter;
+  color: #4b4d61;
+  margin-bottom: 25px;
 }
 
-.titulos h2 {
-  font-size: 30px;
+.headerContainer h1 span {
+  font-weight: bold;
 }
 
-.titulos p {
-  margin-top: 15px;
-  margin-bottom: 65px;
+.headerContainer p {
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #9b9c9e;
 }
 
 .gridContainer {
-  max-width: 1108px;
-  margin: 0 auto;
-  margin-bottom: 15px;
+  max-width: 1113px;
+  margin: 0 auto 20px auto;
   display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 350px));
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: 
-  ".          team          ."
-  "supervisor team calculator"
-  "supervisor karma calculator"
-  ".          karma         .";
-  gap: 30px;
+  column-gap: 30px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 351px));
+  grid-template-rows: minmax(auto, 138px) repeat(2, 115px) minmax(auto, 138px);
+  grid-template-areas:
+    ". verm ."
+    "verd verm azul"
+    "verd ama azul"
+    ". ama .";
 }
 
 .content {
-  padding: 25px;
-  border-top: 4px solid;
+  height: min-content;
+  padding: 30px;
+  background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 9px 14px 0px hsl(213, 30%, 88%);
+  border-top: 6px solid;
+  box-shadow: 0px 8px 15px 0px rgba(216, 226, 237, 1);
+}
+
+.content h2 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  color: #484852;
 }
 
 .content p {
-  margin-top: 15px;
-  margin-bottom: 35px;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #c5c4ca;
+  margin: 22px 0 44px 0;
 }
 
 .content img {
   margin-left: auto;
 }
 
-.Supervisor {
-  grid-area: supervisor;
-  border-color: hsl(180, 62%, 55%);
+.content:nth-child(1) {
+  grid-area: verd;
+  border-color: #46d2d1;
 }
-.builder {
-  grid-area: team;
-  border-color: hsl(0, 78%, 62%);
+.content:nth-child(2) {
+  grid-area: verm;
+  border-color: #ea5453;
+  margin-bottom: 30px;
 }
-.karma {
-  grid-area: karma;
-  border-color: hsl(34, 97%, 64%);
+.content:nth-child(3) {
+  grid-area: azul;
+  border-color: #fcae4a;
 }
-.calculator {
-  grid-area: calculator;
-  border-color: hsl(212, 86%, 64%);
+.content:nth-child(4) {
+  grid-area: ama;
+  border-color: #529ff1;
 }
 
-@media (max-width: 425px) {
-  .titulos {
-    max-width: 300px;
-    margin: 90px auto 25px auto;
-  }
+/* arrumar o sistema de grid */
 
-  .titulos h1 {
-    font-size: 24px
-  }
-  
-  .titulos h2 {
-    font-size: 24px
-  }
-  
-  .titulos p {
-    margin-top: 15px;
-    margin-bottom: 70px;
-    font-size: 15px;
-  }
+@media (max-width: 720px) {
   .gridContainer {
-    max-width: 315px;
-    grid-template-columns: 315px;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-    "supervisor"
-    "team"
-    "karma"
-    "calculator";
+    row-gap: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+      "verd"
+      "verm"
+      "ama"
+      "azul";
+  }
+
+  .content:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+
+/* estilos mobile */
+
+@media (max-width: 450px) {
+  .headerContainer {
+    margin: 90px auto 75px auto;
+  }
+
+  .headerContainer h1 {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .headerContainer h1 span {
+    letter-spacing: 1px;
+  }
+
+  .content p {
+    margin: 10px 0 35px 0;
   }
 }
