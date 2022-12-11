@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
   margin: 0;
@@ -8,116 +8,12 @@
 
 body {
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
-p {
-  color: hsl(229, 6%, 66%);
-}
-
-h1, h2 {
-  color: hsl(234, 12%, 34%);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.titulos {
+.headerContainer {
+  max-width: 518px;
+  margin: 70px auto 80px auto;
   text-align: center;
-  max-width: 505px;
-  margin: 90px auto 65px auto;
-}
-
-.titulos h1 {
-  font-weight: 200;
-}
-
-.titulos h2 {
-  font-size: 30px;
-}
-
-.titulos p {
-  margin-top: 15px;
-  margin-bottom: 65px;
-}
-
-.gridContainer {
-  max-width: 1108px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 350px));
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: 
-  ".          team          ."
-  "supervisor team calculator"
-  "supervisor karma calculator"
-  ".          karma         .";
-  gap: 30px;
-}
-
-.content {
-  padding: 25px;
-  border-top: 4px solid;
-  border-radius: 5px;
-  box-shadow: 0px 9px 14px 0px hsl(213, 30%, 88%);
-}
-
-.content p {
-  margin-top: 15px;
-  margin-bottom: 35px;
-}
-
-.content img {
-  margin-left: auto;
-}
-
-.Supervisor {
-  grid-area: supervisor;
-  border-color: hsl(180, 62%, 55%);
-}
-.builder {
-  grid-area: team;
-  border-color: hsl(0, 78%, 62%);
-}
-.karma {
-  grid-area: karma;
-  border-color: hsl(34, 97%, 64%);
-}
-.calculator {
-  grid-area: calculator;
-  border-color: hsl(212, 86%, 64%);
-}
-
-@media (max-width: 425px) {
-  .titulos {
-    max-width: 300px;
-    margin: 90px auto 25px auto;
-  }
-
-  .titulos h1 {
-    font-size: 24px
-  }
-  
-  .titulos h2 {
-    font-size: 24px
-  }
-  
-  .titulos p {
-    margin-top: 15px;
-    margin-bottom: 70px;
-    font-size: 15px;
-  }
-  .gridContainer {
-    max-width: 315px;
-    grid-template-columns: 315px;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-    "supervisor"
-    "team"
-    "karma"
-    "calculator";
-  }
 }
