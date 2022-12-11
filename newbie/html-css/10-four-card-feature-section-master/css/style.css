@@ -103,9 +103,11 @@ img {
   border-color: #529ff1;
 }
 
+/* arrumar o sistema de grid */
+
 @media (max-width: 720px) {
   .gridContainer {
-    row-gap: 30px;
+    row-gap: 25px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
@@ -117,5 +119,26 @@ img {
 
   .content:nth-child(2) {
     margin-bottom: 0;
+  }
+}
+
+/* estilos mobile */
+
+@media (max-width: 450px) {
+  .headerContainer {
+    margin: 90px auto 75px auto;
+  }
+
+  .headerContainer h1 {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  .headerContainer h1 span {
+    letter-spacing: 1px;
+  }
+
+  .content p {
+    margin: 10px 0 35px 0;
   }
 }
