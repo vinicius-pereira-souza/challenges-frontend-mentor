@@ -15,9 +15,10 @@ body {
   height: 100vh;
   padding: 10px;
   font-family: "Raleway", sans-serif;
-  background: #0c122c;
+  background: url("../images/bg-desktop.png"), #0c122c;
   background-repeat: no-repeat;
-  background-position: center bottom 0vh;
+  background-position: center bottom -10vh;
+  background-attachment: fixed;
   background-size: contain;
   display: grid;
   align-items: center;
@@ -99,6 +100,18 @@ body {
   border-radius: 10px;
   padding: 2px 4px;
   background-image: linear-gradient(90deg, #ff9f98, #fa4c91);
+  position: relative;
+}
+
+.progress::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #fcf3f3;
+  position: absolute;
+  top: 2px;
+  right: 4px;
 }
 
 .flexGBs {
@@ -152,7 +165,7 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 800px) {
   body {
     background: url("../images/bg-mobile.png"), #0c122c;
     background-position: center;
