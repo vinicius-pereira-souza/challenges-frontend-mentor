@@ -8,39 +8,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Profile card component</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
 </head>
 
 <body>
-  <section class="container">
-    <main class="card">
-      <div class="bgImagem"></div>
-      <div class="info">
-        <figure class="foto"><img src="images/image-victor.jpg" alt="foto do Victor"></figure>
-        <h1>Victor Crests <span>26</span></h1>
-        <p>London</p>
-      </div>
+  <main class="cardContainer">
+    <div class="bgImgTop"></div>
+    <div class="perfil">
+      <img src="images/image-victor.jpg" alt="imagem de avatar">
+      <h1>Victor Crest<span>26</span></h1>
+      <h2>London</h2>
       <ul>
         <li>
           <span>80K</span>
-          <p>Followers</p>
+          <span>Followers</span>
         </li>
         <li>
           <span>803K</span>
-          <p>Likes</p>
+          <span>Likes</span>
         </li>
         <li>
           <span>1.4K</span>
-          <p>Photos</p>
+          <span>Photos</span>
         </li>
       </ul>
-    </main>
+    </div>
+  </main>
 
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
-    </footer>
-  </section>
-
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
+  </footer>
 </body>
 
 </html>
