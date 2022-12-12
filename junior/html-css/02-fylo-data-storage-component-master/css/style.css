@@ -152,14 +152,45 @@ body {
   text-transform: uppercase;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 420px) {
+  body {
+    background: url("../images/bg-mobile.png"), #0c122c;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .containerGeral {
+    gap: 17px;
+  }
+
+  .logoImgs {
+    padding: 21px 42px 58px 38px;
+  }
+
+  .logoImgs > img {
+    margin-bottom: 32px;
+  }
+
+  .imgBox {
+    flex: 0 0 47px;
+    height: 47px;
+  }
+
+  .progressContainer {
+    padding: 41px 24px;
+    border-radius: 9px;
+  }
+
+  .progressContainer h1 {
+    text-align: center;
+  }
+
   .boxAbsolute {
-    padding: 14px 24px;
-    gap: 6px;
+    padding: 15px 25px;
     top: auto;
     right: auto;
-    bottom: -37px;
-
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
   }
