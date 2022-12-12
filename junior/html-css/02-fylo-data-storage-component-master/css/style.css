@@ -11,10 +11,160 @@ img {
 }
 
 body {
+  font-size: 14px;
   height: 100vh;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  background: #0c122c;
+  background-repeat: no-repeat;
+  background-position: center bottom 0vh;
+  background-size: contain;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 923px);
+  grid-template-rows: auto min-content;
+  gap: 50px;
+}
+
+.containerGeral {
+  max-width: 0 1 923px;
+  max-width: 923px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logoImgs {
+  flex: 0 1 352px;
+  background-color: #1d2d6b;
+  border-radius: 7px 100px 7px 7px;
+  padding: 22px 42px 59px 50px;
+}
+
+.logoImgs > img {
+  margin-bottom: 33px;
+}
+
+.flexImgs {
+  max-width: 173px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.imgBox {
+  flex: 0 0 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f112a;
+  border-radius: 11px;
+}
+
+.progressContainer {
+  flex: 0 1 541px;
+  align-self: flex-end;
+  background-color: #1e2c69;
+  padding: 40px;
+  border-radius: 11px;
+  position: relative;
+}
+
+.progressContainer h1 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #d0d6ff;
+  font-weight: 400;
+}
+
+.progressContainer h1 span {
+  font-weight: bold;
+}
+
+.progressBar {
+  padding: 3px 4px;
+  background-color: #151e49;
+  border-radius: 10px;
+  margin: 17px 0 8px 0;
+}
+
+.progress {
+  max-width: calc(100% - 116px);
+  height: 14px;
+  border-radius: 10px;
+  padding: 2px 4px;
+  background-image: linear-gradient(90deg, #ff9f98, #fa4c91);
+}
+
+.flexGBs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexGBs span {
+  font-size: 12px;
+  font-weight: bold;
+  color: #d0d6ff;
+}
+
+.boxAbsolute {
+  padding: 14px 24px;
+  border-radius: 7px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
+  gap: 6px;
+  position: absolute;
+  top: -48px;
+  right: 40px;
+}
+
+.boxAbsolute::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 21px solid transparent;
+  border-right-color: #fff;
+  position: absolute;
+  bottom: -21px;
+  right: 0;
+}
+
+.boxAbsolute span:nth-child(1) {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0b102d;
+}
+
+.boxAbsolute span:nth-child(2) {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #a1a0a5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .boxAbsolute {
+    padding: 14px 24px;
+    gap: 6px;
+    top: auto;
+    right: auto;
+    bottom: -37px;
+
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .boxAbsolute::after {
+    display: none;
+  }
 }
