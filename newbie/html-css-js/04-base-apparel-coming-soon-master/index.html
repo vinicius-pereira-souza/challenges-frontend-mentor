@@ -21,24 +21,36 @@
 </head>
 
 <body>
-  <main class="container">
-    <header class="header">
-      <img src="images/logo.svg" alt="logo">
+  <main class="containerGrid">
+    <header class="headerLogo">
+      <img src="images/logo.svg" alt="imagem da logo">
     </header>
+    <div class="imgBgRight"></div>
     <article class="content">
-      <h1><span>We're</span><br>coming soon</h1>
-      <p>Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <div class="formFlex">
-        <form class="form">
-          <input type="email" name="email" id="email" placeholder="Email Address" required>
-          <button class="btn"></button>
-        </form>
-        <p class="mensage">Please provide a valid email</p>
-      </div>
+      <h1>
+        <span>We're</span> coming soon
+      </h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form class="formContainer">
+        <div class="inputEmail">
+          <input type="email" placeholder="Email Address" required>
+          <img src="images/icon-error.svg" alt="icone de erro">
+        </div>
+        <span>Please provide a valid email</span>
+        <button>
+          <img src="images/icon-arrow.svg" alt="icone flecha">
+        </button>
+      </form>
     </article>
-    <div class="imgBg"></div>
   </main>
+
+
+
+
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
