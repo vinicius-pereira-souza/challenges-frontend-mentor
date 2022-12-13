@@ -3,4 +3,149 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  /* font-family: "Josefin Sans", sans-serif;
+  background: url("../images/bg-pattern-desktop.svg");
+  background-position: center left 0vw;
+  background-repeat: no-repeat;
+  background-size: contain; */
+}
+
+img {
+  max-width: 100%;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 610px);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header img"
+    "content img";
+  position: relative;
+  z-index: 1000;
+}
+
+.imgBgRight {
+  grid-area: img;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerLogo {
+  grid-area: header;
+  margin: 65px 0 135px 0;
+  display: grid;
+  grid-template-columns: minmax(auto, 165px) max-content 1fr;
+  grid-template-areas: ". img .";
+}
+
+.headerLogo img {
+  grid-area: img;
+  margin: 0 20px;
+}
+
+.content {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: minmax(auto, 165px) minmax(auto, 440px) 1fr;
+  grid-template-rows: min-content auto min-content;
+  grid-template-areas:
+    ". h1 ."
+    ". p ."
+    ". form .";
+}
+
+.content h1 {
+  grid-area: h1;
+  font-size: 65px;
+  line-height: 68px;
+  font-weight: 400;
+  letter-spacing: 26px;
+  text-transform: uppercase;
+  color: #433a3b;
+}
+
+.content h1 span {
+  font-weight: 300;
+  color: #c89a9c;
+}
+
+.content p {
+  grid-area: p;
+  line-height: 27px;
+  color: #caa6a8;
+  margin: 28px 0 46px 0;
+}
+
+.formContainer {
+  grid-area: form;
+}
+
+.formContainer {
+  grid-area: form;
+  width: 100%;
+  margin-bottom: 164px;
+  position: relative;
+}
+
+.formContainer span,
+.inputEmail img {
+  display: none;
+}
+
+.inputEmail {
+  width: 100%;
+  position: relative;
+}
+
+.inputEmail input,
+span {
+  display: block;
+}
+
+.inputEmail input {
+  width: 100%;
+  padding: 21px 33px;
+  border-radius: 29px;
+  border: 1px solid #ded4d5;
+  outline: none;
+  color: #c89a9c;
+  letter-spacing: 1px;
+}
+
+input::placeholder {
+  line-height: 26px;
+  color: #decece;
+}
+
+.inputEmail img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 117px;
+}
+
+.formContainer span {
+  font-size: 13px;
+  line-height: 27px;
+  color: #f49da3;
+  margin: 11px 0 0 33px;
+}
+
+.formContainer button {
+  padding: 17px 40px;
+  border-radius: 31px;
+  border: none;
+  background-image: linear-gradient(90deg, #f8b4b5, #ee9493);
+  box-shadow: 0px 10px 18px 0px #f4dfde;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.3s ease-in-out;
 }
