@@ -42,7 +42,7 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/03-article-preview-component-master">article-preview-component-master</a>
 
-<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/04-base-apparel-coming-soon-master">base-apparel-coming-soon-master</a>
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/04-base-apparel-coming-soon-master">base-apparel-coming-soon-master (este ainda não esta responsivo)</a> 
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/05-interactive-rating-component-main">interactive-rating-component-main</a>
 
