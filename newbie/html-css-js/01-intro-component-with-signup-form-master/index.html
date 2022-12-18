@@ -37,17 +37,17 @@
       </div>
       <form class="form">
         <div class="inputContainer">
-          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="First Name" pattern="[a-z\s]+$" required>
           <span>First Name cannot be empty</span>
           <img src="images/icon-error.svg" alt="icone de erro">
         </div>
         <div class="inputContainer">
-          <input type="text" placeholder="Last Name" required>
+          <input type="text" placeholder="Last Name" pattern="[a-z\s]+$" required>
           <span>Last Name cannot be empty</span>
           <img src="images/icon-error.svg" alt="icone de erro">
         </div>
         <div class="inputContainer">
-          <input type="email" placeholder="Email Address" required>
+          <input type="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
           <span>Looks like this is not an email</span>
           <img src="images/icon-error.svg" alt="icone de erro">
         </div>
@@ -61,7 +61,11 @@
           By clicking the button, you are agreeing to our <span>Terms and Services</span>
         </p>
       </form>
+
     </article>
+    <div class="succMessage">
+      <p>successful login!</p>
+    </div>
   </main>
 
   <footer>

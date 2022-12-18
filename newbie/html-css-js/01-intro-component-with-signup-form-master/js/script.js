@@ -1,5 +1,6 @@
 const btnSubmit = document.querySelector(".btnSubmit");
 const inputs = document.querySelectorAll("input");
+const messSuccess = document.querySelector(".succMessage");
 
 btnSubmit.addEventListener("click", handleFormSubmit);
 inputs.forEach((input) => {
@@ -20,7 +21,12 @@ function handleFormSubmit(e) {
       input.nextElementSibling.nextElementSibling.classList.remove(
         "errorActive",
       );
+
+      messSuccess.classList.add("showSuccessSubmit");
       input.value = "";
+      setInterval(() => {
+        messSuccess.classList.remove("showSuccessSubmit");
+      }, 2000);
     }
   });
 
