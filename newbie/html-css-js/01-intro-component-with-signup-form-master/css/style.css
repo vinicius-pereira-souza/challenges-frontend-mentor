@@ -137,6 +137,40 @@ body {
   color: #fa7974;
 }
 
+/* --------- SUCCESS --------- */
+
+.succMessage {
+  width: 300px;
+  padding: 20px;
+  background-color: #37cc8a;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  box-shadow: 0px 10px 0px 0px #2ca671;
+  text-align: center;
+  color: #e7fffa;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  visibility: hidden;
+}
+
+.succMessage.showSuccessSubmit {
+  visibility: visible;
+  animation: showMessage 0.7s ease-in-out;
+}
+
+@keyframes showMessage {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 img.errorActive {
   max-width: 100%;
   display: block;
@@ -177,5 +211,9 @@ span.errorActive {
     margin-top: 25px;
     font-size: 13px;
     line-height: 14px;
+  }
+
+  .succMessage {
+    width: 255px;
   }
 }
