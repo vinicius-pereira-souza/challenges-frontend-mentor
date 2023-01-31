@@ -20,7 +20,7 @@ body {
 
 .containerGeral {
   max-width: 920px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 32px;
   border-radius: 33px;
   background-color: hsl(0, 0%, 100%);
@@ -32,6 +32,7 @@ body {
 
 .form {
   flex: 0 1 380px;
+  margin: 0 auto;
 }
 
 .form label {
@@ -110,4 +111,58 @@ input[type="number"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.containerValue {
+  flex: 0 1 413px;
+  border-radius: 13px;
+  padding: 55px 40px 40px 40px;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.containerValue div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerValue div p {
+  color: hsl(0, 0%, 100%);
+}
+
+.containerValue div p span {
+  font-size: 14px;
+  color: hsl(186, 25%, 54%);
+}
+
+.Total {
+  margin: 55px 0 135px 0;
+}
+
+.valueContent span {
+  text-align: end;
+  color: hsl(171, 69%, 45%);
+  font-weight: bold;
+  font-size: 47px;
+}
+
+.containerValue button {
+  background-color: #26c2ad;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 47px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  transition: 0.3s ease-in-out;
+}
+
+.containerValue button:is(:hover, :active) {
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(173, 61%, 77%);
+  transition: 0.3s ease-in-out;
 }
