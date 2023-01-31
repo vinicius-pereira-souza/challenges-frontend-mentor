@@ -23,41 +23,45 @@
   <header class="headerLogo">
     <img src="images/logo.svg" alt="imagem da logo">
   </header>
-  <main class="container">
-    <form class="formContainer">
-      <div class="billArea">
-        <label for="bill">Bill</label>
-        <input type="number" name="bill" id="bill" placeholder="0">
+  <main class="containerGeral">
+    <form class="form">
+      <div class="bill">
+        <label for="bil">Bill</label>
         <img src="images/icon-dollar.svg" alt="icone de dolar">
+        <input type="number" name="bill" id="bill" placeholder="0">
       </div>
-      <div class="selectionBtn">
-        <label for="selectionTip">Select Tip %</label>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input type="number" name="custom" id="custom" placeholder="Custom">
+      <div class="SelectTip">
+        <label>Select Tip %</label>
+        <div class="sectionBtn">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <input type="number" name="custom" id="custom" placeholder="Custom">
+        </div>
       </div>
-      <div class="peopleArea">
-        <label for="numberOfPeople">Number of People</label>
-        <input type="number" name="numberOfPeople" id="numberOfPeople" placeholder="0">
+      <div class="numberPeople">
+        <span class="errirTitle">
+          <label for="numberOfPeople">Number of People</label>
+          <span class="error">Can't be zero</span>
+        </span>
         <img src="images/icon-person.svg" alt="icone de pessoa">
+        <input type="number" name="numberOfPeople" id="numberOfPeople" placeholder="0">
       </div>
     </form>
-    <div class="valuesContainer">
-      <div class="tipAmount">
-        <p>Tip Amount<span>/ person</span></p>
-        <span>$0.00</span>
-      </div>
-      <div class="Total">
-        <p>Total<span>/ person</span></p>
-        <span>$0.00</span>
-      </div>
-    </div>
-    <button>Reset</button>
   </main>
 
+
+
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
