@@ -32,7 +32,6 @@ body {
 
 .form {
   flex: 0 1 380px;
-  margin: 0 auto;
 }
 
 .form label {
@@ -113,6 +112,16 @@ input[type="number"] {
   justify-content: space-between;
 }
 
+.error {
+  color: hsl(12, 45%, 59%);
+  font-weight: bold;
+  display: none;
+}
+
+.error.errActive {
+  display: block;
+}
+
 .containerValue {
   flex: 0 1 413px;
   border-radius: 13px;
@@ -136,7 +145,7 @@ input[type="number"] {
 }
 
 .Total {
-  margin: 55px 0 135px 0;
+  margin: 50px 0 100px 0;
 }
 
 .valueContent span {
