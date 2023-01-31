@@ -25,9 +25,9 @@
   </header>
   <main class="containerGeral">
     <form class="form">
-      <div class="bill">
-        <label for="bil">Bill</label>
-        <img src="images/icon-dollar.svg" alt="icone de dolar">
+      <label for="bill">Bill</label>
+      <div class="billContainer">
+        <img class="imgAbsolue" src="images/icon-dollar.svg" alt="icone de dolar">
         <input type="number" name="bill" id="bill" placeholder="0">
       </div>
       <div class="SelectTip">
@@ -41,12 +41,12 @@
           <input type="number" name="custom" id="custom" placeholder="Custom">
         </div>
       </div>
+      <span class="errirTitle">
+        <label for="numberOfPeople">Number of People</label>
+        <span class="error">Can't be zero</span>
+      </span>
       <div class="numberPeople">
-        <span class="errirTitle">
-          <label for="numberOfPeople">Number of People</label>
-          <span class="error">Can't be zero</span>
-        </span>
-        <img src="images/icon-person.svg" alt="icone de pessoa">
+        <img class="imgAbsolue" src="images/icon-person.svg" alt="icone de pessoa">
         <input type="number" name="numberOfPeople" id="numberOfPeople" placeholder="0">
       </div>
     </form>
