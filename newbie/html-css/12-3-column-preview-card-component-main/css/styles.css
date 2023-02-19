@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* 
+  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Big Shoulders Display', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  padding: 45px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  max-width: 930px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.container article {
+  flex: 0 1 307px;
+  padding: 45px;
+  padding-right: 51px;
+}
+
+.container article h1 {
+  margin: 40px 0;
+  color: hsl(0, 0%, 95%);
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.container article p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 85px;
+  line-height: 25px;
+}
+
+.container article button {
+  display: block;
+  width: 145px;
+  height: 48px;
+  border: none;
+  border-radius: 50px;
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.container article button:is(:hover, :active) {
+  cursor: pointer;
+  border-color: hsl(0, 0%, 95%);
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 7px 0 0 7px;
+}
+
+.sedans button {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.suvs button {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 7px 7px 0;
+}
+
+.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container article {
+    padding: 45px;
+  }
+
+  .container article p {
+    margin-bottom: 25px;
+  }
+
+  .sedans {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 7px 7px;
+  }
+}
