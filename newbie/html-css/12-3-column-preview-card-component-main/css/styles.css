@@ -28,6 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .container article {
@@ -92,4 +93,26 @@ body {
 
 .luxury button {
   color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container article {
+    padding: 45px;
+  }
+
+  .container article p {
+    margin-bottom: 25px;
+  }
+
+  .sedans {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 7px 7px;
+  }
 }
