@@ -6,7 +6,7 @@ listaPerguntas.forEach(pergunta => {
 
 function handleAbrir(e) {
   const target = e.target
-  target.classList.add('active')
+  target.classList.toggle('active')
   target.nextElementSibling.classList.add('active')
   handleFechar(e.target)
 }
