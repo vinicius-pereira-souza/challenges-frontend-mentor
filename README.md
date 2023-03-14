@@ -48,6 +48,8 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/05-interactive-rating-component-main">interactive-rating-component-main</a>
 
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/06-results-summary-component-main/">results-summary-component-main</a>
+
 <h3>Nivel junior com HTML e CSS</h3>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/01-testimonials-grid-section-main/">testimonials-grid-section-main</a>
