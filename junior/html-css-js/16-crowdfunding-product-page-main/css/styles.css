@@ -49,3 +49,83 @@ body {
   cursor: pointer;
   display: none;
 }
+
+.container_absolute {
+  max-width: 730px;
+  margin: 0 auto;
+  position: absolute;
+  top: 310px;
+  left: 0;
+  right: 0;
+}
+
+.container_absolute section {
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+#mastercraft {
+  text-align: center;
+  position: relative;
+}
+
+#mastercraft .logo {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#mastercraft h1 {
+  font-size: 28px;
+  line-height: 24px;
+  margin: 9px 0 23px 0;
+}
+
+#mastercraft p {
+  line-height: 24px;
+  margin: 0 0 43px 0;
+}
+
+.flex_btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex_btns button:first-child {
+  border: none;
+  border-radius: 36px;
+  background-color: #147b74;
+  padding: 18px 34px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.flex_btns button:first-child:hover {
+  cursor: pointer;
+  background-color: #3cb4ac;
+}
+
+.btn_bookmark {
+  position: relative;
+  border: none;
+  padding: 17px 24px 18px 40px;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
+}
+
+.btn_bookmark svg {
+  position: absolute;
+  left: -28px;
+  top: -2px;
+}
