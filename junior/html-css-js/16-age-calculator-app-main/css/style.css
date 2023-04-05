@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+  max-width: 839px;
+  margin: 20px auto;
+  padding: 55px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 203px 20px;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 47px;
+  position: relative;
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+  margin-bottom: 45px;
+}
+
+.formContainer :is(label, span) {
+  display: block;
+  font-size: 14px;
+}
+
+.formContainer label {
+  font-weight: bold;
+  color: hsl(0, 1%, 44%);
+}
+
+.formContainer input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  display: block;
+  max-width: 160px;
+  padding: 11px 25px;
+  margin: 15px 0;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 8px;
+  font-size: 32px;
+  color: hsl(0, 0%, 8%);
+}
+.formContainer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.formContainer span {
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  display: none;
+}
+
+.formContainer > div.err span {
+  display: block;
+}
+
+.formContainer > div.err label {
+  color: hsl(0, 100%, 67%);
+}
+
+.formContainer > div.err input {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.formContainer button {
+  display: block;
+  width: 95px;
+  height: 95px;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: -47.5px;
+  transition: 0.3s;
+}
+
+.formContainer button:is(:hover, :active) {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.formContainer button img {
+  max-width: 100%;
+  display: block;
+}
+
+.data p {
+  font-size: 103px;
+  font-weight: bold;
+  line-height: 110px;
+  font-style: italic;
+  color: hsl(0, 0%, 8%);
+}
+
+.data p span {
+  color: hsl(259, 100%, 65%);
+}
+
+@media (max-width: 670px) {
+  .formContainer input {
+    max-width: 120px;
+    font-size: 25px;
+  }
+
+  .formContainer span {
+    display: none;
+  }
+
+  .formContainer button {
+    width: 75px;
+    height: 75px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    bottom: -37.5px;
+  }
+
+  .data p {
+    font-size: 70px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 555px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 50px 24px 52px 24px;
+    border-radius: 25px 25px 95px 25px;
+  }
+
+  .formContainer {
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: nowrap;
+  }
+
+  .formContainer :is(label, span) {
+    font-size: 12px;
+  }
+
+  .formContainer input {
+    max-width: 88px;
+    margin: 10px 0;
+    font-size: 20px;
+    padding: 11px 20px;
+  }
+
+  .formContainer input::placeholder {
+    font-size: 16px;
+  }
+
+  .formContainer button {
+    width: 64px;
+    height: 64px;
+    bottom: -32px;
+    padding: 18px;
+  }
+
+  .data p {
+    font-size: 54px;
+    line-height: 60px;
+  }
+}

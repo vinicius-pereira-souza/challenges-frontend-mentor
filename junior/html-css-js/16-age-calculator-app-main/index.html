@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <form class="formContainer">
+      <div>
+        <label for="day">Day</label>
+        <input type="number" name="day" id="day" placeholder="DD" maxlength="">
+        <span>This field is required</span>
+      </div>
+      <div>
+        <label for="month">Month</label>
+        <input type="number" name="month" id="month" placeholder="MM">
+        <span>This field is required</span>
+      </div>
+      <div>
+        <label for="year">Years</label>
+        <input type="number" name="year" id="year" placeholder="YYYY">
+        <span>This field is required</span>
+      </div>
+      <button>
+        <img src="./images/icon-arrow.svg" alt="icone arrow">
+      </button>
+    </form>
+    <div class="data">
+      <p><span>--</span>years</p>
+      <p><span>--</span>months</p>
+      <p><span>--</span>day</p>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
+  </footer>
+</body>
+
+</html>
