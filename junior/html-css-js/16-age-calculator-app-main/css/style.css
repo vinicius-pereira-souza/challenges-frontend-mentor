@@ -20,7 +20,6 @@ body {
 
 .formContainer {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 30px;
   padding-bottom: 47px;
@@ -50,6 +49,7 @@ body {
   border-radius: 8px;
   font-size: 32px;
   color: hsl(0, 0%, 8%);
+  outline: none;
 }
 .formContainer input::-webkit-inner-spin-button {
   -webkit-appearance: none;
