@@ -30,6 +30,10 @@ class DatasForm {
   */
   handleChange = (e) => {
     this.validationInputValue(e.target);
+
+    if (e.target.value && e.target.parentElement.classList.contains("err")) {
+      e.target.parentElement.classList.remove("err");
+    }
   };
 
   /* 

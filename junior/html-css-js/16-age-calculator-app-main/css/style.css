@@ -50,6 +50,7 @@ body {
   font-size: 32px;
   color: hsl(0, 0%, 8%);
   outline: none;
+  caret-color: hsl(259, 27%, 52%);
 }
 .formContainer input::-webkit-inner-spin-button {
   -webkit-appearance: none;
