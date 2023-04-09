@@ -56,6 +56,8 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/02-fylo-data-storage-component-master/">fylo-data-storage-component-master</a>
 
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css/03-notifications-page-main/">notifications-page-main</a>
+
 <h3>Nivel junior com HTML, CSS e JavaScript</h3>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/01-fylo-landing-page-with-two-column-layout-master/">fylo-landing-page-with-two-column-layout-master</a>
