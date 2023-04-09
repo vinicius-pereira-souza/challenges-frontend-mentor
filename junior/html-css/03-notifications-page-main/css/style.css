@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(210, 60%, 98%);
+}
+
+.container {
+  max-width: 730px;
+  margin: 30px auto;
+  background-color: hsl(0, 0%, 100%);
+  padding: 35px 30px;
+  border-radius: 13px;
+}
+
+.header_notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.header_notification h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(224, 21%, 14%);
+}
+
+.header_notification h1 span {
+  display: inline-block;
+  background-color: hsl(219, 85%, 26%);
+  padding: 3px 11px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  margin-left: 11px;
+}
+
+.header_notification p {
+  color: hsl(219, 12%, 42%);
+  transition: 0.3s;
+}
+
+.header_notification p:is(:hover, :active) {
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(219, 85%, 26%);
+}
+
+.container_notification {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 19px;
+}
+
+.container_notification.new {
+  background-color: hsl(210, 60%, 98%);
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.container_notification > img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.content p {
+  color: hsl(219, 14%, 63%);
+  letter-spacing: 0.01em;
+  margin-bottom: 9px;
+  user-select: none;
+}
+
+.content p > span:nth-child(1) {
+  color: hsl(224, 21%, 14%);
+}
+
+.content p > span:nth-child(2) {
+  color: hsl(219, 12%, 42%);
+}
+
+.content p > span {
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.content p > span:is(:hover, :active) {
+  cursor: pointer;
+  transition: 0.3s;
+  color: hsl(219, 85%, 26%);
+}
+
+.container_notification.new .circle_new_notification {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(1, 90%, 64%);
+  margin-left: 5px;
+}
+
+.time_send {
+  color: hsl(219, 14%, 63%);
+}
+
+.post {
+  border: 1px solid hsl(219, 14%, 63%);
+  border-radius: 6px;
+  color: hsl(219, 12%, 42%);
+  padding: 20px 25px;
+  margin: 0 0 20px 80px;
+  transition: 0.3s;
+}
+
+.post:is(:hover, :active) {
+  cursor: pointer;
+  user-select: none;
+  background-color: hsl(211, 68%, 94%);
+  border-color: hsl(211, 68%, 94%);
+  transition: 0.3s;
+}
+
+.notification_post.img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post_img > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.post_img img:is(:hover, :active) {
+  cursor: pointer;
+  border-color: hsl(211, 68%, 94%);
+  transition: 0.3s;
+}

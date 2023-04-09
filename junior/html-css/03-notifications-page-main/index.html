@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header class="header_notification">
+      <h1>Notifications <span>3</span></h1>
+      <p>Mark all as read</p>
+    </header>
+    <article class="container_notification new">
+      <img src="assets/images/avatar-mark-webber.webp" alt="imagem de perfil do avatar">
+      <div class="content">
+        <p>
+          <span>Mark Webber</span> reacted to your recent post <span> My first tournament today!</span>
+          <span class="circle_new_notification"></span>
+        </p>
+        <span class="time_send">1m ago</span>
+      </div>
+    </article>
+    <article class="container_notification new">
+      <img src="assets/images/avatar-angela-gray.webp" alt="imagem de perfil do avatar">
+      <div class="content">
+        <p>
+          <span>Angela Gray</span> followed you
+          <span class="circle_new_notification"></span>
+        </p>
+        <span class="time_send">5m ago</span>
+      </div>
+    </article>
+    <article class="container_notification new">
+      <img src="assets/images/avatar-jacob-thompson.webp" alt="imagem de perfil do avatar">
+      <div class="content">
+        <p>
+          <span>Jacob Thompson</span> has joined your group <span>Chess Club</span>
+          <span class="circle_new_notification"></span>
+        </p>
+        <span class="time_send">1 day ago</span>
+      </div>
+    </article>
+    <article class="notification_post">
+      <header class="container_notification">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="imagem de perfil do avatar">
+        <div class="content">
+          <p>
+            <span>Jacob Thompson</span> has joined your group <span>Chess Club</span>
+            <span class="circle_new_notification"></span>
+          </p>
+          <span class="time_send">5 days ago</span>
+        </div>
+      </header>
+      <div class="post">
+        <p>
+          Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+        </p>
+      </div>
+    </article>
+    <article class="notification_post img">
+      <header class="container_notification">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="imagem de perfil do avatar">
+        <div class="content">
+          <p>
+            <span>Kimberly Smith</span> commented on your picture
+            <span class="circle_new_notification"></span>
+          </p>
+          <span class="time_send">1 week ago</span>
+        </div>
+      </header>
+      <div class="post_img">
+        <img src="assets/images/image-chess.webp" alt="imagem postada">
+      </div>
+    </article>
+    <!-- 
+      -----------------------
+     -->
+    <article class="container_notification">
+      <img src="assets/images/avatar-nathan-peterson.webp" alt="imagem de perfil do avatar">
+      <div class="content">
+        <p>
+          <span>Nathan Peterson</span> reacted to your recent post <span>5 end-game strategies to increase your win rate</span>
+          <span class="circle_new_notification"></span>
+        </p>
+        <span class="time_send">2 weeks ago</span>
+      </div>
+    </article>
+    <article class="container_notification">
+      <img src="assets/images/avatar-anna-kim.webp" alt="imagem de perfil do avatar">
+      <div class="content">
+        <p>
+          <span>Anna Kim</span> left the group <span>Chess Club</span>
+          <span class="circle_new_notification"></span>
+        </p>
+        <span class="time_send">2 weeks ago</span>
+      </div>
+    </article>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
+  </footer>
+</body>
+
+</html>
