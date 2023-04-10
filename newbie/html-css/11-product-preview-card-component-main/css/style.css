@@ -10,6 +10,11 @@
 body {
   font-size: 14px;
   background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container {
