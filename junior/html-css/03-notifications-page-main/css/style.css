@@ -103,11 +103,11 @@ body {
 
 .container_notification.new .circle_new_notification {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: hsl(1, 90%, 64%);
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .time_send {
@@ -149,4 +149,41 @@ body {
   cursor: pointer;
   border-color: hsl(211, 68%, 94%);
   transition: 0.3s;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    margin: 0 auto 20px auto;
+    padding: 25px 15px;
+  }
+
+  .header_notification {
+    margin-bottom: 25px;
+  }
+
+  .header_notification h1 {
+    font-size: 20px;
+  }
+
+  .container_notification {
+    gap: 13px;
+    padding: 17px 15px;
+  }
+
+  .container_notification > img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .content p {
+    margin-bottom: 3px;
+  }
+
+  .post {
+    padding: 20px 15px;
+  }
 }
