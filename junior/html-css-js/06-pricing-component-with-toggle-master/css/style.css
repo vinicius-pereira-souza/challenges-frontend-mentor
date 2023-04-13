@@ -1,251 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 body {
-  font-size: 15px;
-  font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
   background-color: hsl(240, 78%, 98%);
-  background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-image: url("../images/bg-top.svg"), url("../images/bg-bottom.svg");
   background-position: right 0vw top 0vh, left 0vw bottom 0vh;
   background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .container {
-  max-width: 1050px;
-  margin: 0 auto;
+  width: 1050px;
 }
 
-.container h1 {
-  margin-top: 75px;
-  margin-bottom: 40px;
+.header_page h1 {
+  color: hsl(232, 13%, 33%);
   text-align: center;
-  color:hsl(233, 13%, 49%);
 }
 
-.flexToggle {
+.container_btn_taggle {
   display: flex;
-  max-width: 245px;
-  margin: 0 auto;
   align-items: center;
-  gap: 25px;
-  font-size: 14px;
-  color: hsl(234, 14%, 74%);
+  justify-content: center;
+  gap: 23px;
+  margin: 40px 0 65px 0;
 }
 
-.toggle {
+.container_btn_taggle button {
+  display: block;
   width: 55px;
-  height: 33px;
-  padding: 4px;
+  height: 32px;
+  border: none;
   border-radius: 20px;
-  background-image: linear-gradient(260deg, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  background-color: hsl(237, 63%, 64%);
   position: relative;
+  transition: 0.3s;
 }
 
-.toggle:hover {
+.container_btn_taggle button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: hsl(234, 14%, 74%);
+}
+
+.container_btn_taggle button:is(:hover, :active) {
   cursor: pointer;
 }
 
-.toggle.active .btn{
-  right: 4px;
-}
-
-.btn {
-  width: 24px;
-  height: 24px;
+.container_btn_taggle button span {
+  display: block;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color: hsl(240, 78%, 98%);
   position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
-.ContainerPlanos {
-  max-width: 100%;
-  margin: 65px auto 50px auto;
-  align-items: center; 
-  display: grid;
-  grid-template-columns: repeat(3, minmax(auto, 350px));
-  grid-template-areas: "plano1 plano2 plano3";
-  margin-top: 65px;
+.container_btn_taggle button.active span {
+  left: auto;
+  right: 5px;
 }
 
-.plano {
-  padding: 35px 30px 30px 30px;
-  border-radius: 10px;
-  background-color: #fff;
+.container_btn_taggle > span {
+  color: hsl(234, 14%, 74%);
 }
 
-.plano h2 {
-  font-size: 15px;
-  text-align: center;
-  color:hsl(232, 13%, 33%);
-  margin-bottom: 40px;
-}
-
-.plano span {
-  width: 210px;
+.grid_cards {
   margin: 0 auto;
-  text-align: center;
-  font-size: 58px;
-  color: hsl(232, 13%, 33%);
   display: grid;
-  grid-template-columns: 25px minmax(auto, 215px);
   align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  margin-bottom: 20px;
 }
 
-.plano span span {
-  font-size: 30px;
-}
-
-.plano ul {
-  list-style: none;
-  max-width: 290px;
+.card {
+  height: max-content;
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  border: 1px solid #dbdbdb;
-  border-right: none;
-  border-left: none;
-  color:hsl(233, 13%, 49%);
+  padding: 33px 30px;
 }
 
-.plano ul li {
+.card header p {
+  font-size: 18px;
+  color: hsl(233, 13%, 49%);
+}
+
+.card .number {
+  font-size: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(232, 13%, 33%);
+  letter-spacing: -0.04em;
+}
+
+.card ul {
+  list-style: none;
+  color: hsl(233, 13%, 49%);
+  margin: 20px 0 30px 0;
+}
+
+.card ul li {
+  border: 1px solid hsl(234, 14%, 74%);
+  border-left-color: transparent;
+  border-right-color: transparent;
   padding: 20px 0;
-  border-bottom: 1px solid #dbdbdb;
 }
 
-.plano ul li:last-child {
-  border-bottom: none;
+.card ul li:nth-child(2) {
+  border: none;
 }
 
-.plano button {
+.card .number > span {
+  font-size: 74px;
+}
+
+.card footer button {
   display: block;
   width: 100%;
-  height: 45px;
-  border: none;
-  border-radius: 10px;
-  background-image: linear-gradient(60deg, hsl(236, 72%, 79%),  hsl(237, 63%, 64%) );
-  letter-spacing: 1px;
-  color:hsl(240, 78%, 98%);
+  padding: 18px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.card:where(:nth-child(1), :nth-child(3)) button {
+  background-image: linear-gradient(
+    40deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: hsl(240, 78%, 98%);
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  transition: 1s;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  transition: 0.7s;
 }
 
-.plano button:hover {
+.card:where(:nth-child(1), :nth-child(3)) button:hover {
   cursor: pointer;
-  border: 1px solid hsl(237, 63%, 64%);
-  color: hsl(237, 63%, 64%);
-  background-color: #fff;
+  transition: 0.7s;
   background-image: none;
-  transition: 1s;
+  border-color: hsl(237, 63%, 64%);
+  background-color: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
 }
 
-.ContainerPlanos div:nth-child(1) {
-  grid-area: plano1;
+.card:where(:nth-child(1), :nth-child(3)) {
+  background-color: #fff;
+}
+
+.card:nth-child(1) {
   border-radius: 10px 0 0 10px;
-  box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
 }
 
-.ContainerPlanos div:nth-child(3) {
-  grid-area: plano3;
+.card:nth-child(3) {
   border-radius: 0 10px 10px 0;
-  box-shadow: 0 0 6px 0 hsl(234, 14%, 74%);
 }
 
-.planoProfessional {
-  grid-area: plano2;
-  padding-top: 60px;
-  padding-bottom: 50px;
+.card:nth-child(2) {
+  background-image: linear-gradient(
+    180.08deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.card:nth-child(2) header p {
+  color: hsl(240, 78%, 98%);
+}
+
+.card:nth-child(2) span {
+  color: hsl(240, 78%, 98%);
+}
+
+.card:nth-child(2) ul {
+  color: hsl(240, 78%, 98%);
+}
+
+.card:nth-child(2) button {
+  background-color: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+}
+
+.card:nth-child(2) button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  border-color: hsl(240, 78%, 98%);
+  color: hsl(240, 78%, 98%);
   background-color: hsl(237, 63%, 64%);
 }
 
-.planoProfessional h2, 
-.planoProfessional span, 
-.planoProfessional ul li{
-  color: #fff;
-}
-
-.planoProfessional button{
-  background-color: #fff;
-  color: hsl(237, 63%, 64%);
-  background-image: none;
-}
-
-.planoProfessional button:hover{
-  background: hsl(237, 63%, 64%);
-  border: 1px solid #fff;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   body {
-    background-position: right 0vw top 0vh, right  65vw bottom -8vh;
-  }
-}
-
-@media (max-width: 425px) {
-  body {
-    background-image: url('../images/bg-top.svg');
-    background-position: left  50vw top -4vh;
-  }
-  .container h1 {
-    margin-top: 70px;
-    margin-bottom: 45px
+    background-position: right -58vw top -13vh, left 15vw bottom 0vh;
   }
 
-  .ContainerPlanos {
-    margin: 80px auto 50px auto;
-    grid-template-columns: minmax(auto, 1fr) minmax(auto, 330px) minmax(auto, 1fr);
-    grid-template-rows: repeat(3, minmax(auto, 455px));
-    grid-template-areas: ". plano1 ." ". plano2 ." ". plano3 .";
-    gap: 35px;
-  }
-  
-  .plano {
-    height: 455px;
+  .grid_cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
   }
 
-  .plano h2 {
-    margin-bottom: 20px;
-  }
-  
-  .plano span {
-    width: 210px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 58px;
-    color: hsl(232, 13%, 33%);
-    display: grid;
-    grid-template-columns: 25px minmax(auto, 215px);
-    align-items: center;
-  }
-  
-  .plano span span {
-    font-size: 30px;
-  }
-  
-  .plano ul {
-    margin-top: 25px;
-  }
-  
-  .ContainerPlanos div:nth-child(1), 
-  .ContainerPlanos div:nth-child(3), 
-  .planoProfessional{
+  .card:nth-child(1) {
     border-radius: 10px;
   }
-  
-  .planoProfessional {
-    padding-top: 40px;
-    padding-bottom: 37px;
+
+  .card:nth-child(2) {
+    padding: 33px 30px;
+    border-radius: 10px;
   }
 
-  .planoProfessional span {
-    color: #fff;
+  .card:nth-child(3) {
+    border-radius: 10px;
+  }
+
+  .card .number > span {
+    font-size: 60px;
   }
 }
-
