@@ -1,19 +1,24 @@
-const btnToggle = document.querySelector('.toggle')
-btnToggle.addEventListener("click", handleToggle)
+const btnToggle = document.querySelector(".container_btn_taggle button");
+const cardPrices = document.querySelectorAll(".card .number > span");
 
-function handleToggle(e) {
-  e.preventDefault()
-  btnToggle.classList.toggle("active")
-  const valorPlanos = document.querySelectorAll('.valorPlanos')
-  valorPlanos.forEach(plano => {
-    let limparCifra = /\$/
-    if(btnToggle.classList.contains("active")) {
-      let limpar = plano.textContent.replace(limparCifra, '').replace(/9.99/, '')
-      plano.innerHTML = `<span>&dollar;</span>${limpar}.99`
-    } else {
-      let limpar = plano.textContent.replace(limparCifra, '').replace(/.99/, '')
-      plano.innerHTML = `<span>&dollar;</span>${limpar}9.99`
-    }
-  })
+btnToggle.addEventListener("click", handleToggleClick);
+
+function handleToggleClick(e) {
+  btnToggle.classList.toggle("active");
+
+  if (btnToggle.classList.contains("active")) {
+    cardPrices[0].textContent = "199.99";
+    cardPrices[1].textContent = "249.99";
+    cardPrices[2].textContent = "399.99";
+  } else {
+    addPrices();
+  }
 }
 
+function addPrices() {
+  cardPrices[0].textContent = "19.99";
+  cardPrices[1].textContent = "24.99";
+  cardPrices[2].textContent = "39.99";
+}
+
+addPrices();
