@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: $Light-grayish-cyan;
+}
+
+header img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 80px auto;
+}
+
+.contianer {
+  width: 920px;
+}
+
+.card_container {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: $White;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 45px;
+}
+
+// formulario
+.form {
+  flex: 1;
+
+  .flexLabel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+    font-size: 16px;
+
+    label {
+      color: $Dark-grayish-cyan;
+    }
+
+    span {
+      color: $Error;
+      display: none;
+    }
+  }
+
+  & > div:nth-child(2) {
+    margin: 45px 0;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: $Very-light-grayish-cyan;
+    text-align: end;
+    font-size: 24px;
+    caret-color: $Bg_button;
+    color: $Very-dark-cyan;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .btnsOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+    gap: 13px;
+    grid-auto-rows: 48px;
+
+    button {
+      background-color: $Very-dark-cyan;
+      color: $White;
+      border: none;
+      font-size: 24px;
+      transition: 0.3s;
+      border-radius: 4px;
+
+      &:is(:active, :hover) {
+        cursor: pointer;
+        color: $Very-dark-cyan;
+        background-color: $Bg_button;
+      }
+    }
+  }
+}
+
+form > div.error {
+  .flexLabel span {
+    display: inline;
+  }
+  input {
+    border-color: $Error;
+  }
+}
+
+// conteudo
+.content {
+  flex: 1;
+  max-width: 413px;
+  border-radius: 20px;
+  background-color: $Very-dark-cyan;
+  padding: 50px 40px 40px 40px;
+
+  .price_contatainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & p:nth-child(1) {
+      color: $White;
+
+      & > span {
+        display: block;
+        font-size: 14px;
+        color: $Grayish-cyan;
+      }
+    }
+
+    & p:nth-child(2) {
+      font-size: 50px;
+      letter-spacing: -0.05em;
+      color: $Bg_button;
+    }
+  }
+
+  #reset {
+    display: block;
+    width: 100%;
+    padding: 10px 50px;
+    border-radius: 3px;
+    border: none;
+    background-color: $Bg_button;
+    margin-top: 135px;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: $Very-dark-cyan;
+    transition: 0.3s;
+
+    &:disabled {
+      background-color: $Bg_button_disabled;
+      color: $Very-dark-cyan;
+    }
+
+    &:is(:active, :hover):not(:disabled) {
+      cursor: pointer;
+      background-color: $Bg_button_hover;
+      transition: 0.3s;
+    }
+  }
+}

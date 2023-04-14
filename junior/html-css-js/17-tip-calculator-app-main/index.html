@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="contianer">
+    <header>
+      <img src="images/logo.svg" alt="logo">
+    </header>
+    <div class="card_container">
+      <form class="form">
+        <div>
+          <span class="flexLabel">
+            <label for="bill">Bill</label>
+            <span>Can't be zero</span>
+          </span>
+          <input type="number" name="bill" id="bill" placeholder="0">
+        </div>
+        <div>
+          <span class="flexLabel">
+            <label for="selecttip">Select Tip %</label>
+            <span>Can't be zero</span>
+          </span>
+          <div class="btnsOptions">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="number" name="selecttip" id="selecttip" placeholder="Custom">
+          </div>
+        </div>
+        <div>
+          <span class="flexLabel">
+            <label for="numberofpeople">Number of People</label>
+            <span>Can't be zero</span>
+          </span>
+          <input type="number" name="numberofpeople" id="numberofpeople" placeholder="0">
+        </div>
+      </form>
+      <div class="content">
+        <div class="price_contatainer">
+          <p>Tip Amount <span>/ person</span></p>
+          <p>$<span class="innerPrice">0.00</span></p>
+        </div>
+        <div class="price_contatainer">
+          <p>Total <span>/ person</span></p>
+          <p>$<span class="innerPrice">0.00</span></p>
+        </div>
+        <button id="reset" disabled>Reset</button>
+      </div>
+    </div>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
