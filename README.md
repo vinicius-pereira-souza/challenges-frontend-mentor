@@ -91,3 +91,5 @@
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/15-news-homepage-main">news-homepage</a>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/16-age-calculator-app-main/">age-calculator-app</a>
+
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/17-tip-calculator-app-main/">tip-calculator-app</a>
