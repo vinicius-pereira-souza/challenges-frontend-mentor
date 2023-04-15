@@ -29,25 +29,27 @@ class Form {
       e.target.value > 0
     ) {
       this.values.porcent = +e.target.value;
+    } else if (e.type === "click" && e.target.id === "selecttip") {
+      const btnActive = document.querySelector("button.optionActive");
+      if (btnActive) btnActive.classList.remove("optionActive");
     }
 
-    if (e.type === "click" && e.target.id === "selecttip") {
-      let btnActive = document.querySelector(
-        ".btnsOptions button.optionActive",
-      );
-
-      btnActive.classList.remove("optionActive");
-    }
     this.calculator();
   };
 
   alternativeBtnActive = (target) => {
+    let input = document.querySelector(".btnsOptions input");
     this.btns.forEach((btn) => {
       if (target !== btn) {
         target.classList.add("optionActive");
         btn.classList.remove("optionActive");
       }
     });
+
+    if (input.value) {
+      input.value = "";
+      input.style.border = "none";
+    }
   };
 
   handleIntputChange = (e) => {
@@ -102,7 +104,7 @@ class Form {
       this.price.amount = gorFormat;
       this.price.total = totalPagar.toFixed(2);
 
-      this.innerValues[0].textContent = this.price.amount;
+      this.innerValues[0].textContent = this.price.amount.toFixed(2);
       this.innerValues[1].textContent = this.price.total;
 
       this.btnReset.removeAttribute("disabled");
