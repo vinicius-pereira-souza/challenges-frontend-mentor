@@ -75,11 +75,32 @@ header img {
     font-size: 24px;
     caret-color: $Bg_button;
     color: $Very-dark-cyan;
+    position: relative;
   }
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  & > div:is(:nth-child(1), :nth-child(3)) {
+    position: relative;
+  }
+
+  & > div:nth-child(1)::after {
+    content: url("../images/icon-dollar.svg");
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  & > div:nth-child(3)::after {
+    content: url("../images/icon-person.svg");
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
   }
 
   .btnsOptions {
@@ -96,7 +117,7 @@ header img {
       transition: 0.3s;
       border-radius: 4px;
 
-      &:is(:active, :hover) {
+      &:is(:active, :hover, .optionActive) {
         cursor: pointer;
         color: $Very-dark-cyan;
         background-color: $Bg_button;
@@ -167,5 +188,15 @@ form > div.error {
       background-color: $Bg_button_hover;
       transition: 0.3s;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 50px 0;
+  }
+
+  header img {
+    margin: 0 auto 40px auto;
   }
 }

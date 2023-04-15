@@ -21,6 +21,8 @@ class Form {
 
     if (e.type === "click" && e.target.id !== "selecttip") {
       this.values.porcent = +e.target.textContent.replace("%", "");
+      e.target.classList.add("optionActive");
+      this.alternativeBtnActive(e.target);
     } else if (
       e.type === "change" &&
       e.target.id === "selecttip" &&
@@ -28,7 +30,24 @@ class Form {
     ) {
       this.values.porcent = +e.target.value;
     }
+
+    if (e.type === "click" && e.target.id === "selecttip") {
+      let btnActive = document.querySelector(
+        ".btnsOptions button.optionActive",
+      );
+
+      btnActive.classList.remove("optionActive");
+    }
     this.calculator();
+  };
+
+  alternativeBtnActive = (target) => {
+    this.btns.forEach((btn) => {
+      if (target !== btn) {
+        target.classList.add("optionActive");
+        btn.classList.remove("optionActive");
+      }
+    });
   };
 
   handleIntputChange = (e) => {
@@ -43,20 +62,29 @@ class Form {
   };
 
   handleResetValues = (e) => {
+    let btnActive = document.querySelector(".btnsOptions button.optionActive");
     this.innerValues[0].textContent = "0.00";
     this.innerValues[1].textContent = "0.00";
 
     this.inputs.forEach((input) => {
       input.value = "";
+      input.style.border = "none";
     });
+
+    btnActive.classList.remove("optionActive");
   };
 
   errorIntputChange = (e) => {
     if (e.target.value <= 0) {
+      e.target.style.border = "2px solid hsl(10, 61%, 63%)";
       e.target.parentElement.classList.add("error");
       return;
     } else {
       e.target.parentElement.classList.remove("error");
+    }
+
+    if (e.target.value) {
+      e.target.style.border = "2px solid hsl(172, 67%, 45%)";
     }
   };
 
