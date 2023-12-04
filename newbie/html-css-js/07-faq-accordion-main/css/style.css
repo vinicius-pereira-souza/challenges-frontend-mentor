@@ -96,11 +96,11 @@ body {
   flex: 0 0 30px;
   height: 31px;
   display: block;
-  background: url("../images/icon-plus.svg") no-repeat center;
+  background: url("../images/icon-minus.svg") no-repeat center;
 }
 
 [data-accordion="close"] .icon {
-  background-image: url("../images/icon-minus.svg");
+  background-image: url("../images/icon-plus.svg");
 }
 
 .accordion-button-container p {
