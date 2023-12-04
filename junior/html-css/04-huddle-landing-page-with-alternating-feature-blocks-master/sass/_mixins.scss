@@ -1,0 +1,30 @@
+@mixin flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin container_center {
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+@mixin flex-startY {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+@mixin flex-startY-space-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin flex-centerY {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
