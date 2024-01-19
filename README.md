@@ -36,6 +36,8 @@
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/12-3-column-preview-card-component-main">3-column-preview-card-component</a>
 
+<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css/14-social-links-profile-main/">social-links-profile</a>
+
 <h3>Nivel iniciante com HTML, CSS e JavaScript</h3>
 
 <a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/newbie/html-css-js/01-intro-component-with-signup-form-master/">intro-component-with-signup-form</a>
