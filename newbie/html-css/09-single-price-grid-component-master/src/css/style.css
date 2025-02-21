@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background: hsl(204, 43%, 93%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.container {
+  flex: 1;
+  max-width: 635px;
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "header header" "signUp whyUs";
+}
+
+.header {
+  grid-area: header;
+  background: hsl(0, 0%, 100%);
+  border-radius: 8px 8px 0 0;
+  padding: 40px;
+}
+
+.header h1 {
+  color: hsl(179, 62%, 43%);
+  font-size: 22px;
+}
+
+.header h2 {
+  color: hsl(71, 73%, 54%);
+  font-size: 18px;
+  margin: 16px 0 28px 0;
+}
+
+.header p {
+  font-size: 15px;
+  line-height: 24px;
+  color: hsl(218, 22%, 67%);
+}
+
+.signUp {
+  grid-area: signUp;
+  padding: 40px;
+  background: hsl(179, 62%, 43%);
+  border-radius: 0 0 0 10px;
+}
+
+.signUp h2 {
+  font-size: 17px;
+  color: hsl(180, 100%, 92%);
+}
+
+.signUp > div {
+  display: flex;
+  align-items: center;
+}
+
+.signUp > div span:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  margin: 18px 14px 0 0;
+}
+
+.signUp > div span:nth-child(2) {
+  color: hsl(181, 66%, 69%);
+  margin: 18px 14px 0 0;
+}
+
+.signUp p {
+  color: hsl(180, 100%, 92%);
+  font-size: 15px;
+  margin: 8px 0 30px 0;
+}
+
+.signUp button {
+  border: none;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  background: hsl(71, 73%, 54%);
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.signUp button:hover {
+  cursor: pointer;
+  background: hsl(71, 98%, 55%);
+}
+
+.whyUs {
+  grid-area: whyUs;
+  padding: 40px;
+  background: #4abebd;
+  border-radius: 0 0 10px 0;
+}
+
+.whyUs h2 {
+  font-size: 17px;
+  color: hsl(180, 100%, 92%);
+  margin: 0 0 17px 0;
+}
+
+.whyUs p {
+  font-size: 15px;
+  line-height: 20px;
+  color: hsl(180, 100%, 92%);
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 50px 10px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "signUp" "whyUs";
+  }
+
+  .header {
+    padding: 30px 26px 30px 30px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header h2 {
+    margin: 16px 0 15px 0;
+    line-height: 27px;
+    font-size: 15px;
+  }
+
+  .header p {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .signUp {
+    padding: 30px;
+    border-radius: 0;
+  }
+
+  .signUp p {
+    font-size: 13px;
+    margin: 8px 0 30px 0;
+  }
+
+  .whyUs {
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .whyUs p {
+    font-size: 13px;
+  }
+}

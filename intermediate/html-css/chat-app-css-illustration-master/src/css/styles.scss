@@ -1,0 +1,82 @@
+@import "./variables", "./mixins", "./phone";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include flex-center-center;
+  min-height: 100vh;
+  background-color: $light-grayish-violet;
+  font-family: "Rubik", serif;
+  padding: 115px 20px;
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    width: 511px;
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    top: -80px;
+    left: -185px;
+    background-color: $moderate-violet;
+    border-radius: 0 0 250px 250px;
+  }
+
+  &::after {
+    content: "";
+    width: 511px;
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+    bottom: -80px;
+    right: -170px;
+    background-color: #f9f4fa;
+    border-radius: 250px 250px 0 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 820px;
+  column-gap: 116px;
+  display: grid;
+  grid-template-columns: 247px auto;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 65px;
+
+    &::before {
+      position: absolute;
+      top: -130px;
+      left: -245px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
+
+  .container_phone {
+    margin: 0 auto 60px;
+  }
+
+  .content_container {
+    text-align: center;
+  }
+}

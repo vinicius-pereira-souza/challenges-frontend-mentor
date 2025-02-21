@@ -1,0 +1,30 @@
+@mixin base-massage {
+  width: 125px;
+  padding: 8px 6px;
+  line-height: 11px;
+  margin-bottom: 8px;
+  border-radius: 8px 8px 8px 8px;
+}
+
+@mixin message-base-left {
+  color: $moderate-violet;
+  background-color: hsl(272, 41%, 93%);
+  margin-right: auto;
+}
+
+@mixin message-base-right {
+  color: $desaturated-dark-violet;
+  background-color: $white;
+  margin-left: auto;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-items-center {
+  display: flex;
+  align-items: center;
+}

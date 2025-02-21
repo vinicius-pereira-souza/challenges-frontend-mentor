@@ -1,0 +1,222 @@
+@import "_varsmixs.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $rose-50;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.container {
+  flex: 1;
+  max-width: 736px;
+  border-radius: 25px;
+  background-color: $white;
+
+  .imgBox,
+  section {
+    padding: 40px;
+  }
+
+  h1,
+  h2 {
+    font-family: "Young Serif", serif;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 15px;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+.content {
+  padding: 0 40px;
+
+  h1 {
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: hsl(24, 5%, 18%);
+  }
+
+  p {
+    color: hsl(30, 10%, 34%);
+    line-height: 23px;
+  }
+}
+
+.preparation {
+  background-color: $rose-50;
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  h3 {
+    color: $rose-800;
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      color: $stone-600;
+      padding-left: 16px;
+
+      span {
+        font-weight: bold;
+      }
+
+      &::marker {
+        color: $rose-800;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+div {
+  color: $stone-600;
+  h2 {
+    color: $brown-800;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+}
+
+.ingredients {
+  border-bottom: 1px solid $stone-150;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    li {
+      margin-bottom: 13px;
+      padding-left: 16px;
+
+      &::marker {
+        color: $brown-800;
+      }
+    }
+  }
+}
+
+.instructions {
+  border-bottom: 1px solid $stone-150;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  ul {
+    list-style: decimal;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 7px;
+      line-height: 24px;
+      padding-left: 15px;
+
+      span {
+        font-weight: bold;
+      }
+
+      &::marker {
+        color: $brown-800;
+      }
+    }
+  }
+}
+
+.nutrition {
+  p {
+    margin-bottom: 14px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $stone-150;
+    }
+
+    span:first-child {
+      flex: 1;
+      max-width: 295px;
+    }
+
+    span + span {
+      color: $brown-800;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    border-radius: 0;
+
+    .imgBox {
+      padding: 0;
+      margin-bottom: 38px;
+
+      img {
+        border-radius: 0;
+      }
+    }
+
+    section {
+      padding: 30px;
+    }
+  }
+
+  .content {
+    padding: 0 30px;
+  }
+
+  .preparation {
+    padding: 25px;
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 13px;
+      }
+    }
+  }
+
+  .nutrition {
+    li {
+      span:first-child {
+        max-width: 130px;
+      }
+    }
+  }
+}

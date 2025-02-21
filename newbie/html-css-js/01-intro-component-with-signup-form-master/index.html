@@ -6,17 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Intro component with sign up form</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
@@ -39,43 +29,34 @@
         <div class="inputContainer">
           <input type="text" id="nome" placeholder="First Name" required>
           <span>First Name cannot be empty</span>
-          <img src="images/icon-error.svg" alt="icone de erro">
+          <img src="./src/images/icon-error.svg" alt="icone de erro">
         </div>
         <div class="inputContainer">
           <input type="text" id="sobrenome" placeholder="Last Name" required>
           <span>Last Name cannot be empty</span>
-          <img src="images/icon-error.svg" alt="icone de erro">
+          <img src="./src/images/icon-error.svg" alt="icone de erro">
         </div>
         <div class="inputContainer">
           <input type="email" id="emailInput" placeholder="Email Address" required>
           <span>Looks like this is not an email</span>
-          <img src="images/icon-error.svg" alt="icone de erro">
+          <img src="./src/images/icon-error.svg" alt="icone de erro">
         </div>
         <div class="inputContainer">
           <input type="password" id="senha" placeholder="Password" required>
           <span>Password cannot be empty</span>
-          <img src="images/icon-error.svg" alt="icone de erro">
+          <img src="./src/images/icon-error.svg" alt="icone de erro">
         </div>
         <button class="btnSubmit">Claim your free trial</button>
         <p>
           By clicking the button, you are agreeing to our <span>Terms and Services</span>
         </p>
       </form>
-
     </article>
     <div class="succMessage">
       <p>successful login!</p>
     </div>
   </main>
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
-    </p>
-  </footer>
-
-  <script src="js/script.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
 
 </html>

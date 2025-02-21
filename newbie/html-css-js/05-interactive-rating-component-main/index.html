@@ -6,50 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive rating component</title>
-
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-  <!-- Rating state start -->
-  <main class="containerSelectBtn">
-    <span class="star">
-      <img src="images/icon-star.svg" alt="icone de estrela">
-    </span>
-    <h1>How did we do?</h1>
-    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-    <div class="btns">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
+  <main class="container" data-selected="false">
+    <div class="cardSubmit">
+      <div class="star-circle">
+        <img src="src/images/icon-star.svg" alt="icon-star">
+      </div>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <ul class="list-btns">
+        <li><button>1</button></li>
+        <li><button>2</button></li>
+        <li><button>3</button></li>
+        <li><button>4</button></li>
+        <li><button>5</button></li>
+      </ul>
+      <button id="submit">Submit</button>
     </div>
-    <button id="submit">Submit</button>
+
+    <div class="cardSelected">
+      <img src="src/images/illustration-thank-you.svg" alt="illustration thank you">
+      <p class="selectedOption">You selected <span>4</span> out of 5</p>
+      <h1>Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!
+      </p>
+    </div>
   </main>
-  <main class="containerThankYouMessage">
-    <img src="images/illustration-thank-you.svg" alt="ilustração">
-    <span>You selected <span class="option"></span> out of 5</span>
-    <h1>Thank you!</h1>
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
-  </main>
-  <!-- Thank you state end -->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/vinicius-pereira-souza">Vinicius - Souza</a>.
-  </div>
-  <script src="js/script.js"></script>
+
+  <script src="./src/js/script.js"></script>
 </body>
 
 </html>
