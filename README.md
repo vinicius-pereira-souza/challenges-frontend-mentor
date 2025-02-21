@@ -98,4 +98,8 @@
 
 17.<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/junior/html-css-js/17-tip-calculator-app-main/">tip-calculator-app</a>
 
+<h3>Nivel intermediario com HTML e CSS</h3>
+
+1.<a href="https://vinicius-pereira-souza.github.io/challenges-frontend-mentor/intermediate/html-css/chat-app-css-illustration-master/">chat app css illustration master<a/>
+
 <p>Sinta-se à vontade para explorar cada desafio individualmente!</p>
